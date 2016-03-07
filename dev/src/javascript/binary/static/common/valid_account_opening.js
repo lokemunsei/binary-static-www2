@@ -1,10 +1,9 @@
 var ValidAccountOpening = (function(){
   var redirectCookie = function() {
-    if (!$.cookie('login')) {
-        window.location.href = page.url.url_for('login');
+    if (page.client.redirect_if_logout()) {
         return;
     }
-    if (page.client.type !== 'virtual') {
+    if (!page.client.is_virtual()) {
       window.location.href = page.url.url_for('user/my_accountws');
       return;
     }

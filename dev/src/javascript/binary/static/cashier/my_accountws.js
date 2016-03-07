@@ -175,7 +175,7 @@ var MyAccountWS = (function() {
             return false;
         }
 
-        isReal = !TUser.get().is_virtual;
+        isReal = !page.client.is_virtual();
 
         switch(response.msg_type) {
             case 'get_account_status':
@@ -206,8 +206,7 @@ var MyAccountWS = (function() {
 pjax_config_page("user/my_accountws", function() {
     return {
         onLoad: function() {
-            if (!getCookieItem('login')) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 

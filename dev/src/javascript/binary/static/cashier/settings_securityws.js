@@ -1,7 +1,8 @@
 var securityws = (function(){
 
     "use strict";
-    var $form ;
+    var $form,
+        init_done;
 
     var clearErrors = function(){
         $("#SecuritySuccessMsg").text('');
@@ -11,27 +12,29 @@ var securityws = (function(){
     };
 
     var init = function(){
+        init_done = true;
+        if(page.client.redirect_if_is_virtual('user/settingsws')) {
+            return;
+        }
+
         $form   = $("#changeCashierLock");
         $("#repasswordrow").show();
         $("#changeCashierLock").show();
 
         clearErrors();
+
         $form.find("button").attr("value","Update");
 
+        var loginToken = CommonData.getApiToken();
         $form.find("button").on("click", function(e){
             e.preventDefault();
             e.stopPropagation();
             if(validateForm() === false){
                 return false;
             }
-            if($(this).attr("value") === "Update"){
-                BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "lock_password"}});
-            }
-            else{
-                BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "unlock_password"}});
-            }
+            BinarySocket.send({"authorize": loginToken, "passthrough": {"value": $(this).attr("value") === "Update" ? "lock_password" : "unlock_password"}});
         });
-        BinarySocket.send({"authorize": $.cookie('login'), "passthrough": {"value": "is_locked"}});
+        BinarySocket.send({"authorize": loginToken, "passthrough": {"value": "is_locked"}});
     };
 
     var validateForm = function(){
@@ -78,6 +81,11 @@ var securityws = (function(){
                             "passthrough" : {"value" : "lock_status"}
                         });
                         break ;
+                default:
+                        if(!init_done) {
+                            init();
+                        }
+                        break;
             }
         }
     };
@@ -111,7 +119,6 @@ var securityws = (function(){
                   $('#password-meter').remove();
                 }
             }
-
         }
         else{
             if("error" in response) {
@@ -159,27 +166,24 @@ var securityws = (function(){
 pjax_config_page("user/settings/securityws", function() {
     return {
         onLoad: function() {
-          if (!getCookieItem('login')) {
-              window.location.href = page.url.url_for('login');
-              return;
-          }
-          if((/VRT/.test($.cookie('loginid')))){
-              window.location.href = ("/");
-          }
-
-          Content.populate();
-
-          BinarySocket.init({
+            if (page.client.redirect_if_logout()) {
+                return;
+            }
+  
+            Content.populate();
+  
+            BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
                     if (response) {
                         securityws.SecurityApiResponse(response);
-
                     }
                 }
             });
 
-            securityws.init();
+            if(page.client.get_storage_value('is_virtual').length > 0) {
+                securityws.init();
+            }
         }
     };
 });

@@ -12,6 +12,10 @@ var SelfExlusionWS = (function() {
         isValid;
 
     var init = function() {
+        if(page.client.redirect_if_is_virtual('user/settingsws')) {
+            return;
+        }
+
         $form       = $('#frmSelfExclusion');
         $loading    = $('#loading');
         dateID      = 'exclude_until';
@@ -243,12 +247,7 @@ var SelfExlusionWS = (function() {
 pjax_config_page("user/self_exclusionws", function() {
     return {
         onLoad: function() {
-        	if (!getCookieItem('login')) {
-                window.location.href = page.url.url_for('login');
-                return;
-            }
-            if((/VRT/.test($.cookie('loginid')))){
-                window.location.href = page.url.url_for('user/settingsws');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 
@@ -256,7 +255,10 @@ pjax_config_page("user/self_exclusionws", function() {
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
                     if (response) {
-                        if (response.msg_type === "get_self_exclusion") {
+                        if (response.msg_type === "authorize") {
+                            SelfExlusionWS.init();
+                        }
+                        else if (response.msg_type === "get_self_exclusion") {
                             SelfExlusionWS.getResponse(response);
                         }
                         else if (response.msg_type === "set_self_exclusion") {
@@ -270,7 +272,9 @@ pjax_config_page("user/self_exclusionws", function() {
             });	
 
             Content.populate();
-            SelfExlusionWS.init();
+            if(TUser.get().hasOwnProperty('is_virtual')) {
+                SelfExlusionWS.init();
+            }
         }
     };
 });

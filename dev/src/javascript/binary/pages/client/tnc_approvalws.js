@@ -43,7 +43,7 @@ var TNCApproval = (function() {
     };
 
     var responseTNCApproval = function(response) {
-        if(!response.hasOwnProperty('error')) {
+        if(+response.tnc_approval === 1) {
             redirectToMyAccount();
         }
         else {

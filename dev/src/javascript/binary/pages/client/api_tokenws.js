@@ -284,8 +284,7 @@ var APITokenWS = (function() {
 pjax_config_page("api_tokenws", function() {
     return {
         onLoad: function() {
-            if (!$.cookie('login')) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 

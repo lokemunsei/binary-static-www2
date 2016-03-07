@@ -33,7 +33,8 @@ var TradingAnalysis = (function() {
                     '" class="tm-a">' + text.localize('Explanation') + '</a>' +
                   '</li>' +
                   '<li id="tab_last_digit" class="invisible tm-li">' +
-                    '<a href="#" class="tm-a">' +
+                    '<a href="' + page.url.url_for('trade/last_digit_info?underlying=' + $('#underlying').val() +
+                    '&ajax_only=1') + '" class="tm-a">' +
                     text.localize('Last Digit Stats') + '</a>' +
                   '</li>' +
                   '<li id="tab_japan_info" class="invisible tm-li last">' +
@@ -119,7 +120,7 @@ var TradingAnalysis = (function() {
                 if (currentTab == 'tab_last_digit') {
                     var underlying = $('[name=underlying] option:selected').val() || $('#underlying option:selected').val();
                     var tick = $('[name=tick_count]').val() || 100;
-                    trading_digit_info = TradingAnalysis.tab_last_digitws;
+                    trading_digit_info = BetAnalysis.tab_last_digitws;
                     var request = JSON.parse('{"ticks_history":"'+ underlying +'",'+
                                               '"end": "latest",'+
                                               '"count": '+ tick +','+

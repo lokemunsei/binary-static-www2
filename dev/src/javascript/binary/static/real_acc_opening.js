@@ -16,7 +16,11 @@ pjax_config_page("new_account/realws", function(){
             onmessage: function(msg){
               var response = JSON.parse(msg.data);
               if (response) {
-                if (response.msg_type === 'new_account_real'){
+                if(response.msg_type === 'authorize' && !page.client.is_virtual()) {
+                    window.location.href = page.url.url_for('user/my_accountws');
+                    return;
+                }
+                else if (response.msg_type === 'new_account_real'){
                   ValidAccountOpening.handler(response, response.new_account_real);
                 }
               }

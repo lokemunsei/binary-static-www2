@@ -72,18 +72,7 @@ var User = function() {
 var Client = function() {
     this.loginid =  $.cookie('loginid');
     this.residence =  $.cookie('residence');
-    this.is_logged_in = false;
-    this.is_real = false;
-    if(this.loginid === null || typeof this.loginid === "undefined") {
-        this.type = 'logged_out';
-    } else if(/VRT/.test(this.loginid)) {
-        this.type = 'virtual';
-        this.is_logged_in = true;
-    } else {
-        this.type = 'real';
-        this.is_logged_in = true;
-        this.is_real = true;
-    }
+    this.is_logged_in = this.loginid && this.loginid.length > 0;
 
     var dl_info = gtm_data_layer_info();
     if(dl_info.length > 0) {
@@ -110,6 +99,22 @@ var Client = function() {
 };
 
 Client.prototype = {
+    redirect_if_logout: function(redirectPage) {
+        if(!this.is_logged_in) {
+            window.location.href = page.url.url_for(redirectPage || 'login');
+        }
+        return !this.is_logged_in;
+    },
+    redirect_if_is_virtual: function(redirectPage) {
+        var is_virtual = this.is_virtual();
+        if(is_virtual) {
+            window.location.href = page.url.url_for(redirectPage || '');
+        }
+        return is_virtual;
+    },
+    is_virtual: function() {
+        return this.get_storage_value('is_virtual') === '1';
+    },
     get_storage_value: function(key) {
         return LocalStore.get('client.' + key) || '';
     },
@@ -118,6 +123,10 @@ Client.prototype = {
     },
     check_storage_values: function(origin) {
         var is_ok = true;
+
+        if(!this.get_storage_value('is_virtual') && TUser.get().hasOwnProperty('is_virtual')) {
+            this.set_storage_value('is_virtual', TUser.get().is_virtual);
+        }
 
         // currencies
         if(!this.get_storage_value('currencies')) {
@@ -133,7 +142,7 @@ Client.prototype = {
 
         // allowed markets
         if(this.is_logged_in) {
-            if(this.is_real && !this.get_storage_value('allowed_markets') && TUser.get().landing_company_name) {
+            if(!TUser.get().is_virtual && !this.get_storage_value('allowed_markets') && TUser.get().landing_company_name) {
                 $('#topMenuStartBetting').addClass('invisible');
                 BinarySocket.send({
                     'landing_company_details': TUser.get().landing_company_name,
@@ -169,9 +178,16 @@ Client.prototype = {
             $('#topMenuStartBetting').removeClass('invisible');
         }
     },
+    response_authorize: function(response) {
+        TUser.set(response.authorize);
+        this.set_storage_value('is_virtual', TUser.get().is_virtual);
+        this.check_storage_values();
+        page.contents.activate_by_client_type();
+        page.contents.topbar_message_visibility();
+    },
     clear_storage_values: function() {
         var that  = this;
-        var items = ['currencies', 'allowed_markets', 'landing_company_name'];
+        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual'];
         items.forEach(function(item) {
             that.set_storage_value(item, '');
         });
@@ -379,17 +395,17 @@ Menu.prototype = {
         // enable only allowed markets
         var allowed_markets = page.client.get_storage_value('allowed_markets');
         if(!allowed_markets && page.client.is_logged_in) {
-            if(page.client.is_real) {
+            if(TUser.get().hasOwnProperty('is_virtual') && !TUser.get().is_virtual) {
                 $('#topMenuStartBetting').addClass('invisible');
             }
             return;
         }
+
         var markets_array = allowed_markets ? allowed_markets.split(',') : [];
         var sub_items = $('li#topMenuStartBetting ul.sub_items');
-        var isReal = $.cookie('loginid') && !(/VRT/.test($.cookie('loginid')));
         sub_items.find('li').each(function () {
             var link_id = $(this).attr('id').split('_')[1];
-            if(markets_array.indexOf(link_id) < 0 && isReal) {
+            if(markets_array.indexOf(link_id) < 0 && !page.client.is_virtual()) {
                 var link = $(this).find('a');
                 var link_text = link.text();
                 var link_href = link.attr('href');
@@ -402,6 +418,7 @@ Menu.prototype = {
                 span.replaceWith($('<a/>', {class: 'link', text: span_text, href: span_href}));
             }
         });
+        $('#topMenuStartBetting').removeClass('invisible');
     },
     reset: function() {
         $("#main-menu .item").unbind();
@@ -463,12 +480,12 @@ Menu.prototype = {
     register_dynamic_links: function() {
         var stored_market = page.url.param('market') || LocalStore.get('bet_page.market') || 'forex';
         var allowed_markets = page.client.get_storage_value('allowed_markets');
-        if(!allowed_markets && page.client.is_logged_in && page.client.is_real) {
+        if(!allowed_markets && page.client.is_logged_in && !TUser.get().is_virtual) {
             return;
         }
 
         var markets_array = allowed_markets ? allowed_markets.split(',') : [];
-        if(page.client.is_real && markets_array.indexOf(stored_market) < 0) {
+        if(!TUser.get().is_virtual && markets_array.indexOf(stored_market) < 0) {
             stored_market = markets_array[0];
             LocalStore.set('bet_page.market', stored_market);
         }
@@ -792,7 +809,10 @@ Contents.prototype = {
     activate_by_client_type: function() {
         $('.by_client_type').addClass('invisible');
         if(this.client.is_logged_in) {
-            if(this.client.is_real) {
+            if(page.client.get_storage_value('is_virtual').length === 0) {
+                return;
+            }
+            if(!page.client.is_virtual()) {
                 $('.by_client_type.client_real').removeClass('invisible');
                 $('.by_client_type.client_real').show();
 
@@ -844,10 +864,13 @@ Contents.prototype = {
     },
     topbar_message_visibility: function() {
         if(this.client.is_logged_in) {
+            if(page.client.get_storage_value('is_virtual').length === 0) {
+                return;
+            }
             var loginid_array = this.user.loginid_array;
             var c_config = page.settings.get('countries_list')[this.client.residence];
 
-            if (!this.client.is_real) {
+            if (page.client.is_virtual()) {
                 var show_upgrade = true;
                 for (var i=0;i<loginid_array.length;i++) {
                     if (loginid_array[i].real) {
