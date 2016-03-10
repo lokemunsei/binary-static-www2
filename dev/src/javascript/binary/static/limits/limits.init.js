@@ -3,7 +3,6 @@ var LimitsWS = (function(){
 
     function limitsHandler(response){
         var limits = response.get_limits;
-        Content.limitsTranslation();
         LimitsUI.fillLimitsTable(limits);
 
         var withdrawal_limit = document.getElementById("withdrawal-limit");

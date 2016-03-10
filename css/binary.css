@@ -615,6 +615,11 @@ ul.checked li {
   margin-bottom: 0;
 }
 
+.charting-page img.responsive {
+  width: 140px;
+  height: 140px;
+}
+
 *,
 *:after,
 *:before {
@@ -5415,6 +5420,22 @@ div.kineticjs-content {
 }
 #trading_socket_container #contract_prices_container .contract_heading.DIGITMATCH {
   background: url("../images/pages/trade/matches_1.svg") no-repeat top center;
+}
+#trading_socket_container #contract_prices_container .contract_heading.DIGITEVEN {
+  background: url("../images/pages/trade/digits_even_1.svg") no-repeat no-repeat top center;
+  background-size: 40%;
+}
+#trading_socket_container #contract_prices_container .contract_heading.DIGITODD {
+  background: url("../images/pages/trade/digits_odd_1.svg") no-repeat no-repeat top center;
+  background-size: 40%;
+}
+#trading_socket_container #contract_prices_container .contract_heading.DIGITOVER {
+  background: url("../images/pages/trade/digits_over_1.svg") no-repeat no-repeat top center;
+  background-size: 40%;
+}
+#trading_socket_container #contract_prices_container .contract_heading.DIGITUNDER {
+  background: url("../images/pages/trade/digits_under_1.svg") no-repeat no-repeat top center;
+  background-size: 40%;
 }
 #trading_socket_container #contract_prices_container .contract_heading.CALL {
   background: url("../images/pages/trade/rise_1.png") no-repeat top center;

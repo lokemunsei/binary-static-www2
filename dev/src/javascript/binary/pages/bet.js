@@ -47,7 +47,7 @@ pjax_config_page('/trade.cgi', function() {
                             Symbols.details(response);
                             var underlying = $('[name=underlying_symbol] option:selected').val() || $('#underlying option:selected').val();
                             var tick = $('[name=tick_count]').val() || 100;
-                            TradingAnalysis.set_digit_info(BetAnalysis.tab_last_digitws);
+                            TradingAnalysis.set_digit_info(TradingAnalysis.tab_last_digitws);
                             var request = JSON.parse('{"ticks_history":"'+ underlying +'",'+
                                                       '"end": "latest",'+
                                                       '"count": '+ tick +','+

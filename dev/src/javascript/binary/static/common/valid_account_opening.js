@@ -33,26 +33,8 @@ var ValidAccountOpening = (function(){
       var cookie_domain = '.' + document.domain.split('.').slice(-2).join('.');
       $.cookie('loginid_list', loginid + ':R:E+' + oldCookieValue, {domain: cookie_domain, path:'/'});
       $.cookie('loginid', loginid, {domain: cookie_domain, path:'/'});
-      //push to gtm
-      var gtmDataLayer = document.getElementsByClassName('gtm_data_layer')[0];
-      var age = new Date().getFullYear() - document.getElementById('dobyy').value;
-      document.getElementById('event').innerHTML = 'new_account';
-      dataLayer.push({
-        'language': page.language(),
-        'event': 'new_account',
-        'visitorID': loginid,
-        'bom_age': age,
-        'bom_country': $('#residence-disabled option[value="' + page.client.residence + '"]').html(),
-        'bom_today': Math.floor(Date.now() / 1000),
-        'bom_email': page.user.email,
-        'bom_firstname': document.getElementById('fname').value,
-        'bom_lastname': document.getElementById('lname').value,
-        'bom_phone': document.getElementById('tel').value
-      });
-      var affiliateToken = $.cookie('affiliate_tracking');
-      if (affiliateToken) {
-        dataLayer.push({'bom_affiliate_token': JSON.parse($.cookie('affiliate_tracking')).t});
-      }
+      // set a flag to push to gtm in my_account
+      localStorage.setItem('new_account', '1');
       //generate dropdown list and switch
       page.client.clear_storage_values();
       var option = new Option('Real Account (' + loginid + ')', loginid);

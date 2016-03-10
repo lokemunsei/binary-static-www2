@@ -1,4 +1,4 @@
-BetAnalysis.DigitInfoWS = function() {
+TradingAnalysis.DigitInfoWS = function() {
     this.chart_config = {
         chart: {
                 renderTo:'last_digit_histo',
@@ -87,7 +87,7 @@ BetAnalysis.DigitInfoWS = function() {
     this.prev_max_index = -1;
 };
 
-BetAnalysis.DigitInfoWS.prototype = {
+TradingAnalysis.DigitInfoWS.prototype = {
     add_content: function(underlying){
         var domain = document.domain.split('.').slice(-2).join('.'),
             underlyings =[];
@@ -107,7 +107,7 @@ BetAnalysis.DigitInfoWS.prototype = {
         var contentId = document.getElementById('tab_last_digit-content'),
             content = '<div class="grd-parent">'+
                         '<div id="last_digit_histo_form" class="grd-grid-8 grd-grid-mobile-12 grd-centered">'+
-                        '<form class=smallfont action="'+ page.url.url_for('trade/last_digit_info') +'" method="post">'+
+                        '<form class=smallfont action="#" method="post">'+
                         '<div class="grd-grid-mobile-12">'+ text.localize('Select market')+' : ' + elem +' </div>'+
                         '<div class="grd-grid-mobile-12">'+ text.localize('Number of ticks')+' : <select class="smallfont" name="tick_count"><option value="25">25</option><option value="50">50</option><option selected="selected" value="100">100</option><option value="500">500</option><option value="1000">1000</option></select></div>'+
                         '</form>'+
@@ -276,4 +276,4 @@ BetAnalysis.DigitInfoWS.prototype = {
     }
 };
 
-BetAnalysis.tab_last_digitws = new BetAnalysis.DigitInfoWS();
+TradingAnalysis.tab_last_digitws = new TradingAnalysis.DigitInfoWS();

@@ -245,16 +245,7 @@ var TradingEvents = (function () {
          */
         var amountElement = document.getElementById('amount');
         if (amountElement) {
-            amountElement.addEventListener('keypress', function(e) {
-                var key = e.keyCode;
-                var char = String.fromCharCode(e.which);
-                if((char === '.' && e.target.value.indexOf(char) >= 0) ||
-                    (!/[0-9\.]/.test(char) && [8, 37, 39, 46].indexOf(key) < 0) || // delete, backspace, arrow keys
-                    /['%]/.test(char)) { // similarity to arrows key code in some browsers
-                        e.returnValue = false;
-                        e.preventDefault();
-                }
-            });
+            amountElement.addEventListener('keypress', onlyNumericOnKeypress);
 
             amountElement.addEventListener('input', debounce( function(e) {
                 e.target.value = e.target.value.replace(/[^0-9.]/g, '');

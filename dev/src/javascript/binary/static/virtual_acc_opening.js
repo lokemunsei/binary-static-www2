@@ -47,6 +47,9 @@ pjax_config_page("new_account/virtualws", function(){
                     var error = response.error;
 
                     if (type === 'new_account_virtual' && !error){
+                      // set a flag to push to gtm in my_account
+                      localStorage.setItem('new_account', '1');
+
                       form.setAttribute('action', '/login');
                       form.setAttribute('method', 'POST');
                       virtualForm.unbind('submit');

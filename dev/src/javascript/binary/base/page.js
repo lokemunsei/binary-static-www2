@@ -1,34 +1,100 @@
 var text;
 var clock_started = false;
-var gtm_data_layer_info = function() {
-    var gtm_data_layer_info = [];
-    $('.gtm_data_layer').each(function() {
-        var gtm_params = {};
-        var event_name = '';
-        $(this).children().each(function() {
-            var tag = $(this).attr("id");
-            var value = $(this).html();
 
-            if ($(this).attr("data-type") == "json") {
-                value = JSON.parse($(this).html());
-            }
+var GTM = (function() {
+    "use strict";
 
-            if (tag == "event") {
-                event_name = value;
-            } else {
-                gtm_params[tag] = value;
-            }
+    var gtm_data_layer_info = function(data) {
+        var data_layer_info = {
+            language  : page.language(),
+            pageTitle : page_title(),
+            pjax      : page.is_loaded_by_pjax,
+            url       : document.URL,
+            event     : 'page_load',
+            is_legacy : 'false',
+        };
+        if(page.client.is_logged_in) {
+            data_layer_info['visitorID'] = page.client.loginid;
+        }
+
+        $.extend(true, data_layer_info, data);
+
+        var event = data_layer_info.event;
+        delete data_layer_info['event'];
+
+        return {
+            data : data_layer_info,
+            event: event,
+        };
+    };
+
+    var push_data_layer = function(data) {
+        // follow the legacy method for not converted pages
+        var legacy_pages = ['affiliate_signup', 'cashier', 'trade.cgi', 'payment'];
+        var regex = new RegExp(legacy_pages.join('|'), 'i');
+        if(regex.test(location.pathname)) {
+            push_data_layer_legacy();
+            return;
+        }
+
+        // new implementation (all pages except the above list)
+        var info = gtm_data_layer_info(data && typeof(data) === 'object' ? data : null);
+        dataLayer[0] = info.data;
+        dataLayer.push(info.data);
+        dataLayer.push({"event": info.event});
+    };
+
+    var page_title = function() {
+        var t = /^.+[:-]\s*(.+)$/.exec(document.title);
+        return t && t[1] ? t[1] : document.title;
+    };
+
+    // Legacy functions (To be removed once all pages use new implementation above)
+    var gtm_data_layer_info_legacy = function() {
+        var gtm_data_layer_info = [];
+        $('.gtm_data_layer').each(function() {
+            var gtm_params = {};
+            var event_name = '';
+            $(this).children().each(function() {
+                var tag = $(this).attr("id");
+                var value = $(this).html();
+
+                if ($(this).attr("data-type") == "json") {
+                    value = JSON.parse($(this).html());
+                }
+
+                if (tag == "event") {
+                    event_name = value;
+                } else {
+                    gtm_params[tag] = value;
+                }
+            });
+            gtm_params['url'] = document.URL;
+            gtm_params['is_legacy'] = 'true';
+
+            var entry = {};
+            entry['params'] = gtm_params;
+            entry['event'] = event_name;
+            gtm_data_layer_info.push(entry);
         });
-        gtm_params['url'] = document.URL;
 
-        var entry = {};
-        entry['params'] = gtm_params;
-        entry['event'] = event_name;
-        gtm_data_layer_info.push(entry);
-    });
+        return gtm_data_layer_info;
+    };
 
-    return gtm_data_layer_info;
-};
+    var push_data_layer_legacy = function() {
+        var info = gtm_data_layer_info_legacy();
+        for (var i=0;i<info.length;i++) {
+            dataLayer[0] = info[i].params;
+
+            dataLayer.push(info[i].params);
+            dataLayer.push({"event": info[i].event});
+        }
+    };
+
+    return {
+        push_data_layer : push_data_layer
+    };
+}());
 
 var User = function() {
     this.email =  $.cookie('email');
@@ -70,38 +136,15 @@ var User = function() {
 };
 
 var Client = function() {
-    this.loginid =  $.cookie('loginid');
-    this.residence =  $.cookie('residence');
+    this.loginid      =  $.cookie('loginid');
+    this.residence    =  $.cookie('residence');
     this.is_logged_in = this.loginid && this.loginid.length > 0;
-
-    var dl_info = gtm_data_layer_info();
-    if(dl_info.length > 0) {
-        for (var i=0;i<dl_info.length;i++) {
-            if(dl_info[i].event == 'log_in') {
-                SessionStore.set('client_info', this.loginid + ':' + dl_info[i].params.bom_firstname + ':'  + dl_info[i].params.bom_lastname + ':' + dl_info[i].params.bom_email + ':' + dl_info[i].params.bom_phone);
-            }
-        }
-    }
-
-    var client_info = SessionStore.get('client_info');
-    if(client_info) {
-        var parsed = client_info.split(':');
-        if(this.is_logged_in && parsed[0] == this.loginid) {
-            this.first_name = parsed[1];
-            this.last_name = parsed[2];
-            this.name = this.first_name +  ' ' + this.last_name;
-            this.email = parsed[3];
-            this.phone = parsed[4];
-        } else {
-            SessionStore.remove('client_info');
-        }
-    }
 };
 
 Client.prototype = {
-    redirect_if_logout: function(redirectPage) {
+    redirect_if_logout: function() {
         if(!this.is_logged_in) {
-            window.location.href = page.url.url_for(redirectPage || 'login');
+            window.location.href = page.url.url_for('login');
         }
         return !this.is_logged_in;
     },
@@ -928,6 +971,7 @@ Contents.prototype = {
 };
 
 var Page = function(config) {
+    this.is_loaded_by_pjax = false;
     config = typeof config !== 'undefined' ? config : {};
     this.user = new User();
     this.client = new Client();
@@ -935,6 +979,7 @@ var Page = function(config) {
     this.settings = new InScriptStore(config['settings']);
     this.header = new Header({ user: this.user, client: this.client, settings: this.settings, url: this.url});
     this.contents = new Contents(this.client, this.user);
+    onLoad.queue(GTM.push_data_layer);
 };
 
 Page.prototype = {

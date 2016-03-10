@@ -19,5 +19,5 @@
         </div>
     </div>
 
-    <p class="grd-grid-12 grd-parent invisible error-msg" id="err_message"></p>
+    <p class="grd-grid-12 grd-parent invisible error-msg center" id="err_message"></p>
 </div>

@@ -97,6 +97,7 @@ var pjax_config = function() {
             onUnload.fire();
         },
         'complete': function() {
+            page.is_loaded_by_pjax = true;
             onLoad.fire();
             onUnload.reset();
         },
