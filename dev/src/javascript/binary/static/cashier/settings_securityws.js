@@ -8,20 +8,23 @@ var securityws = (function(){
         $("#SecuritySuccessMsg").text('');
         $("#client_message_content").text('');
         $("#client_message_content").hide();
-
     };
 
     var init = function(){
         init_done = true;
-        if(page.client.redirect_if_is_virtual('user/settingsws')) {
+
+        $form   = $("#changeCashierLock");
+
+        clearErrors();
+
+        if(page.client.is_virtual()) {
+            $form.hide();
+            $('#SecuritySuccessMsg').addClass('notice-msg center').text(Content.localize().textFeatureUnavailable);
             return;
         }
 
-        $form   = $("#changeCashierLock");
         $("#repasswordrow").show();
         $("#changeCashierLock").show();
-
-        clearErrors();
 
         $form.find("button").attr("value","Update");
 
