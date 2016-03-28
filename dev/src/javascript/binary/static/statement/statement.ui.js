@@ -63,7 +63,7 @@ var StatementUI = (function(){
             var $viewButtonSpan = Button.createBinaryStyledButton();
             var $viewButton = $viewButtonSpan.children(".button").first();
             $viewButton.text(text.localize("View"));
-            $viewButton.addClass("open_contract_details");
+            $viewButton.addClass("open_contract_detailsws");
             $viewButton.attr("contract_id", transaction["contract_id"]);
 
             $statementRow.

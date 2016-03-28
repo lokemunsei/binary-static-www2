@@ -183,7 +183,7 @@ var account_transferws = (function(){
 
                         availableCurr.push(currObj);     
 
-                        firstacct = "";    
+                        firstacct = {};    
 
                         if(selectedIndex < 0 && value.balance){
                             selectedIndex =  index;
@@ -199,7 +199,7 @@ var account_transferws = (function(){
                                  .attr("value",optionValue)
                                  .text(str));     
                     }
-                    secondacct = "";
+                    secondacct = {};
 
                     if(value.balance <= 0){
                         $form.find("#transfer_account_transfer option:last").remove();

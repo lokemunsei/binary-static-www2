@@ -43,9 +43,9 @@
                                 <label for="dobdd">[% l('Date of birth') %]</label>
                             </div>
                             <div class="grd-grid-8">
-                                <select name="dobdd" id="dobdd"></select>
-                                <select name="dobmm" id="dobmm"></select>
                                 <select name="dobyy" id="dobyy"></select>
+                                <select name="dobmm" id="dobmm"></select>
+                                <select name="dobdd" id="dobdd"></select>
                                 <p class="errorfield" id="error-birthdate" style="display:none"></p>
                             </div>
                         </div>

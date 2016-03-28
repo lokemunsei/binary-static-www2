@@ -7,7 +7,7 @@
         <fieldset>
             <legend>[% l('Details') %]</legend>
 
-            <div class="grd-row-padding row clear hidden RealAcc">
+            <div class="grd-row-padding row rowName clear hidden RealAcc">
                 <div class="grd-grid-4 form_label">
                     <label><em class="required_asterisk">**</em> [% l('Name') %]</label>
                 </div>
@@ -115,33 +115,11 @@
 
             <div class="grd-row-padding row clear">
                 <div class="grd-grid-4 form_label">
-                    <label for="Address1"><em class="required_asterisk">**</em> [% l('First line of home address') %]</label>
+                    <label for="Postcode"><em class="required_asterisk">**</em> [% l('Postal Code / ZIP') %]</label>
                 </div>
                 <div class="grd-grid-8">
                     <span id="inputheading">
-                        <strong id="lblAddress1"></strong>
-                    </span>
-                </div>
-            </div>
-
-            <div class="grd-row-padding row clear">
-                <div class="grd-grid-4 form_label">
-                    <label for="Address2"><em class="required_asterisk">**</em> [% l('Second line of home address') %]</label>
-                </div>
-                <div class="grd-grid-8">
-                    <span id="inputheading">
-                        <strong id="lblAddress2"></strong>
-                    </span>
-                </div>
-            </div>
-
-            <div class="grd-row-padding row clear">
-                <div class="grd-grid-4 form_label">
-                    <label for="City"><em class="required_asterisk">**</em> [% l('Town/City') %]</label>
-                </div>
-                <div class="grd-grid-8">
-                    <span id="inputheading">
-                        <strong id="lblCity"></strong>
+                        <strong id="lblPostcode"></strong>
                     </span>
                 </div>
             </div>
@@ -159,11 +137,33 @@
 
             <div class="grd-row-padding row clear">
                 <div class="grd-grid-4 form_label">
-                    <label for="Postcode"><em class="required_asterisk">**</em> [% l('Postal Code / ZIP') %]</label>
+                    <label for="City"><em class="required_asterisk">**</em> [% l('Town/City') %]</label>
                 </div>
                 <div class="grd-grid-8">
                     <span id="inputheading">
-                        <strong id="lblPostcode"></strong>
+                        <strong id="lblCity"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label for="Address1"><em class="required_asterisk">**</em> [% l('First line of home address') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblAddress1"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label for="Address2"><em class="required_asterisk">**</em> [% l('Second line of home address') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblAddress2"></strong>
                     </span>
                 </div>
             </div>
@@ -199,6 +199,6 @@
 
     </form>
 
-    <p class="required hidden RealAcc"><em class="required_asterisk">**</em> [% l('To change your name, date of birth, country of residence, or email, please contact <a href="[_1]">Customer Support</a>.', request.url_for('contact')) %]</p>
+    <p class="required hidden RealAcc rowCustomerSupport"><em class="required_asterisk">**</em> [% l('To change your name, date of birth, country of residence, or email, please contact <a href="[_1]">Customer Support</a>.', request.url_for('contact')) %]</p>
 
 </div>

@@ -1,13 +1,14 @@
 var securityws = (function(){
-
     "use strict";
     var $form,
         init_done;
 
     var clearErrors = function(){
         $("#SecuritySuccessMsg").text('');
-        $("#client_message_content").text('');
-        $("#client_message_content").hide();
+        $("#invalidinputfound").text('');
+        $('#errorcashierlockpassword1').contents().filter(function () {
+          return this.nodeType === 3;
+        }).remove();
     };
 
     var init = function(){
@@ -23,10 +24,8 @@ var securityws = (function(){
             return;
         }
 
-        $("#repasswordrow").show();
-        $("#changeCashierLock").show();
-
-        $form.find("button").attr("value","Update");
+        $form   = $("#changeCashierLock");
+        clearErrors();
 
         var loginToken = CommonData.getApiToken();
         $form.find("button").on("click", function(e){
@@ -42,8 +41,6 @@ var securityws = (function(){
 
     var validateForm = function(){
         var isValid = true;
-        var regexp = new RegExp('^[ -~]+$');
-
         clearErrors();
 
         var pwd1 = document.getElementById("cashierlockpassword1").value,
@@ -56,13 +53,15 @@ var securityws = (function(){
           if (!Validate.errorMessagePassword(pwd1, pwd2, errorPassword, errorRPassword)){
             isValid = false;
           }
+        } else if (!/[ -~]{6,25}/.test(pwd1)) {
+          errorPassword.textContent = Content.errorMessage('min', 6);
+          isValid = false;
         }
-
         return isValid;
     };
     var isAuthorized =  function(response){
         if(response.echo_req.passthrough){
-            var option= response.echo_req.passthrough.value ;
+            var option = response.echo_req.passthrough.value;
             var pwd = $("#cashierlockpassword1").val();
 
             switch(option){
@@ -105,11 +104,11 @@ var securityws = (function(){
                 $("#lockInfo").text(text.localize("Your cashier is locked as per your request - to unlock it, please enter the password."));
                 $form.find("button").attr("value","Unlock Cashier");
                 $form.find("button").html(text.localize("Unlock Cashier"));
-
+                $('#changeCashierLock').show();
             }
             else if(parseInt(resvalue) === 0){
                 $("#repasswordrow").show();
-                $("legend").text(text.localize("lock Cashier"));
+                $("legend").text(text.localize("Lock Cashier"));
                 $("#lockInfo").text(text.localize("An additional password can be used to restrict access to the cashier."));
                 $form.find("button").attr("value","Update");
                 $form.find("button").html(text.localize("Update"));
@@ -121,28 +120,25 @@ var securityws = (function(){
                 } else {
                   $('#password-meter').remove();
                 }
+                $('#changeCashierLock').show();
             }
         }
         else{
             if("error" in response) {
                 if("message" in response.error) {
-                    $("#client_message_content").show();
-                    $("#client_message_content").text(text.localize(response.error.message));
+                    $("#invalidinputfound").text(text.localize(response.error.message));
                 }
                 return false;
             }
             else{
-
                 resvalue = response.echo_req.cashier_password;
                 if(parseInt(resvalue) === 1){
                     $("#changeCashierLock").hide();
-                    $("#client_message_content").hide();
+                    $("#invalidinputfound").text('');
                     $("#SecuritySuccessMsg").text(text.localize('Your settings have been updated successfully.'));
                 }
                 else{
-                    $("#client_message_content").show();
-                    $("#client_message_content").text(text.localize('Sorry, an error occurred while processing your account.'));
-
+                    $("#invalidinputfound").text(text.localize('Sorry, an error occurred while processing your account.'));
                     return false;
                 }
             }
@@ -172,9 +168,9 @@ pjax_config_page("user/settings/securityws", function() {
             if (page.client.redirect_if_logout()) {
                 return;
             }
-  
+
             Content.populate();
-  
+
             BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);

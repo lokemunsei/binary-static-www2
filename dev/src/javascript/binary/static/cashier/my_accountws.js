@@ -29,7 +29,16 @@ var MyAccountWS = (function() {
 
     var responseGetSettings = function(response) {
         var get_settings = response.get_settings;
-
+        if (get_settings.country === null || $.cookie('residence') === '') {
+          var documentDomain = document.domain.split('.').slice(-2).join('.');
+          if ($.cookie('residence') !== '') {
+            $.cookie('residence', '', {path: '/', domain: documentDomain});
+          } else if (get_settings.country_code) {
+            $.cookie('residence', get_settings.country_code, {path: '/', domain: documentDomain});
+          }
+          page.client.residence = get_settings.country_code;
+          page.contents.topbar_message_visibility();
+        }
         client_tnc_status = get_settings.client_tnc_status || '-';
         is_authenticated_payment_agent = get_settings.is_authenticated_payment_agent;
 
@@ -77,8 +86,8 @@ var MyAccountWS = (function() {
         $(welcomeTextID)
             .text(
                 text.localize(
-                    isReal ? 
-                        'You are currently logged in to your real money account with [_1] ([_2]).' : 
+                    isReal ?
+                        'You are currently logged in to your real money account with [_1] ([_2]).' :
                         'You are currently logged in to your virtual money account ([_2]).'
                 )
                     .replace('[_1]', landing_company || '')
@@ -135,7 +144,7 @@ var MyAccountWS = (function() {
             }
 
             if(isReal) {
-                data['bom_age']       = parseInt((moment(str).unix() - get_settings.date_of_birth) / 31557600);
+                data['bom_age']       = parseInt((moment().unix() - get_settings.date_of_birth) / 31557600);
                 data['bom_firstname'] = get_settings.first_name;
                 data['bom_lastname']  = get_settings.last_name;
                 data['bom_phone']     = get_settings.phone;
@@ -171,7 +180,7 @@ var MyAccountWS = (function() {
     var apiResponse = function(response) {
         if('error' in response){
             if('message' in response.error) {
-                console.log(response.error.message);
+                console.warn(response.error.message);
             }
             return false;
         }

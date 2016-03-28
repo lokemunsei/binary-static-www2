@@ -17,22 +17,28 @@ var ValidAccountOpening = (function(){
   var handler = function(response, message) {
     if (response.error) {
       var errorMessage = response.error.message;
+      if (response.error.code === 'show risk disclaimer' && document.getElementById('financial-form')) {
+        $('#financial-form').addClass('hidden');
+        $('#financial-risk').removeClass('hidden');
+        return;
+      }
       if (document.getElementById('real-form')) {
         $('#real-form').remove();
       } else if (document.getElementById('japan-form')) {
         $('#japan-form').remove();
+      } else if (document.getElementById('financial-form')) {
+        $('#financial-form').remove();
+        $('#financial-risk').remove();
       }
       var error = document.getElementsByClassName('notice-msg')[0];
       error.innerHTML = (response.msg_type === 'sanity_check') ? text.localize('There was some invalid character in an input field.') : errorMessage;
       error.parentNode.parentNode.parentNode.setAttribute('style', 'display:block');
       return;
-    } else {
+    } else if (getCookieItem('residence') === 'jp') {
+      window.location.href = page.url.url_for('new_account/knowledge_testws');
+      $('#topbar-msg').children('a').addClass('invisible');
+    } else {     // jp account require more steps to have real account
       var loginid = message.client_id;
-      //set cookies
-      var oldCookieValue = $.cookie('loginid_list');
-      var cookie_domain = '.' + document.domain.split('.').slice(-2).join('.');
-      $.cookie('loginid_list', loginid + ':R:E+' + oldCookieValue, {domain: cookie_domain, path:'/'});
-      $.cookie('loginid', loginid, {domain: cookie_domain, path:'/'});
       // set a flag to push to gtm in my_account
       localStorage.setItem('new_account', '1');
       //generate dropdown list and switch
@@ -44,7 +50,7 @@ var ValidAccountOpening = (function(){
       $('#loginid-switch-form').submit();
     }
   };
-  var letter, numbers, space, hyphen, period, apost;
+  var letters, numbers, space, hyphen, period, apost;
 
   var initializeValues = function() {
     letters = Content.localize().textLetters;
@@ -103,9 +109,9 @@ var ValidAccountOpening = (function(){
       errorTel.innerHTML = Content.errorMessage('min', 6);
       Validate.displayErrorMessage(errorTel);
       window.accountErrorCounter++;
-    } else if (!/^\+?[\d-\s]+$/.test(tel.value)){
+    } else if (!/^\+?[0-9\s]{6,35}$/.test(tel.value)){
       initializeValues();
-      errorTel.innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
+      errorTel.innerHTML = Content.errorMessage('reg', [numbers, space]);
       Validate.displayErrorMessage(errorTel);
       window.accountErrorCounter++;
     }

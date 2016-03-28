@@ -75,9 +75,13 @@ var Symbols = (function () {
     };
 
     var getSymbols = function (update) {
-        BinarySocket.send({
+        var $args = {
             active_symbols: "brief"
-        });
+        };
+        if (typeof is_japan === 'function') {
+            $args['landing_company'] = "japan";
+        }
+        BinarySocket.send($args);
         need_page_update = update;
     };
 

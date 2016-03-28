@@ -57,6 +57,9 @@ var SelfExlusionWS = (function() {
         $form.removeClass(hiddenClass);
 
         if('error' in response) {
+            if (response.error.code === 'ClientSelfExclusion') {
+              BinarySocket.send({logout: 1});
+            }
             if('message' in response.error) {
                 showPageError(response.error.message, true);
             }
@@ -253,7 +256,7 @@ pjax_config_page("user/self_exclusionws", function() {
                 return;
             }
 
-        	BinarySocket.init({
+          BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
                     if (response) {
@@ -271,7 +274,7 @@ pjax_config_page("user/self_exclusionws", function() {
                         console.log('some error occured');
                     }
                 }
-            });	
+            });
 
             Content.populate();
             if(TUser.get().hasOwnProperty('is_virtual')) {

@@ -1240,5 +1240,11 @@ var BetSell = function() {
                 top: $('#sell_bet_desc').outerHeight() + 'px', // appending pixel because this height is already generated
             });
         },
+        show_popup: function(trans_id) {
+            var contract_id = (/trading/i).test(window.location.pathname) ? 
+                $('div.button button.open_contract_detailsws').attr('contract_id') :
+                $('td').filter(function() {return $(this).text() == trans_id;}).parents('tr').find('button.open_contract_detailsws').attr('contract_id');
+            this.get_analyse_contract(contract_id);
+        },
     }; // BetSell
 }();

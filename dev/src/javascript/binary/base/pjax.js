@@ -145,3 +145,27 @@ var load_with_pjax = function(url) {
         config.history = true;
         pjax.invoke(config);
 };
+
+// Reduce duplication as required Auth is a common pattern
+var pjax_config_page_require_auth = function(url, exec) {
+    var redirect = function() {
+        window.location.href = page.url.url_for('login');
+    };
+
+    var oldOnLoad = exec().onLoad;
+    var newOnLoad = function() {
+        if (!getCookieItem('login')) {
+            redirect();
+        } else {
+            oldOnLoad();
+        }
+    };
+
+    var newExecFn = function(){
+        return {
+            onLoad: newOnLoad,
+            onUnload: exec().onUnload
+        };
+    };
+    pjax_config_page(url, newExecFn);
+};

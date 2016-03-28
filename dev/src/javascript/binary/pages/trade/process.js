@@ -86,8 +86,7 @@ function processMarketUnderlying() {
 function processContract(contracts) {
     'use strict';
     window.chartAllowed = true;
-    var feedLicense = contracts.contracts_for.feed_license;
-    if (feedLicense && feedLicense === 'chartonly') {
+    if (contracts.contracts_for && contracts.contracts_for.feed_license && contracts.contracts_for.feed_license === 'chartonly') {
       window.chartAllowed = false;
     }
 

@@ -56,7 +56,7 @@
                             %]"[%
                             END %]>[% l('Platform Tour') %]</a>
                         </li>
-                        <li class="ja-hide">
+                        <li class="ja-hide id-hide">
                             <a href="http://www.gamcare.org.uk/" target="_blank">[% l('GamCare') %]</a>
                         </li>
                         <li class="ja-hide blog">
@@ -127,7 +127,7 @@
                         <a class="pjaxload" href="[% request.url_for('/terms-and-conditions', {selected_tab => 'complaints-disputes-tac-tab'}) %]"[% IF target %]
                             target="[% target %]"[% END %]>[% l('Complaints and Disputes') %]</a>
                         </li>
-                        <li class="ja-hide">
+                        <li class="ja-hide id-hide">
                             <a href="[% request.url_for('/legal/us_patents') %]" class="us_patent_link pjaxload">[% l('Patents') %]</a>
                         </li>
                     </ul>
@@ -157,7 +157,7 @@
     </div>
     <div id="footer-regulatory">
         <div class="grd-container grd-default-container">
-            <div class="grd-parent grd-grid-12 ja-hide">
+            <div class="grd-parent grd-grid-12 ja-hide id-hide">
                 <div class="grd-grid-2">
                     <a href="http://www.gov.im/gambling/" target="_blank">
                         <img id="iom_icon_footer" class="responsive" src="[% request.url_for('images/pages/footer/isle-of-man.png') %]"/>
