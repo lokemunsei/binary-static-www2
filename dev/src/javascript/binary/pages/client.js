@@ -52,7 +52,7 @@ var enable_residence_form_submit = function () {
 };
 
 var upgrade_investment_disabled_field = function () {
-    if (page.client.is_real) {
+    if (!page.client.is_virtual()) {
         var fields = ['mrms', 'fname', 'lname', 'dobdd', 'dobmm', 'dobyy', 'residence', 'secretquestion', 'secretanswer'];
         fields.forEach(function (element, index, array) {
             var obj = $('#'+element);
@@ -78,7 +78,7 @@ var financial_enable_fields_form_submit = function () {
             return;
         }
 
-        if (page.client.is_real) {
+        if (!page.client.is_virtual()) {
             var fields = ['mrms', 'fname', 'lname', 'dobdd', 'dobmm', 'dobyy', 'residence', 'secretquestion', 'secretanswer'];
             fields.forEach(function (element, index, array) {
                 var obj = $('#'+element);
@@ -99,53 +99,16 @@ var hide_account_opening_for_risk_disclaimer = function () {
     }
 };
 
-var toggle_hedging_assets_japan = function() {
-    var trading_purpose = $('#trading_purpose');
-    var hedging_assets_fields = $('.hedging_assets');
-
-    if (trading_purpose.val() === 'Hedging') {
-        hedging_assets_fields.show();
-    } else {
-        hedging_assets_fields.hide();
-    }
-};
-
-var validate_hedging_fields_form_submit = function () {
-    $('form#openAccForm').submit(function (event) {
-        if ($('#trading_purpose').val() === 'Hedging') {
-            if ($('#hedge_asset').val() === '') {
-                $('#error_hedge_asset').text(text.localize('Please select a value.'));
-            }
-            if ($('#hedge_asset_amount').val() === '') {
-                $('#error_hedge_asset_amount').text(text.localize('Please enter amount.'));
-            }
-        }
-    });
-};
-
 pjax_config_page('new_account/maltainvest', function() {
     return {
         onLoad: function() {
-            if (!page.client.is_real) {
+            if (page.client.is_virtual()) {
                 client_form.on_residence_change();
                 select_user_country();
             }
             upgrade_investment_disabled_field();
             financial_enable_fields_form_submit();
             hide_account_opening_for_risk_disclaimer();
-        }
-    };
-});
-
-pjax_config_page('new_account/japan', function() {
-    return {
-        onLoad: function() {
-            client_form.set_idd_for_residence('jp');
-            toggle_hedging_assets_japan();
-            $('#trading_purpose').on('change', function() {
-                toggle_hedging_assets_japan();
-            });
-            validate_hedging_fields_form_submit();
         }
     };
 });

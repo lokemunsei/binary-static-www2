@@ -13,7 +13,7 @@
             %a{:href => "#controlled-risk"}= l('Controlled risk')
           %li#sidebar-link-section-4
             %a{:href => "#power-and-simplicity"}= l('Power & simplicity')
-          %li#sidebar-link-section-5
+          %li#sidebar-link-section-5.id-hide.ja-hide
             %a{:href => "#security"}= l('Security')
           %li#sidebar-link-section-6.ja-hide
             %a{:href => "#trust"}= l('Trust')
@@ -90,7 +90,7 @@
                 %li= l('Execute your trade in seconds.')
                 %li= l('Monitor your portfolio in real time.')
                 %li= l('Sell back trades at market prices.')
-      .section
+      .section.id-hide.ja-hide
         %a#security
         .section-content.grd-parent.grd-grid-12
           #section-5
@@ -102,7 +102,7 @@
                 %li= l('We segregate and hold client funds in secure AAA-rated banks.')
                 %li= l('We are fully licensed in the British Isles and Malta.')
                 %li= l('We have a proven track record since starting in 2000.')
-            .grd-grid-4.grd-grid-mobile-12.grd-parent.ja-hide
+            .grd-grid-4.grd-grid-mobile-12.grd-parent
               .grd-grid-11.grd-grid-mobile-8.grd-with-padding.grd-centered
                 %img.responsive{:src => url_for('images/pages/why-us/mga-logo2.svg')}
               .grd-parent.grd-grid-12.grd-grid-mobile-8.grd-centered

@@ -300,6 +300,8 @@ function contractTypeDisplayMapping(type) {
     var obj = {
         CALL: "top",
         PUT: "bottom",
+        CALLE: "top",
+        PUTE: "bottom",
         ASIANU: "top",
         ASIAND: "bottom",
         DIGITMATCH: "top",
@@ -308,6 +310,8 @@ function contractTypeDisplayMapping(type) {
         DIGITODD: "bottom",
         DIGITOVER: "top",
         DIGITUNDER: "bottom",
+        EXPIRYRANGEE: "top",
+        EXPIRYMISSE: "bottom",
         EXPIRYRANGE: "top",
         EXPIRYMISS: "bottom",
         RANGE: "top",
@@ -446,6 +450,11 @@ function getContractCategoryTree(elements){
         ],
         'spreads'
     ];
+
+    // Temp hack. Should be deleted after japan release
+    if (typeof is_japan === 'function') {
+        delete tree[2];
+    }
 
     if(elements){
         tree = tree.map(function(e){
@@ -899,24 +908,28 @@ function showHighchart(){
   if(document.getElementById('trade_live_chart').hasChildNodes()) {
     return;
   }
-
   var div = document.createElement('div');
   div.className = 'grd-grid-12 chart_div';
-
-  div.innerHTML = '<table width="600px" align="center"><tr id="highchart_duration"><td width="25%">' +
-                  Content.localize().textDuration + ':</td><td width="25%"><select id="time_period"><option value="1t">1 ' +
-                  Content.localize().textTickResultLabel.toLowerCase() + '</option><option value="1m" selected="selected">1 ' + text.localize("minute").toLowerCase() +
-                  '</option><option value="2m">2 ' + Content.localize().textDurationMinutes.toLowerCase() + '</option><option value="3m">3 ' +
-                  Content.localize().textDurationMinutes.toLowerCase() +'</option><option value="5m">5 ' + Content.localize().textDurationMinutes.toLowerCase() +
-                  '</option><option value="10m">10 ' + Content.localize().textDurationMinutes.toLowerCase() + '</option><option value="15m">15 ' +
-                  Content.localize().textDurationMinutes.toLowerCase() +'</option><option value="30m">30 ' + Content.localize().textDurationMinutes.toLowerCase() +
-                  '</option><option value="1h">1 ' + text.localize('hour').toLowerCase() + '</option><option value="2h">2 ' +
-                  Content.localize().textDurationHours.toLowerCase() +'</option><option value="4h">4 ' + Content.localize().textDurationHours.toLowerCase() +
-                  '</option><option value="8h">8 ' + Content.localize().textDurationHours.toLowerCase() + '</option><option value="1d">1 ' +
-                  text.localize('day').toLowerCase() +'</option></select></td></td></tr><tr align="center"><td colspan="4">' +
-                  '<iframe src="" width="100%" height="520" id="chart_frame" style="overflow-y : hidden;" scrolling="no"></iframe></td></tr></table>';
-
-   document.getElementById('trade_live_chart').appendChild(div);
+  if (window.chartAllowed) {
+    div.innerHTML = '<table width="600px" align="center"><tr id="highchart_duration"><td width="25%">' +
+                    Content.localize().textDuration + ':</td><td width="25%"><select id="time_period"><option value="1t">1 ' +
+                    Content.localize().textTickResultLabel.toLowerCase() + '</option><option value="1m" selected="selected">1 ' + text.localize("minute").toLowerCase() +
+                    '</option><option value="2m">2 ' + Content.localize().textDurationMinutes.toLowerCase() + '</option><option value="3m">3 ' +
+                    Content.localize().textDurationMinutes.toLowerCase() +'</option><option value="5m">5 ' + Content.localize().textDurationMinutes.toLowerCase() +
+                    '</option><option value="10m">10 ' + Content.localize().textDurationMinutes.toLowerCase() + '</option><option value="15m">15 ' +
+                    Content.localize().textDurationMinutes.toLowerCase() +'</option><option value="30m">30 ' + Content.localize().textDurationMinutes.toLowerCase() +
+                    '</option><option value="1h">1 ' + text.localize('hour').toLowerCase() + '</option><option value="2h">2 ' +
+                    Content.localize().textDurationHours.toLowerCase() +'</option><option value="4h">4 ' + Content.localize().textDurationHours.toLowerCase() +
+                    '</option><option value="8h">8 ' + Content.localize().textDurationHours.toLowerCase() + '</option><option value="1d">1 ' +
+                    text.localize('day').toLowerCase() +'</option></select></td></td></tr><tr align="center"><td colspan="4">' +
+                    '<iframe src="" width="100%" height="630" id="chart_frame" style="overflow-y : hidden;" scrolling="no"></iframe></td></tr></table>';
+    document.getElementById('trade_live_chart').appendChild(div);
+    setUnderlyingTime();
+  } else {
+    div.innerHTML = '<p class="error-msg">' + text.localize('Chart is not available for this underlying.') + '</p>';
+    document.getElementById('trade_live_chart').appendChild(div);
+    return;
+  }
 }
 
 function setUnderlyingTime() {

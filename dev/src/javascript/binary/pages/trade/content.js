@@ -85,8 +85,9 @@ var Content = (function () {
             textMaxAggregateTooltip: text.localize('Presents the maximum aggregate payouts on outstanding contracts in your portfolio. If the maximum is attained, you may not purchase additional contracts without first closing out existing positions.'),
             textTradingLimits: text.localize('Trading Limits'),
             textWithdrawalTitle: text.localize('Withdrawal Limits'),
-            textWithdrawalLimits: text.localize('Your withdrawal limit is EUR [_1] (or equivalent in other currency).'),
-            textWithrawalAmount: text.localize('You have already withdrawn the equivalent of EUR [_1]'),
+            textWithdrawalLimits: text.localize('Your withdrawal limit is [_1] [_2] (or equivalent in other currency).'),
+            textWithrawalAmountEquivalant: text.localize('You have already withdrawn the equivalent of [_1] [_2]'),
+            textWithrawalAmount: text.localize('You have already withdrawn [_1] [_2]'),
             textDayWithdrawalLimit: text.localize('Your [_1] day withdrawal limit is currently EUR [_2] (or equivalent in other currency).'),
             textAuthenticatedWithdrawal: text.localize('Your account is fully authenticated and your withdrawal limits have been lifted.'),
             textAggregateOverLast: text.localize('in aggregate over the last'),
@@ -114,15 +115,12 @@ var Content = (function () {
             textApost: text.localize('apostrophe'),
             textPassword: text.localize('password'),
             textPasswordsNotMatching: text.localize('The two passwords that you entered do not match.'),
-            textTokenMissing: text.localize('Verification token is missing.'),
-            textClickHereToRestart: text.localize('Please click on the verification link sent to your email, or click <a class="pjaxload" href="[_1]">here</a> to restart the verification process.'),
-            textDuplicatedEmail: text.localize('Your provided email address is already in use by another Login ID'),
+            textClickHereToRestart: text.localize('Your token has expired. Please click <a class="pjaxload" href="[_1]">here</a> to restart the verification process.'),
             textAsset: text.localize('Asset'),
             textOpens: text.localize('Opens'),
             textCloses: text.localize('Closes'),
             textSettles: text.localize('Settles'),
             textUpcomingEvents: text.localize('Upcoming Events'),
-            textEmailSent: text.localize('Thanks for signing up! Check your inbox now, to verify your email.'),
             textMr: text.localize('Mr'),
             textMrs: text.localize('Mrs'),
             textMs: text.localize('Ms'),
@@ -134,7 +132,8 @@ var Content = (function () {
             textUnavailableReal: text.localize('Sorry, account opening is unavailable.'),
             textMessageMinRequired: text.localize('Minimum of [_1] characters required.'),
             textFeatureUnavailable: text.localize('Sorry, this feature is not available.'),
-            textMessagePasswordScore: text.localize( 'Password score is: [_1]. Passing score is: 20.')
+            textMessagePasswordScore: text.localize( 'Password score is: [_1]. Passing score is: 20.'),
+            textShouldNotLessThan: text.localize('Please enter a number greater or equal to [_1].')
         };
 
         var starTime = document.getElementById('start_time_label');
@@ -281,11 +280,11 @@ var Content = (function () {
     };
 
     var limitsTranslation = function(){
-        var titleElement = document.getElementById("limits-title").firstElementChild;
+        var titleElement = document.getElementById("limits-ws-container").firstElementChild;
         titleElement.textContent = localize.textLimits;
 
-        if(TUser.get().loginid){
-            var loginId = TUser.get().loginid;
+        if(page.client.is_logged_in && !page.client.is_virtual()){
+            var loginId = page.client.loginid;
 
             var tradingLimits = document.getElementById("trading-limits");
             tradingLimits.textContent = loginId + " - " + localize.textTradingLimits;
@@ -321,6 +320,9 @@ var Content = (function () {
             case 'pass':
                 if(param)
                     msg = localize.textMessagePasswordScore.replace('[_1]', param);
+                break;
+            case 'number_not_less_than':
+                msg = localize.textShouldNotLessThan.replace('[_1]', param);
                 break;
             default:
                 break;

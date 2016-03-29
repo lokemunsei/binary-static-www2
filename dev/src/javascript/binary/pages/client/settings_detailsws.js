@@ -29,35 +29,34 @@ var SettingsDetailsWS = (function() {
     var getDetails = function(response) {
         var data = response.get_settings;
 
-        // Check if it is a real account or not
-        var isReal = !(/VRT/.test($.cookie('loginid')));
-
         $('#lblCountry').text(data.country);
         $('#lblEmail').text(data.email);
 
-        if(!isReal){ // Virtual Account
+        if(page.client.is_virtual()){ // Virtual Account
             $(RealAccElements).remove();
         }
         else { // Real Account
-            $('#lblName').text((data.salutation || '') + ' ' + (data.first_name || '') + ' ' + (data.last_name || ''));
             var birthDate = data.date_of_birth ? moment.utc(new Date(data.date_of_birth * 1000)).format("YYYY-MM-DD") : '';
             $('#lblBirthDate').text(birthDate);
+            // Generate states list
+            var residence = $.cookie('residence');
+            BinarySocket.send({"states_list": residence, "passthrough": {"value": data.address_state}});
             if (page.client.residence === 'jp') {
+                $('#lblName').text((data.last_name || '') + ' ' + (data.first_name || ''));
                 $('#lblAddress1').text(data.address_line_1);
                 $('#lblAddress2').text(data.address_line_2);
                 $('#lblCity').text(data.address_city);
-                $('#lblState').text(data.address_state);
                 $('#lblPostcode').text(data.address_postcode);
                 $('#lblPhone').text(data.phone);
                 $('.JpAcc').css('display', 'block');
+                $('.rowBirthDate').removeClass('hidden');
+                $('.rowName').removeClass('hidden');
+                $('.rowCustomerSupport').removeClass('hidden');
             } else {
+                $('#lblName').text((data.salutation || '') + ' ' + (data.first_name || '') + ' ' + (data.last_name || ''));
                 $(fieldIDs.address1).val(data.address_line_1);
                 $(fieldIDs.address2).val(data.address_line_2);
                 $(fieldIDs.city).val(data.address_city);
-
-                // Generate states list
-                var residence = $.cookie('residence');
-                BinarySocket.send({"states_list": residence, "passthrough": {"value": data.address_state}});
 
                 $(fieldIDs.postcode).val(data.address_postcode);
                 $(fieldIDs.phone).val(data.phone);
@@ -89,6 +88,7 @@ var SettingsDetailsWS = (function() {
         else {
             $(fieldIDs.state).replaceWith($('<input/>', {id: 'State', type: 'text', maxlength: '35', value: defaultValue}));
         }
+        $('#lblState').text($('#State option:selected').text());
     };
 
     var formValidate = function() {
@@ -221,8 +221,7 @@ var SettingsDetailsWS = (function() {
 pjax_config_page("settings/detailsws", function() {
     return {
         onLoad: function() {
-            if (!$.cookie('login')) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 

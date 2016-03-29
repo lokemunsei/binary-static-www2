@@ -45,7 +45,7 @@ var TickDisplay = function() {
             if ($self.contract_category.match('asian')) {
                 $self.ticks_needed = $self.number_of_ticks;
                 $self.x_indicators = {
-                    '_0': { label: 'Tick 1', id: 'start_tick'},
+                    '_0': { label: 'Entry Spot', id: 'start_tick'},
                 };
                 $self.x_indicators['_' + exit_tick_index] = {
                     label: 'Exit Spot',
@@ -72,7 +72,6 @@ var TickDisplay = function() {
             } else {
                 $self.x_indicators = {};
             }
-
         },
         initialize_chart: function(config) {
             var $self = this;
@@ -85,7 +84,7 @@ var TickDisplay = function() {
                     height: config.minimize ? 143 : null,
                     backgroundColor: null,
                     events: { load: $self.plot(config.plot_from, config.plot_to) },
-                    marginLeft: 20,
+                    marginLeft: 100
                 },
                 credits: {enabled: false},
                 tooltip: {
@@ -278,7 +277,6 @@ var TickDisplay = function() {
                     $self.lose();
                 }
             }
-
         },
         win: function() {
             var $self = this;

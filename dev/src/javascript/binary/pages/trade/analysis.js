@@ -53,7 +53,7 @@ var TradingAnalysis = (function() {
               '</div>' +
             '</div>' +
           '</div>';
-        if (formName === 'digits') {
+        if (formName === 'digits' || formName === 'overunder' || formName === 'evenodd') {
             $('#tab_last_digit').removeClass("invisible");
         }
         sessionStorage.setItem('currentAnalysisTab', getActiveTab());
@@ -110,7 +110,6 @@ var TradingAnalysis = (function() {
             if (currentTab === 'tab_graph') {
                 if (document.getElementById('underlying')){
                     showHighchart();
-                    setUnderlyingTime();
                 } else {
                     BetAnalysis.tab_live_chart.reset();
                     BetAnalysis.tab_live_chart.render(true);

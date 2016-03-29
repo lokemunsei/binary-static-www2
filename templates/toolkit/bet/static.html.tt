@@ -80,7 +80,7 @@
                            </label>
                         </div>
                         <div class="big-col">
-                           <input id="barrier" type="text" name="H" pattern="^[\+-]\d+(\.\d{1,5})?|\d+(\.\d{1,5})?$" title="maximum of 5 decimal points allowed" />
+                           <input id="barrier" type="text" name="H" pattern="^[\+-]\d+(\.\d{1,5})?|\d+(\.\d{1,5})?$" title="[% l('Please enter a number.') %]" />
                            <abbr rel="tooltip" id="indicative_barrier_tooltip"></abbr>
                         </div>
                      </div>
@@ -100,7 +100,7 @@
                            </label>
                         </div>
                         <div class="big-col">
-                           <input id="barrier_high" type="text" name="H" pattern="^\+\d+(\.\d{1,5})?|\d+(\.\d{1,5})?$" title="maximum of 5 decimal points allowed" />
+                           <input id="barrier_high" type="text" name="H" pattern="^[\+-]\d+(\.\d{1,5})?|\d+(\.\d{1,5})?$" title="[% l('Please enter a number.') %]" />
                            <abbr rel="tooltip" id="indicative_high_barrier_tooltip"></abbr>
                         </div>
                      </div>
@@ -120,7 +120,7 @@
                            </label>
                         </div>
                         <div class="big-col">
-                           <input id="barrier_low" type="text" name="L" pattern="^\-\d+(\.\d{1,5})?|\d+(\.\d{1,5})?$" title="maximum of 5 decimal points allowed" />
+                           <input id="barrier_low" type="text" name="L" pattern="^[\+-]\d+(\.\d{1,5})?|\d+(\.\d{1,5})?$" title="[% l('Please enter a number.') %]" />
                            <abbr rel="tooltip" id="indicative_low_barrier_tooltip"></abbr>
                         </div>
                      </div>
@@ -205,7 +205,7 @@
                   </div>
                   <div id="contract_purchase_reference"></div>
                   <div class="button">
-                     <button id="contract_purchase_button" class="open_contract_details"></button>
+                     <button id="contract_purchase_button" class="button open_contract_detailsws"></button>
                   </div>
                   <div id="contract_purchase_spots"></div>
                   <div id="tick_chart"></div>

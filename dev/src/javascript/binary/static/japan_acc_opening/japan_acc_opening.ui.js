@@ -1,6 +1,8 @@
 var JapanAccOpeningUI = function () {
   "use strict";
 
+    var elementObj;
+
   function checkValidity() {
     window.accountErrorCounter = 0;
     var letters = Content.localize().textLetters,
@@ -10,7 +12,7 @@ var JapanAccOpeningUI = function () {
         period = Content.localize().textPeriod,
         apost = Content.localize().textApost;
 
-    var elementObj = {
+    elementObj = {
         gender: document.getElementById('gender'),
         fname: document.getElementById('fname'),
         lname: document.getElementById('lname'),
@@ -120,7 +122,15 @@ var JapanAccOpeningUI = function () {
       window.accountErrorCounter++;
     }
 
-    ValidAccountOpening.checkTel(elementObj['tel'], errorObj['tel']);
+    if (elementObj['tel'].value.replace(/\+| /g,'').length < 6) {
+      errorObj['tel'].innerHTML = Content.errorMessage('min', 6);
+      Validate.displayErrorMessage(errorObj['tel']);
+      window.accountErrorCounter++;
+    } else if (!/^\+?[0-9\s-]{6,35}$/.test(elementObj['tel'].value)){
+      errorObj['tel'].innerHTML = Content.errorMessage('reg', [numbers, space, hyphen]);
+      Validate.displayErrorMessage(errorObj['tel']);
+      window.accountErrorCounter++;
+    }
     ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
     if (!/^\d+$/.test(elementObj['limit'].value)) {
@@ -151,7 +161,6 @@ var JapanAccOpeningUI = function () {
     }
 
     if (window.accountErrorCounter === 0) {
-      JapanAccOpeningData.getJapanAcc(elementObj);
       for (key in errorObj) {
         if (errorObj[key].offsetParent !== null) {
           errorObj[key].setAttribute('style', 'display:none');
@@ -162,7 +171,12 @@ var JapanAccOpeningUI = function () {
     return 0;
   }
 
+    function fireRequest() {
+        JapanAccOpeningData.getJapanAcc(elementObj);
+    }
+
   return {
-    checkValidity: checkValidity
+    checkValidity: checkValidity,
+      fireRequest: fireRequest,
   };
 }();

@@ -52,8 +52,7 @@ var Portfolio = function () {
     var elements = $('button.open_contract_details');
     return {
         update_indicative_prices: function() {
-            if(!page.client.is_logged_in) {
-                window.location.href = page.url.url_for('login');
+            if (page.client.redirect_if_logout()) {
                 return;
             }
 

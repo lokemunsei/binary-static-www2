@@ -43,6 +43,14 @@ var Validate = (function(){
     return false;
   }
 
+  //check validity of token
+  function validateToken(token) {
+    if (token.length == 48) {
+      return true;
+    }
+    return false;
+  }
+
   //give error message for invalid email, needs DOM element of error and value of email
   function errorMessageEmail(email, error) {
     if (email === "") {
@@ -51,6 +59,21 @@ var Validate = (function(){
       return true;
     } else if (!validateEmail(email)) {
       error.textContent = Content.errorMessage('valid', text.localize('email address'));
+      displayErrorMessage(error);
+      return true;
+    }
+    hideErrorMessage(error);
+    return false;
+  }
+
+  //give error message for invalid verification token, needs DOM element of error and value of verification token
+  function errorMessageToken(token, error) {
+    if (token === "") {
+      error.textContent = Content.errorMessage('req');
+      displayErrorMessage(error);
+      return true;
+    } else if (!validateToken(token)) {
+      error.textContent = Content.errorMessage('valid', text.localize('verification token'));
       displayErrorMessage(error);
       return true;
     }
@@ -93,10 +116,10 @@ var Validate = (function(){
   }
 
   function passwordChars(password, error){
-    if (/[0-9]+/.test(password) && /[a-zA-Z]+/.test(password)) {
+    if (/[0-9]+/.test(password) && /[A-Z]+/.test(password) && /[a-z]+/.test(password)) {
       return true;
     }
-    handleError(error, text.localize('Password should have letters and numbers.'));
+    handleError(error, text.localize('Password should have lower and uppercase letters with numbers.'));
     return errorCounter++;
   }
 
@@ -167,6 +190,7 @@ var Validate = (function(){
     errorMessageEmail: errorMessageEmail,
     errorMessagePassword: errorMessagePassword,
     fieldNotEmpty: fieldNotEmpty,
-    errorMessageResidence: errorMessageResidence
+    errorMessageResidence: errorMessageResidence,
+    errorMessageToken: errorMessageToken
   };
 }());
