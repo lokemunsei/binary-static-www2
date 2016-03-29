@@ -24,7 +24,7 @@
                 <p style="margin:0px;height:0.5em;">
                   <meter id="password-meter" value="" max="50" min="0" high="20" low="10" optimum="50"></meter>
                 </p>
-                <div class="hint">[% l('Minimum of six lower and uppercase letters with numbers') %]</div>
+                <div class="hint">[% l('Minimum 6 characters with at least 1 number') %]</div>
                 <p class="errorfield" id="error-password" style="display:none">
                   <abbr rel="tooltip" title="" id="tooltip-password"></abbr>
                 </p>
@@ -51,6 +51,7 @@
           </fieldset>
           <fieldset class="center-aligned" id="formlayout">
             <span class="button button-focus">
+              <input type="hidden" name="account" value="new virtual account"></input>
               <button class="button button-focus" id="btn_submit" type="submit">[% l('Create New Account') %]</button>
               <p class="errorfield" id="error-account-opening" style="display:none"></p>
             </span>

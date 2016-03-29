@@ -7,10 +7,6 @@ var account_transferws = (function(){
     var payoutCurr = [];
     
     var init = function(){
-        if(page.client.redirect_if_is_virtual()) {
-            return;
-        }
-
         $form = $('#account_transfer');
         $("#success_form").hide();
         $("#client_message").hide();
@@ -84,13 +80,12 @@ var account_transferws = (function(){
 
     var apiResponse = function(response){
         var type = response.msg_type;
-        if (type === "authorize") {
-            init();
-        }
-        else if (type === "transfer_between_accounts" || (type === "error" && "transfer_between_accounts" in response.echo_req)) {
+        if (type === "transfer_between_accounts" || (type === "error" && "transfer_between_accounts" in response.echo_req)){
            responseMessage(response);
+
         }
-        else if(type === "payout_currencies" || (type === "error" && "payout_currencies" in response.echo_req)) {
+        else if(type === "payout_currencies" || (type === "error" && "payout_currencies" in response.echo_req))
+        {
             responseMessage(response);
         }
     };
@@ -183,7 +178,7 @@ var account_transferws = (function(){
 
                         availableCurr.push(currObj);     
 
-                        firstacct = {};    
+                        firstacct = "";    
 
                         if(selectedIndex < 0 && value.balance){
                             selectedIndex =  index;
@@ -199,7 +194,7 @@ var account_transferws = (function(){
                                  .attr("value",optionValue)
                                  .text(str));     
                     }
-                    secondacct = {};
+                    secondacct = "";
 
                     if(value.balance <= 0){
                         $form.find("#transfer_account_transfer option:last").remove();
@@ -262,8 +257,12 @@ var account_transferws = (function(){
 pjax_config_page("cashier/account_transferws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
+        	if (!getCookieItem('login')) {
+                window.location.href = page.url.url_for('login');
                 return;
+            }
+            if((/VRT/.test($.cookie('loginid')))){
+                window.location.href = ("/");
             }
 
         	BinarySocket.init({
@@ -275,9 +274,7 @@ pjax_config_page("cashier/account_transferws", function() {
                 }
             });	
 
-            if(TUser.get().hasOwnProperty('is_virtual')) {
-                account_transferws.init();
-            }
+            account_transferws.init();
         }
     };
 });

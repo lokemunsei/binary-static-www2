@@ -18,12 +18,6 @@ var SelfExlusionWS = (function() {
         errorClass  = 'errorfield';
         hiddenClass = 'hidden';
 
-        if(page.client.is_virtual()) {
-            $('#selfExclusionDesc').addClass(hiddenClass);
-            showPageError(Content.localize().textFeatureUnavailable, true);
-            return;
-        }
-
         showLoadingImage($loading);
 
         submittedValues = {};
@@ -57,9 +51,6 @@ var SelfExlusionWS = (function() {
         $form.removeClass(hiddenClass);
 
         if('error' in response) {
-            if (response.error.code === 'ClientSelfExclusion') {
-              BinarySocket.send({logout: 1});
-            }
             if('message' in response.error) {
                 showPageError(response.error.message, true);
             }
@@ -252,18 +243,20 @@ var SelfExlusionWS = (function() {
 pjax_config_page("user/self_exclusionws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
+        	if (!getCookieItem('login')) {
+                window.location.href = page.url.url_for('login');
+                return;
+            }
+            if((/VRT/.test($.cookie('loginid')))){
+                window.location.href = page.url.url_for('user/settingsws');
                 return;
             }
 
-          BinarySocket.init({
+        	BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);
                     if (response) {
-                        if (response.msg_type === "authorize") {
-                            SelfExlusionWS.init();
-                        }
-                        else if (response.msg_type === "get_self_exclusion") {
+                        if (response.msg_type === "get_self_exclusion") {
                             SelfExlusionWS.getResponse(response);
                         }
                         else if (response.msg_type === "set_self_exclusion") {
@@ -274,12 +267,10 @@ pjax_config_page("user/self_exclusionws", function() {
                         console.log('some error occured');
                     }
                 }
-            });
+            });	
 
             Content.populate();
-            if(TUser.get().hasOwnProperty('is_virtual')) {
-                SelfExlusionWS.init();
-            }
+            SelfExlusionWS.init();
         }
     };
 });

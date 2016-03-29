@@ -111,10 +111,6 @@ var PasswordWS = (function(){
 pjax_config_page("user/change_password", function() {
     return {
         onLoad: function() {
-          if (page.client.redirect_if_logout()) {
-              return;
-          }
-
           Content.populate();
           if (isIE() === false) {
             $('#password').on('input', function() {
@@ -123,7 +119,10 @@ pjax_config_page("user/change_password", function() {
           } else {
             $('#password-meter').remove();
           }
-
+          if (!getCookieItem('login')) {
+                window.location.href = page.url.url_for('login');
+                return;
+            }
           BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);

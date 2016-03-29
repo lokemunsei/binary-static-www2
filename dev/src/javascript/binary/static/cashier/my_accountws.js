@@ -29,16 +29,7 @@ var MyAccountWS = (function() {
 
     var responseGetSettings = function(response) {
         var get_settings = response.get_settings;
-        if (get_settings.country === null || $.cookie('residence') === '') {
-          var documentDomain = document.domain.split('.').slice(-2).join('.');
-          if ($.cookie('residence') !== '') {
-            $.cookie('residence', '', {path: '/', domain: documentDomain});
-          } else if (get_settings.country_code) {
-            $.cookie('residence', get_settings.country_code, {path: '/', domain: documentDomain});
-          }
-          page.client.residence = get_settings.country_code;
-          page.contents.topbar_message_visibility();
-        }
+
         client_tnc_status = get_settings.client_tnc_status || '-';
         is_authenticated_payment_agent = get_settings.is_authenticated_payment_agent;
 
@@ -86,8 +77,8 @@ var MyAccountWS = (function() {
         $(welcomeTextID)
             .text(
                 text.localize(
-                    isReal ?
-                        'You are currently logged in to your real money account with [_1] ([_2]).' :
+                    isReal ? 
+                        'You are currently logged in to your real money account with [_1] ([_2]).' : 
                         'You are currently logged in to your virtual money account ([_2]).'
                 )
                     .replace('[_1]', landing_company || '')
@@ -102,7 +93,7 @@ var MyAccountWS = (function() {
                 .text(
                     text.localize('Deposit [_1] [_2] virtual money into your account [_3]')
                         .replace('[_1]', TUser.get().currency)
-                        .replace('[_2]', '10000')
+                        .replace('[_2]', ' 10000')
                         .replace('[_3]', loginid)
                 );
             $(virtualTopupID).removeClass(hiddenClass);
@@ -118,41 +109,40 @@ var MyAccountWS = (function() {
     };
 
     var addGTMDataLayer = function(get_settings) {
-        var is_login = page.url.param('login'),
-            is_newaccount = localStorage.getItem('new_account') === '1';
-        if(is_login || is_newaccount) {
-            localStorage.removeItem('new_account');
+        if(page.url.param('login') || page.url.param('newaccounttype')) {
             var oldUrl = window.location.href;
             var newUrl = oldUrl.replace(/(login=true&|newaccounttype=real&|newaccounttype=virtual&)/gi, '');
-
+            var title  = document.title;
+            var name   = TUser.get().fullname.split(' ');
+            var data   = {};
             var affiliateToken = $.cookie('affiliate_tracking');
             if (affiliateToken) {
-                GTM.push_data_layer({'bom_affiliate_token': JSON.parse(affiliateToken).t});
+                dataLayer.push({'bom_affiliate_token': affiliateToken});
             }
-
-            var data = {
-                'visitorID'   : page.client.loginid,
-                'bom_country' : get_settings.country,
-                'bom_email'   : get_settings.email,
-                'url'         : oldUrl,
-                'bom_today'   : Math.floor(Date.now() / 1000),
-                'event'       : is_newaccount ? 'new_account' : 'log_in'
-            };
-
-            if(is_newaccount) {
-                data['bom_date_joined'] = data['bom_today'];
-            }
+            data['bom_country'] = get_settings.country;
+            data['bom_email']   = TUser.get().email;
+            data['language']    = page.url.param('l');
+            data['pageTitle']   = title;
+            data['url']         = oldUrl;
+            data['visitorID']   = TUser.get().loginid;
+            data['bom_today']   = Math.floor(Date.now() / 1000);
 
             if(isReal) {
-                data['bom_age']       = parseInt((moment().unix() - get_settings.date_of_birth) / 31557600);
-                data['bom_firstname'] = get_settings.first_name;
-                data['bom_lastname']  = get_settings.last_name;
+                data['bom_age']       = parseInt((moment(str).unix() - get_settings.date_of_birth) / 31557600);
+                data['bom_firstname'] = name[1];
+                data['bom_lastname']  = name[2];
                 data['bom_phone']     = get_settings.phone;
             }
 
-            GTM.push_data_layer(data);
+            data['event'] = 
+                page.url.param('newaccounttype') ? 
+                    'new_account' : 
+                    page.url.param('login') ?
+                        'log_in' :
+                        'page_load';
 
-            window.history.replaceState('My Account', document.title, newUrl);
+            dataLayer.push(data);
+            window.history.replaceState('My Account', title, newUrl);
         }
     };
 
@@ -180,12 +170,12 @@ var MyAccountWS = (function() {
     var apiResponse = function(response) {
         if('error' in response){
             if('message' in response.error) {
-                console.warn(response.error.message);
+                console.log(response.error.message);
             }
             return false;
         }
 
-        isReal = !page.client.is_virtual();
+        isReal = !TUser.get().is_virtual;
 
         switch(response.msg_type) {
             case 'get_account_status':
@@ -216,7 +206,8 @@ var MyAccountWS = (function() {
 pjax_config_page("user/my_accountws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
+            if (!getCookieItem('login')) {
+                window.location.href = page.url.url_for('login');
                 return;
             }
 

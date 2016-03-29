@@ -86,7 +86,6 @@ var RealAccOpeningUI = (function(){
     }
 
     if (window.accountErrorCounter === 0) {
-      $('#btn_submit').attr('disabled','disabled');
       RealAccOpeningData.getRealAcc(elementObj);
       for (key in errorObj) {
         if (errorObj[key].offsetParent !== null) {

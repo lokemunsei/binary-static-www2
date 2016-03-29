@@ -11,6 +11,7 @@ WSTickDisplay.update_ui = function(final_price, pnl, contract_status) {
 };
 
 WSTickDisplay.updateChart = function(data) {
+
     var $self = this;
 
     var chart = document.getElementById('tick_chart');
@@ -46,7 +47,12 @@ WSTickDisplay.updateChart = function(data) {
                 $self.add_barrier();
                 $self.apply_chart_background_color(tick);
                 $self.counter++;
+
             }
         }
     }
+
+
+
+
 };

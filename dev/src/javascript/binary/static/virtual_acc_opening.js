@@ -47,37 +47,29 @@ pjax_config_page("new_account/virtualws", function(){
                     var error = response.error;
 
                     if (type === 'new_account_virtual' && !error){
-                      // set a flag to push to gtm in my_account
-                      localStorage.setItem('new_account', '1');
-
                       form.setAttribute('action', '/login');
                       form.setAttribute('method', 'POST');
                       virtualForm.unbind('submit');
                       form.submit();
-                    } else if (type === 'error' || error) {
-                      if (error.code === 'InvalidAccount') {
+                    } else if (type === 'error' || error){
+                      if (/account opening is unavailable/.test(error.message)) {
                         errorAccount.textContent = error.message;
                         Validate.displayErrorMessage(errorAccount);
                         return;
-                      } else if (error.code === 'InsufficientAccountDetails') {
-                        errorAccount.textContent = error.message;
-                        Validate.displayErrorMessage(errorAccount);
-                        return;
-                      } else if (error.code === 'duplicate email') {
+                      } else if (/email address is already in use/.test(error.message)) {
                         errorEmail.textContent = Content.localize().textDuplicatedEmail;
-                      } else if (error.code === 'InvalidToken' || error.code === 'InvalidEmail') {
+                      } else if (/email address is unverified/.test(error.message)) {
                         virtualForm.empty();
-                        var errorText = '',
+                        var errorText = '<p class="errorfield">' + text.localize('The re-entered email address is incorrect.') + '</p>',
                             noticeText = '<p>' + text.localize('Your token has been invalidated. Please click <a class="pjaxload" href="[_1]">here</a> to restart the verification process.').replace('[_1]', page.url.url_for('')) + '</p>';
-                        if (error.code === 'InvalidEmail') {
-                            errorText = '<p class="errorfield">' + text.localize('The re-entered email address is incorrect.') + '</p>';
-                        }
                         virtualForm.html(errorText + noticeText);
                         return;
-                      } else if (error.code === 'PasswordError') {
+                      } else if (/not strong enough/.test(error.message)) {
                         errorEmail.textContent = text.localize('Password is not strong enough.');
-                      } else if (error.details && error.details.verification_code && /required/.test(error.details.verification_code)) {
-                        errorEmail.textContent = Content.localize().textTokenMissing;
+                      } else if (error.details && error.details.verification_code) {
+                        if (/required/.test(error.details.verification_code)){
+                          errorEmail.textContent = Content.localize().textTokenMissing;
+                        }
                       } else if (error.message) {
                         errorEmail.textContent = error.message;
                       }

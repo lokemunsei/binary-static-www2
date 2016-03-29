@@ -141,8 +141,8 @@ var Price = (function() {
             type = typeDisplayIdMapping[id];
         }
 
-        var is_spread = false; 
-        if (params.contract_type && (params.contract_type === 'SPREADU' || params.contract_type === 'SPREADD')) {
+        var is_spread = false;
+        if (proposal && proposal['spread']) {
             is_spread = true;
         }
 

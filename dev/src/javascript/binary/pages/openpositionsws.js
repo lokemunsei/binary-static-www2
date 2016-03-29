@@ -40,7 +40,6 @@ var PortfolioWS =  (function() {
          * no open contracts
         **/
         if(0 === data.portfolio.contracts.length) {
-            $("#portfolio-no-contract").show();
             $("#portfolio-table").addClass("dynamic");
             $("#portfolio-content").removeClass("dynamic");
             $("#portfolio-loading").hide();
@@ -51,7 +50,7 @@ var PortfolioWS =  (function() {
          * User has at least one contract
         **/
 
-        $("#portfolio-no-contract").hide();
+        $("#portfolio-no-contract").remove();
         var contracts = '';
         var sumPurchase = 0.0;
         var currency;
@@ -67,7 +66,7 @@ var PortfolioWS =  (function() {
         });
 
         // contracts is ready to be added to the dom
-        $("#portfolio-dynamic").append(trans(contracts));
+        $("#portfolio-dynamic").replaceWith(trans(contracts));
 
         // update footer area data
         sumPurchase = sumPurchase.toFixed(2);
@@ -96,23 +95,15 @@ var PortfolioWS =  (function() {
 
         var status_class = '';
         var no_resale_html = '';
-        if(proposal.is_sold == 1) {
-            $td.parent('tr').remove();
-            if($('#portfolio-dynamic tr').length === 0) {
-                BinarySocket.send({"portfolio":1});
-            }
+        if(proposal.is_valid_to_sell != 1) {
+            no_resale_html = '<span>' + text.localize('Resale not offered') + '</span>';
+            $td.addClass("no_resale");
         }
         else {
-            if(proposal.is_valid_to_sell != 1) {
-                no_resale_html = '<span>' + text.localize('Resale not offered') + '</span>';
-                $td.addClass("no_resale");
-            }
-            else {
-                status_class = new_indicative < old_indicative ? ' price_moved_down' : (new_indicative > old_indicative ? ' price_moved_up' : '');
-                $td.removeClass("no_resale");
-            }
-            $td.html(proposal.currency + ' <strong class="indicative_price' + status_class + '"">' + bid_price + '</strong>' + no_resale_html);
+            status_class = new_indicative < old_indicative ? ' price_moved_down' : (new_indicative > old_indicative ? ' price_moved_up' : '');
+            $td.removeClass("no_resale");
         }
+        $td.html(proposal.currency + ' <strong class="indicative_price' + status_class + '"">' + bid_price + '</strong>' + no_resale_html);
 
         var indicative_sum = 0, indicative_price = 0, up_down;
         $("strong.indicative_price").each(function() {
@@ -162,7 +153,8 @@ var PortfolioWS =  (function() {
 pjax_config_page("user/openpositionsws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
+            if (!getCookieItem('login')) {
+                window.location.href = page.url.url_for('login');
                 return;
             }
             BinarySocket.init({
