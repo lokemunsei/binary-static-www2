@@ -669,10 +669,10 @@ Header.prototype = {
         var start_timestamp = response.time;
         var pass = response.echo_req.passthrough.client_time;
 
-        that.time_now = ((start_timestamp * 1000) + (moment().valueOf() - pass));
+        that.client_time_at_response = moment().valueOf();
+        that.server_time_at_response = ((start_timestamp * 1000) + (that.client_time_at_response - pass));
         var update_time = function() {
-            that.time_now += (moment().valueOf() - that.time_now);
-            clock.html(moment(that.time_now).utc().format("YYYY-MM-DD HH:mm") + " GMT");
+            clock.html(moment(that.server_time_at_response + moment().valueOf() - that.client_time_at_response).utc().format("YYYY-MM-DD HH:mm") + " GMT");
         };
         update_time();
 
