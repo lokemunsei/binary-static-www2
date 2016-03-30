@@ -125,6 +125,8 @@ var Content = (function () {
             textMrs: text.localize('Mrs'),
             textMs: text.localize('Ms'),
             textMiss: text.localize('Miss'),
+            textDr: text.localize('Dr'),
+            textProf: text.localize('Prof'),
             textErrorBirthdate: text.localize('Please input a valid date'),
             textSelect: text.localize('Please select'),
             textUnavailableReal: text.localize('Sorry, account opening is unavailable.'),

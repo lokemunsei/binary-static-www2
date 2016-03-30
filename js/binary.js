@@ -63476,6 +63476,8 @@ function chartFrameSource(underlying, highchart_time){
             textMrs: text.localize('Mrs'),
             textMs: text.localize('Ms'),
             textMiss: text.localize('Miss'),
+            textDr: text.localize('Dr'),
+            textProf: text.localize('Prof'),
             textErrorBirthdate: text.localize('Please input a valid date'),
             textSelect: text.localize('Please select'),
             textUnavailableReal: text.localize('Sorry, account opening is unavailable.'),
@@ -70542,13 +70544,15 @@ var ProfitTableUI = (function(){
     };
 
     var responseContract = function(response) {
+        if(!response.proposal_open_contract || Object.keys(response.proposal_open_contract).length === 0) {
+            showErrorPopup(response);
+            return;
+        }
         // In case of error such as legacy shortcode, this call is returning the error message
         // but no error field. To specify those cases, we check for other fields existence
-        if(!response.proposal_open_contract ||
-            Object.keys(response.proposal_open_contract).length === 0 ||
-            !response.proposal_open_contract.hasOwnProperty('shortcode')) {
-                showErrorPopup(response);
-                return;
+        if(!response.proposal_open_contract.hasOwnProperty('shortcode')) {
+            showErrorPopup(response, response.proposal_open_contract.validation_error);
+            return;
         }
 
         $.extend(contract, response.proposal_open_contract);
@@ -70923,8 +70927,11 @@ var ProfitTableUI = (function(){
         ViewPopupUI.show_inpage_popup('<div class="' + popupboxID + '">' + $con.html() + '</div>', 'message_popup', '#sell_bet_desc, #sell_content_wrapper');
     };
 
-    var showErrorPopup = function(response) {
-        showMessagePopup(text.localize('Sorry, an error occurred while processing your request.'), 'There was an error', 'notice-msg');
+    var showErrorPopup = function(response, message) {
+        if(!message || message.length === 0) {
+            message = 'Sorry, an error occurred while processing your request.';
+        }
+        showMessagePopup(text.localize(message), 'There was an error', 'notice-msg');
         console.log(response);
     };
 
