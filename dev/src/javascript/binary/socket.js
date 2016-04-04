@@ -138,6 +138,7 @@ function BinarySocketClass() {
                 var type = response.msg_type;
                 if (type === 'authorize') {
                     if(response.hasOwnProperty('error')) {
+                        LocalStore.set('reality_check.ack', 0);
                        send({'logout': '1', passthrough: {'redirect': 'login'}});
                     }
                     else {

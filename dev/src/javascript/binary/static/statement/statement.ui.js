@@ -13,7 +13,7 @@ var StatementUI = (function(){
             Content.localize().textBalance
         ];
 
-        header[5] = header[5] + (TUser.get().currency ? "(" + TUser.get().currency + ")" : "");
+        header[5] = header[5] + (TUser.get().currency ? " (" + TUser.get().currency + ")" : "");
 
         var metadata = {
             id: tableID,
@@ -48,8 +48,8 @@ var StatementUI = (function(){
         var date = dateStr + "\n" + timeStr;
         var ref = transaction["transaction_id"];
         var desc = transaction["longcode"].replace(/\n/g, '<br />');
-        var amount = Number(parseFloat(transaction["amount"])).toFixed(2);
-        var balance = Number(parseFloat(transaction["balance_after"])).toFixed(2);
+        var amount = addComma(Number(parseFloat(transaction["amount"])));
+        var balance = addComma(Number(parseFloat(transaction["balance_after"])));
 
         var creditDebitType = (parseFloat(amount) >= 0) ? "profit" : "loss";
 
@@ -70,12 +70,12 @@ var StatementUI = (function(){
                 children(".desc").
                 first().
                 append("<br>").
-                append($viewButtonSpan);    
+                append($viewButtonSpan);
         }
 
         return $statementRow[0];        //return DOM instead of jquery object
     }
-    
+
     return {
         clearTableContent: clearTableContent,
         createEmptyStatementTable: createEmptyStatementTable,

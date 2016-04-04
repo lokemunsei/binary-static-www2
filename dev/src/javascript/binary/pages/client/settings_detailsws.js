@@ -119,9 +119,7 @@ var SettingsDetailsWS = (function() {
         }
 
         // town/city
-        if(!isRequiredError(fieldIDs.city) && !(/^[a-zA-Z\s\-']+$/).test(city)) {
-            showError(fieldIDs.city, Content.errorMessage('reg', [letters, space, '- \'']));
-        }
+        isRequiredError(fieldIDs.city);
 
         // state
         if(!isRequiredError(fieldIDs.state) && ($(fieldIDs.state).is('input') && !(/^[a-zA-Z\s\-']+$/).test(state))) {

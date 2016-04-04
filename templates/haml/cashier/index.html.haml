@@ -22,6 +22,15 @@
     .grd-row-padding
       %a.pjaxload.button.button_large.by_client_type.client_real.with_login_cookies{ :href => stash('withdraw_url') }
         %span= l('Withdraw')
+    .grd-row-padding
+      %a.pjaxload.button.button_large.by_client_type.client_virtual.with_login_cookies.virtual-upgrade-link{:href => url_for('new_account/realws')}
+        %span= l('Upgrade to a Real Account')
+    .grd-row-padding
+      %a.pjaxload.button.button_large.by_client_type.client_virtual.with_login_cookies.vr-japan-upgrade-link{:href => url_for('new_account/japanws')}
+        %span= l('Upgrade to a Real Account')
+    .grd-row-padding
+      %a.pjaxload.button.button_large.by_client_type.client_virtual.with_login_cookies.vr-financial-upgrade-link{:href => url_for('new_account/maltainvestws')}
+        %span= l('Upgrade to a Financial Account')
 
 .grd-row-padding
   %span

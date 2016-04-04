@@ -620,6 +620,16 @@ ul.checked li {
   height: 140px;
 }
 
+.popup_page_overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
 *,
 *:after,
 *:before {
@@ -4611,6 +4621,27 @@ table .loss, table .lower {
     font-size: 80% !important;
   }
 }
+#applications-ws-container table td, #applications-ws-container table th.flex-tr-child {
+  text-align: center !important;
+  vertical-align: middle !important;
+  line-height: 30px;
+}
+#applications-ws-container table td .button, #applications-ws-container table th.flex-tr-child .button {
+  margin: 3px 0px;
+}
+
+@media screen and (max-width: 480px) {
+  #applications-ws-container table td, #applications-ws-container table th {
+    font-size: 80%;
+  }
+  #applications-ws-container table button {
+    font-size: 80%;
+    padding: 10px 15px;
+  }
+  #applications-ws-container .errorfield {
+    font-size: 80% !important;
+  }
+}
 .career .xquote, .user_testing .xquote {
   background-color: #F2F2F2;
   padding: 20px 20px;
@@ -5018,8 +5049,9 @@ div.kineticjs-content {
 #guideBtn {
   display: inline-block;
   background-color: #f2f2f2;
-  padding: 5px 20px;
+  padding: 4px 20px;
   position: relative;
+  margin-left: 15px;
 }
 #guideBtn span.close {
   display: none;
@@ -5038,7 +5070,7 @@ div.kineticjs-content {
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
-  line-height: 22px;
+  line-height: 20px;
 }
 #guideBtn strong span {
   display: inline-block;

@@ -16,7 +16,7 @@ var ProfitTableUI = (function(){
             Content.localize().textProfitLoss
         ];
 
-        header[6] = header[6] + (TUser.get().currency ? "(" + TUser.get().currency + ")" : "");
+        header[6] = header[6] + (TUser.get().currency ? " (" + TUser.get().currency + ")" : "");
 
         var footer = [Content.localize().textTotalProfitLoss, "", "", "", "", "", ""];
 
@@ -49,8 +49,8 @@ var ProfitTableUI = (function(){
         }
 
         var currentTotal = transactions.reduce(function(previous, current){
-            var buyPrice = Number(parseFloat(current["buy_price"])).toFixed(2);
-            var sellPrice = Number(parseFloat(current["sell_price"])).toFixed(2);
+            var buyPrice = addComma(Number(parseFloat(current["buy_price"])));
+            var sellPrice = addComma(Number(parseFloat(current["sell_price"])));
             var pl = sellPrice - buyPrice;
             return previous + pl;
         }, 0);

@@ -70,7 +70,6 @@ var MyAccountWS = (function() {
             if(is_authenticated_payment_agent) {
                 $('#payment_agent').removeClass(hiddenClass);
             }
-            showNoticeMsg();
         }
 
         if(get_account_status[0] === 'unwelcome'){
@@ -106,14 +105,6 @@ var MyAccountWS = (function() {
                         .replace('[_3]', loginid)
                 );
             $(virtualTopupID).removeClass(hiddenClass);
-        }
-    };
-
-    var showNoticeMsg = function() {
-        var loginid_list = $.cookie('loginid_list');
-        var res = loginid_list.split('+');
-        if(res.length === 2 && (/MLT/.test(res[0]) || /MLT/.test(res[1]))) {
-            $('#investment_message').removeClass(hiddenClass);
         }
     };
 

@@ -37,7 +37,7 @@ var Validate = (function(){
 
   //check validity of email
   function validateEmail(mail) {
-    if (/^\w+([\+\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+    if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)){
       return true;
     }
     return false;
