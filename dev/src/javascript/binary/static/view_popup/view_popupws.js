@@ -633,8 +633,10 @@ var ViewPopupWS = (function() {
         if(response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.dispatch_to === 'ViewPopupWS') {
             switch(response.msg_type) {
                 case 'proposal_open_contract':
-                    storeSubscriptionID(response.proposal_open_contract.id);
-                    responseContract(response);
+                    if(response.proposal_open_contract && response.proposal_open_contract.contract_id == contractID) {
+                        storeSubscriptionID(response.proposal_open_contract.id);
+                        responseContract(response);
+                    }
                     break;
                 case 'history':
                 case 'candles':
