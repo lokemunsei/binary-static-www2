@@ -248,13 +248,10 @@ var ViewPopupWS = (function() {
             $Container = normalMakeTemplate();
         }
 
-        containerSetText('trade_details_contract_id'   , contract.contract_id);
-        containerSetText('trade_details_ref_id'        , contract.transaction_id);
         containerSetText('trade_details_start_date'    , epochToDateTime(contract.date_start) , {'epoch_time': contract.date_start});
         containerSetText('trade_details_end_date'      , epochToDateTime(contract.date_expiry), {'epoch_time': contract.date_expiry});
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
 
-        normalUpdateTimers(contract.current_spot_time, moment().valueOf());
         normalUpdate();
 
         if(!chartStarted) {
@@ -312,36 +309,6 @@ var ViewPopupWS = (function() {
         contract.validation_error = '';
     };
 
-    var normalUpdateTimers = function(serverTime, clientTime) {
-        window.client_time_at_response = moment().valueOf();
-        window.server_time_at_response = serverTime * 1000 + (window.client_time_at_response - clientTime);
-        var update_time = function() {
-            var now = Math.floor((window.server_time_at_response + moment().valueOf() - window.client_time_at_response) / 1000);
-            containerSetText('trade_details_live_date' , epochToDateTime(now));
-
-            var is_started = !contract.is_forward_starting || contract.current_spot_time > contract.date_start,
-                is_ended   = contract.is_expired || contract.is_sold;
-            if(!is_started || is_ended) {
-                containerSetText('trade_details_live_remaining', '-');
-            } else {
-                var remained = contract.date_expiry - now,
-                    day_seconds = 24 * 60 * 60,
-                    days = 0;
-                if(remained > day_seconds) {
-                    days = Math.floor(remained / day_seconds);
-                    remained = remained % day_seconds;
-                }
-                containerSetText('trade_details_live_remaining',
-                    (days > 0 ? days + ' ' + text.localize(days > 1 ? 'days' : 'day') + ', ' : '') + 
-                    moment((remained) * 1000).utc().format('HH:mm:ss'));
-            }
-        };
-        update_time();
-
-        clearInterval(window.ViewPopupTimerInterval);
-        window.ViewPopupTimerInterval = setInterval(update_time, 1000);
-    };
-
     var normalContractEnded = function(is_win) {
         containerSetText('trade_details_now_date'        , '', {'epoch_time': ''});
         containerSetText('trade_details_current_title'   , text.localize('Contract Expiry'));
@@ -359,17 +326,14 @@ var ViewPopupWS = (function() {
         $sections.find('#sell_details_table').append($(
             '<table>' +
                 '<tr><th colspan="2">' + text.localize('Contract Information') + '</th></tr>' +
-                    normalRow('Contract ID',    '', 'trade_details_contract_id') +
-                    normalRow('Ref. ID',        '', 'trade_details_ref_id') +
                     normalRow('Start Time',     '', 'trade_details_start_date') +
                     normalRow('End Time',       '', 'trade_details_end_date') +
-                    normalRow('Remaining Time', '', 'trade_details_live_remaining') +
                     normalRow('Entry Spot',     '', 'trade_details_entry_spot') +
                     normalRow('Purchase Price', '', 'trade_details_purchase_price') +
+                '<tr><td colspan="2" class="last_cell" id="trade_details_contract_note">&nbsp;</td></tr>' +
                 '<tr><th colspan="2" id="trade_details_current_title">' + text.localize('Current') + '</th></tr>' +
+                    normalRow('Time',           '', 'trade_details_current_date') +
                     normalRow('Spot',           '', 'trade_details_current_spot') +
-                    normalRow('Spot Time',      '', 'trade_details_current_date') +
-                    normalRow('Current Time',   '', 'trade_details_live_date') +
                     normalRow('Indicative',     'trade_details_indicative_label', 'trade_details_indicative_price') +
                     normalRow('Profit/Loss',    '', 'trade_details_profit_loss') +
                 '<tr><td colspan="2" class="last_cell" id="trade_details_message">&nbsp;</td></tr>' +
@@ -691,9 +655,6 @@ var ViewPopupWS = (function() {
                 default:
                     break;
             }
-        }
-        else if(contractType === 'normal' && response.msg_type === 'time' && !isNaN(response.echo_req.passthrough.client_time) && !response.error) {
-            normalUpdateTimers(response.time, response.echo_req.passthrough.client_time);
         }
     };
 

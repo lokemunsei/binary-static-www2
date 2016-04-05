@@ -151,6 +151,14 @@ var Validate = (function(){
   }
 
   //give error message for invalid password, needs value of password, repeat of password, and DOM element of error
+  /**
+   *
+   * @param password      password
+   * @param rPassword     confirm password
+   * @param error         dom to show error for password (not jquery!)
+   * @param rError        dom to show error for confirm password (not jquery!)
+   * @returns {boolean}
+     */
   function errorMessagePassword(password, rPassword, error, rError) {
     hideErrorMessage(error);
     hideErrorMessage(rError);
@@ -194,3 +202,8 @@ var Validate = (function(){
     errorMessageToken: errorMessageToken
   };
 }());
+
+function passwordValid(password) {
+  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+  return r.test(password);
+}

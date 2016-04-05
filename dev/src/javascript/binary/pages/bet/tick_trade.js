@@ -19,10 +19,10 @@ var TickDisplay = function() {
             $self.contract_category = data.contract_category;
             $self.set_barrier = ($self.contract_category.match('digits')) ? false : true;
             $self.display_decimals = data.display_decimals || 2;
+            $self.show_contract_result = data.show_contract_result;
             var tick_frequency = 5;
 
             if (data.show_contract_result) {
-                $self.show_contract_result = true;
                 $self.contract_sentiment = data.contract_sentiment;
                 $self.price = parseFloat(data.price);
                 $self.payout = parseFloat(data.payout);
@@ -180,7 +180,9 @@ var TickDisplay = function() {
         },
         apply_chart_background_color: function(tick) {
             var $self = this;
-
+            if(!$self.show_contract_result) {
+                return;
+            }
             var chart_container = $('#tick_chart');
             if ($self.contract_sentiment === 'up') {
                 if (tick.quote > $self.contract_barrier) {

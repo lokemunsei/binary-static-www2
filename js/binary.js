@@ -51404,7 +51404,7 @@ function testPassword(passwd)
     {
        strVerdict = text.localize("Password is moderate");
     }
-    else if (intScore > 20)
+    else if (intScore > 19)
     {
        strVerdict = text.localize("Password is strong");
     }
@@ -57864,10 +57864,10 @@ BetForm.Time.EndTime.prototype = {
             $self.contract_category = data.contract_category;
             $self.set_barrier = ($self.contract_category.match('digits')) ? false : true;
             $self.display_decimals = data.display_decimals || 2;
+            $self.show_contract_result = data.show_contract_result;
             var tick_frequency = 5;
 
             if (data.show_contract_result) {
-                $self.show_contract_result = true;
                 $self.contract_sentiment = data.contract_sentiment;
                 $self.price = parseFloat(data.price);
                 $self.payout = parseFloat(data.payout);
@@ -58025,7 +58025,9 @@ BetForm.Time.EndTime.prototype = {
         },
         apply_chart_background_color: function(tick) {
             var $self = this;
-
+            if(!$self.show_contract_result) {
+                return;
+            }
             var chart_container = $('#tick_chart');
             if ($self.contract_sentiment === 'up') {
                 if (tick.quote > $self.contract_barrier) {
@@ -66103,7 +66105,6 @@ function BinarySocketClass() {
                     ViewBalanceUI.updateBalances(response);
                 } else if (type === 'time') {
                     page.header.time_counter(response);
-                    ViewPopupWS.dispatch(response);
                 } else if (type === 'logout') {
                     page.header.do_logout(response);
                     localStorage.removeItem('jp_test_allowed');
@@ -66149,7 +66150,10 @@ function BinarySocketClass() {
                             .on('click', '#ratelimit-refresh-link', function () {
                                 window.location.reload();
                             });
-                      } else if (response.error.code === 'InvalidToken' && type !== 'new_account_virtual' && type !== 'paymentagent_withdraw') {
+                      } else if (response.error.code === 'InvalidToken' && 
+                          type !== 'reset_password' && 
+                          type !== 'new_account_virtual' && 
+                          type !== 'paymentagent_withdraw') {
                         BinarySocket.send({'logout': '1'});
                       }
                     }
@@ -67671,6 +67675,42 @@ pjax_config_page("top_up_virtualws", function() {
         ev.preventDefault();
     }
 }
+;var PasswordMeter = (function(){
+    'use strict';
+
+    /**
+     * attach password meter to DOM
+     * @param $container       container for password meter, can be a p or div
+     * @param id               optional id for meter element
+     */
+    function attach($container) {
+        if (isIE()) return;
+        var $meter = $('<meter></meter>', {min: 0, max: 50, high: 20, low: 10, optimum: 50});
+        var $verdictTxt = $('<p></p>').text(text.localize('Password is weak'));
+        $container
+            .append($meter)
+            .append($verdictTxt);
+    }
+
+    /**
+     * Update password meter
+     * @param $container        container for password meter, can be a p or div
+     * @param newPW
+     */
+    function updateMeter($container, newPW) {
+        var pwStrength = testPassword(newPW);
+        var pwStrengthScore = pwStrength[0];
+        var pwStrengthVerdict = pwStrength[1];
+
+        $container.children('meter').val(pwStrengthScore);
+        $container.children('p').text(pwStrengthVerdict);
+    }
+
+    return {
+        attach: attach,
+        updateMeter: updateMeter
+    };
+}());
 ;
 var StringUtil = (function(){
     function toTitleCase(str){
@@ -68139,6 +68179,14 @@ var Table = (function(){
   }
 
   //give error message for invalid password, needs value of password, repeat of password, and DOM element of error
+  /**
+   *
+   * @param password      password
+   * @param rPassword     confirm password
+   * @param error         dom to show error for password (not jquery!)
+   * @param rError        dom to show error for confirm password (not jquery!)
+   * @returns {boolean}
+     */
   function errorMessagePassword(password, rPassword, error, rError) {
     hideErrorMessage(error);
     hideErrorMessage(rError);
@@ -68182,6 +68230,11 @@ var Table = (function(){
     errorMessageToken: errorMessageToken
   };
 }());
+
+function passwordValid(password) {
+  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+  return r.test(password);
+}
 ;pjax_config_page("new_account/maltainvestws", function(){
   return {
     onLoad: function() {
@@ -69241,6 +69294,65 @@ pjax_config_page("user/assessmentws", function() {
         fillLimitsTable: fillLimitsTable
     };
 }());
+;pjax_config_page('user/lost_passwordws', function() {
+    return {
+        onLoad: function() {
+            BinarySocket.init({
+                onmessage: LostPassword.lostPasswordWSHandler
+            });
+            LostPassword.init();
+        }
+    };
+});
+;var LostPassword = (function() {
+    'use strict';
+
+    var hiddenClass = 'invisible';
+
+    function submitEmail() {
+        var emailInput = $('#lp_email').val();
+
+        if (emailInput === '') {
+            $("#email_error").removeClass(hiddenClass);
+        } else {
+            BinarySocket.send({verify_email: emailInput, type: 'reset_password'});
+        }
+    }
+
+    function onEmailInput(input) {
+        if (input) {
+            $("#email_error").addClass(hiddenClass);
+        }
+    }
+    
+    function lostPasswordWSHandler(msg) {
+        var response = JSON.parse(msg.data);
+        var type = response.msg_type;
+
+        if (type === 'verify_email') {
+            if (response.verify_email === 1) {
+                load_with_pjax('reset_passwordws');
+            } else if (response.error) {
+                $("#email_error").removeClass(hiddenClass).text(text.localize('Invalid email format'));
+            }
+        }
+    }
+
+    function init() {
+        $('#submit').click(function() {
+            submitEmail();
+        });
+
+        $('#lp_email').change(function(ev) {
+            onEmailInput(ev.target.value);
+        });
+    }
+
+    return {
+        lostPasswordWSHandler: lostPasswordWSHandler,
+        init: init
+    };
+}());
 ;
 
 pjax_config_page("user/profit_table", function(){
@@ -69844,6 +69956,116 @@ var ProfitTableUI = (function(){
         init: init
     };
 }());
+;pjax_config_page('user/reset_passwordws', function() {
+    return {
+        onLoad: function() {
+            BinarySocket.init({
+                onmessage: ResetPassword.resetPasswordWSHandler
+            });
+            ResetPassword.init();
+        }
+    };
+});
+;var ResetPassword = (function () {
+    'use strict';
+
+    var hiddenClass = 'invisible';
+
+    function submitResetPassword() {
+        var token = $('#verification-code').val();
+        var pw1 = $('#reset-password1').val();
+        var pw2 = $('#reset-password2').val();
+        var dob = $('#dob').val();
+
+        if (token.length < 48) {
+            $('#verification-error').removeClass(hiddenClass).text(text.localize('Verification code format incorrect.'));
+            return;
+        }
+
+        // use regex to validate password
+
+        if (passwordValid(pw1)) {
+            $('#password-error1')
+                .removeClass(hiddenClass)
+                .text(text.localize('Password should have lower and uppercase letters with numbers.'));
+            return;
+        }
+
+        if (pw1 !== pw2) {
+            $('#password-error2')
+                .removeClass(hiddenClass)
+                .text(Content.localize().textPasswordsNotMatching);
+            return;
+        }
+
+        var dobDate = new Date(dob);
+        var isVirtual = page.client.is_virtual();
+        var dateValid = !(dob === '' || dobDate === 'Invalid Date');
+        if (!isVirtual && !dateValid) {
+            $('#dob-error').removeClass(hiddenClass).text(text.localize('Invalid date of birth.'));
+            return;
+        }
+
+        if (isVirtual) {
+            BinarySocket.send({
+                reset_password: 1,
+                verification_code: token,
+                new_password: pw1
+            });
+        } else {
+            BinarySocket.send({
+                reset_password: 1,
+                verification_code: token,
+                new_password: pw1,
+                date_of_birth: dob
+            });
+        }
+    }
+
+    function onInput() {
+        $('.errorfield').addClass(hiddenClass);
+    }
+
+    function resetPasswordWSHandler(msg) {
+        var response = JSON.parse(msg.data);
+        var type = response.msg_type;
+
+        if (type === 'reset_password') {
+            if (response.error) {
+                $('#reset-error').removeClass(hiddenClass).text(response.error.message);
+            } else {
+                $('#reset-form').addClass(hiddenClass);
+                $('p.notice-msg')
+                    .text(text.localize('Your password has been successfully reset. ' +
+                        'Please log into your account using your new password.'));
+            }
+        }
+    }
+    
+    function init() {
+        Content.populate();
+        var $pmContainer = $('#password-meter-container');
+
+        $('input').keydown(function () {
+            onInput();
+        });
+
+        $('#reset-password1').keyup(function (ev) {
+            PasswordMeter.updateMeter($pmContainer, ev.target.value);
+        });
+
+        $('#reset').click(function () {
+            submitResetPassword();
+        });
+
+        PasswordMeter.attach($pmContainer);
+    }
+
+    return {
+        resetPasswordWSHandler: resetPasswordWSHandler,
+        init: init
+    };
+}());
 ;pjax_config_page("user/statement", function(){
     return {
         onLoad: function() {
@@ -70156,7 +70378,6 @@ var ProfitTableUI = (function(){
         },
         cleanup: function () {
             this.forget_streams();
-            this.clear_timer();
             this.close_container();
             this._init();
         },
@@ -70166,12 +70387,6 @@ var ProfitTableUI = (function(){
                 if(id && id.length > 0) {
                     BinarySocket.send({"forget": id});
                 }
-            }
-        },
-        clear_timer: function() {
-            if(window.ViewPopupTimerInterval) {
-                clearInterval(window.ViewPopupTimerInterval);
-                window.ViewPopupTimerInterval = undefined;
             }
         },
         close_container: function () {
@@ -70680,13 +70895,10 @@ var ProfitTableUI = (function(){
             $Container = normalMakeTemplate();
         }
 
-        containerSetText('trade_details_contract_id'   , contract.contract_id);
-        containerSetText('trade_details_ref_id'        , contract.transaction_id);
         containerSetText('trade_details_start_date'    , epochToDateTime(contract.date_start) , {'epoch_time': contract.date_start});
         containerSetText('trade_details_end_date'      , epochToDateTime(contract.date_expiry), {'epoch_time': contract.date_expiry});
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
 
-        normalUpdateTimers(contract.current_spot_time, moment().valueOf());
         normalUpdate();
 
         if(!chartStarted) {
@@ -70744,36 +70956,6 @@ var ProfitTableUI = (function(){
         contract.validation_error = '';
     };
 
-    var normalUpdateTimers = function(serverTime, clientTime) {
-        window.client_time_at_response = moment().valueOf();
-        window.server_time_at_response = serverTime * 1000 + (window.client_time_at_response - clientTime);
-        var update_time = function() {
-            var now = Math.floor((window.server_time_at_response + moment().valueOf() - window.client_time_at_response) / 1000);
-            containerSetText('trade_details_live_date' , epochToDateTime(now));
-
-            var is_started = !contract.is_forward_starting || contract.current_spot_time > contract.date_start,
-                is_ended   = contract.is_expired || contract.is_sold;
-            if(!is_started || is_ended) {
-                containerSetText('trade_details_live_remaining', '-');
-            } else {
-                var remained = contract.date_expiry - now,
-                    day_seconds = 24 * 60 * 60,
-                    days = 0;
-                if(remained > day_seconds) {
-                    days = Math.floor(remained / day_seconds);
-                    remained = remained % day_seconds;
-                }
-                containerSetText('trade_details_live_remaining',
-                    (days > 0 ? days + ' ' + text.localize(days > 1 ? 'days' : 'day') + ', ' : '') + 
-                    moment((remained) * 1000).utc().format('HH:mm:ss'));
-            }
-        };
-        update_time();
-
-        clearInterval(window.ViewPopupTimerInterval);
-        window.ViewPopupTimerInterval = setInterval(update_time, 1000);
-    };
-
     var normalContractEnded = function(is_win) {
         containerSetText('trade_details_now_date'        , '', {'epoch_time': ''});
         containerSetText('trade_details_current_title'   , text.localize('Contract Expiry'));
@@ -70791,17 +70973,14 @@ var ProfitTableUI = (function(){
         $sections.find('#sell_details_table').append($(
             '<table>' +
                 '<tr><th colspan="2">' + text.localize('Contract Information') + '</th></tr>' +
-                    normalRow('Contract ID',    '', 'trade_details_contract_id') +
-                    normalRow('Ref. ID',        '', 'trade_details_ref_id') +
                     normalRow('Start Time',     '', 'trade_details_start_date') +
                     normalRow('End Time',       '', 'trade_details_end_date') +
-                    normalRow('Remaining Time', '', 'trade_details_live_remaining') +
                     normalRow('Entry Spot',     '', 'trade_details_entry_spot') +
                     normalRow('Purchase Price', '', 'trade_details_purchase_price') +
+                '<tr><td colspan="2" class="last_cell" id="trade_details_contract_note">&nbsp;</td></tr>' +
                 '<tr><th colspan="2" id="trade_details_current_title">' + text.localize('Current') + '</th></tr>' +
+                    normalRow('Time',           '', 'trade_details_current_date') +
                     normalRow('Spot',           '', 'trade_details_current_spot') +
-                    normalRow('Spot Time',      '', 'trade_details_current_date') +
-                    normalRow('Current Time',   '', 'trade_details_live_date') +
                     normalRow('Indicative',     'trade_details_indicative_label', 'trade_details_indicative_price') +
                     normalRow('Profit/Loss',    '', 'trade_details_profit_loss') +
                 '<tr><td colspan="2" class="last_cell" id="trade_details_message">&nbsp;</td></tr>' +
@@ -71123,9 +71302,6 @@ var ProfitTableUI = (function(){
                 default:
                     break;
             }
-        }
-        else if(contractType === 'normal' && response.msg_type === 'time' && !isNaN(response.echo_req.passthrough.client_time) && !response.error) {
-            normalUpdateTimers(response.time, response.echo_req.passthrough.client_time);
         }
     };
 
