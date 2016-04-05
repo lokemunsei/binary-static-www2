@@ -2810,7 +2810,10 @@ a.close:hover {
 }
 .inpage_popup_container_ws .inpage_popup_content_box #sell_details_table th {
   line-height: 24px;
-  border-bottom-color: #44484c;
+  border-bottom-color: #c2c2c2;
+}
+.inpage_popup_container_ws .inpage_popup_content_box #sell_details_table td {
+  border-bottom-width: 1px;
 }
 .inpage_popup_container_ws .inpage_popup_content_box #sell_details_table #trade_details_profit_loss {
   font-weight: bold;
@@ -4350,7 +4353,7 @@ table .loss, table .lower {
   margin-bottom: 40px;
 }
 
-#frmPersonalDetails .JpAcc {
+#frmPersonalDetails .JpAcc, #frmPersonalDetails .hedge {
   display: none;
 }
 

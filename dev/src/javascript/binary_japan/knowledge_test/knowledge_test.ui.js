@@ -93,7 +93,7 @@ var KnowledgeTestUI = (function () {
     }
 
     function createAlreadyCompleteDiv() {
-        var msg = "Dear customer, you've already completed the knowledge test, please proceed to next step.";
+        var msg = "[JAPAN ONLY]Dear customer, you've already completed the knowledge test, please proceed to next step.";
         var $completeDiv = $('<div></div>').text(text.localize(msg));
         return $completeDiv;
     }

@@ -131,7 +131,6 @@ var JapanAccOpeningUI = function () {
       Validate.displayErrorMessage(errorObj['tel']);
       window.accountErrorCounter++;
     }
-    ValidAccountOpening.checkAnswer(elementObj['answer'], errorObj['answer']);
 
     if (!/^\d+$/.test(elementObj['limit'].value)) {
       errorObj['limit'].innerHTML = Content.errorMessage('reg', [numbers]);

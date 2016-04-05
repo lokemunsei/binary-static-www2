@@ -156,6 +156,7 @@ function BinarySocketClass() {
                     ViewBalanceUI.updateBalances(response);
                 } else if (type === 'time') {
                     page.header.time_counter(response);
+                    ViewPopupWS.dispatch(response);
                 } else if (type === 'logout') {
                     page.header.do_logout(response);
                     localStorage.removeItem('jp_test_allowed');

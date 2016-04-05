@@ -18,6 +18,17 @@
                 </div>
             </div>
 
+            <div class="grd-row-padding row clear JpAcc">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Gender') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblGender"></strong>
+                    </span>
+                </div>
+            </div>
+
             <div class="grd-row-padding row clear rowBirthDate hidden RealAcc">
                 <div class="grd-grid-4 form_label">
                     <label><em class="required_asterisk">**</em> [% l('Date of birth') %]</label>
@@ -47,6 +58,17 @@
                 <div class="grd-grid-8">
                     <span id="inputheading">
                         <strong id="lblEmail"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear JpAcc">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Occupation') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblOccupation"></strong>
                     </span>
                 </div>
             </div>
@@ -175,6 +197,157 @@
                 <div class="grd-grid-8">
                     <span id="inputheading">
                         <strong id="lblPhone"></strong>
+                    </span>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="JpAcc">
+            <legend>[% l('Status') %]</legend>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Annual income') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblAnnualIncome"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Financial asset') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblFinancialAsset"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Daily limit on losses') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblDailyLossLimit"></strong>
+                    </span>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="JpAcc">
+            <legend>[% l('Trading Experience') %]</legend>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Equities') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblEquities"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Commodities') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblCommodities"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Foreign currency deposit') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblForeignCurrencyDeposit"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Margin FX') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblMarginFX"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Investment trust') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblInvestmentTrust"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Public and corporation bond') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblPublicCorporationBond"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('OTC Derivative (Option) Trading') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblDerivativeTrading"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Purpose of trading') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblPurposeOfTrading"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear hedge">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Classification of assets requiring hedge') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblHedgeAsset"></strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grd-row-padding row clear hedge">
+                <div class="grd-grid-4 form_label">
+                    <label><em class="required_asterisk">**</em> [% l('Amount of above assets') %]</label>
+                </div>
+                <div class="grd-grid-8">
+                    <span id="inputheading">
+                        <strong id="lblHedgeAssetAmount"></strong>
                     </span>
                 </div>
             </div>

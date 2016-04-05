@@ -8,8 +8,8 @@ var KnowledgeTest = (function() {
     var randomPicksAnswer = {};
     var resultScore = 0;
 
-    var passMsg = 'Congratulations, you have pass the test, our Customer Support will contact you shortly';
-    var failMsg = 'Sorry, you have failed the test, please try again after 24 hours.';
+    var passMsg = '[JAPAN ONLY]Congratulations, you have pass the test, our Customer Support will contact you shortly';
+    var failMsg = '[JAPAN ONLY]Sorry, you have failed the test, please try again after 24 hours.';
 
     function questionAnswerHandler(ev) {
         var selected = ev.target.value;
@@ -54,7 +54,7 @@ var KnowledgeTest = (function() {
         $('#knowledge-test-questions input[type=radio]').click(questionAnswerHandler);
         $('#knowledge-test-submit').click(submitHandler);
         $('#knowledge-test-questions').removeClass(hiddenClass);
-        $('#knowledge-test-msg').text(text.localize('Please complete the following questions.'));
+        $('#knowledge-test-msg').text(text.localize('[JAPAN ONLY]Please complete the following questions.'));
     }
 
     function showResult(score, time) {
@@ -84,7 +84,7 @@ var KnowledgeTest = (function() {
         var lastTestDate = new Date(lastTestEpoch * 1000);
 
         var msgTemplate =
-            'Dear customer, you are not allowed to take knowledge test until [_1].\nLast test taken at [_2].';
+            '[JAPAN ONLY]Dear customer, you are not allowed to take knowledge test until [_1].\nLast test taken at [_2].';
 
         var msg = text.localize(msgTemplate)
             .replace('[_1]', nextTestDate.toUTCString())
@@ -94,7 +94,7 @@ var KnowledgeTest = (function() {
     }
 
     function showCompletedMsg() {
-        var msg = "Dear customer, you've already completed the knowledge test, please proceed to next step.";
+        var msg = "[JAPAN ONLY]Dear customer, you've already completed the knowledge test, please proceed to next step.";
         showMsgOnly(msg);
     }
 
@@ -153,7 +153,7 @@ var KnowledgeTest = (function() {
                         $('#knowledgetest-link').addClass(hiddenClass);     // hide it anyway
                         localStorage.setItem('jp_test_allowed', 0);
                     } else if (response.error.code === 'TestUnavailableNow') {
-                        showMsgOnly('The test is unavailable now, test can only be taken again on next business day with respect of most recent test.');
+                        showMsgOnly('[JAPAN ONLY]The test is unavailable now, test can only be taken again on next business day with respect of most recent test.');
                     }
                 }
             }

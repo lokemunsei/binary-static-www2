@@ -29,6 +29,7 @@ var ViewPopupUI = (function() {
         },
         cleanup: function () {
             this.forget_streams();
+            this.clear_timer();
             this.close_container();
             this._init();
         },
@@ -38,6 +39,12 @@ var ViewPopupUI = (function() {
                 if(id && id.length > 0) {
                     BinarySocket.send({"forget": id});
                 }
+            }
+        },
+        clear_timer: function() {
+            if(window.ViewPopupTimerInterval) {
+                clearInterval(window.ViewPopupTimerInterval);
+                window.ViewPopupTimerInterval = undefined;
             }
         },
         close_container: function () {
