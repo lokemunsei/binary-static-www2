@@ -8,11 +8,9 @@ var PasswordMeter = (function(){
      */
     function attach($container) {
         if (isIE()) return;
-        var $meter = $('<meter></meter>', {min: 0, max: 50, high: 20, low: 10, optimum: 50});
-        var $verdictTxt = $('<p></p>').text(text.localize('Password is weak'));
+        var $meter = $('<meter></meter>', {id: 'password-meter', min: 0, max: 50, high: 20, low: 10, optimum: 50});
         $container
-            .append($meter)
-            .append($verdictTxt);
+            .append($meter);
     }
 
     /**
@@ -23,10 +21,8 @@ var PasswordMeter = (function(){
     function updateMeter($container, newPW) {
         var pwStrength = testPassword(newPW);
         var pwStrengthScore = pwStrength[0];
-        var pwStrengthVerdict = pwStrength[1];
 
         $container.children('meter').val(pwStrengthScore);
-        $container.children('p').text(pwStrengthVerdict);
     }
 
     return {

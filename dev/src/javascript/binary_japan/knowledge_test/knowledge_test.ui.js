@@ -93,7 +93,7 @@ var KnowledgeTestUI = (function () {
     }
 
     function createAlreadyCompleteDiv() {
-        var msg = "[JAPAN ONLY]Dear customer, you've already completed the knowledge test, please proceed to next step.";
+        var msg = "{JAPAN ONLY}Dear customer, you've already completed the knowledge test, please proceed to next step.";
         var $completeDiv = $('<div></div>').text(text.localize(msg));
         return $completeDiv;
     }
@@ -109,7 +109,7 @@ var KnowledgeTestUI = (function () {
             class: 'pjaxload',
             id: 'knowledgetest-link',
             href: '/new_account/knowledge_testws'
-        }).text(text.localize('Take knowledge test'));
+        }).text(text.localize('{JAPAN ONLY}Take knowledge test'));
 
         $topbarmsg.children('a').addClass('invisible');
         $topbarmsg.append($knowledgeTestLink);

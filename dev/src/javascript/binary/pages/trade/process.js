@@ -85,6 +85,20 @@ function processMarketUnderlying() {
  */
 function processContract(contracts) {
     'use strict';
+    if(contracts.hasOwnProperty('error') && contracts.error.code === 'InvalidSymbol') {
+        processForgetProposals();
+        var container = document.getElementById('contract_confirmation_container'),
+            message_container = document.getElementById('confirmation_message'),
+            confirmation_error = document.getElementById('confirmation_error'),
+            contracts_list = document.getElementById('contracts_list');
+        container.style.display = 'block';
+        contracts_list.style.display = 'none';
+        message_container.hide();
+        confirmation_error.show();
+        confirmation_error.innerHTML = contracts.error.message + ' <a href="javascript:;" onclick="TradePage.reload();">' + text.localize('Please reload the page') + '</a>';
+        return;
+    }
+
     window.chartAllowed = true;
     if (contracts.contracts_for && contracts.contracts_for.feed_license && contracts.contracts_for.feed_license === 'chartonly') {
       window.chartAllowed = false;

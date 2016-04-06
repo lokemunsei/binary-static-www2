@@ -65029,6 +65029,20 @@ function processMarketUnderlying() {
  */
 function processContract(contracts) {
     'use strict';
+    if(contracts.hasOwnProperty('error') && contracts.error.code === 'InvalidSymbol') {
+        processForgetProposals();
+        var container = document.getElementById('contract_confirmation_container'),
+            message_container = document.getElementById('confirmation_message'),
+            confirmation_error = document.getElementById('confirmation_error'),
+            contracts_list = document.getElementById('contracts_list');
+        container.style.display = 'block';
+        contracts_list.style.display = 'none';
+        message_container.hide();
+        confirmation_error.show();
+        confirmation_error.innerHTML = contracts.error.message + ' <a href="javascript:;" onclick="TradePage.reload();">' + text.localize('Please reload the page') + '</a>';
+        return;
+    }
+
     window.chartAllowed = true;
     if (contracts.contracts_for && contracts.contracts_for.feed_license && contracts.contracts_for.feed_license === 'chartonly') {
       window.chartAllowed = false;
@@ -65930,6 +65944,11 @@ WSTickDisplay.updateChart = function(data) {
 		});
 	};
 
+	var reload = function() {
+		sessionStorage.removeItem('underlying');
+		window.location.reload();
+	};
+
 	var onUnload = function(){
 		trading_page = 0;
 		forgetTradingStreams();
@@ -65938,6 +65957,7 @@ WSTickDisplay.updateChart = function(data) {
 
 	return {
 		onLoad: onLoad,
+		reload: reload,
 		onUnload : onUnload,
 		is_trading_page: function(){return trading_page;}
 	};
@@ -66105,6 +66125,7 @@ function BinarySocketClass() {
                     ViewBalanceUI.updateBalances(response);
                 } else if (type === 'time') {
                     page.header.time_counter(response);
+                    ViewPopupWS.dispatch(response);
                 } else if (type === 'logout') {
                     page.header.do_logout(response);
                     localStorage.removeItem('jp_test_allowed');
@@ -67685,11 +67706,9 @@ pjax_config_page("top_up_virtualws", function() {
      */
     function attach($container) {
         if (isIE()) return;
-        var $meter = $('<meter></meter>', {min: 0, max: 50, high: 20, low: 10, optimum: 50});
-        var $verdictTxt = $('<p></p>').text(text.localize('Password is weak'));
+        var $meter = $('<meter></meter>', {id: 'password-meter', min: 0, max: 50, high: 20, low: 10, optimum: 50});
         $container
-            .append($meter)
-            .append($verdictTxt);
+            .append($meter);
     }
 
     /**
@@ -67700,10 +67719,8 @@ pjax_config_page("top_up_virtualws", function() {
     function updateMeter($container, newPW) {
         var pwStrength = testPassword(newPW);
         var pwStrengthScore = pwStrength[0];
-        var pwStrengthVerdict = pwStrength[1];
 
         $container.children('meter').val(pwStrengthScore);
-        $container.children('p').text(pwStrengthVerdict);
     }
 
     return {
@@ -69971,11 +69988,12 @@ var ProfitTableUI = (function(){
 
     var hiddenClass = 'invisible';
 
+    var dob;
+
     function submitResetPassword() {
         var token = $('#verification-code').val();
         var pw1 = $('#reset-password1').val();
         var pw2 = $('#reset-password2').val();
-        var dob = $('#dob').val();
 
         if (token.length < 48) {
             $('#verification-error').removeClass(hiddenClass).text(text.localize('Verification code format incorrect.'));
@@ -69984,7 +70002,7 @@ var ProfitTableUI = (function(){
 
         // use regex to validate password
 
-        if (passwordValid(pw1)) {
+        if (!passwordValid(pw1)) {
             $('#password-error1')
                 .removeClass(hiddenClass)
                 .text(text.localize('Password should have lower and uppercase letters with numbers.'));
@@ -70041,9 +70059,27 @@ var ProfitTableUI = (function(){
             }
         }
     }
-    
+
+    function haveRealAccountHandler() {
+        var isChecked = $('#have-real-account').is(':checked');
+        if (isChecked) {
+            $('#dob-field').removeClass(hiddenClass);
+        } else {
+            $('#dob-field').addClass(hiddenClass);
+        }
+    }
+
+    function onDOBChange() {
+        var dd = $('#dobdd').val();
+        var mm = $('#dobmm').val();
+        var yy = $('#dobyy').val();
+
+        dob = yy + '-' + mm + '-' + dd;
+    }
+
     function init() {
         Content.populate();
+        generateBirthDate();
         var $pmContainer = $('#password-meter-container');
 
         $('input').keydown(function () {
@@ -70056,6 +70092,14 @@ var ProfitTableUI = (function(){
 
         $('#reset').click(function () {
             submitResetPassword();
+        });
+
+        $('#have-real-account').click(function () {
+            haveRealAccountHandler();
+        });
+
+        $('select').change(function () {
+            onDOBChange();
         });
 
         PasswordMeter.attach($pmContainer);
@@ -70378,6 +70422,7 @@ var ProfitTableUI = (function(){
         },
         cleanup: function () {
             this.forget_streams();
+            this.clear_timer();
             this.close_container();
             this._init();
         },
@@ -70387,6 +70432,12 @@ var ProfitTableUI = (function(){
                 if(id && id.length > 0) {
                     BinarySocket.send({"forget": id});
                 }
+            }
+        },
+        clear_timer: function() {
+            if(window.ViewPopupTimerInterval) {
+                clearInterval(window.ViewPopupTimerInterval);
+                window.ViewPopupTimerInterval = undefined;
             }
         },
         close_container: function () {
@@ -70748,7 +70799,6 @@ var ProfitTableUI = (function(){
             contractType = 'normal';
             if(Object.keys(history).length === 0) {
                 getTickHistory(contract.underlying, contract.date_start + 1, contract.date_start + 60, 0, {'next_tick': 1});
-                getTickHistory(contract.underlying, contract.date_start, contract.date_expiry, 1, {'normal': 1}, 60);
             }
             normalShowContract();
         }
@@ -70847,7 +70897,7 @@ var ProfitTableUI = (function(){
         $Container.find('#sell_level').parent('tr').addClass(hiddenClass);
         $Container.find('#exit_level').text(contract.exit_level.toFixed(contract.decPlaces)).parent('tr').removeClass(hiddenClass);
         sellSetVisibility(false);
-        showWinLossStatus(is_win);
+        // showWinLossStatus(is_win);
     };
  
     var spreadMakeTemplate = function() {
@@ -70885,7 +70935,7 @@ var ProfitTableUI = (function(){
 
     // ===== Contract: Normal =====
     var normalShowContract = function() {
-        if(Object.keys(history).length === 0 || nextTickEpoch.length === 0) {
+        if(nextTickEpoch.length === 0) {
             return;
         }
 
@@ -70895,10 +70945,13 @@ var ProfitTableUI = (function(){
             $Container = normalMakeTemplate();
         }
 
+        containerSetText('trade_details_contract_id'   , contract.contract_id);
+        containerSetText('trade_details_ref_id'        , contract.transaction_id);
         containerSetText('trade_details_start_date'    , epochToDateTime(contract.date_start) , {'epoch_time': contract.date_start});
         containerSetText('trade_details_end_date'      , epochToDateTime(contract.date_expiry), {'epoch_time': contract.date_expiry});
         containerSetText('trade_details_purchase_price', contract.currency + ' ' + parseFloat(contract.buy_price).toFixed(2));
 
+        normalUpdateTimers(contract.current_spot_time, moment().valueOf());
         normalUpdate();
 
         if(!chartStarted) {
@@ -70956,13 +71009,43 @@ var ProfitTableUI = (function(){
         contract.validation_error = '';
     };
 
+    var normalUpdateTimers = function(serverTime, clientTime) {
+        window.client_time_at_response = moment().valueOf();
+        window.server_time_at_response = serverTime * 1000 + (window.client_time_at_response - clientTime);
+        var update_time = function() {
+            var now = Math.floor((window.server_time_at_response + moment().valueOf() - window.client_time_at_response) / 1000);
+            containerSetText('trade_details_live_date' , epochToDateTime(now));
+
+            var is_started = !contract.is_forward_starting || contract.current_spot_time > contract.date_start,
+                is_ended   = contract.is_expired || contract.is_sold;
+            if(!is_started || is_ended || now >= contract.date_expiry) {
+                containerSetText('trade_details_live_remaining', '-');
+            } else {
+                var remained = contract.date_expiry - now,
+                    day_seconds = 24 * 60 * 60,
+                    days = 0;
+                if(remained > day_seconds) {
+                    days = Math.floor(remained / day_seconds);
+                    remained = remained % day_seconds;
+                }
+                containerSetText('trade_details_live_remaining',
+                    (days > 0 ? days + ' ' + text.localize(days > 1 ? 'days' : 'day') + ', ' : '') + 
+                    moment((remained) * 1000).utc().format('HH:mm:ss'));
+            }
+        };
+        update_time();
+
+        clearInterval(window.ViewPopupTimerInterval);
+        window.ViewPopupTimerInterval = setInterval(update_time, 1000);
+    };
+
     var normalContractEnded = function(is_win) {
         containerSetText('trade_details_now_date'        , '', {'epoch_time': ''});
-        containerSetText('trade_details_current_title'   , text.localize('Contract Expiry'));
+        containerSetText('trade_details_current_title'   , text.localize(contract.sell_spot_time < contract.date_expiry ? 'Contract Sold' : 'Contract Expiry'));
         containerSetText('trade_details_indicative_label', text.localize('Price'));
         containerSetText('trade_details_message'         , '&nbsp;', {'epoch_time': ''});
         sellSetVisibility(false);
-        showWinLossStatus(is_win);
+        // showWinLossStatus(is_win);
     };
  
     var normalMakeTemplate = function() {
@@ -70973,14 +71056,17 @@ var ProfitTableUI = (function(){
         $sections.find('#sell_details_table').append($(
             '<table>' +
                 '<tr><th colspan="2">' + text.localize('Contract Information') + '</th></tr>' +
+                    // normalRow('Contract ID',    '', 'trade_details_contract_id') +
+                    // normalRow('Reference ID',   '', 'trade_details_ref_id') +
                     normalRow('Start Time',     '', 'trade_details_start_date') +
                     normalRow('End Time',       '', 'trade_details_end_date') +
+                    normalRow('Remaining Time', '', 'trade_details_live_remaining') +
                     normalRow('Entry Spot',     '', 'trade_details_entry_spot') +
                     normalRow('Purchase Price', '', 'trade_details_purchase_price') +
-                '<tr><td colspan="2" class="last_cell" id="trade_details_contract_note">&nbsp;</td></tr>' +
                 '<tr><th colspan="2" id="trade_details_current_title">' + text.localize('Current') + '</th></tr>' +
-                    normalRow('Time',           '', 'trade_details_current_date') +
                     normalRow('Spot',           '', 'trade_details_current_spot') +
+                    normalRow('Spot Time',      '', 'trade_details_current_date') +
+                    normalRow('Current Time',   '', 'trade_details_live_date') +
                     normalRow('Indicative',     'trade_details_indicative_label', 'trade_details_indicative_price') +
                     normalRow('Profit/Loss',    '', 'trade_details_profit_loss') +
                 '<tr><td colspan="2" class="last_cell" id="trade_details_message">&nbsp;</td></tr>' +
@@ -71189,9 +71275,13 @@ var ProfitTableUI = (function(){
         if(!start) {
             delete(req['start']);
         }
+        if(!count || count === 0) {
+            delete(req['count']);
+        }
         if(passthrough && Object.keys(passthrough).length > 0) {
             req.passthrough = passthrough;
         }
+        req.passthrough.contract_id = contractID;
         if(granularity > 0) {
             req.style = 'candles';
             req.granularity = granularity;
@@ -71203,6 +71293,9 @@ var ProfitTableUI = (function(){
         if(response.hasOwnProperty('error')) {
             // Sometimes when tick data or feed is not ready, the tick_history response returns with unclear error
             showErrorPopup(response);
+            return;
+        }
+        if(response.echo_req.passthrough && response.echo_req.passthrough.contract_id != contractID) {
             return;
         }
 
@@ -71231,10 +71324,6 @@ var ProfitTableUI = (function(){
                             }
                         }
                     }
-                }
-                else {
-                    history = response.candles;
-                    normalShowContract();
                 }
                 break;
         }
@@ -71302,6 +71391,9 @@ var ProfitTableUI = (function(){
                 default:
                     break;
             }
+        }
+        else if(contractType === 'normal' && response.msg_type === 'time' && !isNaN(response.echo_req.passthrough.client_time) && !response.error) {
+            normalUpdateTimers(response.time, response.echo_req.passthrough.client_time);
         }
     };
 
@@ -72036,151 +72128,151 @@ function attach_tabs(element) {
     var questions = {
         section1:[
             {
-                question: "[JAPAN ONLY]An option holder must buy ( or sell ) the underlying asset at a predetermined price within a specified period ( or at a specific time ).",
+                question: "{JAPAN ONLY}An option holder must buy ( or sell ) the underlying asset at a predetermined price within a specified period ( or at a specific time ).",
                 answer: false,
                 id: 1,
             },
             {
-                question: "[JAPAN ONLY]A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short.",
+                question: "{JAPAN ONLY}A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short.",
                 answer: true,
                 id: 2
             },
             {
-                question: "[JAPAN ONLY]There are two types of option delivery: One requires exchanging the underlying asset, and the other requires a payment which depends on the difference between the fair market price and the exercise price. A Binary Option is the second type where if the fair market price meets certain conditions with respect to the exercise price, then an agreed fixed amount will be paid to the option buyer.",
+                question: "{JAPAN ONLY}There are two types of option delivery: One requires exchanging the underlying asset, and the other requires a payment which depends on the difference between the fair market price and the exercise price. A Binary Option is the second type where if the fair market price meets certain conditions with respect to the exercise price, then an agreed fixed amount will be paid to the option buyer.",
                 answer: true,
                 id: 3
             },
             {
-                question: "[JAPAN ONLY]A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen.",
+                question: "{JAPAN ONLY}A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen.",
                 answer: true,
                 id: 4
             },
             {
-                question: "[JAPAN ONLY]A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset.",
+                question: "{JAPAN ONLY}A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset.",
                 answer: true,
                 id: 5
             },
             {
-                question: "[JAPAN ONLY]There are some types of Binary Option, such as Range Binary Options, Touch or No-Touch Binary Options, that are exceptions to the general rule where payment is made at a known exercise time. For these types of option a payment is made automatically at Exit Time when certain conditions have been met.",
+                question: "{JAPAN ONLY}There are some types of Binary Option, such as Range Binary Options, Touch or No-Touch Binary Options, that are exceptions to the general rule where payment is made at a known exercise time. For these types of option a payment is made automatically at Exit Time when certain conditions have been met.",
                 answer: true,
                 id: 6
             },
             {
-                question: "[JAPAN ONLY]There are many types of Binary Option, including some such as Range Binary Options and Touch or No-Touch Binary Options which do not always require automatic payment at Exercise Time and which will be settled earlier if certain conditions have been met. However, in all cases, for a payment to be required, the option must end In The Money.",
+                question: "{JAPAN ONLY}There are many types of Binary Option, including some such as Range Binary Options and Touch or No-Touch Binary Options which do not always require automatic payment at Exercise Time and which will be settled earlier if certain conditions have been met. However, in all cases, for a payment to be required, the option must end In The Money.",
                 answer: true,
                 id: 7
             },
             {
-                question: "[JAPAN ONLY]A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time.",
+                question: "{JAPAN ONLY}A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time.",
                 answer: true,
                 id: 8
             },
             {
-                question: "[JAPAN ONLY]For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option.",
+                question: "{JAPAN ONLY}For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option.",
                 answer: false,
                 id: 9
             },
             {
-                question: "[JAPAN ONLY]For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option",
+                question: "{JAPAN ONLY}For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option",
                 answer: true,
                 id: 10
             },
             {
-                question: "[JAPAN ONLY]If you sell a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option.",
+                question: "{JAPAN ONLY}If you sell a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option.",
                 answer: false,
                 id: 11
             },
             {
-                question: "[JAPAN ONLY]If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option.",
+                question: "{JAPAN ONLY}If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option.",
                 answer: true,
                 id: 12
             },
             {
-                question: "[JAPAN ONLY]If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option.",
+                question: "{JAPAN ONLY}If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option.",
                 answer: false,
                 id: 13
             },
             {
-                question: "[JAPAN ONLY]If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option.",
+                question: "{JAPAN ONLY}If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option.",
                 answer: true,
                 id: 14
             },
             {
-                question: "[JAPAN ONLY]If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller.",
+                question: "{JAPAN ONLY}If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller.",
                 answer: true,
                 id: 15
             },
             {
-                question: "[JAPAN ONLY]If you sell a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you need to payout 1,000 yen, then your profit will be minus 500 yen after subtracting the 500 yen that was received as a fee from the option buyer.",
+                question: "{JAPAN ONLY}If you sell a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you need to payout 1,000 yen, then your profit will be minus 500 yen after subtracting the 500 yen that was received as a fee from the option buyer.",
                 answer: true,
                 id: 16
             }
         ],
         section2:[
             {
-                question: "[JAPAN ONLY]To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option.",
+                question: "{JAPAN ONLY}To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option.",
                 answer: false,
                 id: 17
             },
             {
-                question: "[JAPAN ONLY]To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option.",
+                question: "{JAPAN ONLY}To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option.",
                 answer: true, id: 18
             },
             {
-                question: "[JAPAN ONLY]Predicted that the underlying asset price is largely up-dean and in order to obtain the benefit also moving in either direction of rising send falling, obtained both options of the call options that exercise price is higher than the underlying asset price and tie put option that exercise prize is lower than underlying asset price.",
+                question: "{JAPAN ONLY}Predicted that the underlying asset price is largely up-dean and in order to obtain the benefit also moving in either direction of rising send falling, obtained both options of the call options that exercise price is higher than the underlying asset price and tie put option that exercise prize is lower than underlying asset price.",
                 answer: true, id: 19
             },
             {
-                question: "[JAPAN ONLY]Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price.",
+                question: "{JAPAN ONLY}Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price.",
                 answer: true, id: 20
             },
             {
-                question: "[JAPAN ONLY]Covered option is holding the underlying assets which like covering sell position of options and sell the it.",
+                question: "{JAPAN ONLY}Covered option is holding the underlying assets which like covering sell position of options and sell the it.",
                 answer: true,
                 id: 21,
             },
             {
-                question: "[JAPAN ONLY]Predicted the underlying asset price will decline than strike price at exit time and bought binary call options.",
+                question: "{JAPAN ONLY}Predicted the underlying asset price will decline than strike price at exit time and bought binary call options.",
                 answer: false,
                 id: 22
             },
             {
-                question: "[JAPAN ONLY]Predicted the underlying asset price will decline than strike price at exit time and bought binary put options.",
+                question: "{JAPAN ONLY}Predicted the underlying asset price will decline than strike price at exit time and bought binary put options.",
                 answer: false,
                 id: 23
             },
             {
-                question: "[JAPAN ONLY]Predicted the underlying asset price will raise than strike price at exit time and bought binary put options.",
+                question: "{JAPAN ONLY}Predicted the underlying asset price will raise than strike price at exit time and bought binary put options.",
                 answer: false,
                 id: 24
             },
             {
-                question: "[JAPAN ONLY]Predicted the underlying asset price will decline than strike price at exit time and bought binary call options.",
+                question: "{JAPAN ONLY}Predicted the underlying asset price will decline than strike price at exit time and bought binary call options.",
                 answer: true,
                 id: 25
             },
             {
-                question: "[JAPAN ONLY] At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price.",
+                question: "{JAPAN ONLY} At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price.",
                 answer: true,
                 id: 26
             },
             {
-                question: "[JAPAN ONLY] At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price.",
+                question: "{JAPAN ONLY} At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price.",
                 answer: true,
                 id: 27
             },
             {
-                question: "[JAPAN ONLY]Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed.",
+                question: "{JAPAN ONLY}Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed.",
                 answer: true,
                 id: 28
             },
             {
-                question: "[JAPAN ONLY]Using two options, if obtain  binary put option which exercise price is higher and binary call option which exercise price is lower, its possible to obtain profit in case that exit price is between the exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is in side of the predetermined price.",
+                question: "{JAPAN ONLY}Using two options, if obtain  binary put option which exercise price is higher and binary call option which exercise price is lower, its possible to obtain profit in case that exit price is between the exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is in side of the predetermined price.",
                 answer: true,
                 id: 29
             },
             {
-                question: "[JAPAN ONLY]Using two options, if get  binary call option which exercise price is higher and binary put option which exercise price is lower, its possible to obtain profit in case that exit price is out side of the price range made by exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is out side of the predetermined price.",
+                question: "{JAPAN ONLY}Using two options, if get  binary call option which exercise price is higher and binary put option which exercise price is lower, its possible to obtain profit in case that exit price is out side of the price range made by exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is out side of the predetermined price.",
                 answer: true,
                 id: 30
             },
@@ -72188,327 +72280,327 @@ function attach_tabs(element) {
         ],
         section3:[
             {
-                question: "[JAPAN ONLY]Trading period (expiration) of binary option is 2 hours and more. All of the transactions are established at the start of the trading period and the established position will be settled only by judge.",
+                question: "{JAPAN ONLY}Trading period (expiration) of binary option is 2 hours and more. All of the transactions are established at the start of the trading period and the established position will be settled only by judge.",
                 answer: false,
                 id: 31
             },
             {
-                question: "[JAPAN ONLY]A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling.",
+                question: "{JAPAN ONLY}A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling.",
                 answer: true,
                 id: 32
             },
             {
-                question: "[JAPAN ONLY]Short positions of currency-related binary options, unlike the short positions of the other currency-related option, will not be loss cut because it is not a financial instruments subjected to loss cut regulation.",
+                question: "{JAPAN ONLY}Short positions of currency-related binary options, unlike the short positions of the other currency-related option, will not be loss cut because it is not a financial instruments subjected to loss cut regulation.",
                 answer: false,
                 id: 33
             },
             {
-                question: "[JAPAN ONLY]Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader.",
+                question: "{JAPAN ONLY}Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader.",
                 answer: true,
                 id: 34
             },
             {
-                question: "[JAPAN ONLY]Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled.",
+                question: "{JAPAN ONLY}Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled.",
                 answer: false,
                 id: 35
             },
             {
-                question: "[JAPAN ONLY]Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option.",
+                question: "{JAPAN ONLY}Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option.",
                 answer: true,
                 id: 36
             },
             {
-                question: "[JAPAN ONLY]For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option.",
+                question: "{JAPAN ONLY}For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option.",
                 answer: true,
                 id: 37
             },
             {
-                question: "[JAPAN ONLY]For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an out-of-the-money option.",
+                question: "{JAPAN ONLY}For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an out-of-the-money option.",
                 answer: false,
                 id: 38
             },
             {
-                question: "[JAPAN ONLY]For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option.",
+                question: "{JAPAN ONLY}For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option.",
                 answer: true,
                 id: 39
             },
             {
-                question: "[JAPAN ONLY]For a put option, if the underlying asset price is lower than the option exercise price, it is known as an out-of-the-money option.",
+                question: "{JAPAN ONLY}For a put option, if the underlying asset price is lower than the option exercise price, it is known as an out-of-the-money option.",
                 answer: false,
                 id: 40
             },
             {
-                question: "[JAPAN ONLY]For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option.",
+                question: "{JAPAN ONLY}For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option.",
                 answer: false,
                 id: 41,
             },
             {
-                question: "[JAPAN ONLY]Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout.",
+                question: "{JAPAN ONLY}Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout.",
                 answer: true,
                 id: 42
             },
             {
-                question: "[JAPAN ONLY]Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price.",
+                question: "{JAPAN ONLY}Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price.",
                 answer: true,
                 id: 43
             },
             {
-                question: "[JAPAN ONLY]The payout is the amount that seller of the option paid to the buyer as a result of exercising the right, when the predetermined exercise conditions meet and the amount paid like that called payout amount.",
+                question: "{JAPAN ONLY}The payout is the amount that seller of the option paid to the buyer as a result of exercising the right, when the predetermined exercise conditions meet and the amount paid like that called payout amount.",
                 answer: true,
                 id: 44
             },
             {
-                question: "[JAPAN ONLY]In the OTC currency binary options trading, if the exchange rate during the trading period move to one direction more than expected, that there is no exercise price which can continue appropriate trading around at-the-money, there is possible to add the exercise price on the way. However, even if the exercise price has been added, do the exercise price will continue trading using up to it, also the transaction price will not be affected by the additional impact of the exercise price.",
+                question: "{JAPAN ONLY}In the OTC currency binary options trading, if the exchange rate during the trading period move to one direction more than expected, that there is no exercise price which can continue appropriate trading around at-the-money, there is possible to add the exercise price on the way. However, even if the exercise price has been added, do the exercise price will continue trading using up to it, also the transaction price will not be affected by the additional impact of the exercise price.",
                 answer: true,
                 id: 45
             },
             {
-                question: "[JAPAN ONLY]The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for personal, company inspects if mistakes and intentional operation has not been performed inspection for exit price the company determined and also checking whether there is an error in the data in case that the company use the rate data provided by third company.",
+                question: "{JAPAN ONLY}The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for personal, company inspects if mistakes and intentional operation has not been performed inspection for exit price the company determined and also checking whether there is an error in the data in case that the company use the rate data provided by third company.",
                 answer: true,
                 id: 46
             },
             {
-                question: "[JAPAN ONLY]About OTC currency for binary options trading, summarizes the profit and loss result of all transactions that have been made between the customer, to publish the information in the company's home page, at any time while the customer is doing the transaction before the start, or the transaction, the information Make sure, for that you're willing to trade under the calm judgment, we are committed to a variety of environmental improvement.",
+                question: "{JAPAN ONLY}About OTC currency for binary options trading, summarizes the profit and loss result of all transactions that have been made between the customer, to publish the information in the company's home page, at any time while the customer is doing the transaction before the start, or the transaction, the information Make sure, for that you're willing to trade under the calm judgment, we are committed to a variety of environmental improvement.",
                 answer: true,
                 id: 47
             },
             {
-                question: "[JAPAN ONLY]For an individual investor, all profits from OTC currency options trading are tax-free.",
+                question: "{JAPAN ONLY}For an individual investor, all profits from OTC currency options trading are tax-free.",
                 answer: false,
                 id: 48
             },
             {
-                question: "[JAPAN ONLY]For an individual investor, profits and losses from OTC currency options traing cannot be combined with profits and losses from margin FX and securities-related OTC options.",
+                question: "{JAPAN ONLY}For an individual investor, profits and losses from OTC currency options traing cannot be combined with profits and losses from margin FX and securities-related OTC options.",
                 answer: false,
                 id: 49
             },
             {
-                question: "[JAPAN ONLY]Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made.",
+                question: "{JAPAN ONLY}Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made.",
                 answer: true,
                 id: 50
             }
         ],
         section4:[
             {
-                question: "[JAPAN ONLY]If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller.",
+                question: "{JAPAN ONLY}If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller.",
                 answer: false,
                 id: 51
             },
             {
-                question: "[JAPAN ONLY]If the buyer of an option waives his right to exercise, a transaction in the underlying asset will not be dealt between the seller and the buyer.",
+                question: "{JAPAN ONLY}If the buyer of an option waives his right to exercise, a transaction in the underlying asset will not be dealt between the seller and the buyer.",
                 answer: true, id: 52
             },
             {
-                question: "[JAPAN ONLY]The seller of an option should receive the option premium from the buyer, even if the buyer waives the right to exercise the option.",
+                question: "{JAPAN ONLY}The seller of an option should receive the option premium from the buyer, even if the buyer waives the right to exercise the option.",
                 answer: true, id: 53
             },
             {
-                question: "[JAPAN ONLY]If an option buyer wishes to exercise the option rights, the seller may still reject the deal.",
+                question: "{JAPAN ONLY}If an option buyer wishes to exercise the option rights, the seller may still reject the deal.",
                 answer: false, id: 54
             },
             {
-                question: "[JAPAN ONLY]The option of the leverage effect, the buyer is likely to be obtained several times profit compared to the option fee, but the loss is limited to the option fee, when it comes to seller, profit is limited to the option fee, but loss will be likely to be doubled of option fee.",
+                question: "{JAPAN ONLY}The option of the leverage effect, the buyer is likely to be obtained several times profit compared to the option fee, but the loss is limited to the option fee, when it comes to seller, profit is limited to the option fee, but loss will be likely to be doubled of option fee.",
                 answer: true, id: 55
             },
             {
-                question: "[JAPAN ONLY]The buyer of the plane option can waiver when incriminating, so the maximum loss of buyer is option fee and maximum earning is the amount subtracted by the difference of underlying asset price and exercise price from option fee. Therefore, when the underlying asset price is infinite, the profit will be infinite.",
+                question: "{JAPAN ONLY}The buyer of the plane option can waiver when incriminating, so the maximum loss of buyer is option fee and maximum earning is the amount subtracted by the difference of underlying asset price and exercise price from option fee. Therefore, when the underlying asset price is infinite, the profit will be infinite.",
                 answer: true, id: 56
             },
             {
-                question: "[JAPAN ONLY]While seller of plan options is limited the earnings is the option fee, the difference of the underlying asset price and the strike price is a loss, if the underlying asset price is infinite, the loss will be infinite.",
+                question: "{JAPAN ONLY}While seller of plan options is limited the earnings is the option fee, the difference of the underlying asset price and the strike price is a loss, if the underlying asset price is infinite, the loss will be infinite.",
                 answer: true, id: 57
             },
             {
-                question: "[JAPAN ONLY]Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller.",
+                question: "{JAPAN ONLY}Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller.",
                 answer: true, id: 58
             },
             {
-                question: "[JAPAN ONLY]Although the options which is not be exercised will disappear at the exercise period, the option fee which seller received will remain for sellers.",
+                question: "{JAPAN ONLY}Although the options which is not be exercised will disappear at the exercise period, the option fee which seller received will remain for sellers.",
                 answer: true, id: 59
             },
             {
-                question: "[JAPAN ONLY]Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount.",
+                question: "{JAPAN ONLY}Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount.",
                 answer: true, id: 60
             },
             {
-                question: "[JAPAN ONLY]Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally.",
+                question: "{JAPAN ONLY}Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally.",
                 answer: true,
                 id: 61,
             },
             {
-                question: "[JAPAN ONLY]Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options.",
+                question: "{JAPAN ONLY}Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options.",
                 answer: false,
                 id: 62
             },
             {
-                question: "[JAPAN ONLY]Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions.",
+                question: "{JAPAN ONLY}Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions.",
                 answer: true,
                 id: 63
             },
             {
-                question: "[JAPAN ONLY]In case probability to receive the payout is 50% and magnification of payout for the investment is less than a 2-fold lower, than the expected rate will be  1 times lower and forecast recovery amount is less than the investment.",
+                question: "{JAPAN ONLY}In case probability to receive the payout is 50% and magnification of payout for the investment is less than a 2-fold lower, than the expected rate will be  1 times lower and forecast recovery amount is less than the investment.",
                 answer: true,
                 id: 64
             },
             {
-                question: "[JAPAN ONLY]It can not be said that binary option is unconditionally advantageous because the reason why investors will lose the full amount of investment at binary option, on the other hand part of investment will remain at FX.",
+                question: "{JAPAN ONLY}It can not be said that binary option is unconditionally advantageous because the reason why investors will lose the full amount of investment at binary option, on the other hand part of investment will remain at FX.",
                 answer: true,
                 id: 65
             },
             {
-                question: "[JAPAN ONLY]The contents of the financial instruments of the OTC binary options are the same even transactions dealers handling financial instruments business are different.",
+                question: "{JAPAN ONLY}The contents of the financial instruments of the OTC binary options are the same even transactions dealers handling financial instruments business are different.",
                 answer: false,
                 id: 66
             },
             {
-                question: "[JAPAN ONLY]The price of OTC binary options of the same conditions, (sometimes) the price varies depending on transactions dealers handling financial instruments business.",
+                question: "{JAPAN ONLY}The price of OTC binary options of the same conditions, (sometimes) the price varies depending on transactions dealers handling financial instruments business.",
                 answer: true,
                 id: 67
             },
             {
-                question: "[JAPAN ONLY]Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically.",
+                question: "{JAPAN ONLY}Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically.",
                 answer: true,
                 id: 68
             },
             {
-                question: "[JAPAN ONLY]Regarding to the OTC price of financial instruments, in case that financial instruments business operator suggests both of  bid and ask price (or trading price and cancellation price), generally there is a difference of them. This option will be wider as the expiration approaches.",
+                question: "{JAPAN ONLY}Regarding to the OTC price of financial instruments, in case that financial instruments business operator suggests both of  bid and ask price (or trading price and cancellation price), generally there is a difference of them. This option will be wider as the expiration approaches.",
                 answer: true,
                 id: 69
             },
             {
-                question: "[JAPAN ONLY]Price of the option, the price of the underlying asset, price fluctuation rate of the underlying assets, the time until the exercise date, subject to any of the impact of interest rates.",
+                question: "{JAPAN ONLY}Price of the option, the price of the underlying asset, price fluctuation rate of the underlying assets, the time until the exercise date, subject to any of the impact of interest rates.",
                 answer: true, id: 70
             },
 
         ],
         section5:[
             {
-                question: "[JAPAN ONLY]The price of an option can be affected by the underlying asset price, by the volatility rate of the underlying asset, or by the time remaining to the exercise time.",
+                question: "{JAPAN ONLY}The price of an option can be affected by the underlying asset price, by the volatility rate of the underlying asset, or by the time remaining to the exercise time.",
                 answer: true, id: 71
             },
             {
-                question: "[JAPAN ONLY]Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low.",
+                question: "{JAPAN ONLY}Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low.",
                 answer: true, id: 72
             },
             {
-                question: "[JAPAN ONLY]If the exercise prices and exercise times are the same for an American style and European style option, then the American style option will have a higher price.",
+                question: "{JAPAN ONLY}If the exercise prices and exercise times are the same for an American style and European style option, then the American style option will have a higher price.",
                 answer: true, id: 73
             },
             {
-                question: "[JAPAN ONLY]In case of the right to buy the underlying asset (call option), when the underlying asset price falls, the option price will increase.",
+                question: "{JAPAN ONLY}In case of the right to buy the underlying asset (call option), when the underlying asset price falls, the option price will increase.",
                 answer: false, id: 74
             },
             {
-                question: "[JAPAN ONLY]In case of the right to sell the underlying asset (put option), when the underlying asset price rises, the option price will increase.",
+                question: "{JAPAN ONLY}In case of the right to sell the underlying asset (put option), when the underlying asset price rises, the option price will increase.",
                 answer: false, id: 75
             },
             {
-                question: "[JAPAN ONLY]For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be.",
+                question: "{JAPAN ONLY}For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be.",
                 answer: true, id: 76
             },
             {
-                question: "[JAPAN ONLY]For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be.",
+                question: "{JAPAN ONLY}For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be.",
                 answer: false, id: 77
             },
             {
-                question: "[JAPAN ONLY]If implied volatility increases then the prices of both call and put types of plain vanilla options will increase.",
+                question: "{JAPAN ONLY}If implied volatility increases then the prices of both call and put types of plain vanilla options will increase.",
                 answer: true, id: 78
             },
             {
-                question: "[JAPAN ONLY]As the expected volatility of the underlying asset increases, a plain vanilla option price will move higher.",
+                question: "{JAPAN ONLY}As the expected volatility of the underlying asset increases, a plain vanilla option price will move higher.",
                 answer: true, id: 79
             },
             {
-                question: "[JAPAN ONLY]For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease.",
+                question: "{JAPAN ONLY}For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease.",
                 answer: true, id: 80
             },
             {
-                question: "[JAPAN ONLY]An option price is the sum of the intrinsic-value and the time-value.",
+                question: "{JAPAN ONLY}An option price is the sum of the intrinsic-value and the time-value.",
                 answer: true,
                 id: 81,
             },
             {
-                question: "[JAPAN ONLY]If the underlying asset price is 100 yen, the exercise price is 80 yen, and the call option price is 45 yen, then it can be said that the option's intrinsic-value is 20 yen, and its time-value is 25 yen.",
+                question: "{JAPAN ONLY}If the underlying asset price is 100 yen, the exercise price is 80 yen, and the call option price is 45 yen, then it can be said that the option's intrinsic-value is 20 yen, and its time-value is 25 yen.",
                 answer: true,
                 id: 82
             },
             {
-                question: "[JAPAN ONLY]The time-value of an option represents the expected value of the option at the exercise point, and may be positive, even when the intrinsic-value is zero.",
+                question: "{JAPAN ONLY}The time-value of an option represents the expected value of the option at the exercise point, and may be positive, even when the intrinsic-value is zero.",
                 answer: true,
                 id: 83
             },
             {
-                question: "[JAPAN ONLY]As the time to the exercise point shortens, the time-value of a plain vanilla option decreases.",
+                question: "{JAPAN ONLY}As the time to the exercise point shortens, the time-value of a plain vanilla option decreases.",
                 answer: true,
                 id: 84
             },
             {
-                question: "[JAPAN ONLY]A binary option price cannot exceed the payout amount.",
+                question: "{JAPAN ONLY}A binary option price cannot exceed the payout amount.",
                 answer: true,
                 id: 85
             },
             {
-                question: "[JAPAN ONLY]In general a binary option price will not exceed the payout amount.",
+                question: "{JAPAN ONLY}In general a binary option price will not exceed the payout amount.",
                 answer: true,
                 id: 86
             },
             {
-                question: "[JAPAN ONLY]Unlike a plain vanilla option, an in-the-money binary option will have a lower price, the further away it is from the exercise point.",
+                question: "{JAPAN ONLY}Unlike a plain vanilla option, an in-the-money binary option will have a lower price, the further away it is from the exercise point.",
                 answer: true,
                 id: 87
             },
             {
-                question: "[JAPAN ONLY]In general the price of a binary option will be lower than the price of a plain vanilla option because the payout amount is fixed.",
+                question: "{JAPAN ONLY}In general the price of a binary option will be lower than the price of a plain vanilla option because the payout amount is fixed.",
                 answer: false,
                 id: 88
             },
             {
-                question: "[JAPAN ONLY]A binary option which is out-of-the-money will have a lower price than an option which is in-the-money because the probability of receiving the payout amount is lower.",
+                question: "{JAPAN ONLY}A binary option which is out-of-the-money will have a lower price than an option which is in-the-money because the probability of receiving the payout amount is lower.",
                 answer: true,
                 id: 89
             },
             {
-                question: "[JAPAN ONLY]A binary option which is in-the-money will have a higher value than an option that is out-of-the-money because there will be a higher probability of receiving the payout amount.",
+                question: "{JAPAN ONLY}A binary option which is in-the-money will have a higher value than an option that is out-of-the-money because there will be a higher probability of receiving the payout amount.",
                 answer: true, id: 90
             },
             {
-                question: "[JAPAN ONLY]As the exercise deadline approaches, the price of an in-the-money binary option will move towards the payout amount.",
+                question: "{JAPAN ONLY}As the exercise deadline approaches, the price of an in-the-money binary option will move towards the payout amount.",
                 answer: true, id: 91
             },
             {
-                question: "[JAPAN ONLY]As the exercise deadline approaches, the price of an out-of-the-money binary option will move towards zero.",
+                question: "{JAPAN ONLY}As the exercise deadline approaches, the price of an out-of-the-money binary option will move towards zero.",
                 answer: true, id: 92
             },
             {
-                question: "[JAPAN ONLY]The price of a binary option is affected by not only the change in the underlying asset price, but also the change in remaining time to the exercise point.",
+                question: "{JAPAN ONLY}The price of a binary option is affected by not only the change in the underlying asset price, but also the change in remaining time to the exercise point.",
                 answer: true, id: 93
             },
             {
-                question: "[JAPAN ONLY]Implied volatility is a prediction of the future rate of change in the underlying asset.",
+                question: "{JAPAN ONLY}Implied volatility is a prediction of the future rate of change in the underlying asset.",
                 answer: true, id: 94
             },
             {
-                question: "[JAPAN ONLY]Historical volatility is a prediction of the future rate of change in the underlying asset.",
+                question: "{JAPAN ONLY}Historical volatility is a prediction of the future rate of change in the underlying asset.",
                 answer: false, id: 95
             },
             {
-                question: "[JAPAN ONLY]Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price.",
+                question: "{JAPAN ONLY}Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price.",
                 answer: true, id: 96
             },
             {
-                question: "[JAPAN ONLY]Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. Apart from the fixed exercise price, all other elements are changing constantly, so an understanding of the relationships between each element and changes in the options price is necessary for the management of options trading risk.",
+                question: "{JAPAN ONLY}Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. Apart from the fixed exercise price, all other elements are changing constantly, so an understanding of the relationships between each element and changes in the options price is necessary for the management of options trading risk.",
                 answer: true, id: 97
             },
             {
-                question: "[JAPAN ONLY]Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. However, when the remaining time to the exercise point is very short, there is no need to consider these when managing option trading risk, as all these elements are constant.",
+                question: "{JAPAN ONLY}Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. However, when the remaining time to the exercise point is very short, there is no need to consider these when managing option trading risk, as all these elements are constant.",
                 answer: false, id: 98
             },
             {
-                question: "[JAPAN ONLY]The Black-Scholes model is widely used to calculate theoretical option prices.",
+                question: "{JAPAN ONLY}The Black-Scholes model is widely used to calculate theoretical option prices.",
                 answer: true, id: 99
             },
             {
-                question: "[JAPAN ONLY]A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options.",
+                question: "{JAPAN ONLY}A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options.",
                 answer: true, id: 100
             },
         ],
@@ -72567,8 +72659,8 @@ function attach_tabs(element) {
     var randomPicksAnswer = {};
     var resultScore = 0;
 
-    var passMsg = '[JAPAN ONLY]Congratulations, you have pass the test, our Customer Support will contact you shortly';
-    var failMsg = '[JAPAN ONLY]Sorry, you have failed the test, please try again after 24 hours.';
+    var passMsg = '{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly';
+    var failMsg = '{JAPAN ONLY}Sorry, you have failed the test, please try again after 24 hours.';
 
     function questionAnswerHandler(ev) {
         var selected = ev.target.value;
@@ -72613,11 +72705,11 @@ function attach_tabs(element) {
         $('#knowledge-test-questions input[type=radio]').click(questionAnswerHandler);
         $('#knowledge-test-submit').click(submitHandler);
         $('#knowledge-test-questions').removeClass(hiddenClass);
-        $('#knowledge-test-msg').text(text.localize('[JAPAN ONLY]Please complete the following questions.'));
+        $('#knowledge-test-msg').text(text.localize('{JAPAN ONLY}Please complete the following questions.'));
     }
 
     function showResult(score, time) {
-        $('#knowledge-test-header').text(text.localize('Knowledge Test Result'));
+        $('#knowledge-test-header').text(text.localize('{JAPAN ONLY}Knowledge Test Result'));
         if (score >= 14) {
             $('#knowledge-test-msg').text(text.localize(passMsg));
         } else {
@@ -72643,7 +72735,7 @@ function attach_tabs(element) {
         var lastTestDate = new Date(lastTestEpoch * 1000);
 
         var msgTemplate =
-            '[JAPAN ONLY]Dear customer, you are not allowed to take knowledge test until [_1].\nLast test taken at [_2].';
+            '{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until [_1].\nLast test taken at [_2].';
 
         var msg = text.localize(msgTemplate)
             .replace('[_1]', nextTestDate.toUTCString())
@@ -72653,7 +72745,7 @@ function attach_tabs(element) {
     }
 
     function showCompletedMsg() {
-        var msg = "[JAPAN ONLY]Dear customer, you've already completed the knowledge test, please proceed to next step.";
+        var msg = "{JAPAN ONLY}Dear customer, you've already completed the knowledge test, please proceed to next step.";
         showMsgOnly(msg);
     }
 
@@ -72712,7 +72804,7 @@ function attach_tabs(element) {
                         $('#knowledgetest-link').addClass(hiddenClass);     // hide it anyway
                         localStorage.setItem('jp_test_allowed', 0);
                     } else if (response.error.code === 'TestUnavailableNow') {
-                        showMsgOnly('[JAPAN ONLY]The test is unavailable now, test can only be taken again on next business day with respect of most recent test.');
+                        showMsgOnly('{JAPAN ONLY}The test is unavailable now, test can only be taken again on next business day with respect of most recent test.');
                     }
                 }
             }
@@ -72838,7 +72930,7 @@ function attach_tabs(element) {
     }
 
     function createAlreadyCompleteDiv() {
-        var msg = "[JAPAN ONLY]Dear customer, you've already completed the knowledge test, please proceed to next step.";
+        var msg = "{JAPAN ONLY}Dear customer, you've already completed the knowledge test, please proceed to next step.";
         var $completeDiv = $('<div></div>').text(text.localize(msg));
         return $completeDiv;
     }
@@ -72854,7 +72946,7 @@ function attach_tabs(element) {
             class: 'pjaxload',
             id: 'knowledgetest-link',
             href: '/new_account/knowledge_testws'
-        }).text(text.localize('Take knowledge test'));
+        }).text(text.localize('{JAPAN ONLY}Take knowledge test'));
 
         $topbarmsg.children('a').addClass('invisible');
         $topbarmsg.append($knowledgeTestLink);

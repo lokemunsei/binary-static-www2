@@ -37,6 +37,11 @@ var TradePage = (function(){
 		});
 	};
 
+	var reload = function() {
+		sessionStorage.removeItem('underlying');
+		window.location.reload();
+	};
+
 	var onUnload = function(){
 		trading_page = 0;
 		forgetTradingStreams();
@@ -45,6 +50,7 @@ var TradePage = (function(){
 
 	return {
 		onLoad: onLoad,
+		reload: reload,
 		onUnload : onUnload,
 		is_trading_page: function(){return trading_page;}
 	};
