@@ -18,9 +18,13 @@ var ResetPassword = (function () {
         // use regex to validate password
 
         if (!passwordValid(pw1)) {
+            var errMsg = pw1.length < 6 ?
+                Content.errorMessage('range', '6-25') :
+                text.localize('Password should have lower and uppercase letters with numbers.');
+
             $('#password-error1')
                 .removeClass(hiddenClass)
-                .text(text.localize('Password should have lower and uppercase letters with numbers.'));
+                .text(errMsg);
             return;
         }
 
@@ -32,14 +36,13 @@ var ResetPassword = (function () {
         }
 
         var dobDate = new Date(dob);
-        var isVirtual = page.client.is_virtual();
         var dateValid = !(dob === '' || dobDate === 'Invalid Date');
-        if (!isVirtual && !dateValid) {
-            $('#dob-error').removeClass(hiddenClass).text(text.localize('Invalid date of birth.'));
+        if (!dateValid) {
+            $('#dob-error').removeClass(hiddenClass).text(text.localize('Invalid format for date of birth.'));
             return;
         }
 
-        if (isVirtual) {
+        if (!dob || dob === '') {
             BinarySocket.send({
                 reset_password: 1,
                 verification_code: token,
@@ -65,7 +68,8 @@ var ResetPassword = (function () {
 
         if (type === 'reset_password') {
             if (response.error) {
-                $('#reset-error').removeClass(hiddenClass).text(response.error.message);
+                $('#reset-error').removeClass(hiddenClass);
+                $('#reset-error .errorfield').removeClass(hiddenClass);
             } else {
                 $('#reset-form').addClass(hiddenClass);
                 $('p.notice-msg')
@@ -92,13 +96,20 @@ var ResetPassword = (function () {
         dob = yy + '-' + mm + '-' + dd;
     }
 
+    function onEnterKey(e) {
+        if (e.which === 13) {
+            submitResetPassword();
+        }
+    }
+
     function init() {
         Content.populate();
         generateBirthDate();
         var $pmContainer = $('#password-meter-container');
 
-        $('input').keydown(function () {
+        $('input').keypress(function (e) {
             onInput();
+            onEnterKey(e);
         });
 
         $('#reset-password1').keyup(function (ev) {
