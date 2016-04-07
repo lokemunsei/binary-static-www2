@@ -69370,7 +69370,10 @@ pjax_config_page("user/assessmentws", function() {
             submitEmail();
         });
 
-        $('#lp_email').change(function(ev) {
+        $('#lp_email').keypress(function(ev) {
+            if (ev.which === 13) {
+                submitEmail();
+            }
             onEmailInput(ev.target.value);
         });
     }
