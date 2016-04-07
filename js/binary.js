@@ -70074,11 +70074,11 @@ var ProfitTableUI = (function(){
         var type = response.msg_type;
 
         if (type === 'reset_password') {
+            $('#reset-form').addClass(hiddenClass);
             if (response.error) {
+                $('p.notice-msg').addClass(hiddenClass);
                 $('#reset-error').removeClass(hiddenClass);
-                $('#reset-error .errorfield').removeClass(hiddenClass);
             } else {
-                $('#reset-form').addClass(hiddenClass);
                 $('p.notice-msg')
                     .text(text.localize('Your password has been successfully reset. ' +
                         'Please log into your account using your new password.'));
