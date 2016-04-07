@@ -133,20 +133,11 @@ var Validate = (function(){
 
   function passwordStrong(password, error){
     var tooltipPassword = document.getElementById('tooltip-password');
+    tooltipPassword.setAttribute('style', 'display:none');
     if (testPassword(password)[0] < 20) {
-      tooltipPassword.innerHTML = testPassword(password)[1];
-      if (/[0-9]+/.test(password) && !/[a-zA-Z]+/.test(password)){
-        tooltipPassword.setAttribute('title', text.localize('Try adding more letters.') + ' ' + Content.errorMessage('pass', testPassword(password)[0]));
-      } else if (!/[0-9]+/.test(password) && /[a-zA-Z]+/.test(password)) {
-        tooltipPassword.setAttribute('title', text.localize('Try adding more numbers.') + ' ' + Content.errorMessage('pass', testPassword(password)[0]));
-      } else {
-        tooltipPassword.setAttribute('title', text.localize('Try adding more letters or numbers.') + ' ' + Content.errorMessage('pass', testPassword(password)[0]));
-      }
-      tooltipPassword.setAttribute('style', 'display:inline-block');
       displayErrorMessage(error);
       return errorCounter++;
     }
-    tooltipPassword.setAttribute('style', 'display:none');
     return true;
   }
 
@@ -168,7 +159,6 @@ var Validate = (function(){
       passwordLength(password, error);
       passwordChars(password, error);
       passwordValid(password, error);
-      passwordStrong(password, error);
       if (fieldNotEmpty(rPassword, rError) === true){
         passwordMatching(password, rPassword, rError);
       }
@@ -204,6 +194,26 @@ var Validate = (function(){
 }());
 
 function passwordValid(password) {
-  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,25}/;
   return r.test(password);
+}
+
+/**
+ * Use this if you want to separate validation logic with UI
+ * Use Validate.errorMessagePassword if you want to handle UI with validation together
+ * @param password      password
+ * @returns {Array}     array of error message, can be empty
+ */
+function showPasswordError(password) {
+  var errMsgs = [];
+  if (password.length < 6 || password.length > 25) {
+    errMsgs.push(Content.errorMessage('range', '6-25'));
+  }
+
+  var hasUpperLowerDigitRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
+  if (!hasUpperLowerDigitRegex.test(password)) {
+    errMsgs.push(text.localize('Password should have lower and uppercase letters with numbers.'));
+  }
+
+  return errMsgs;
 }

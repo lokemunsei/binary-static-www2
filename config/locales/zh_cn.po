@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 1228\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2016-04-04 16:17+0000\n"
+"PO-Revision-Date: 2016-04-05 18:03+0000\n"
 "Last-Translator: Xiaojing <cai.cxj@gmail.com>\n"
 "Language-Team: Chinese (China) <https://hosted.weblate.org/projects/binary/static/zh_CN/>\n"
 "Language: zh_cn\n"
@@ -38,25 +38,25 @@ msgstr "“我与多家联盟公司合作，迄今为止，它是我发现的最
 msgid "\"Third Party Provider(s)\" means the third party (non-affiliated) entity that makes available features and functions through use of the Binary.com API."
 msgstr ""
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:640
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:650
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:736
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:394
 msgid "$100,000 - $250,000"
 msgstr "$100,000 - $250,000"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:637
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:647
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:718
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:380
 msgid "$100,000 - $500,000"
 msgstr "$100,000 - $500,000"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:636
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:646
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:714
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:379
 msgid "$25,000 - $100,000"
 msgstr "$25,000 - $100,000"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:641
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:651
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:740
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:395
 msgid "$250,000 - $1,000,000"
@@ -89,7 +89,7 @@ msgid "%1 Affiliate Program Terms and Conditions"
 msgstr "%1 联盟计划的条款和条件"
 
 #. ($params->{website_name})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:80
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:92
 msgid "%1 New Password Request"
 msgstr "%1 新密码请求"
 
@@ -159,7 +159,7 @@ msgstr "%1 有几个客服专业空缺，是难得的工作机会。"
 msgid "%1 has thousands of clients taking a variety of positions on the financial markets at any one time, and earns a small margin on these trades."
 msgstr "%1在任一时间内均有数千名客户交易各类金融产品，该平台在这些交易中仅赚取极低的利润率。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:511
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:521
 msgid "%1 has updated its %2. By clicking OK, you confirm that you have read and accepted the updated %2."
 msgstr "%1已经更新了%2。通过点击OK键，您确认已经阅读并接受更新的%2条款和条件。"
 
@@ -402,7 +402,7 @@ msgstr "水电煤账单或银行月结单扫描件（日期不得超过3个月�
 msgid "- A scanned copy of your passport, driving licence (provisional or full) or identity card, showing your name and date of birth."
 msgstr "显示您名字和出生日期的护照、驾照（临时或永久）或身份证的扫描件。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:616
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:626
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:600
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:163
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:191
@@ -413,7 +413,7 @@ msgstr "显示您名字和出生日期的护照、驾照（临时或永久）或
 msgid "0-1 year"
 msgstr "0-1 年"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:619
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:629
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:618
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:177
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:205
@@ -428,7 +428,7 @@ msgstr "过去12个月内0-5次交易"
 msgid "1 million transactions/day"
 msgstr "一百万笔交易/天"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:617
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:627
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:604
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:164
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:192
@@ -562,7 +562,7 @@ msgstr "3个月"
 msgid "4. Choose your Payout"
 msgstr "4. 选择赔付额"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:621
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:631
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:626
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:179
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:207
@@ -604,7 +604,7 @@ msgstr "6 - 25 个字符。"
 msgid "6 months to 1 year"
 msgstr "6 months to 1 year"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:620
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:630
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:622
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:178
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:206
@@ -658,7 +658,7 @@ msgstr "<a href=\"%1\">公司</a> 位于马耳他、马来西亚和日本"
 msgid "<a href='%1' class='pjaxload'>Contact us</a> should you need further assistance."
 msgstr "若需进一步帮助，请<a href='%1' class='pjaxload'>联系我们</a>。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:112
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:124
 #, fuzzy
 #| msgid "Dear Valued Customer, <p style=\"margin-top:1em;line-height:200%;\">It appears that you have tried to register an email address that is already included in our system. If it was not you, simply ignore this email, or contact our customer support if you have any concerns.</p>"
 msgid "<div style=\"line-height:200%;color:#333333;font-size:15px;\"><p>Dear Valued Customer,</p><p>It appears that you have tried to register an email address that is already included in our system. If it was not you, simply ignore this email, or contact our customer support if you have any concerns.</p></div>"
@@ -669,7 +669,7 @@ msgid "<option value=\"\"></option><option value=\"01\">Jan</option><option valu
 msgstr "<option value=\"\"></option><option value=\"01\">一月</option><option value=\"02\">二月</option><option value=\"03\">三月</option><option value=\"04\">四月</option><option value=\"05\">五月</option><option value=\"06\">六月</option><option value=\"07\">七月</option><option value=\"08\">八月</option><option value=\"09\">九月</option><option value=\"10\">十月</option><option value=\"11\">十一月</option><option value=\"12\">十二月</option>"
 
 #. ($params->{code}                                . '</span></p></p><p>Enjoy trading with us on Binary.com.</p>')
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:100
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:112
 #, fuzzy
 msgid "<p style=\"font-weight: bold;\">Thanks for signing up for a virtual account!</p><p>Enter the following verification token into the form to create an account:<p><span style=\"background: #f2f2f2; padding: 10px;\">"
 msgstr ""
@@ -682,12 +682,12 @@ msgstr ""
 "<p style='margin-top: 0;'>与Binary.com一块享受交易的乐趣。</p>\n"
 
 #. ($params->{code}                            . '</span></p></p>')
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:85
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:97
 msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Before we can help you change your password, please help us to verify your identity by entering the following verification token into the password reset form:<p><span style=\"background: #f2f2f2; padding: 10px;\">"
 msgstr ""
 
 #. ($params->{code}                            . '</span></p></p>')
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:127
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:139
 msgid "<p style=\"line-height:200%;color:#333333;font-size:15px;\">Dear Valued Customer,</p><p>Please help us to verify your identity by entering the following verification token into the payment agent withdrawal form:<p><span style=\"background: #f2f2f2; padding: 10px;\">"
 msgstr ""
 
@@ -1086,7 +1086,7 @@ msgid "A Bachelor’s degree in business or related discipline"
 msgstr "商科或相关学科学士学位"
 
 #. ($params->{website_name})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:109
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:121
 msgid "A Duplicate Email Address Has Been Submitted - %1"
 msgstr "您提供重复的电子邮件地址- %1"
 
@@ -1360,7 +1360,7 @@ msgstr "账户余额： "
 msgid "Account is dsiabled"
 msgstr "您的账户已被禁用"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:554
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:564
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Accounting"
 msgstr "会计"
@@ -1369,7 +1369,7 @@ msgstr "会计"
 msgid "Accounting & Payments"
 msgstr "账户处理&款项支付"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:555
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:565
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Accounts And Payments Executive"
 msgstr "账户与支付执行员"
@@ -1443,12 +1443,12 @@ msgstr "管理中心"
 msgid "Administering the company’s semi-annual performance appraisal process"
 msgstr "管理公司的半年度业绩评估程序"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:563
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:573
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Administrative Executive"
 msgstr "行政管理执行员"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:562
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:572
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Administrator"
 msgstr "管理员"
@@ -1567,13 +1567,13 @@ msgstr "高等/高级/研究生文凭或学士学位"
 msgid "An Ends Between trade pays out if the market exit price is strictly higher than the low price target AND strictly lower than the high price target. An Ends Outside binary pays out if the market exit price is EITHER strictly higher than the high price target OR strictly lower than the low price target."
 msgstr "如果市场平仓价格严格高于 \"低\" 目标价格以及严格低于 \"高\"目标价格，“收于范围之内”交易将可获利。如果市场平仓价格严格高于 \"高\" 目标价格或严格低于 \"低\"目标价格，“收于范围之外”交易将可获利。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:532
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:542
 msgid "An additional password can be used to restrict access to the cashier."
 msgstr "可使用额外密码来限制对收银台的访问。"
 
-#. ($session->email,                                $r->client_ip)
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:120
-msgid "An additional sign-in has just been detected on your account %1 from the following IP address: %2. If this additional sign-in was not performed by you, and / or you have any related concerns, please contact our Customer Support team."
+#. ($session->email, $r->client_ip, $country_code, $user_agent)
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:137
+msgid "An additional sign-in has just been detected on your account %1 from the following IP address: %2, country: %3 and browser: %4. If this additional sign-in was not performed by you, and / or you have any related concerns, please contact our Customer Support team."
 msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -1648,7 +1648,7 @@ msgstr "这是我们赢得的另一大奖项。该奖项由《Global Banking and
 msgid "Answer to secret question"
 msgstr "密码提示问题的答案"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:558
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:568
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Anti-Fraud Officer"
 msgstr "反欺诈主任"
@@ -1689,7 +1689,7 @@ msgstr "任何年满 18 岁 [已阅读并同意 %1 条款和条件]，且非居�
 msgid "Anyone who has potential to grow or increase traffic to %1"
 msgstr "任何有潜力让 %1 增长或提高流量的人士"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:647
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:657
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:802
 #, fuzzy
 #| msgid "Application Name"
@@ -2217,13 +2217,13 @@ msgstr "二元期权很容易了解。它被称为“二元”是因为只能有
 msgid "Binary options basics"
 msgstr "二元期权基础知识"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:607
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:617
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:288
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:270
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "二元期权或其他金融衍生品交易经验"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:608
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:618
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:314
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:284
 msgid "Binary options or other financial derivatives trading frequency"
@@ -2401,7 +2401,7 @@ msgstr "第一辆车的品牌"
 msgid "Browse"
 msgstr "浏览"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:517
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:527
 #, fuzzy
 #| msgid "Browse"
 msgid "Browser"
@@ -2821,7 +2821,7 @@ msgstr "关闭位置值"
 msgid "Close of trading day."
 msgstr "交易日收盘。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:573
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:583
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:12
 msgid "Closed"
 msgstr "收盘"
@@ -2881,13 +2881,13 @@ msgstr "大宗商品"
 msgid "Commodities are resources that are grown or extracted from the ground, such as silver, gold and oil. On %1, they are priced in US dollars."
 msgstr "大宗商品是生长在地上或从地面开采的宝贵资源，例如白银、黄金和石油。在 %1，大宗商品按美元报价。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:603
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:613
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:184
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:214
 msgid "Commodities trading experience"
 msgstr "大宗商品交易经验"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:604
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:614
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:210
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:228
 msgid "Commodities trading frequency"
@@ -2917,12 +2917,12 @@ msgstr "公司权利"
 msgid "Complaints and Disputes"
 msgstr "投诉与纠纷"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:556
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:566
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Compliance"
 msgstr "法规遵从性"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:557
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:567
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Compliance Executive"
 msgstr "法律执行员"
@@ -2971,7 +2971,7 @@ msgstr "冲突政策"
 msgid "Connection failure. Please try again later."
 msgstr "连接失败。请稍后重试。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:622
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:632
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:636
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:331
 msgid "Construction"
@@ -3029,19 +3029,19 @@ msgstr "合约确认"
 msgid "Contract Details"
 msgstr "合约详情"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:569
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:579
 #, fuzzy
 #| msgid "Contract expired"
 msgid "Contract Expiry"
 msgstr "合约已到期"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:594
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:604
 #, fuzzy
 #| msgid "Contract"
 msgid "Contract ID"
 msgstr "合约"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:568
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:578
 #, fuzzy
 #| msgid "Contract Confirmation"
 msgid "Contract Information"
@@ -3055,7 +3055,7 @@ msgstr "合约赔付额"
 msgid "Contract Risks"
 msgstr "合约风险"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:570
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:580
 #, fuzzy
 #| msgid "Contracts sold"
 msgid "Contract Sold"
@@ -3074,6 +3074,13 @@ msgstr "合约的到期日不能设置在年末节日期间。选择 %1 之后�
 msgid "Contract cannot be sold at this time."
 msgstr "目前合约无法卖出。"
 
+#. ($args->{contract_category})
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:42
+#, fuzzy
+#| msgid "Contract period"
+msgid "Contract category %1 invalid"
+msgstr "合约期间"
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:65
 msgid "Contract expired"
 msgstr "合约已到期"
@@ -3082,7 +3089,7 @@ msgstr "合约已到期"
 msgid "Contract has already expired."
 msgstr "合约已经到期。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:581
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:591
 #, fuzzy
 #| msgid "Contract started"
 msgid "Contract is not started yet"
@@ -3121,7 +3128,7 @@ msgstr "合约期间"
 msgid "Contract started"
 msgstr "合约已开始"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:593
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:603
 #, fuzzy
 #| msgid "Note: Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
 msgid "Contract will be sold at the prevailing market price when the request is received by our servers. This price may differ from the indicated price."
@@ -3226,7 +3233,7 @@ msgstr "为项目交付展开协调，制定和更新日程安排、维护任务
 msgid "Copyright"
 msgstr "版权"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:551
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:561
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Copywriter"
 msgstr "广告文编写人"
@@ -3243,7 +3250,7 @@ msgstr "成本"
 msgid "Costs and Charges"
 msgstr "成本和费用"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:548
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:558
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Country Manager"
 msgstr "区域经理"
@@ -3325,13 +3332,13 @@ msgstr "货币"
 msgid "Currency"
 msgstr "货币"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:571
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:581
 #, fuzzy
 #| msgid "Currency"
 msgid "Current"
 msgstr "货币"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:578
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:588
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:31
 msgid "Current Level"
 msgstr "当前价位"
@@ -3377,7 +3384,7 @@ msgstr "客户资金"
 msgid "Customer Service Representatives"
 msgstr "客户服务代表"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:508
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:518
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Customer Support"
@@ -3423,17 +3430,25 @@ msgid "Data will be available after market close."
 msgstr "收市后数据可用。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:197
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:391
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/legacy_chart_table.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/tradecorporate_action.html.tt:5
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/market_timesws.html.tt:4
 msgid "Date"
 msgstr "日期"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:516
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:526
 #, fuzzy
 #| msgid "End Time"
 msgid "Date and Time"
 msgstr "结束时间"
+
+#. ($args->{date_expiry})
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:36
+#, fuzzy
+#| msgid "Style %1 invalid"
+msgid "Date expiry %1 invalid"
+msgstr "%1类型无效"
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1600
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:360
@@ -3734,7 +3749,7 @@ msgstr ""
 msgid "Deposit"
 msgstr "存款"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:505
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:515
 msgid "Deposit %1 %2 virtual money into your account %3"
 msgstr "将%1 %2虚拟资金存入您的账户%3"
 
@@ -3820,7 +3835,7 @@ msgstr "非趋势价格摆动指标 (DPO)"
 msgid "DevOps Engineering"
 msgstr "开发运营工程"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:537
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:547
 msgid "DevOps Manager"
 msgstr "DevOps 经理 / 团队领导"
 
@@ -4095,7 +4110,7 @@ msgstr "简易波动指标"
 msgid "Educate prospects, clients, and partners regarding the benefits of %1’s innovative online trading platform"
 msgstr "对目标客户、客户和合作伙伴进行培训，使其了解 %1 创新在线交易平台的好处"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:623
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:633
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:640
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:332
@@ -4177,7 +4192,7 @@ msgstr "电子邮件地址"
 msgid "Email address is incorrect."
 msgstr "重新输入的电子邮件地址不正确。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:63
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:64
 msgid "Email not given."
 msgstr "未输入电子邮件地址 。"
 
@@ -4242,7 +4257,7 @@ msgstr "请按与现货价格差额的形式输入障碍水平。如果您输入
 msgid "Enter your email"
 msgstr "请输入您的电子邮件"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:574
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:584
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/spreads.html.tt:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:15
 msgid "Entry Level"
@@ -4266,7 +4281,7 @@ msgstr "入市现价"
 msgid "Equities"
 msgstr "Equities"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:615
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:625
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:496
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:388
 msgid "Estimated Net Worth"
@@ -4385,7 +4400,7 @@ msgstr "行使特殊客户关系管理能力，以防止支付处理和商业交
 msgid "Exercise period"
 msgstr "练习期间"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:575
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:585
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:19
 msgid "Exit Level"
 msgstr "退出价位"
@@ -4501,7 +4516,7 @@ msgstr "常见问题"
 msgid "Facility that allows you to set limits on your account."
 msgstr "可让您对帐户设置限制的设施。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:521
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:531
 #, fuzzy
 #| msgid "Failure"
 msgid "Failed"
@@ -4594,7 +4609,7 @@ msgstr "过滤离散价位"
 msgid "Final Price"
 msgstr "最终价格"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:624
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:634
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:644
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:333
 msgid "Finance"
@@ -4607,7 +4622,7 @@ msgstr "金融"
 msgid "Financial Account Opening"
 msgstr "虚拟账户开立"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:598
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:608
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:793
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:112
 msgid "Financial Assessment"
@@ -4768,13 +4783,13 @@ msgstr "森林图"
 msgid "Forex"
 msgstr "外汇"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:599
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:609
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:80
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:158
 msgid "Forex trading experience"
 msgstr "外汇交易经验"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:600
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:610
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:106
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:172
 msgid "Forex trading frequency"
@@ -4958,7 +4973,7 @@ msgstr "开始交易"
 msgid "Give Me More Money!"
 msgstr "我要赚更多！"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:559
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:569
 msgid "Global Customer Service Representatives"
 msgstr "客户服务代表"
 
@@ -4997,11 +5012,11 @@ msgstr "适用法律和司法管辖权"
 msgid "Governing law and jurisdiction"
 msgstr "适用法律和司法管辖权"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:49
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:50
 msgid "Granularity is not valid"
 msgstr "粒度无效"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:549
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:559
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Graphic Designers"
 msgstr "平面设计员"
@@ -5038,7 +5053,7 @@ msgstr "有自动化测试设备使用经验者优先考虑"
 msgid "Have a question? Need Help?"
 msgstr "有问题吗？需要帮助？"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:625
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:635
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:648
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:334
 msgid "Health"
@@ -5197,12 +5212,12 @@ msgstr "如何使用支付代理?"
 msgid "However, in order to increase your withdrawal limits, you are kindly requested to follow the instructions below."
 msgstr "但是，为了提高取款限额，请您务必遵照以下要求行事。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:561
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:571
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Human Resource Executive"
 msgstr "人力资源执行员"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:560
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:570
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Human Resources"
 msgstr "人力资源"
@@ -5245,7 +5260,7 @@ msgstr "I understand and agree that, with regard to over-the-counter binary opti
 msgid "I'm new to binaries, where do I start?"
 msgstr "我是新手，该如何开始呢？"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:518
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:528
 msgid "IP Address"
 msgstr "IP 地址"
 
@@ -5661,7 +5676,7 @@ msgstr "“范围之内/之外”期权(<a href=\"%1\">收盘位于范围之内/
 msgid "In/Out trades"
 msgstr "“范围之内 / 之外”交易"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:613
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:623
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:444
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:357
 msgid "Income Source"
@@ -5681,7 +5696,7 @@ msgstr "指标"
 msgid "Indemnity and Liability"
 msgstr "赔偿及责任"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:584
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:594
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/openpositionsws.html.tt:32
 msgid "Indicative"
 msgstr "指示性"
@@ -5715,13 +5730,13 @@ msgstr "当指数大于零时表明市场处于上升趋势，小于零时表明
 msgid "Indices"
 msgstr "指数"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:601
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:611
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:132
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:186
 msgid "Indices trading experience"
 msgstr "指数交易经验"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:602
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:612
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:158
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:200
 msgid "Indices trading frequency"
@@ -5735,7 +5750,7 @@ msgstr "个人交易者"
 msgid "Indonesia"
 msgstr "印尼"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:611
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:621
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:392
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:326
 msgid "Industry of Employment"
@@ -5745,7 +5760,7 @@ msgstr "职业领域"
 msgid "Information Security"
 msgstr "信息安全"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:536
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:546
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Information Technology"
 msgstr "信息技术"
@@ -5763,7 +5778,7 @@ msgstr "任何标的工具或资产上一次的表现不可保证其当前或未
 msgid "Input error."
 msgstr "输入错误。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:415
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:418
 msgid "Input validation failed: "
 msgstr "输入验证失败： "
 
@@ -5788,13 +5803,13 @@ msgstr "感兴趣，接下来该怎么做？如您可向我们的客户提供特
 msgid "Interested? Why not try a virtual account"
 msgstr "感兴趣？何不开个虚拟账户试试"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:564
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:574
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Internal Audit"
 msgstr "内部审计"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:565
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:575
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Internal Auditor"
 msgstr "内部审计员"
@@ -5873,8 +5888,8 @@ msgstr "无效K线图请求"
 msgid "Invalid email address"
 msgstr "无效的电子邮件地址"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:171
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:72
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:191
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:73
 msgid "Invalid email and password combination."
 msgstr "无效的电子邮件地址和密码组合。"
 
@@ -5940,7 +5955,7 @@ msgstr "Investment Solicitation Policy"
 msgid "Investment trust"
 msgstr "Investment trust"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:633
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:643
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:692
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:364
 msgid "Investments & Dividends"
@@ -6667,7 +6682,7 @@ msgstr "六月"
 msgid "June"
 msgstr "六月"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:653
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:663
 #, fuzzy
 #| msgid "API token for third party applications."
 msgid "Keep track of your authorised applications."
@@ -6688,12 +6703,6 @@ msgstr "谨致问候，"
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:219
 msgid "Kindly send us your documents for verification."
 msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:2
-#, fuzzy
-#| msgid "Acknowledgement of"
-msgid "Knowledge Test"
-msgstr "确认"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge and experience in the financial services industry"
@@ -6741,11 +6750,11 @@ msgid "Last Digit Stats"
 msgstr "最后数字的统计数据"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:346
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:650
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:660
 msgid "Last Used"
 msgstr "上一次使用"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:500
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:510
 msgid "Last digit stats for the latest %1 ticks on %2"
 msgstr "显示 %2 最新 %1 跳点的最后统计数字"
 
@@ -6811,13 +6820,13 @@ msgstr "法律&法规符合性"
 msgid "Legal Compliance"
 msgstr "法规遵从性"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:639
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:649
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:732
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:393
 msgid "Less than $100,000"
 msgstr "少于$100,000"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:635
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:645
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:710
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:378
 msgid "Less than $25,000"
@@ -6840,7 +6849,7 @@ msgstr "Less than 1 million JPY"
 msgid "Less than 6 months"
 msgstr "Less than 6 months"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:612
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:622
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:418
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:343
 msgid "Level of Education"
@@ -6918,7 +6927,7 @@ msgstr "链接"
 msgid "Live chat:"
 msgstr "在线聊天："
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:531
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:541
 msgid "Lock Cashier"
 msgstr "锁定收银台"
 
@@ -6954,12 +6963,12 @@ msgstr "对数刻度"
 msgid "Login"
 msgstr "登录"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:141
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:37
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:161
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:38
 msgid "Login Failed"
 msgstr "登录失败"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:523
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:533
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:775
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:98
 #, fuzzy
@@ -6977,7 +6986,7 @@ msgstr "登录 ID"
 msgid "Login ID (%1) does not exist."
 msgstr "登录 ID (%1) 不存在。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:131
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:151
 msgid "Login Success"
 msgstr "登陆成功"
 
@@ -7061,7 +7070,7 @@ msgstr "MACD信号"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Maintain accurate system pricing parameters"
-msgstr "维护准确的系统定价参数"
+msgstr "保持准确的系统定价参数"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Maintain adequate speed and volume of output"
@@ -7070,7 +7079,7 @@ msgstr "保持适当的速度和输出量"
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:35
 msgid "Maintain your Site and promote %1 in an appropriate manner and contact us if you are changing design or layout or adding material that may influence our opinion as to whether you are a suitable affiliate partner."
-msgstr "以合适的方式维护您的网站并推广 %1。如果您正在改变设计、版面或增加材料，且这些变化可能影响我们判断对您是否为合适的联盟伙伴，请与我们联系。"
+msgstr "以合适的方式维护您的网站并推广 %1。如果您正在改变设计、版面或增加材料，且这些变化可能影响我们判断您是否为合适的联盟伙伴，请与我们联系。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/openpositionsws.html.tt:16
 msgid "Make a Deposit"
@@ -7169,17 +7178,17 @@ msgstr "市场价格最快每秒更新一次。对于任何给定的某一秒钟
 msgid "Market-closing times: Please refer to"
 msgstr "收市时间：请参见"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:545
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:555
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Marketing"
 msgstr "市场营销"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:550
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:560
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Marketing Executives"
 msgstr "市场营销执行员"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:546
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:556
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Marketing Project Manager"
 msgstr "营销项目经理"
@@ -7533,7 +7542,7 @@ msgstr "必须监控头寸"
 msgid "Neither you nor your direct relatives are eligible to become Clients and you shall not be entitled to any share of net revenue or any other remuneration from the Company in relation to such relatives or friends. Direct relatives in this context shall include your spouse, partner, parent, child or sibling."
 msgstr "您和您的直系亲属都不得成为客户，您也无权享有任何与亲友相关的净收入或公司其他酬金的份额。此处的直系亲属包括您的配偶、伴侣、父母、子女和兄弟姐妹。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:614
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:624
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:470
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:373
 msgid "Net Annual Income"
@@ -7551,7 +7560,7 @@ msgstr "净收益"
 msgid "Network Status"
 msgstr "网络状态"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:651
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:661
 #, fuzzy
 #| msgid "Never Used"
 msgid "Never"
@@ -7574,7 +7583,7 @@ msgstr "新密码"
 msgid "New Password Request"
 msgstr "新密码请求"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:114
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:132
 msgid "New Sign-In Activity Detected"
 msgstr ""
 
@@ -7692,7 +7701,7 @@ msgstr "Not FATCA*"
 msgid "Not publish any advertising material without the company’s consent. Any advertising material promoting %1 must be submitted for approval prior to being published on your website."
 msgstr "在没有公司许可的情况下，不可发布任何广告资料。在您网站发布任何推广 %1 的广告资料前，请务必事先提交申请。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:592
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:602
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/asian.html.tt:10
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/digits.html.tt:7
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/endsinout.html.tt:14
@@ -7763,7 +7772,7 @@ msgstr "交易新手可使用我们的直观视觉式平台学习交易、练习
 msgid "Now"
 msgstr "现在"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:499
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:509
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/tick.html.tt:2
 msgid "Number of ticks"
 msgstr "跳动点数目"
@@ -7810,7 +7819,7 @@ msgstr "十月"
 msgid "Office worker"
 msgstr "Office worker"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:513
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:523
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_conditions_approval_message.html.tt:17
 msgid "Ok"
 msgstr "确定"
@@ -7900,7 +7909,7 @@ msgstr "每人只能开立一个账户。使用假名开立账户或属于同一
 msgid "Only properly tagged clients can be assigned to you as an affiliate. Should an affiliate tag be improperly inserted into your site or not properly received by the MyAffiliates server the resulting client registration and purchases will not be assigned to you. Therefore, it is your responsibility to ensure that all links are properly tagged."
 msgstr "作为联盟会员，只有适当添加标签的客户方可分配给您。如果联盟会员标签以不恰当的方式加入您的网站或未被 MyAffiliates 服务器适当接收，则相应的客户注册或买入不会分配给您。因此，您有责任确保所有链接都已适当添加标签。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:572
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:582
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:430
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:510
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/ticker_data_table.html.tt:6
@@ -7980,7 +7989,7 @@ msgstr "执行订单"
 msgid "Oscillator calculated from the daily readings of the Accumulation Distribution Line. The CMF is unlike a momentum oscillator in that it is not influenced by the daily price change. Instead, the indicator focuses on the location of the close relative to the range for the period (daily or weekly)."
 msgstr "摆动指标根据累积分配线的每日读数计算。CMF 不同于动能摆动指标，它不受每日价格变动影响。相反，该指标侧重相对于期间范围的（每日或每周）收盘位置。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:627
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:637
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:656
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:700
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:389
@@ -7999,13 +8008,13 @@ msgstr "公司的义务"
 msgid "Other best execution factors such as speed of execution, likelihood of execution and settlement, size, nature or any other considerations relevant to the execution of a particular order may also be applied by us in order to obtain the best possible results for you."
 msgstr "我们可能也会采用其他最佳执行因素如执行速度、执行和结算可能性、大小、性质或其他跟执行指定订单相关的因素，以替您获取最佳结果。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:609
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:619
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:340
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:298
 msgid "Other financial instruments trading experience"
 msgstr "其他金融工具交易体验"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:610
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:620
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:366
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:312
 msgid "Other financial instruments trading frequency"
@@ -8096,17 +8105,17 @@ msgstr "我们所提供的服务仅限于执行，并不提供与产品和服务
 msgid "Our site can be filtered using a number of filtering systems available on the market which could be used to restrict one’s access to our site."
 msgstr "我们的网站可以使用市场上多个过滤系统进行过滤，以限制用户对网站的访问。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:445
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:448
 msgid "Output validation failed: "
 msgstr "输出验证失败： "
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:642
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:652
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:744
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:396
 msgid "Over $1,000,000"
 msgstr "大于$1,000,000"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:638
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:648
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:722
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:381
 msgid "Over $500,001"
@@ -8122,7 +8131,7 @@ msgstr "在全球拥有超过一百万个注册账户"
 msgid "Over 100 million JPY"
 msgstr "Over 100 million JPY"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:618
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:628
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:608
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:165
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:193
@@ -8190,7 +8199,7 @@ msgstr "无法找到页面"
 msgid "Parabolic SAR"
 msgstr "抛物线状止损和反转指标"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:614
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:619
 msgid "Parameters sanity check failed."
 msgstr "参数完整性检查失败。"
 
@@ -8236,7 +8245,7 @@ msgstr "密码安全度非常强"
 msgid "Password is weak"
 msgstr "密码安全度很弱"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:67
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:68
 msgid "Password not given."
 msgstr "未输入密码。"
 
@@ -8360,7 +8369,7 @@ msgstr "赔付额须在%1 与 %2之间。"
 msgid "Pending Bonus: %1"
 msgstr "待定奖金：%1"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:634
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:644
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:696
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:365
 msgid "Pension"
@@ -8383,7 +8392,7 @@ msgid "Perl modules"
 msgstr "Perl 模块"
 
 #. ($descriptor->{require_scope})
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:429
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:432
 #, fuzzy
 #| msgid "Permission denied."
 msgid "Permission denied, requiring %1"
@@ -8393,7 +8402,7 @@ msgstr "权限不足，需有%1"
 msgid "Permission denied."
 msgstr "权限不足。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:649
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:659
 #, fuzzy
 #| msgid "Permission denied."
 msgid "Permissions"
@@ -8467,7 +8476,7 @@ msgstr "请输入0和%1之间的数字"
 msgid "Please enter a number between 0 and %1."
 msgstr "请输入0和%1之间的数字。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:526
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:536
 msgid "Please enter a number greater or equal to %1."
 msgstr "请输入大于0之数字。"
 
@@ -8578,7 +8587,7 @@ msgstr "请输入有效日期。"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:28
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:119
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:424
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:427
 msgid "Please log in."
 msgstr "请登陆。"
 
@@ -8621,7 +8630,7 @@ msgstr "请将文件邮寄至："
 msgid "Please provide at least one self-exclusion setting."
 msgstr "请提供至少一个自我禁止设置。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:342
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:360
 #, fuzzy
 #| msgid "Please provide at least one self-exclusion setting."
 msgid "Please provide complete details for account opening."
@@ -8896,7 +8905,7 @@ msgstr "以往在金融公司和/或二元期权网站服务的经验"
 msgid "Previous work experience in a client service and/or marketing role"
 msgstr "客户服务和/或市场营销岗位的工作经验"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:582
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:592
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/intraday_prices.html.tt:33
 msgid "Price"
 msgstr "价格"
@@ -8920,7 +8929,7 @@ msgstr "对交易进行报价。"
 msgid "Prices"
 msgstr "价格"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:628
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:638
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:666
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:348
 msgid "Primary"
@@ -9002,7 +9011,7 @@ msgstr "利润表"
 msgid "Profit/Loss"
 msgstr "利润/亏损"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:579
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:589
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:43
 msgid "Profit/Loss (points)"
 msgstr "利润/亏损（点）"
@@ -9032,7 +9041,7 @@ msgstr "公司网站、博客和社交媒体网站内容从英语翻成区域语
 msgid "Proofread existing content used on the company’s blogs and social media outlets"
 msgstr "公司博客和社交媒体网站当前内容的校对工作"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:553
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:563
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Proofreader"
 msgstr "校对员"
@@ -9132,22 +9141,22 @@ msgstr "对您的利润设置限额。一旦达到限额就将部分金额存起
 msgid "Qualified applicants should have global experience in recruitment administration, excellent administrative skills, and the ability to work in a fast-paced entrepreneurial environment. We are seeking a true professional capable of making an impact by supporting and advancing HR best practices throughout the company’s global operations."
 msgstr "合格申请人应具备全球招聘管理经验、优秀的管理技能、并能够在快节奏的企业创新环境里工作。我们正寻找能够激励公司人力资源以最佳作业方式支持和推动全球业务的真正专业人士。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:540
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:550
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Quality Assurance"
 msgstr "质量保证"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:541
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:551
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Quality Assurance Engineer"
 msgstr "质量保证工程师"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:542
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:552
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Quantitative Analysis"
 msgstr "量化分析"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:544
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:554
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Quantitative Analyst"
 msgstr "量化分析员"
@@ -9156,7 +9165,7 @@ msgstr "量化分析员"
 msgid "Quantitative Analytics"
 msgstr "量化分析"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:543
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:553
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Quantitative Developer"
 msgstr "量化开发员"
@@ -9297,7 +9306,7 @@ msgstr "账户资金永远安全，您可充分利用二元期权交易的优势
 msgid "Ref."
 msgstr "参考"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:595
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:605
 #, fuzzy
 #| msgid "Reference number"
 msgid "Reference ID"
@@ -9457,7 +9466,7 @@ msgid "Respond to client queries using our state of the art telephone, electroni
 msgstr "对客户端查询使用先进的电话、电子邮件和在线聊天系统作出响应"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:127
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:568
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:573
 msgid "Response too large."
 msgstr "反应太大。"
 
@@ -9545,7 +9554,7 @@ msgstr "期权定价和实时风险管理程序使用的代码审查、制订和
 msgid "Revisions to the Binary.com API"
 msgstr "使用Binary.com API 的网页应用程序"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:652
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:662
 msgid "Revoke access"
 msgstr ""
 
@@ -9606,7 +9615,7 @@ msgstr "俄罗斯"
 msgid "Sa"
 msgstr "星期六"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:631
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:641
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:684
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:362
 msgid "Salaried Employee"
@@ -9655,6 +9664,10 @@ msgstr "以SVG格式保存"
 msgid "Scope and Intent"
 msgstr "未输入登录 ID 。"
 
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:390
+msgid "Score"
+msgstr ""
+
 #. (broker_name)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/faq.html.tt:26
 msgid "Seasoned traders can use the %1 platform for the full advantage of the wide range of trading and analysis tools we have on offer."
@@ -9669,7 +9682,7 @@ msgstr "经验丰富的交易员可充分利用%1平台广泛交易类型和我�
 msgid "Second line of home address"
 msgstr "家庭地址第二行"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:629
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:639
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:670
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:349
 msgid "Secondary"
@@ -9681,33 +9694,6 @@ msgstr "次要"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:145
 msgid "Secret question"
 msgstr "密码提示问题"
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:24
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:7
-msgid "Section 1: Structure"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:10
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:27
-msgid "Section 2: Method"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:13
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:30
-msgid "Section 3: Outline"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:16
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:33
-msgid "Section 4: Risk"
-msgstr ""
-
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:19
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:36
-#, fuzzy
-#| msgid "Session duration:"
-msgid "Section 5: Calculation"
-msgstr "会话时间："
 
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:108
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:634
@@ -9742,7 +9728,7 @@ msgstr "安全隐私"
 msgid "Select Country"
 msgstr "选择国家"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:498
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:508
 msgid "Select market"
 msgstr "选择市场"
 
@@ -9762,7 +9748,7 @@ msgstr "选择基础资产"
 msgid "Self Exclusion"
 msgstr "自我禁止"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:632
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:642
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:688
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:363
 msgid "Self-Employed"
@@ -9794,7 +9780,7 @@ msgstr "卖出现价"
 msgid "Sell Time"
 msgstr "卖出时间"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:589
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:599
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:25
 msgid "Sell at market"
 msgstr "按市价卖出"
@@ -9822,12 +9808,12 @@ msgstr "请将您的简历以及说明您职业兴趣的求职信发送给我们
 msgid "Send your funds to the payment agent. The deposited funds, less the agent's commission, will show up in your account."
 msgstr "将资金存入支付代理。存入资金减去代理佣金的金额将会显示在您的账户中。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:538
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:548
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Senior Front-End Developer"
 msgstr "高级前端编程员"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:539
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:549
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Senior Perl Developer"
 msgstr "高级 (Perl) 编程员"
@@ -10012,7 +9998,7 @@ msgstr "消除随机噪声"
 msgid "So what are you waiting for? Join us as an affiliate today."
 msgstr "因此，您为何还迟疑不决？请即刻加入成为联盟会员吧。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:547
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:557
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Social Media Executive"
 msgstr "社交媒体网站执行员"
@@ -10073,14 +10059,14 @@ msgstr "对不起，在加载表格时出错了。如果问题持续出现，请
 msgid "Sorry, an error occurred while processing your account."
 msgstr "对不起，在处理您的账户时出错。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:587
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:597
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:1094
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:980
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:211
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:271
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount/Japan.pm:181
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:533
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:552
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:538
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:557
 msgid "Sorry, an error occurred while processing your request."
 msgstr "对不起，在处理您的请求时出错。"
 
@@ -10302,7 +10288,7 @@ msgstr "特定指令"
 msgid "Spot"
 msgstr "现价"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:583
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:593
 #, fuzzy
 #| msgid "Support Times"
 msgid "Spot Time"
@@ -10391,7 +10377,7 @@ msgstr "统计"
 
 # 83%
 # 100%
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:519
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:529
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:179
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:206
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:11
@@ -10467,19 +10453,19 @@ msgstr "拆股"
 msgid "Stock market indices measure the value of a selection of companies in the stock market."
 msgstr "股市指数衡量股市中部分公司的价值。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:605
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:615
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:236
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:242
 msgid "Stocks trading experience"
 msgstr "股票交易经验"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:606
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:616
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:262
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:256
 msgid "Stocks trading frequency"
 msgstr "股票交易频率"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:576
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:586
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:23
 msgid "Stop Loss Level"
 msgstr "止损价位"
@@ -10489,7 +10475,7 @@ msgstr "止损价位"
 msgid "Stop Loss must be between %1 and %2 %3"
 msgstr "止损须在%1 与 %2 %3之间"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:577
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:587
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/analyse_spread_contract.html.tt:27
 msgid "Stop Profit Level"
 msgstr "止盈价位"
@@ -10583,7 +10569,7 @@ msgstr "提交您的简历和求职信"
 msgid "Substantial experience in a senior marketing or advertising role"
 msgstr "高级营销或广告职责有丰富经验"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:520
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:530
 #, fuzzy
 #| msgid "Update successful"
 msgid "Successful"
@@ -10635,7 +10621,9 @@ msgid "Switch to normal mode"
 msgstr "切换到普通模式"
 
 #. ($symbol)
+#. ($args->{symbol})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:23
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:30
 msgid "Symbol %1 invalid"
 msgstr "%1 符号无效"
 
@@ -10749,7 +10737,7 @@ msgstr "本协议的终止并不影响任何一方在终止日或该日之前的
 msgid "Terms"
 msgstr "条款"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:512
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:522
 #, fuzzy
 #| msgid "Terms and Conditions"
 msgid "Terms & Conditions"
@@ -10777,7 +10765,7 @@ msgstr "条款和条件审批"
 msgid "Terms and conditions"
 msgstr "Terms and conditions"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:630
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:640
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:674
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:350
 msgid "Tertiary"
@@ -11376,7 +11364,7 @@ msgstr "滤波算法是根据一个类似于“布林带”波动性系统的数
 msgid "The financial trading services contained within this site are only suitable for Clients who are able to bear the loss of all the money they invest and who understand and have experience of the risks involved in the acquisition of financial contracts."
 msgstr "本网站所涵盖的金融交易服务仅适用于以下客户：能够承受投入资金全部亏损的风险，了解购买金融合约所蕴含的风险并拥有相关的风险经历。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:643
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:653
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:537
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:406
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium."
@@ -11626,7 +11614,7 @@ msgstr "服务器访问出了问题。"
 msgid "There was a problem validating your address. Please fix the indicated fields. If you need assistance feel free to contact our <a href=\"%1\">Customer Support</a>."
 msgstr "在验证您地址的时候出现问题。请修改提示字段。如需帮助，请联系我们的 <a href=\"%1\">客户支持人员</a>。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:588
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:598
 #, fuzzy
 #| msgid "There was an error."
 msgid "There was an error"
@@ -11782,13 +11770,13 @@ msgstr "此客户的收银台部分已锁定。"
 msgid "This contract cannot be properly validated at this time."
 msgstr "目前该交易无法正确验证。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:586
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:596
 #, fuzzy
 #| msgid "This contract has expired."
 msgid "This contract has LOST"
 msgstr "此合约已到期。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:585
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:595
 #, fuzzy
 #| msgid "This contract lost"
 msgid "This contract has WON"
@@ -12110,7 +12098,7 @@ msgstr "“触及/未触及”交易"
 msgid "Tour"
 msgstr "指南"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:626
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:636
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:652
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:335
 msgid "Tourism"
@@ -12353,7 +12341,7 @@ msgstr "将公司的日常业务需求转化成合适的信息技术基础设施
 msgid "Translations"
 msgstr "翻译"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:552
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:562
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Translator"
 msgstr "翻译员"
@@ -12505,11 +12493,11 @@ msgstr "未知着陆公司。"
 msgid "Unless otherwise advised, we shall treat you as a Retail Client. You may also request, in writing, us to change the category in which you have been classified and this may have an effect on the level of protection afforded to you. We reserve the right to accept or refuse any such request for change in classification."
 msgstr "除非另行通知，我们将视您为零售客户。您也可通过书面请求我们改变您的类别，这么做可能会影响到我们所提供给您的保护级别。我们保留接受或拒绝任何改变类别请求的权利。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:529
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:539
 msgid "Unlock Cashier"
 msgstr "解锁收银台"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:453
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:456
 msgid "Unrecognised request."
 msgstr "无法辨识之请求。"
 
@@ -12529,7 +12517,7 @@ msgstr "“上涨/下跌”交易"
 msgid "Upcoming Events"
 msgstr "未来事件"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:533
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:543
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1927
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:367
 msgid "Update"
@@ -12640,14 +12628,14 @@ msgstr "验证新密码"
 #. (request()
 #. ($params->{website_name})
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Account/Virtual.pm:101
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:95
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:107
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:579
 msgid "Verify your email address - %1"
 msgstr "验证您的电子邮件地址 - %1"
 
 #. ($c->stash('website_name')
 #. ($params->{website_name})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:122
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:134
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:186
 msgid "Verify your withdrawal request - %1"
 msgstr "验证您的提款请求 - %1"
@@ -13466,6 +13454,10 @@ msgstr "全球指数"
 msgid "Written limits and self-exclusion"
 msgstr "书面限制和自我禁止"
 
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Japan/Contract.pm:18
+msgid "Wrong pricing table arguments"
+msgstr ""
+
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:55
 msgid "Year"
 msgstr "年"
@@ -13529,8 +13521,8 @@ msgstr "我们仅此通知您，%1 所提供的二元期权交易并不受任何
 
 #. ($symbol)
 #. ($args->{ticks_history})
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:39
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:65
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:40
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:66
 msgid "You are already subscribed to %1"
 msgstr "您已订阅%1"
 
@@ -13546,15 +13538,21 @@ msgstr "您已订阅交易更新。"
 msgid "You are being given the better price."
 msgstr "正在为您获取更好的价格。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:503
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:513
 msgid "You are currently logged in to your real money account with %1 (%2)."
 msgstr "您现已登录您的 %1(%2)真实资金账户。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:504
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:514
 msgid "You are currently logged in to your virtual money account (%2)."
 msgstr "您现已登录您的虚拟资金账户(%2)。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:89
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:110
+#, fuzzy
+#| msgid "You are either already subscribed or you have reached the limit for proposal subscription."
+msgid "You are either already subscribed or you have reached the limit for pricing table subscription."
+msgstr "您要不已经订阅，要不已达所提议订阅的上限。"
+
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:90
 msgid "You are either already subscribed or you have reached the limit for proposal subscription."
 msgstr "您要不已经订阅，要不已达所提议订阅的上限。"
 
@@ -13710,7 +13708,7 @@ msgstr "您已超出 %1%2的7天期损失限额。"
 msgid "You have exceeded your daily limit on losses of %1%2."
 msgstr "您已超出%1%2的每日损失限额。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:648
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:658
 #, fuzzy
 #| msgid "You haven't purchased any contracts."
 msgid "You have not granted access to any apps."
@@ -13729,7 +13727,7 @@ msgid "You have purchased the following contract:"
 msgstr "您已经买入以下合约："
 
 #. ($descriptor->{category})
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:402
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:405
 msgid "You have reached the rate limit for %1."
 msgstr "您已达 %1的最高限率。"
 
@@ -13749,7 +13747,7 @@ msgstr "您已注册一个以上的账户。"
 msgid "You have sold the following contract:"
 msgstr "您已经卖出以下合约："
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:590
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:600
 #, fuzzy
 #| msgid "You have sold the following contract:"
 msgid "You have sold this contract at %1 %2"
@@ -13940,13 +13938,13 @@ msgstr "您所提出的大多数问题可在<a href='%1' target='_blank'>常见�
 msgid "You're using a Virtual Account."
 msgstr "您正在使用虚拟账户。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:506
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:516
 #, fuzzy
 #| msgid "Your %1 account is unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
 msgid "Your %1 account is unavailable. For any questions please contact %2."
 msgstr "您的%1 账户不可用。如有任何问题，请联系%2。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:507
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:517
 #, fuzzy
 #| msgid "Your %1 accounts are unavailable. For any questions please contact <a href=\"%2\">Customer Support</a>."
 msgid "Your %1 accounts are unavailable. For any questions please contact %2."
@@ -14005,7 +14003,7 @@ msgstr "您的账户余额是 %1 %2。通过所有其他方式的最大取款金
 msgid "Your account has exceeded the trading limit with free promo code, please deposit if you wish to continue trading."
 msgstr "您的账户已超过免费推广代码的交易限额，如果要继续交易，请存入资金。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:522
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:532
 msgid "Your account has no Login/Logout activity."
 msgstr "您的账户没交易活动。"
 
@@ -14099,7 +14097,7 @@ msgstr "您的收银台已依照您的请求被密码锁定"
 msgid "Your cashier is locked as per your request - to unlock it, please <a href=\"%1\">click here</a>."
 msgstr "根据您的请求，您的收银台已被锁定 - 如需解除锁定，请<a href=\"%1\">点击此处</a>。"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:530
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:540
 msgid "Your cashier is locked as per your request - to unlock it, please enter the password."
 msgstr "根据您的请求，您的收银台已被锁定 - 如需解除锁定，请输入密码。"
 
@@ -14145,7 +14143,7 @@ msgstr "您的出生日期无效。"
 msgid "Your details"
 msgstr "您的详细信息"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:644
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:654
 msgid "Your details have been updated."
 msgstr "您的个人信息已成功更新。"
 
@@ -14307,7 +14305,7 @@ msgid "Your transaction reference is"
 msgstr "您的交易参考号是"
 
 #. ($tradeRef)
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:591
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:601
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1319
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1683
 msgid "Your transaction reference number is %1"
@@ -14358,435 +14356,6 @@ msgstr "您能赚取的收益将令自己感到吃惊。"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:72
 msgid "Zoom"
 msgstr "缩放"
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:393
-msgid "[JAPAN ONLY]A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:394
-msgid "[JAPAN ONLY]A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:397
-msgid "[JAPAN ONLY]A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:391
-msgid "[JAPAN ONLY]A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:474
-msgid "[JAPAN ONLY]A binary option price cannot exceed the payout amount."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:479
-msgid "[JAPAN ONLY]A binary option which is in-the-money will have a higher value than an option that is out-of-the-money because there will be a higher probability of receiving the payout amount."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:478
-msgid "[JAPAN ONLY]A binary option which is out-of-the-money will have a lower price than an option which is in-the-money because the probability of receiving the payout amount is lower."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:421
-msgid "[JAPAN ONLY]A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:489
-msgid "[JAPAN ONLY]A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:436
-msgid "[JAPAN ONLY]About OTC currency for binary options trading, summarizes the profit and loss result of all transactions that have been made between the customer, to publish the information in the company's home page, at any time while the customer is doing the transaction before the start, or the transaction, the information Make sure, for that you're willing to trade under the calm judgment, we are committed to a variety of environmental improvement."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:452
-msgid "[JAPAN ONLY]Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:424
-msgid "[JAPAN ONLY]Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:448
-msgid "[JAPAN ONLY]Although the options which is not be exercised will disappear at the exercise period, the option fee which seller received will remain for sellers."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:390
-msgid "[JAPAN ONLY]An option holder must buy ( or sell ) the underlying asset at a predetermined price within a specified period ( or at a specific time )."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:470
-msgid "[JAPAN ONLY]An option price is the sum of the intrinsic-value and the time-value."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:480
-msgid "[JAPAN ONLY]As the exercise deadline approaches, the price of an in-the-money binary option will move towards the payout amount."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:481
-msgid "[JAPAN ONLY]As the exercise deadline approaches, the price of an out-of-the-money binary option will move towards zero."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:468
-msgid "[JAPAN ONLY]As the expected volatility of the underlying asset increases, a plain vanilla option price will move higher."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:473
-msgid "[JAPAN ONLY]As the time to the exercise point shortens, the time-value of a plain vanilla option decreases."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:415
-msgid "[JAPAN ONLY]At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:416
-msgid "[JAPAN ONLY]At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:450
-msgid "[JAPAN ONLY]Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:451
-msgid "[JAPAN ONLY]Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:490
-#, fuzzy
-#| msgid "A member of our Customer Support Team will contact you shortly."
-msgid "[JAPAN ONLY]Congratulations, you have pass the test, our Customer Support will contact you shortly."
-msgstr "我们的客户支持人员稍后将与您联系。"
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:410
-msgid "[JAPAN ONLY]Covered option is holding the underlying assets which like covering sell position of options and sell the it."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:492
-msgid "[JAPAN ONLY]Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:493
-msgid "[JAPAN ONLY]Dear customer, you've already completed the knowledge test, please proceed to next step."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:485
-msgid "[JAPAN ONLY]Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:447
-msgid "[JAPAN ONLY]Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:431
-msgid "[JAPAN ONLY]Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:432
-msgid "[JAPAN ONLY]Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:426
-msgid "[JAPAN ONLY]For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:427
-msgid "[JAPAN ONLY]For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an out-of-the-money option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:398
-msgid "[JAPAN ONLY]For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:399
-msgid "[JAPAN ONLY]For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:469
-msgid "[JAPAN ONLY]For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:430
-msgid "[JAPAN ONLY]For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:429
-msgid "[JAPAN ONLY]For a put option, if the underlying asset price is lower than the option exercise price, it is known as an out-of-the-money option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:466
-msgid "[JAPAN ONLY]For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:437
-msgid "[JAPAN ONLY]For an individual investor, all profits from OTC currency options trading are tax-free."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
-msgid "[JAPAN ONLY]For an individual investor, profits and losses from OTC currency options traing cannot be combined with profits and losses from margin FX and securities-related OTC options."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:465
-msgid "[JAPAN ONLY]For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:428
-msgid "[JAPAN ONLY]For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:417
-msgid "[JAPAN ONLY]Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:484
-#, fuzzy
-#| msgid "Each binary option is a prediction on the future movement of an underlying market."
-msgid "[JAPAN ONLY]Historical volatility is a prediction of the future rate of change in the underlying asset."
-msgstr "二元期权交易是对标的市场未来变化的预测。"
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:443
-msgid "[JAPAN ONLY]If an option buyer wishes to exercise the option rights, the seller may still reject the deal."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:467
-msgid "[JAPAN ONLY]If implied volatility increases then the prices of both call and put types of plain vanilla options will increase."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:440
-msgid "[JAPAN ONLY]If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:441
-msgid "[JAPAN ONLY]If the buyer of an option waives his right to exercise, a transaction in the underlying asset will not be dealt between the seller and the buyer."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:462
-msgid "[JAPAN ONLY]If the exercise prices and exercise times are the same for an American style and European style option, then the American style option will have a higher price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:471
-msgid "[JAPAN ONLY]If the underlying asset price is 100 yen, the exercise price is 80 yen, and the call option price is 45 yen, then it can be said that the option's intrinsic-value is 20 yen, and its time-value is 25 yen."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:402
-msgid "[JAPAN ONLY]If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:404
-msgid "[JAPAN ONLY]If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:403
-msgid "[JAPAN ONLY]If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:400
-msgid "[JAPAN ONLY]If you sell a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:405
-msgid "[JAPAN ONLY]If you sell a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you need to payout 1,000 yen, then your profit will be minus 500 yen after subtracting the 500 yen that was received as a fee from the option buyer."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:401
-msgid "[JAPAN ONLY]If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:483
-#, fuzzy
-#| msgid "Each binary option is a prediction on the future movement of an underlying market."
-msgid "[JAPAN ONLY]Implied volatility is a prediction of the future rate of change in the underlying asset."
-msgstr "二元期权交易是对标的市场未来变化的预测。"
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:463
-msgid "[JAPAN ONLY]In case of the right to buy the underlying asset (call option), when the underlying asset price falls, the option price will increase."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:464
-msgid "[JAPAN ONLY]In case of the right to sell the underlying asset (put option), when the underlying asset price rises, the option price will increase."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:453
-msgid "[JAPAN ONLY]In case probability to receive the payout is 50% and magnification of payout for the investment is less than a 2-fold lower, than the expected rate will be  1 times lower and forecast recovery amount is less than the investment."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:475
-msgid "[JAPAN ONLY]In general a binary option price will not exceed the payout amount."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:477
-msgid "[JAPAN ONLY]In general the price of a binary option will be lower than the price of a plain vanilla option because the payout amount is fixed."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:434
-msgid "[JAPAN ONLY]In the OTC currency binary options trading, if the exchange rate during the trading period move to one direction more than expected, that there is no exercise price which can continue appropriate trading around at-the-money, there is possible to add the exercise price on the way. However, even if the exercise price has been added, do the exercise price will continue trading using up to it, also the transaction price will not be affected by the additional impact of the exercise price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:454
-msgid "[JAPAN ONLY]It can not be said that binary option is unconditionally advantageous because the reason why investors will lose the full amount of investment at binary option, on the other hand part of investment will remain at FX."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:449
-msgid "[JAPAN ONLY]Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:486
-msgid "[JAPAN ONLY]Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. Apart from the fixed exercise price, all other elements are changing constantly, so an understanding of the relationships between each element and changes in the options price is necessary for the management of options trading risk."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:487
-msgid "[JAPAN ONLY]Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. However, when the remaining time to the exercise point is very short, there is no need to consider these when managing option trading risk, as all these elements are constant."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:425
-msgid "[JAPAN ONLY]Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:494
-msgid "[JAPAN ONLY]Please complete the following questions."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:408
-msgid "[JAPAN ONLY]Predicted that the underlying asset price is largely up-dean and in order to obtain the benefit also moving in either direction of rising send falling, obtained both options of the call options that exercise price is higher than the underlying asset price and tie put option that exercise prize is lower than underlying asset price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:411
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:414
-msgid "[JAPAN ONLY]Predicted the underlying asset price will decline than strike price at exit time and bought binary call options."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:412
-msgid "[JAPAN ONLY]Predicted the underlying asset price will decline than strike price at exit time and bought binary put options."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:413
-msgid "[JAPAN ONLY]Predicted the underlying asset price will raise than strike price at exit time and bought binary put options."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:409
-msgid "[JAPAN ONLY]Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:457
-msgid "[JAPAN ONLY]Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:461
-msgid "[JAPAN ONLY]Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:459
-msgid "[JAPAN ONLY]Price of the option, the price of the underlying asset, price fluctuation rate of the underlying assets, the time until the exercise date, subject to any of the impact of interest rates."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:458
-msgid "[JAPAN ONLY]Regarding to the OTC price of financial instruments, in case that financial instruments business operator suggests both of  bid and ask price (or trading price and cancellation price), generally there is a difference of them. This option will be wider as the expiration approaches."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:423
-msgid "[JAPAN ONLY]Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:422
-msgid "[JAPAN ONLY]Short positions of currency-related binary options, unlike the short positions of the other currency-related option, will not be loss cut because it is not a financial instruments subjected to loss cut regulation."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:491
-#, fuzzy
-#| msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
-msgid "[JAPAN ONLY]Sorry, you have failed the test, please try again after 24 hours."
-msgstr "对不起，您的失败尝试次数过多。请5分钟后再试。"
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:488
-msgid "[JAPAN ONLY]The Black-Scholes model is widely used to calculate theoretical option prices."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:445
-msgid "[JAPAN ONLY]The buyer of the plane option can waiver when incriminating, so the maximum loss of buyer is option fee and maximum earning is the amount subtracted by the difference of underlying asset price and exercise price from option fee. Therefore, when the underlying asset price is infinite, the profit will be infinite."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:455
-msgid "[JAPAN ONLY]The contents of the financial instruments of the OTC binary options are the same even transactions dealers handling financial instruments business are different."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:435
-msgid "[JAPAN ONLY]The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for personal, company inspects if mistakes and intentional operation has not been performed inspection for exit price the company determined and also checking whether there is an error in the data in case that the company use the rate data provided by third company."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:444
-msgid "[JAPAN ONLY]The option of the leverage effect, the buyer is likely to be obtained several times profit compared to the option fee, but the loss is limited to the option fee, when it comes to seller, profit is limited to the option fee, but loss will be likely to be doubled of option fee."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:433
-msgid "[JAPAN ONLY]The payout is the amount that seller of the option paid to the buyer as a result of exercising the right, when the predetermined exercise conditions meet and the amount paid like that called payout amount."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:456
-msgid "[JAPAN ONLY]The price of OTC binary options of the same conditions, (sometimes) the price varies depending on transactions dealers handling financial instruments business."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:482
-msgid "[JAPAN ONLY]The price of a binary option is affected by not only the change in the underlying asset price, but also the change in remaining time to the exercise point."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:460
-msgid "[JAPAN ONLY]The price of an option can be affected by the underlying asset price, by the volatility rate of the underlying asset, or by the time remaining to the exercise time."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:442
-msgid "[JAPAN ONLY]The seller of an option should receive the option premium from the buyer, even if the buyer waives the right to exercise the option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:495
-msgid "[JAPAN ONLY]The test is unavailable now, test can only be taken again on next business day with respect of most recent test."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:472
-msgid "[JAPAN ONLY]The time-value of an option represents the expected value of the option at the exercise point, and may be positive, even when the intrinsic-value is zero."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:396
-msgid "[JAPAN ONLY]There are many types of Binary Option, including some such as Range Binary Options and Touch or No-Touch Binary Options which do not always require automatic payment at Exercise Time and which will be settled earlier if certain conditions have been met. However, in all cases, for a payment to be required, the option must end In The Money."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:395
-msgid "[JAPAN ONLY]There are some types of Binary Option, such as Range Binary Options, Touch or No-Touch Binary Options, that are exceptions to the general rule where payment is made at a known exercise time. For these types of option a payment is made automatically at Exit Time when certain conditions have been met."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:392
-msgid "[JAPAN ONLY]There are two types of option delivery: One requires exchanging the underlying asset, and the other requires a payment which depends on the difference between the fair market price and the exercise price. A Binary Option is the second type where if the fair market price meets certain conditions with respect to the exercise price, then an agreed fixed amount will be paid to the option buyer."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:406
-msgid "[JAPAN ONLY]To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:407
-msgid "[JAPAN ONLY]To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:420
-msgid "[JAPAN ONLY]Trading period (expiration) of binary option is 2 hours and more. All of the transactions are established at the start of the trading period and the established position will be settled only by judge."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:439
-msgid "[JAPAN ONLY]Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:476
-msgid "[JAPAN ONLY]Unlike a plain vanilla option, an in-the-money binary option will have a lower price, the further away it is from the exercise point."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:419
-msgid "[JAPAN ONLY]Using two options, if get  binary call option which exercise price is higher and binary put option which exercise price is lower, its possible to obtain profit in case that exit price is out side of the price range made by exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is out side of the predetermined price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:418
-msgid "[JAPAN ONLY]Using two options, if obtain  binary put option which exercise price is higher and binary call option which exercise price is lower, its possible to obtain profit in case that exit price is between the exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is in side of the predetermined price."
-msgstr ""
-
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:446
-msgid "[JAPAN ONLY]While seller of plan options is limited the earnings is the option fee, the difference of the underlying asset price and the strike price is a loss, if the underlying asset price is infinite, the loss will be infinite."
-msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/responsible_trading.html.haml:1
 msgid "a definite or indefinite period during which you wish to exclude yourself from the website."
@@ -15011,7 +14580,7 @@ msgstr "月份"
 msgid "months"
 msgstr "月份"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:580
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:590
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_table.html.tt:52
 msgid "not available"
 msgstr "不可使用"
@@ -15174,6 +14743,484 @@ msgstr "您已经完整阅读此法律条款及条件页面，并理解您将在
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:182
 msgid "you have sufficient experience and knowledge in matters of financial trading to be capable of evaluating the merits and risks of acquiring financial contracts via this site and have done so without relying on any information contained in this site."
 msgstr "您拥有足够的金融交易经验和知识，能够评估经由本网站购买金融合约的收益与风险，并且不依赖于本网站中包含的任何信息作出购买决定。"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:403
+msgid "{JAPAN ONLY}A  Net Settlement type of option is one where the underlying asset does not include yen, but the option fee and settlement are paid in yen; it therefore requires some definition of how the settlement amounts will be calculated and converted to yen."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:404
+msgid "{JAPAN ONLY}A Binary Option contains the right for the buyer to receive a certain fixed amount if the market price reaches the exercise price by the exercise time, but it does not contain any rights to sell or buy the underlying asset."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:407
+msgid "{JAPAN ONLY}A Currency Binary Option is one where there is a target for a particular currency pair, so a strike price for the exchange rate is agreed, and a payout will be due if the judgment price meets the conditions of being over or under the target strike price, depending on the option type, by the exercise time."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:401
+msgid "{JAPAN ONLY}A Currency Option confers the right to sell one currency in exchange for another currency as the underlying asset. For example, the right to sell Yen and buy Dollars is known as a Yen Put / Dollar Call Option, or just Yen Put for short; and the opposite right to buy Yen and sell Dollar is called a Yen Call / Dollar Put Option, or just Yen Call for short."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:484
+msgid "{JAPAN ONLY}A binary option price cannot exceed the payout amount."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:489
+msgid "{JAPAN ONLY}A binary option which is in-the-money will have a higher value than an option that is out-of-the-money because there will be a higher probability of receiving the payout amount."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:488
+msgid "{JAPAN ONLY}A binary option which is out-of-the-money will have a lower price than an option which is in-the-money because the probability of receiving the payout amount is lower."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:431
+msgid "{JAPAN ONLY}A bought or sold binary option may be closed-out before exercise time by selling or buying-back the option, or alternatively by cancelling."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:499
+msgid "{JAPAN ONLY}A modified version of the Black-Scholes model is widely used to calculate the theoretical prices of binary options."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:446
+msgid "{JAPAN ONLY}About OTC currency for binary options trading, summarizes the profit and loss result of all transactions that have been made between the customer, to publish the information in the company's home page, at any time while the customer is doing the transaction before the start, or the transaction, the information Make sure, for that you're willing to trade under the calm judgment, we are committed to a variety of environmental improvement."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:462
+msgid "{JAPAN ONLY}Although binary option loss is limited, based on the assets of the investors, so as not to become excessive speculative trading, it is necessary to bear in mind the moderation in transactions."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:434
+msgid "{JAPAN ONLY}Although each traders determined the limit amount to deal with the customer, even if customer's transaction amount, loss with a certain period and open interest a customer held exceeds the reference, the transaction with the customer will not be discontinued or cancelled."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:458
+msgid "{JAPAN ONLY}Although the options which is not be exercised will disappear at the exercise period, the option fee which seller received will remain for sellers."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:400
+msgid "{JAPAN ONLY}An option holder must buy ( or sell ) the underlying asset at a predetermined price within a specified period ( or at a specific time )."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:480
+msgid "{JAPAN ONLY}An option price is the sum of the intrinsic-value and the time-value."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:490
+msgid "{JAPAN ONLY}As the exercise deadline approaches, the price of an in-the-money binary option will move towards the payout amount."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:491
+msgid "{JAPAN ONLY}As the exercise deadline approaches, the price of an out-of-the-money binary option will move towards zero."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:478
+msgid "{JAPAN ONLY}As the expected volatility of the underlying asset increases, a plain vanilla option price will move higher."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:483
+msgid "{JAPAN ONLY}As the time to the exercise point shortens, the time-value of a plain vanilla option decreases."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:425
+msgid "{JAPAN ONLY}At buying call option, break-even point is the price added option fee of a unit of the underlying asset to exercise price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:426
+msgid "{JAPAN ONLY}At buying put option, break-even point is the price minuses option fee of a unit of the underlying asset to exercise price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:460
+msgid "{JAPAN ONLY}Based on the probability of profit is obtained by the exercise, it can not be said that cheaper options is advantageous unconditionally."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:461
+msgid "{JAPAN ONLY}Binary options is lower risks and higher returns than plan options because loss of sellers is limited at binary options."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:500
+#, fuzzy
+#| msgid "A member of our Customer Support Team will contact you shortly."
+msgid "{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly."
+msgstr "我们的客户支持人员稍后将与您联系。"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:420
+msgid "{JAPAN ONLY}Covered option is holding the underlying assets which like covering sell position of options and sell the it."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:502
+msgid "{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until %1.\\nLast test taken at %2."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:503
+msgid "{JAPAN ONLY}Dear customer, you've already completed the knowledge test, please proceed to next step."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:495
+#, fuzzy
+#| msgid "Each binary option is a prediction on the future movement of an underlying market."
+msgid "{JAPAN ONLY}Delta refers to  a percentage change of the option price with respect to the change in the underlying asset price."
+msgstr "二元期权交易是对标的市场未来变化的预测。"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:457
+msgid "{JAPAN ONLY}Exercise deadline is coming, but the option to exercise is not carried out and disappear, option premium the seller received will be as it is that of the seller."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:441
+msgid "{JAPAN ONLY}Exercise price is the price which buy and sell underlying asset by exercise the right and in case of binary option, it is basic price to judge the presence (exist) of payout."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:442
+msgid "{JAPAN ONLY}Exit price is the underlying asset price at exercise time and it's the price to judge the presence (exist) of payout by comparing with exercise price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:436
+msgid "{JAPAN ONLY}For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an in-the-money option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:437
+msgid "{JAPAN ONLY}For a call option, if the price of the underlying asset is higher than the option exercise price, it is know as an out-of-the-money option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:408
+msgid "{JAPAN ONLY}For a currency binary option which has the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes weaker is known as a dollar-put binary option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:409
+msgid "{JAPAN ONLY}For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:479
+msgid "{JAPAN ONLY}For a plain vanilla option, as the time to the exercise point shortens, the price of the option will decrease."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:440
+msgid "{JAPAN ONLY}For a put option, if the underlying asset price is higher than the option exercise price, it is known as an in-the-money option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:439
+msgid "{JAPAN ONLY}For a put option, if the underlying asset price is lower than the option exercise price, it is known as an out-of-the-money option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:476
+msgid "{JAPAN ONLY}For an in-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:447
+msgid "{JAPAN ONLY}For an individual investor, all profits from OTC currency options trading are tax-free."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:448
+msgid "{JAPAN ONLY}For an individual investor, profits and losses from OTC currency options traing cannot be combined with profits and losses from margin FX and securities-related OTC options."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:475
+msgid "{JAPAN ONLY}For an out-of-the-money option, the further away from the underlying asset price that the option exercise price is, the lower the price of the option will be."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:438
+msgid "{JAPAN ONLY}For both call and put options, if the underlying asset price is the same as the exercise price, it is known as an at-the-money option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:427
+msgid "{JAPAN ONLY}Hedge you used for binary option is needed to be conducted as compensation part of loss of  the hedged asset because payout is fixed."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:494
+#, fuzzy
+#| msgid "Each binary option is a prediction on the future movement of an underlying market."
+msgid "{JAPAN ONLY}Historical volatility is a prediction of the future rate of change in the underlying asset."
+msgstr "二元期权交易是对标的市场未来变化的预测。"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:453
+msgid "{JAPAN ONLY}If an option buyer wishes to exercise the option rights, the seller may still reject the deal."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:477
+msgid "{JAPAN ONLY}If implied volatility increases then the prices of both call and put types of plain vanilla options will increase."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:450
+msgid "{JAPAN ONLY}If the buyer of an option does not exercise the option rights, there will be no fee payable to the option seller."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:451
+msgid "{JAPAN ONLY}If the buyer of an option waives his right to exercise, a transaction in the underlying asset will not be dealt between the seller and the buyer."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:472
+msgid "{JAPAN ONLY}If the exercise prices and exercise times are the same for an American style and European style option, then the American style option will have a higher price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:481
+msgid "{JAPAN ONLY}If the underlying asset price is 100 yen, the exercise price is 80 yen, and the call option price is 45 yen, then it can be said that the option's intrinsic-value is 20 yen, and its time-value is 25 yen."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:412
+msgid "{JAPAN ONLY}If you buy a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:414
+msgid "{JAPAN ONLY}If you buy a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you receive a payout of 1,000 yen, then your profit can be calculated 500 yen after subtracting the 500 yen that was paid as a fee to the option seller."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:413
+msgid "{JAPAN ONLY}If you buy a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will receive a payout 1,000 yen from the seller of the option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:410
+msgid "{JAPAN ONLY}If you sell a currency binary call option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:415
+msgid "{JAPAN ONLY}If you sell a currency binary option at a price of 500 yen, and the judgment price meets the conditions so you need to payout 1,000 yen, then your profit will be minus 500 yen after subtracting the 500 yen that was received as a fee from the option buyer."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:411
+msgid "{JAPAN ONLY}If you sell a currency binary put option at a price of 500 yen, with an underlying of dollar against yen, the payout is 1,000 yen, and the strike price is 100, then if the judgment price at exercise time is 99, you will need to payout 1,000 yen to the buyer of the option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:493
+#, fuzzy
+#| msgid "Each binary option is a prediction on the future movement of an underlying market."
+msgid "{JAPAN ONLY}Implied volatility is a prediction of the future rate of change in the underlying asset."
+msgstr "二元期权交易是对标的市场未来变化的预测。"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:473
+msgid "{JAPAN ONLY}In case of the right to buy the underlying asset (call option), when the underlying asset price falls, the option price will increase."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:474
+msgid "{JAPAN ONLY}In case of the right to sell the underlying asset (put option), when the underlying asset price rises, the option price will increase."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:463
+msgid "{JAPAN ONLY}In case probability to receive the payout is 50% and magnification of payout for the investment is less than a 2-fold lower, than the expected rate will be  1 times lower and forecast recovery amount is less than the investment."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:485
+msgid "{JAPAN ONLY}In general a binary option price will not exceed the payout amount."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:487
+msgid "{JAPAN ONLY}In general the price of a binary option will be lower than the price of a plain vanilla option because the payout amount is fixed."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:444
+msgid "{JAPAN ONLY}In the OTC currency binary options trading, if the exchange rate during the trading period move to one direction more than expected, that there is no exercise price which can continue appropriate trading around at-the-money, there is possible to add the exercise price on the way. However, even if the exercise price has been added, do the exercise price will continue trading using up to it, also the transaction price will not be affected by the additional impact of the exercise price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:464
+msgid "{JAPAN ONLY}It can not be said that binary option is unconditionally advantageous because the reason why investors will lose the full amount of investment at binary option, on the other hand part of investment will remain at FX."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:394
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:2
+#, fuzzy
+#| msgid "Acknowledgement of"
+msgid "{JAPAN ONLY}Knowledge Test"
+msgstr "确认"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:393
+msgid "{JAPAN ONLY}Knowledge Test Result"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:459
+msgid "{JAPAN ONLY}Maximum loss of buyer at binary options is an optional fee, maximum loss of the seller will be the amount subtracted the option fee from the payout amount."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:496
+msgid "{JAPAN ONLY}Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. Apart from the fixed exercise price, all other elements are changing constantly, so an understanding of the relationships between each element and changes in the options price is necessary for the management of options trading risk."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:497
+msgid "{JAPAN ONLY}Option prices are normally dependant on elements such as the underlying asset price, the exercise price, the length of time until the exercise point, volatility, and interest rates. However, when the remaining time to the exercise point is very short, there is no need to consider these when managing option trading risk, as all these elements are constant."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:435
+msgid "{JAPAN ONLY}Options may be either European or American style of exercise, and the one which can be exercised at only one expiry time is the European style option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:504
+msgid "{JAPAN ONLY}Please complete the following questions."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:418
+msgid "{JAPAN ONLY}Predicted that the underlying asset price is largely up-dean and in order to obtain the benefit also moving in either direction of rising send falling, obtained both options of the call options that exercise price is higher than the underlying asset price and tie put option that exercise prize is lower than underlying asset price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:421
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:424
+msgid "{JAPAN ONLY}Predicted the underlying asset price will decline than strike price at exit time and bought binary call options."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:422
+msgid "{JAPAN ONLY}Predicted the underlying asset price will decline than strike price at exit time and bought binary put options."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:423
+msgid "{JAPAN ONLY}Predicted the underlying asset price will raise than strike price at exit time and bought binary put options."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:419
+msgid "{JAPAN ONLY}Predicts that width of up-down of underlying asset is small and  in order to obtain the benefit also moving in either direction of rising and falling, granted together both of the call option that exercise price is higher than underlying asset and the put option that exercise price is lower than underlying asset price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:467
+msgid "{JAPAN ONLY}Price of OTC currency option is the calculated value based on multiple elements and is determined by relative trading basically."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:471
+msgid "{JAPAN ONLY}Price of call option will be lower interest rates of the underlying assets is low, but the price of the put option, go up when the interest rates of the underlying assets is low."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:469
+msgid "{JAPAN ONLY}Price of the option, the price of the underlying asset, price fluctuation rate of the underlying assets, the time until the exercise date, subject to any of the impact of interest rates."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:468
+msgid "{JAPAN ONLY}Regarding to the OTC price of financial instruments, in case that financial instruments business operator suggests both of  bid and ask price (or trading price and cancellation price), generally there is a difference of them. This option will be wider as the expiration approaches."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:395
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:24
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:7
+msgid "{JAPAN ONLY}Section 1: Structure"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:396
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:10
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:27
+msgid "{JAPAN ONLY}Section 2: Method"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:397
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:13
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:30
+msgid "{JAPAN ONLY}Section 3: Outline"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:398
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:16
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:33
+msgid "{JAPAN ONLY}Section 4: Risk"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:399
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:19
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:36
+#, fuzzy
+#| msgid "Session duration:"
+msgid "{JAPAN ONLY}Section 5: Calculation"
+msgstr "会话时间："
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:433
+msgid "{JAPAN ONLY}Short positions of currency-related binary option is conducted transactions by depositing necessary margin requirement to trader in advance. If the margin shortage after the transaction established, it is necessary to deposit the additional margin to the trader."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:432
+msgid "{JAPAN ONLY}Short positions of currency-related binary options, unlike the short positions of the other currency-related option, will not be loss cut because it is not a financial instruments subjected to loss cut regulation."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:501
+#, fuzzy
+#| msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
+msgid "{JAPAN ONLY}Sorry, you have failed the test, please try again after 24 hours."
+msgstr "对不起，您的失败尝试次数过多。请5分钟后再试。"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:392
+msgid "{JAPAN ONLY}Take knowledge test"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:498
+msgid "{JAPAN ONLY}The Black-Scholes model is widely used to calculate theoretical option prices."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:455
+msgid "{JAPAN ONLY}The buyer of the plane option can waiver when incriminating, so the maximum loss of buyer is option fee and maximum earning is the amount subtracted by the difference of underlying asset price and exercise price from option fee. Therefore, when the underlying asset price is infinite, the profit will be infinite."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:465
+msgid "{JAPAN ONLY}The contents of the financial instruments of the OTC binary options are the same even transactions dealers handling financial instruments business are different."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:445
+msgid "{JAPAN ONLY}The exit price is important in binary options. In case of handling the OTC currency-related binary options trading for personal, company inspects if mistakes and intentional operation has not been performed inspection for exit price the company determined and also checking whether there is an error in the data in case that the company use the rate data provided by third company."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:454
+msgid "{JAPAN ONLY}The option of the leverage effect, the buyer is likely to be obtained several times profit compared to the option fee, but the loss is limited to the option fee, when it comes to seller, profit is limited to the option fee, but loss will be likely to be doubled of option fee."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:443
+msgid "{JAPAN ONLY}The payout is the amount that seller of the option paid to the buyer as a result of exercising the right, when the predetermined exercise conditions meet and the amount paid like that called payout amount."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:466
+msgid "{JAPAN ONLY}The price of OTC binary options of the same conditions, (sometimes) the price varies depending on transactions dealers handling financial instruments business."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:492
+msgid "{JAPAN ONLY}The price of a binary option is affected by not only the change in the underlying asset price, but also the change in remaining time to the exercise point."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:470
+msgid "{JAPAN ONLY}The price of an option can be affected by the underlying asset price, by the volatility rate of the underlying asset, or by the time remaining to the exercise time."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:452
+msgid "{JAPAN ONLY}The seller of an option should receive the option premium from the buyer, even if the buyer waives the right to exercise the option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:505
+msgid "{JAPAN ONLY}The test is unavailable now, test can only be taken again on next business day with respect of most recent test."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:482
+msgid "{JAPAN ONLY}The time-value of an option represents the expected value of the option at the exercise point, and may be positive, even when the intrinsic-value is zero."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:406
+msgid "{JAPAN ONLY}There are many types of Binary Option, including some such as Range Binary Options and Touch or No-Touch Binary Options which do not always require automatic payment at Exercise Time and which will be settled earlier if certain conditions have been met. However, in all cases, for a payment to be required, the option must end In The Money."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:405
+msgid "{JAPAN ONLY}There are some types of Binary Option, such as Range Binary Options, Touch or No-Touch Binary Options, that are exceptions to the general rule where payment is made at a known exercise time. For these types of option a payment is made automatically at Exit Time when certain conditions have been met."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:402
+msgid "{JAPAN ONLY}There are two types of option delivery: One requires exchanging the underlying asset, and the other requires a payment which depends on the difference between the fair market price and the exercise price. A Binary Option is the second type where if the fair market price meets certain conditions with respect to the exercise price, then an agreed fixed amount will be paid to the option buyer."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:416
+msgid "{JAPAN ONLY}To avoid or hedge the future price of an underlying asset which you hold, you should buy a call option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:417
+msgid "{JAPAN ONLY}To compensate for any rise in the price of an underlying asset that you intend to buy in future, you should buy a call option."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:430
+msgid "{JAPAN ONLY}Trading period (expiration) of binary option is 2 hours and more. All of the transactions are established at the start of the trading period and the established position will be settled only by judge."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:449
+msgid "{JAPAN ONLY}Unless special arrangements are made, cooling-off will not be available after OTC binary options trading contract has been made."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:486
+msgid "{JAPAN ONLY}Unlike a plain vanilla option, an in-the-money binary option will have a lower price, the further away it is from the exercise point."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:429
+msgid "{JAPAN ONLY}Using two options, if get  binary call option which exercise price is higher and binary put option which exercise price is lower, its possible to obtain profit in case that exit price is out side of the price range made by exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is out side of the predetermined price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:428
+msgid "{JAPAN ONLY}Using two options, if obtain  binary put option which exercise price is higher and binary call option which exercise price is lower, its possible to obtain profit in case that exit price is between the exercise prices of two options and its possible to invest range binary options which will be payout in case that exit price is in side of the predetermined price."
+msgstr ""
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:456
+msgid "{JAPAN ONLY}While seller of plan options is limited the earnings is the option fee, the difference of the underlying asset price and the strike price is a loss, if the underlying asset price is infinite, the loss will be infinite."
+msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/group_history.html.haml:1
 msgid "‘Best Customer Communication Firm’ award by Investors Chronicle"

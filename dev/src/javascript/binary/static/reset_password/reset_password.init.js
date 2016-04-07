@@ -15,23 +15,32 @@ var ResetPassword = (function () {
             return;
         }
 
-        // use regex to validate password
+        if (!pw1) {                                         // password not entered
+            $('#password-error1').empty();
+            $('#password-error1').append('<p></p>', {class: 'errorfield'}).text(Content.localize().textMessageRequired);
+            $('#password-error1').removeClass(hiddenClass);
+        } else if (!passwordValid(pw1)) {                   // password failed validation
+            var errMsgs = showPasswordError(pw1);
+            $('#password-error1').empty();
+            errMsgs.forEach(function(msg){
+                var $errP = $('<p></p>', {class: 'errorfield'}).text(msg);
+                $('#password-error1').append($errP);
+            });
 
-        if (!passwordValid(pw1)) {
-            var errMsg = pw1.length < 6 ?
-                Content.errorMessage('range', '6-25') :
-                text.localize('Password should have lower and uppercase letters with numbers.');
-
-            $('#password-error1')
-                .removeClass(hiddenClass)
-                .text(errMsg);
-            return;
+            $('#password-error1').removeClass(hiddenClass);
         }
 
         if (pw1 !== pw2) {
-            $('#password-error2')
-                .removeClass(hiddenClass)
-                .text(Content.localize().textPasswordsNotMatching);
+            if (!pw2) {
+                $('#password-error2')
+                    .removeClass(hiddenClass)
+                    .text(Content.localize().textMessageRequired);
+            } else {
+                $('#password-error2')
+                    .removeClass(hiddenClass)
+                    .text(Content.localize().textPasswordsNotMatching);
+            }
+
             return;
         }
 
