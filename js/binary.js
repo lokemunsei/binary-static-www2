@@ -68238,7 +68238,11 @@ function validateEmail(mail) {
 }
 
 function passwordValid(password) {
-  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,25}$/;
+  if (password.length > 25) {
+    return false;
+  }
+  
+  var r = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,25}$/;
   return r.test(password);
 }
 
