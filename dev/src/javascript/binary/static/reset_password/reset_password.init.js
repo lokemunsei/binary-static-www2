@@ -2,7 +2,7 @@ var ResetPassword = (function () {
     'use strict';
 
     var hiddenClass = 'invisible';
-
+    var resetErrorTemplate = 'Failed to reset password. [error] Please retry.';
     var dob;
 
     function submitResetPassword() {
@@ -19,6 +19,7 @@ var ResetPassword = (function () {
             $('#password-error1').empty();
             $('#password-error1').append('<p></p>', {class: 'errorfield'}).text(Content.localize().textMessageRequired);
             $('#password-error1').removeClass(hiddenClass);
+            return;
         } else if (!passwordValid(pw1)) {                   // password failed validation
             var errMsgs = showPasswordError(pw1);
             $('#password-error1').empty();
@@ -28,6 +29,7 @@ var ResetPassword = (function () {
             });
 
             $('#password-error1').removeClass(hiddenClass);
+            return;
         }
 
         if (pw1 !== pw2) {
@@ -80,6 +82,16 @@ var ResetPassword = (function () {
             if (response.error) {
                 $('p.notice-msg').addClass(hiddenClass);
                 $('#reset-error').removeClass(hiddenClass);
+
+                // special handling as backend return inconsistent format
+                var errMsg;
+                if (response.error.code === 'InputValidationFailed') {
+                    errMsg = resetErrorTemplate.replace('[error]', text.localize('Token has expired.'));
+                } else {
+                    errMsg = resetErrorTemplate.replace('[error]', text.localize(response.error.message));
+                }
+
+                $('#reset-error-msg').text(errMsg);
             } else {
                 $('p.notice-msg')
                     .text(text.localize('Your password has been successfully reset. ' +
