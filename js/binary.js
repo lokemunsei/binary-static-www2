@@ -68080,14 +68080,6 @@ var Table = (function(){
     displayErrorMessage(error);
   }
 
-  //check validity of email
-  function validateEmail(mail) {
-    if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)){
-      return true;
-    }
-    return false;
-  }
-
   //check validity of token
   function validateToken(token) {
     if (token.length == 48) {
@@ -68238,8 +68230,15 @@ var Table = (function(){
   };
 }());
 
+function validateEmail(mail) {
+  if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)){
+    return true;
+  }
+  return false;
+}
+
 function passwordValid(password) {
-  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,25}/;
+  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,25}$/;
   return r.test(password);
 }
 
@@ -69340,11 +69339,14 @@ pjax_config_page("user/assessmentws", function() {
         var emailInput = $('#lp_email').val();
 
         if (emailInput === '') {
-            $("#email_error").removeClass(hiddenClass);
-        } else {
-            BinarySocket.send({verify_email: emailInput, type: 'reset_password'});
+            $("#email_error").removeClass(hiddenClass).text(text.localize('This field is required.'));
+        } else if (!validateEmail(emailInput)){
+            $("#email_error").removeClass(hiddenClass).text(text.localize('Invalid email format'));
         }
-        $('#submit').prop('disabled', true);
+        else {
+            BinarySocket.send({verify_email: emailInput, type: 'reset_password'});
+            $('#submit').prop('disabled', true);
+        }
     }
 
     function onEmailInput(input) {
@@ -69385,268 +69387,7 @@ pjax_config_page("user/assessmentws", function() {
         init: init
     };
 }());
-;var PaymentAgentTransferData = (function () {
-    "use strict";
-    function transfer(transferTo, currency, amount, toDryRun) {
-        var dryRun = toDryRun ? 1 : 0;
-        BinarySocket.send({
-            paymentagent_transfer: 1,
-            transfer_to: transferTo,
-            currency: currency,
-            amount: amount,
-            dry_run: dryRun
-        });
-    }
-
-    return {
-        transfer: transfer
-    };
-}());
-;var PaymentAgentTransfer = (function () {
-    var hiddenClass = 'invisible';
-    function paymentAgentTransferHandler(response) {
-        var req = response.echo_req;
-
-        if (response.error) {
-            if (req.dry_run === 1) {
-                $('#transfer_error_client_id').removeClass(hiddenClass);
-                $('#transfer_error_client_id').text(response.error.message);
-                return;    
-            } else {
-                PaymentAgentTransferUI.showTransferError(response.error.message);
-            }
-        }
-        
-        if (response.paymentagent_transfer === 2) {
-            PaymentAgentTransferUI.hideForm();
-            PaymentAgentTransferUI.hideDone();
-            PaymentAgentTransferUI.hideNotes();
-
-            PaymentAgentTransferUI.showConfirmation();
-
-            PaymentAgentTransferUI
-                .updateConfirmView(response.client_to_full_name, req.transfer_to, req.amount, req.currency);
-        }
-
-        if (response.paymentagent_transfer === 1) {
-            PaymentAgentTransferUI.hideForm();
-            PaymentAgentTransferUI.hideConfirmation();
-            PaymentAgentTransferUI.hideNotes();
-
-            PaymentAgentTransferUI.showDone();
-
-            PaymentAgentTransferUI.updateDoneView(TUser.get().loginid, req.transfer_to, req.amount, req.currency);
-        }
-    }
-
-    function init(auth) {
-        var $pa_form = $('#paymentagent_transfer');
-
-        var currency = TUser.get().currency;
-
-        if (auth && !currency) {
-            $('#no_balance_error').removeClass(hiddenClass);
-            $pa_form.addClass(hiddenClass);
-
-            return;
-        } else {
-            $('#no_balance_error').addClass(hiddenClass);
-            $pa_form.removeClass(hiddenClass);
-        }
-
-        PaymentAgentTransferUI.updateFormView(currency);
-
-        var $submitFormButton = $pa_form.find('button#submit');
-        var $clientIDInput = $pa_form.find('input#client_id');
-        var $amountInput = $pa_form.find('input[name="amount"]');
-
-        var $clientIDError = $('#transfer_error_client_id');
-        var $amountError = $('#transfer_error_amount');
-        var $insufficientBalError = $('#insufficient-balance-error');
-
-        var $paConfirmTransferButton = $('#pa_confirm_transfer #confirm_transfer');
-        var $paConfirmBackButton = $('#back_transfer');
-
-        $submitFormButton.click(function() {
-            var clientID = $clientIDInput.val();
-            var amount = $amountInput.val();
-
-            if (!clientID) {
-                $clientIDError.removeClass(hiddenClass);
-                $clientIDError.text('Please enter the Login ID to transfer funds.');
-                return;
-            }
-
-            if (!(/^\w+\d+$/.test(clientID))) {
-                $clientIDError.removeClass(hiddenClass);
-                $clientIDError.text('Please enter a valid Login ID.');
-                return;
-            }
-
-            if (!amount) {
-                $amountError.removeClass(hiddenClass);
-                return;
-            }
-
-            if (amount > 2000 || amount < 10) {
-                $amountError.removeClass(hiddenClass);
-                return;
-            }
-
-            var bal = +(TUser.get().balance);
-            if (amount > bal) {
-                $insufficientBalError.removeClass(hiddenClass);
-                return;
-            }
-
-            PaymentAgentTransferData.transfer(clientID, currency, amount, true);
-        });
-
-        $paConfirmTransferButton.click(function() {
-            var clientID = $clientIDInput.val();
-            var amount = $amountInput.val();
-            PaymentAgentTransferData.transfer(clientID, currency, amount, false);
-        });
-
-        $paConfirmBackButton.click(function() {
-            PaymentAgentTransferUI.showForm();
-            PaymentAgentTransferUI.showNotes();
-            PaymentAgentTransferUI.hideConfirmation();
-            PaymentAgentTransferUI.hideDone();
-        });
-
-        $clientIDInput.keyup(function(ev) {
-            $clientIDError.addClass(hiddenClass);
-
-            if (ev.which === 13) {
-                $submitFormButton.click();
-            }
-        });
-
-        $amountInput.keypress(onlyNumericOnKeypress);
-
-        $amountInput.keyup(function(ev){
-            $amountError.addClass(hiddenClass);
-            $insufficientBalError.addClass(hiddenClass);
-
-            if (ev.which === 13) {
-                $submitFormButton.click();
-            }
-        });
-    }
-
-    return {
-        init: init,
-        paymentAgentTransferHandler: paymentAgentTransferHandler
-    };
-}());
-;var PaymentAgentTransferUI = (function () {
-    "use strict";
-    var hiddenClass = 'invisible';
-    
-    function hideForm() {
-        $('#paymentagent_transfer').addClass(hiddenClass);
-    }
-    function showForm() {
-        $('#paymentagent_transfer').removeClass(hiddenClass);
-    }
-
-    function hideConfirmation() {
-        $('#pa_confirm_transfer').addClass(hiddenClass);
-    }
-    function showConfirmation() {
-        $('#pa_confirm_transfer').removeClass(hiddenClass);
-        $('#pa_confirm_transfer .errorfield').addClass(hiddenClass);
-    }
-
-    function hideDone() {
-        $('#pa_transfer_done').addClass(hiddenClass);
-    }
-    function showDone() {
-        $('#pa_transfer_done').removeClass(hiddenClass);
-    }
-
-    function hideNotes() {
-        $('#paymentagent_transfer_notes').addClass(hiddenClass);
-    }
-    function showNotes() {
-        $('#paymentagent_transfer_notes').removeClass(hiddenClass);
-    }
-    function updateFormView(currency) {
-        $('#paymentagent_transfer label[for="amount"]').text(text.localize('Amount') + ' ' + currency);
-    }
-
-    function updateConfirmView(username, loginid, amount, currency) {
-        $('#pa_confirm_transfer td#user-name').html(username);
-        $('#pa_confirm_transfer td#login-id').html(loginid);
-        $('#pa_confirm_transfer td#amount').html(currency + ' ' + amount);
-    }
-
-    function showTransferError(err) {
-        $('#pa_confirm_transfer .errorfield')
-            .removeClass(hiddenClass)
-            .text(text.localize(err));
-    }
-
-    function updateDoneView(fromID, toID, amount, currency) {
-        var templateString = "Your request to transfer [_1] [_2] from [_3] to [_4] has been successfully processed.";
-        var translated = text.localize(templateString);
-        var confirmMsg = translated
-            .replace('[_1]', amount)
-            .replace('[_2]', currency)
-            .replace('[_3]', fromID)
-            .replace('[_4]', toID);
-
-        $('#pa_transfer_done > #confirm-msg').text(confirmMsg);
-        $('#pa_transfer_done > #confirm-msg').removeClass(hiddenClass);
-    }
-
-    return {
-        hideForm: hideForm,
-        showForm: showForm,
-        hideConfirmation: hideConfirmation,
-        showConfirmation: showConfirmation,
-        hideDone: hideDone,
-        showDone: showDone,
-        hideNotes: hideNotes,
-        showNotes: showNotes,
-        showTransferError: showTransferError,
-        updateFormView: updateFormView,
-        updateConfirmView: updateConfirmView,
-        updateDoneView: updateDoneView
-    };
-}());
-;pjax_config_page("paymentagent/transferws", function(){
-    return {
-        onLoad: function() {
-            if (!getCookieItem('login')) {
-                window.location.href = page.url.url_for('login');
-                return;
-            }
-            BinarySocket.init({
-                onmessage: function(msg){
-                    var response = JSON.parse(msg.data);
-
-                    if (response) {
-                        var type = response.msg_type;
-                        if (type === 'authorize') {
-                            PaymentAgentTransfer.init(true);
-                        }
-
-                        if (type === 'paymentagent_transfer'){
-                            PaymentAgentTransfer.paymentAgentTransferHandler(response);
-                        }
-                    }
-                }
-            });
-            Content.populate();
-
-            if (TUser.get().email) {
-                PaymentAgentTransfer.init();
-            }
-        }
-    };
-});;
+;
 
 pjax_config_page("user/profit_table", function(){
     return {
@@ -69690,7 +69431,7 @@ var ProfitTableData = (function(){
     };
 }());;
 var ProfitTableWS = (function () {
-    var batchSize = 50;
+    var batchSize = 100;
     var chunkSize = batchSize/2;
 
     var transactionsReceived = 0;
@@ -70324,15 +70065,15 @@ var ProfitTableUI = (function(){
                 new_password: pw1,
                 date_of_birth: dob
             });
+            $('#reset').prop('disabled', true);
         } else {
             BinarySocket.send({
                 reset_password: 1,
                 verification_code: token,
                 new_password: pw1
             });
+            $('#reset').prop('disabled', true);
         }
-
-        $('#reset').prop('disabled', true);
     }
 
     function hideError() {
@@ -70364,6 +70105,9 @@ var ProfitTableUI = (function(){
                 $('p.notice-msg')
                     .text(text.localize('Your password has been successfully reset. ' +
                         'Please log into your account using your new password.'));
+                window.setTimeout(function () {
+                    window.location.href = page.url.url_for('login');
+                }, 5000);
             }
         }
     }
@@ -70485,7 +70229,7 @@ var ProfitTableUI = (function(){
     //receive means receive from ws service
     //consume means consume by UI and displayed to page
 
-    var batchSize = 50;
+    var batchSize = 100;
     var chunkSize = batchSize/2;
 
     var noMoreData = false;

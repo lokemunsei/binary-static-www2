@@ -63,15 +63,15 @@ var ResetPassword = (function () {
                 new_password: pw1,
                 date_of_birth: dob
             });
+            $('#reset').prop('disabled', true);
         } else {
             BinarySocket.send({
                 reset_password: 1,
                 verification_code: token,
                 new_password: pw1
             });
+            $('#reset').prop('disabled', true);
         }
-
-        $('#reset').prop('disabled', true);
     }
 
     function hideError() {
@@ -103,6 +103,9 @@ var ResetPassword = (function () {
                 $('p.notice-msg')
                     .text(text.localize('Your password has been successfully reset. ' +
                         'Please log into your account using your new password.'));
+                window.setTimeout(function () {
+                    window.location.href = page.url.url_for('login');
+                }, 5000);
             }
         }
     }

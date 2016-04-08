@@ -7,11 +7,14 @@ var LostPassword = (function() {
         var emailInput = $('#lp_email').val();
 
         if (emailInput === '') {
-            $("#email_error").removeClass(hiddenClass);
-        } else {
-            BinarySocket.send({verify_email: emailInput, type: 'reset_password'});
+            $("#email_error").removeClass(hiddenClass).text(text.localize('This field is required.'));
+        } else if (!validateEmail(emailInput)){
+            $("#email_error").removeClass(hiddenClass).text(text.localize('Invalid email format'));
         }
-        $('#submit').prop('disabled', true);
+        else {
+            BinarySocket.send({verify_email: emailInput, type: 'reset_password'});
+            $('#submit').prop('disabled', true);
+        }
     }
 
     function onEmailInput(input) {

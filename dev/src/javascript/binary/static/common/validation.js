@@ -35,14 +35,6 @@ var Validate = (function(){
     displayErrorMessage(error);
   }
 
-  //check validity of email
-  function validateEmail(mail) {
-    if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)){
-      return true;
-    }
-    return false;
-  }
-
   //check validity of token
   function validateToken(token) {
     if (token.length == 48) {
@@ -193,8 +185,15 @@ var Validate = (function(){
   };
 }());
 
+function validateEmail(mail) {
+  if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail)){
+    return true;
+  }
+  return false;
+}
+
 function passwordValid(password) {
-  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,25}/;
+  var r = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,25}$/;
   return r.test(password);
 }
 

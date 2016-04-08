@@ -1,6 +1,6 @@
 
 var ProfitTableWS = (function () {
-    var batchSize = 50;
+    var batchSize = 100;
     var chunkSize = batchSize/2;
 
     var transactionsReceived = 0;
