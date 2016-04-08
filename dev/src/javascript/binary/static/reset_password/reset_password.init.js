@@ -2,8 +2,10 @@ var ResetPassword = (function () {
     'use strict';
 
     var hiddenClass = 'invisible';
-    var resetErrorTemplate = 'Failed to reset password. [error] Please retry.';
-    var dob;
+    var resetErrorTemplate = '[error]' +
+        ' Please click the link below to restart the password recovery process. ' +
+        'If you require further assistance, please contact our Customer Support.';
+    var dobdd, dobmm, dobyy;
 
     function submitResetPassword() {
         var token = $('#verification-code').val();
@@ -46,30 +48,33 @@ var ResetPassword = (function () {
             return;
         }
 
-        var dobDate = new Date(dob);
-        var dateValid = !(dob === '' || dobDate === 'Invalid Date');
-        if (!dateValid) {
-            $('#dob-error').removeClass(hiddenClass).text(text.localize('Invalid format for date of birth.'));
-            return;
-        }
+        var dobEntered = dobdd && dobmm && dobyy;
+        if (dobEntered) {
+            var dob;
+            if (!isValidDate(dobdd, dobmm, dobyy)) {
+                $('#dob-error').removeClass(hiddenClass).text(text.localize('Invalid format for date of birth.'));
+                return;
+            }
 
-        if (!dob || dob === '') {
-            BinarySocket.send({
-                reset_password: 1,
-                verification_code: token,
-                new_password: pw1
-            });
-        } else {
+            dob = dobyy + '-' + dobmm + '-' + dobdd;
             BinarySocket.send({
                 reset_password: 1,
                 verification_code: token,
                 new_password: pw1,
                 date_of_birth: dob
             });
+        } else {
+            BinarySocket.send({
+                reset_password: 1,
+                verification_code: token,
+                new_password: pw1
+            });
         }
+
+        $('#reset').prop('disabled', true);
     }
 
-    function onInput() {
+    function hideError() {
         $('.errorfield').addClass(hiddenClass);
     }
 
@@ -78,7 +83,9 @@ var ResetPassword = (function () {
         var type = response.msg_type;
 
         if (type === 'reset_password') {
+            $('#reset').prop('disabled', true);
             $('#reset-form').addClass(hiddenClass);
+
             if (response.error) {
                 $('p.notice-msg').addClass(hiddenClass);
                 $('#reset-error').removeClass(hiddenClass);
@@ -102,6 +109,15 @@ var ResetPassword = (function () {
 
     function haveRealAccountHandler() {
         var isChecked = $('#have-real-account').is(':checked');
+
+        dobdd = undefined;
+        dobmm = undefined;
+        dobyy = undefined;
+
+        $('#dobdd').val('');
+        $('#dobmm').val('');
+        $('#dobyy').val('');
+
         if (isChecked) {
             $('#dob-field').removeClass(hiddenClass);
         } else {
@@ -110,11 +126,9 @@ var ResetPassword = (function () {
     }
 
     function onDOBChange() {
-        var dd = $('#dobdd').val();
-        var mm = $('#dobmm').val();
-        var yy = $('#dobyy').val();
-
-        dob = yy + '-' + mm + '-' + dd;
+        dobdd = $('#dobdd').val();
+        dobmm = $('#dobmm').val();
+        dobyy = $('#dobyy').val();
     }
 
     function onEnterKey(e) {
@@ -129,7 +143,7 @@ var ResetPassword = (function () {
         var $pmContainer = $('#password-meter-container');
 
         $('input').keypress(function (e) {
-            onInput();
+            hideError();
             onEnterKey(e);
         });
 
@@ -137,7 +151,7 @@ var ResetPassword = (function () {
             PasswordMeter.updateMeter($pmContainer, ev.target.value);
         });
 
-        $('#reset').click(function () {
+        $('#reset:enabled').click(function () {
             submitResetPassword();
         });
 
@@ -146,6 +160,7 @@ var ResetPassword = (function () {
         });
 
         $('select').change(function () {
+            hideError();
             onDOBChange();
         });
 

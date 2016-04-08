@@ -6089,6 +6089,10 @@ tr#highchart_duration td:nth-child(2) {
   margin-bottom: 10px;
 }
 
+button:disabled {
+  opacity: 0.5;
+}
+
 #virtual-form input, #virtual-form select, #change-password input, #change-password select, .usersettingssecurityws-content input, .usersettingssecurityws-content select {
   outline: none;
 }
