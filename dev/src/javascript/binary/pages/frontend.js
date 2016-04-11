@@ -576,10 +576,10 @@ pjax_config_page('/smart-indices', function() {
     };
 });
 
-pjax_config_page('/random-markets', function() {
+pjax_config_page('/volidx-markets', function() {
     return {
         onLoad: function() {
-            sidebar_scroll($('.random-markets'));
+            sidebar_scroll($('.volidx-markets'));
             if (page.url.location.hash !== "") {
               $('a[href="' + page.url.location.hash + '"]').click();
             }

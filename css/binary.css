@@ -1446,21 +1446,6 @@ ul.checked li {
   }
 }
 
-meter#password-meter {
-  width: 10.9em;
-  height: .5em;
-  -webkit-appearance: none;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  vertical-align: top;
-  display: block;
-}
-
-meter#password-meter::-webkit-meter-bar {
-  background: #f5f5f5;
-  box-shadow: 0 5px 5px -5px #333 inset;
-}
-
 #tooltip {
   font-family: proxima-nova, arial, sans-serif;
   font-size: 14px;
@@ -6160,15 +6145,6 @@ tr#highchart_duration td:nth-child(2) {
   padding: 3px 8px;
 }
 
-#reset-error {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-button:disabled {
-  opacity: 0.5;
-}
-
 #virtual-form input, #virtual-form select, #change-password input, #change-password select, .usersettingssecurityws-content input, .usersettingssecurityws-content select {
   outline: none;
 }
@@ -6193,15 +6169,6 @@ button:disabled {
 }
 #virtual-form p.error-message-password, #change-password p.error-message-password, .usersettingssecurityws-content p.error-message-password {
   margin: 0.5em 0;
-}
-
-.kv-pairs {
-  width: auto;
-  margin-left: 15px;
-  margin-bottom: 10px;
-}
-.kv-pairs td {
-  border: none;
 }
 
 /* Language based rules */
