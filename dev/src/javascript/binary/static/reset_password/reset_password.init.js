@@ -2,7 +2,7 @@ var ResetPassword = (function () {
     'use strict';
 
     var hiddenClass = 'invisible';
-    var resetErrorTemplate = '[error]' +
+    var resetErrorTemplate = '[_1]' +
         ' Please click the link below to restart the password recovery process. ' +
         'If you require further assistance, please contact our Customer Support.';
     var dobdd, dobmm, dobyy;
@@ -93,9 +93,9 @@ var ResetPassword = (function () {
                 // special handling as backend return inconsistent format
                 var errMsg;
                 if (response.error.code === 'InputValidationFailed') {
-                    errMsg = resetErrorTemplate.replace('[error]', text.localize('Token has expired.'));
+                    errMsg = resetErrorTemplate.replace('[_1]', text.localize('Token has expired.'));
                 } else {
-                    errMsg = resetErrorTemplate.replace('[error]', text.localize(response.error.message));
+                    errMsg = resetErrorTemplate.replace('[_1]', text.localize(response.error.message));
                 }
 
                 $('#reset-error-msg').text(errMsg);

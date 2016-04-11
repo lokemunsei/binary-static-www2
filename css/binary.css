@@ -6195,6 +6195,15 @@ button:disabled {
   margin: 0.5em 0;
 }
 
+.kv-pairs {
+  width: auto;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.kv-pairs td {
+  border: none;
+}
+
 /* Language based rules */
 /* Specific rules for languages */
 body .calls_recording {
