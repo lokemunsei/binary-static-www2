@@ -417,7 +417,7 @@ function compareMarkets(a, b) {
         'indices': 1,
         'stocks': 2,
         'commodities': 3,
-        'random': 4
+        'volidx': 4
     };
 
     if (sortedMarkets[a.toLowerCase()] < sortedMarkets[b.toLowerCase()]) {
@@ -645,7 +645,7 @@ function getDefaultMarket() {
 function getMarketsOrder(market) {
     var order = {
         'forex': 1,
-        'random': 2,
+        'volidx': 2,
         'indices': 3,
         'stocks': 4,
         'commodities': 5
@@ -745,7 +745,7 @@ function marketOrder(market){
         commodities: 12,
         metals: 13,
         energy: 14,
-        random: 15,
+        volidx: 15,
         random_index: 16,
         random_daily: 17,
         random_nightly: 18
@@ -770,22 +770,19 @@ function displayTooltip(market, symbol){
     var tip = document.getElementById('symbol_tip'),
         guide = document.getElementById('guideBtn'),
         app = document.getElementById('androidApp');
-    if (market.match(/^random/)){
+    if (market.match(/^volidx/)){
         tip.show();
-        tip.setAttribute('target','/get-started/random-markets');
+        tip.setAttribute('target','/get-started/volidx-markets');
         app.show();
     } else {
       app.hide();
       tip.hide();
     }
     if (market.match(/^random_index/)){
-        tip.setAttribute('target','/get-started/random-markets#random-indices');
+        tip.setAttribute('target','/get-started/volidx-markets#volidx-indices');
     }
     if (market.match(/^random_daily/)){
-        tip.setAttribute('target','/get-started/random-markets#random-quotidians');
-    }
-    if (market.match(/^random_nightly/)){
-        tip.setAttribute('target','/get-started/random-markets#random-nocturnes');
+        tip.setAttribute('target','/get-started/volidx-markets#volidx-quotidians');
     }
     if (market.match(/^smart_fx/)){
         tip.show();
