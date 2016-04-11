@@ -11,6 +11,8 @@ var PortfolioWS =  (function() {
         $("#portfolio-dynamic tr:first").remove();
         BinarySocket.send({"balance":1});
         BinarySocket.send({"portfolio":1});
+        // Subscribe transactions to auto update new purchases
+        BinarySocket.send({'transaction': 1, 'subscribe': 1});
     };
 
 
@@ -68,6 +70,9 @@ var PortfolioWS =  (function() {
 
         // contracts is ready to be added to the dom
         $("#portfolio-dynamic").append(trans(contracts));
+        if(contracts.length > 0) {
+            $("#portfolio-table").removeClass("dynamic");
+        }
 
         // update footer area data
         sumPurchase = sumPurchase.toFixed(2);
@@ -79,7 +84,23 @@ var PortfolioWS =  (function() {
         // ready to show portfolio table
         $("#portfolio-loading").remove();
         $("#portfolio-content").removeClass("dynamic");
+    };
 
+    var transactionResponseHandler = function(response) {
+        if(response.hasOwnProperty('error')) {
+            return;
+        }
+
+        if(response.transaction.action === 'buy') {
+            $('#portfolio-dynamic').empty();
+            BinarySocket.send({'portfolio': 1});
+        }
+        else if(response.transaction.action === 'sell') {
+            $("tr[data-contract_id='" + response.transaction.contract_id + "']").remove();
+            if($('#portfolio-dynamic tr').length === 0) {
+                BinarySocket.send({"portfolio":1});
+            }
+        }
     };
 
     var updateIndicative = function(data) {
@@ -126,7 +147,6 @@ var PortfolioWS =  (function() {
         indicative_sum = indicative_sum.toFixed(2);
 
         $("#value-of-open-positions").text('USD ' + parseFloat(indicative_sum).toFixed(2));
-
     };
 
 
@@ -154,7 +174,8 @@ var PortfolioWS =  (function() {
         init: init,
         updateBalance: updateBalance,
         updatePortfolio: updatePortfolio,
-        updateIndicative: updateIndicative
+        updateIndicative: updateIndicative,
+        transactionResponseHandler: transactionResponseHandler
     };
 
 })();
@@ -179,24 +200,21 @@ pjax_config_page("user/openpositionsws", function() {
                     }
 
                     var msg_type = response.msg_type;
-
                     switch(msg_type) {
-
                         case "balance":
                             PortfolioWS.updateBalance(response);
                             break;
-
                         case "portfolio":
                             PortfolioWS.updatePortfolio(response);
                             break;
-
+                        case "transaction":
+                            PortfolioWS.transactionResponseHandler(response);
+                            break;
                         case "proposal_open_contract":
                             PortfolioWS.updateIndicative(response);
                             break;
-
                         default:
                             // msg_type is not what PortfolioWS handles, so ignore it.
-
                     }
 
                 }
@@ -205,6 +223,7 @@ pjax_config_page("user/openpositionsws", function() {
         },
         onUnload: function(){
             BinarySocket.send({"forget_all": "proposal_open_contract"});
+            BinarySocket.send({"forget_all": "transaction"});
         }
     };
 });

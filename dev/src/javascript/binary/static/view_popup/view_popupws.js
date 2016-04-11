@@ -270,7 +270,7 @@ var ViewPopupWS = (function() {
 
         var currentSpot = user_sold ? contract.sell_spot : (is_ended ? contract.exit_tick : contract.current_spot);
 
-        containerSetText('trade_details_current_date'    , epochToDateTime(!is_ended ? contract.current_spot_time : (user_sold ? contract.sell_spot_time || contract.sell_time : contract.date_expiry))); // user_sold ? contract.sell_spot_time || contract.sell_time : (is_ended ? contract.date_expiry : contract.current_spot_time)));
+        containerSetText('trade_details_current_date'    , epochToDateTime(!is_ended ? contract.current_spot_time : (user_sold ? contract.sell_spot_time : contract.exit_tick_time)));
         containerSetText('trade_details_current_spot'    , currentSpot || text.localize('not available'));
         containerSetText('trade_details_indicative_price', contract.currency + ' ' + parseFloat(is_ended ? (contract.sell_price || contract.bid_price) : contract.bid_price).toFixed(2));
         containerSetText('trade_details_now_date'        , '' , {'epoch_time': contract.current_spot_time});

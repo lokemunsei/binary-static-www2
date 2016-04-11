@@ -202,7 +202,10 @@ function BinarySocketClass() {
                             .on('click', '#ratelimit-refresh-link', function () {
                                 window.location.reload();
                             });
-                      } else if (response.error.code === 'InvalidToken' && type !== 'new_account_virtual' && type !== 'paymentagent_withdraw') {
+                      } else if (response.error.code === 'InvalidToken' && 
+                          type !== 'reset_password' && 
+                          type !== 'new_account_virtual' && 
+                          type !== 'paymentagent_withdraw') {
                         BinarySocket.send({'logout': '1'});
                       }
                     }
