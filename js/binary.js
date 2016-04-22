@@ -80328,7 +80328,6 @@ $(function() {
 
 });
 ;var PortfolioWS =  (function() {
-
     'use strict';
 
     var rowTemplate;
@@ -80336,8 +80335,10 @@ $(function() {
     var init = function() {
         showLoadingImage($("#portfolio-loading"));
         // get the row template and then discard the node as it has served its purpose
-        rowTemplate = $("#portfolio-dynamic tr:first")[0].outerHTML;
-        $("#portfolio-dynamic tr:first").remove();
+        if(!rowTemplate) {
+            rowTemplate = $("#portfolio-dynamic tr:first")[0].outerHTML;
+            $("#portfolio-dynamic tr:first").remove();
+        }
         BinarySocket.send({"balance":1});
         BinarySocket.send({"portfolio":1});
         // Subscribe transactions to auto update new purchases
@@ -80359,7 +80360,6 @@ $(function() {
      * Updates portfolio table
     **/
     var updatePortfolio = function(data) {
-
         /**
          * Check for error
         **/
@@ -80381,7 +80381,7 @@ $(function() {
         /**
          * User has at least one contract
         **/
-
+        if(!rowTemplate) init();
         $("#portfolio-no-contract").hide();
         var contracts = '';
         var sumPurchase = 0.0;
@@ -80504,7 +80504,6 @@ $(function() {
             return;
         }
         BinarySocket.init({
-
             onmessage: function(msg){
                 var response;
                 try {
@@ -80533,7 +80532,6 @@ $(function() {
                     default:
                         // msg_type is not what PortfolioWS handles, so ignore it.
                 }
-
             }
         });
         init();
