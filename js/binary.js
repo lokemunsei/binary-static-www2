@@ -71226,11 +71226,11 @@ function swithTabIfError(IsErrorFound)
         var times = history.times;
         var prices = history.prices;
         var i;
-        if (window.delayed) {
+        if (window.delayed || !window.min || !window.max) {
           for(i = 0; i < times.length; ++i) {
               data.push([times[i]*1000, prices[i]*1]);
           }
-        } else {
+        } else if (window.min && window.max) {
           for(i = 0; i < times.length; ++i) {
             if (times[i] >= parseInt(window.min) && times[i] <= parseInt(window.max)) {
               // only display the first tick before entry spot and one tick after exit spot
