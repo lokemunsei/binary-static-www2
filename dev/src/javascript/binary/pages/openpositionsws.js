@@ -6,9 +6,10 @@ var PortfolioWS =  (function() {
     var init = function() {
         showLoadingImage($("#portfolio-loading"));
         // get the row template and then discard the node as it has served its purpose
-        if(!rowTemplate) {
-            rowTemplate = $("#portfolio-dynamic tr:first")[0].outerHTML;
-            $("#portfolio-dynamic tr:first").remove();
+        var $tempRow = $("#portfolio-dynamic tr[data-contract_id='!contract_id!']");
+        if($tempRow) {
+            rowTemplate = $tempRow[0].outerHTML;
+            $tempRow.remove();
         }
         BinarySocket.send({"balance":1});
         BinarySocket.send({"portfolio":1});

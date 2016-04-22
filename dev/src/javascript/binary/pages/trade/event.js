@@ -184,7 +184,8 @@ var TradingEvents = (function () {
                 inputEventTriggered = true;
             }));
             $('#duration_amount').on('change', debounce(function (e) {
-                if(inputEventTriggered === false)
+                // using Defaults, to update the value by datepicker if it was emptied by keyboard (delete)
+                if(inputEventTriggered === false || !Defaults.get('duration_amount'))
                     triggerOnDurationChange(e);
                 else
                     inputEventTriggered = false;

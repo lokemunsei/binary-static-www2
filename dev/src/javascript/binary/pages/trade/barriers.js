@@ -30,7 +30,8 @@ var Barriers = (function () {
                     document.getElementById('low_barrier_row').style.display = 'none';
                     document.getElementById('barrier_row').setAttribute('style', '');
 
-                    var barrier_def = Defaults.get('barrier') || barrier['barrier'];
+                    var defaults_barrier = Defaults.get('barrier');
+                    var barrier_def = defaults_barrier && !isNaN(defaults_barrier) ? defaults_barrier : barrier['barrier'];
                     var elm = document.getElementById('barrier'),
                         tooltip = document.getElementById('barrier_tooltip'),
                         span = document.getElementById('barrier_span');
@@ -72,8 +73,9 @@ var Barriers = (function () {
                         low_tooltip = document.getElementById('barrier_low_tooltip'),
                         low_span = document.getElementById('barrier_low_span');
 
-                    var barrier_high = Defaults.get('barrier_high') || barrier['barrier'],
-                        barrier_low  = Defaults.get('barrier_low')  || barrier['barrier1'];
+                    var defaults_barrier_high = Defaults.get('barrier_high'), defaults_barrier_low = Defaults.get('barrier_low');
+                    var barrier_high = defaults_barrier_high && !isNaN(defaults_barrier_high) ? defaults_barrier_high : barrier['barrier'],
+                        barrier_low  = defaults_barrier_low  && !isNaN(defaults_barrier_low)  ? defaults_barrier_low  : barrier['barrier1'];
                     if (unit && unit.value === 'd') {
                         if (currentTick && !isNaN(currentTick) && barrier_high.match(/^[+-]/)) {
                             high_elm.value = (parseFloat(currentTick) + parseFloat(barrier_high)).toFixed(decimalPlaces);

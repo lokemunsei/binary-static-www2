@@ -80334,9 +80334,10 @@ $(function() {
     var init = function() {
         showLoadingImage($("#portfolio-loading"));
         // get the row template and then discard the node as it has served its purpose
-        if(!rowTemplate) {
-            rowTemplate = $("#portfolio-dynamic tr:first")[0].outerHTML;
-            $("#portfolio-dynamic tr:first").remove();
+        var $tempRow = $("#portfolio-dynamic tr[data-contract_id='!contract_id!']");
+        if($tempRow) {
+            rowTemplate = $tempRow[0].outerHTML;
+            $tempRow.remove();
         }
         BinarySocket.send({"balance":1});
         BinarySocket.send({"portfolio":1});
@@ -81392,7 +81393,8 @@ var Barriers = (function () {
                     document.getElementById('low_barrier_row').style.display = 'none';
                     document.getElementById('barrier_row').setAttribute('style', '');
 
-                    var barrier_def = Defaults.get('barrier') || barrier['barrier'];
+                    var defaults_barrier = Defaults.get('barrier');
+                    var barrier_def = defaults_barrier && !isNaN(defaults_barrier) ? defaults_barrier : barrier['barrier'];
                     var elm = document.getElementById('barrier'),
                         tooltip = document.getElementById('barrier_tooltip'),
                         span = document.getElementById('barrier_span');
@@ -81434,8 +81436,9 @@ var Barriers = (function () {
                         low_tooltip = document.getElementById('barrier_low_tooltip'),
                         low_span = document.getElementById('barrier_low_span');
 
-                    var barrier_high = Defaults.get('barrier_high') || barrier['barrier'],
-                        barrier_low  = Defaults.get('barrier_low')  || barrier['barrier1'];
+                    var defaults_barrier_high = Defaults.get('barrier_high'), defaults_barrier_low = Defaults.get('barrier_low');
+                    var barrier_high = defaults_barrier_high && !isNaN(defaults_barrier_high) ? defaults_barrier_high : barrier['barrier'],
+                        barrier_low  = defaults_barrier_low  && !isNaN(defaults_barrier_low)  ? defaults_barrier_low  : barrier['barrier1'];
                     if (unit && unit.value === 'd') {
                         if (currentTick && !isNaN(currentTick) && barrier_high.match(/^[+-]/)) {
                             high_elm.value = (parseFloat(currentTick) + parseFloat(barrier_high)).toFixed(decimalPlaces);
@@ -83924,7 +83927,8 @@ var TradingEvents = (function () {
                 inputEventTriggered = true;
             }));
             $('#duration_amount').on('change', debounce(function (e) {
-                if(inputEventTriggered === false)
+                // using Defaults, to update the value by datepicker if it was emptied by keyboard (delete)
+                if(inputEventTriggered === false || !Defaults.get('duration_amount'))
                     triggerOnDurationChange(e);
                 else
                     inputEventTriggered = false;
@@ -90990,6 +90994,8 @@ var ProfitTableUI = (function(){
             showErrorPopup(response, response.proposal_open_contract.validation_error);
             return;
         }
+
+        if (!document.getElementById(wrapperID)) return;
 
         $.extend(contract, response.proposal_open_contract);
 
