@@ -57,11 +57,10 @@ var ViewPopupWS = (function() {
             return;
         }
 
-        if (!document.getElementById(wrapperID)) return;
-
         $.extend(contract, response.proposal_open_contract);
 
         if(contract && contractType) {
+            if (!document.getElementById(wrapperID)) return;
             ViewPopupWS[contractType + 'Update']();
             return;
         }
