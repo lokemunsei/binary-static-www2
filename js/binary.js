@@ -71569,7 +71569,7 @@ function swithTabIfError(IsErrorFound)
       }
       if (!contract.entry_tick_time && contract.date_start && parseInt((window.time._i/1000)) >= parseInt(contract.date_start)) {
         show_error('', text.localize('Waiting for entry tick.'));
-      } else if (!window.chart) {
+      } else if (!window.chart && (!window.chart_subscribed || window.chart_subscribed === '')) {
         request_data(window.contract);
       } else if (contract.entry_tick_time && window.chart) {
         select_entry_tick(contract.entry_tick_time);
@@ -71593,7 +71593,6 @@ function swithTabIfError(IsErrorFound)
           // force to redraw:
           window.chart.isDirty = true;
           window.chart.redraw();
-          console.log('exit time' + window.exit_time);
         }
         end_contract(contract);
       }
