@@ -601,17 +601,6 @@ pjax_config_page('/open-source-projects', function() {
     };
 });
 
-pjax_config_page('/white-labels', function() {
-    return {
-        onLoad: function() {
-            sidebar_scroll($('.white-labels'));
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
 pjax_config_page('/payment-agent', function() {
     return {
         onLoad: function() {
@@ -626,6 +615,9 @@ pjax_config_page('/payment-agent', function() {
 pjax_config_page('/get-started', function() {
     return {
         onLoad: function() {
+            if (!/jp/.test(window.location.pathname) && page.language().toLowerCase() === 'ja') {
+              window.location.href = page.url.url_for('get-started-jp');
+            }
             get_started_behaviour();
         },
         onUnload: function() {

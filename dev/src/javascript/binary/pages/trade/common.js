@@ -171,7 +171,7 @@
          }
          var current = target.options[target.selectedIndex];
          if(selected !== current.value) {
-            sessionStorage.setItem('market', current.value);
+            Defaults.set('market', current.value);
          }
 
          if(current.disabled) { // there is no open market
@@ -451,11 +451,6 @@ function getContractCategoryTree(elements){
         'spreads'
     ];
 
-    // Temp hack. Should be deleted after japan release
-    if (typeof is_japan === 'function') {
-        delete tree[2];
-    }
-
     if(elements){
         tree = tree.map(function(e){
             if(typeof e === 'object'){
@@ -549,7 +544,7 @@ function setFormPlaceholderContent(name) {
     'use strict';
     var formPlaceholder = document.getElementById('contract_form_nav_placeholder');
     if (formPlaceholder) {
-        name = name || sessionStorage.getItem('formname');
+        name = name || Defaults.get('formname');
         formPlaceholder.textContent = Contract.contractForms()[name];
     }
 }
@@ -630,7 +625,7 @@ function debounce(func, wait, immediate) {
  */
 function getDefaultMarket() {
     'use strict';
-    var mkt = sessionStorage.getItem('market');
+    var mkt = Defaults.get('market');
     var markets = Symbols.markets(1);
     if (!mkt || !markets[mkt] || !markets[mkt].is_active) {
         var sorted_markets = Object.keys(Symbols.markets()).filter(function(v){return markets[v].is_active;}).sort(function(a, b) {
@@ -770,7 +765,7 @@ function displayTooltip(market, symbol){
     var tip = document.getElementById('symbol_tip'),
         guide = document.getElementById('guideBtn'),
         app = document.getElementById('androidApp');
-    if (market.match(/^volidx/)){
+    if (market.match(/^volidx/) || symbol.match(/^R/) || market.match(/^random_index/) || market.match(/^random_daily/)){
         tip.show();
         tip.setAttribute('target','/get-started/volidx-markets');
         app.show();
@@ -778,13 +773,14 @@ function displayTooltip(market, symbol){
       app.hide();
       tip.hide();
     }
-    if (market.match(/^random_index/)){
+
+    if (market.match(/^random_index/) || symbol.match(/^R_/)){
         tip.setAttribute('target','/get-started/volidx-markets#volidx-indices');
     }
-    if (market.match(/^random_daily/)){
+    if (market.match(/^random_daily/) || symbol.match(/^RDB/) || symbol.match(/^RDMO/) || symbol.match(/^RDS/)){
         tip.setAttribute('target','/get-started/volidx-markets#volidx-quotidians');
     }
-    if (market.match(/^smart_fx/)){
+    if (market.match(/^smart_fx/) || symbol.match(/^WLD/)){
         tip.show();
         tip.setAttribute('target','/smart-indices#world-fx-indices');
     }
@@ -829,13 +825,13 @@ function updatePurchaseStatus(final_price, pnl, contract_status){
     $cost = $('#contract_purchase_cost');
     $profit = $('#contract_purchase_profit');
 
-    $payout.html(Content.localize().textBuyPrice + '<p>'+Math.abs(pnl)+'</p>');
-    $cost.html(Content.localize().textFinalPrice + '<p>'+final_price+'</p>');
+    $payout.html(Content.localize().textBuyPrice + '<p>'+addComma(Math.abs(pnl))+'</p>');
+    $cost.html(Content.localize().textFinalPrice + '<p>'+addComma(final_price)+'</p>');
     if(!final_price){
-        $profit.html(Content.localize().textLoss + '<p>'+pnl+'</p>');
+        $profit.html(Content.localize().textLoss + '<p>'+addComma(pnl)+'</p>');
     }
     else{
-        $profit.html(Content.localize().textProfit + '<p>'+(Math.round((final_price-pnl)*100)/100)+'</p>');
+        $profit.html(Content.localize().textProfit + '<p>'+addComma(Math.round((final_price-pnl)*100)/100)+'</p>');
     }
 }
 
@@ -865,27 +861,14 @@ function updateWarmChart(){
 }
 
 function reloadPage(){
-    sessionStorage.removeItem('market');
-    sessionStorage.removeItem('formname');
-    sessionStorage.removeItem('underlying');
-
-    sessionStorage.removeItem('expiry_type');
-    sessionStorage.removeItem('stop_loss');
-    sessionStorage.removeItem('stop_type');
-    sessionStorage.removeItem('stop_profit');
-    sessionStorage.removeItem('amount_per_point');
-    sessionStorage.removeItem('prediction');
-    sessionStorage.removeItem('amount');
-    sessionStorage.removeItem('amount_type');
-    sessionStorage.removeItem('currency');
-    sessionStorage.removeItem('duration_units');
-    sessionStorage.removeItem('diration_value');
-    sessionStorage.removeItem('date_start');
-
+    Defaults.remove('market', 'underlying', 'formname',
+        'date_start','expiry_type', 'expiry_date', 'expirt_time', 'duration_units', 'diration_value',
+        'amount', 'amount_type', 'currency', 'stop_loss', 'stop_type', 'stop_profit', 'amount_per_point', 'prediction');
     location.reload();
 }
 
 function addComma(num){
+    num = (num || 0) * 1;
     return num.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
@@ -900,8 +883,8 @@ function showHighchart(){
   div.className = 'grd-grid-12 chart_div';
   if (window.chartAllowed) {
     div.innerHTML = '<table width="600px" align="center"><tr id="highchart_duration"><td width="25%">' +
-                    Content.localize().textDuration + ':</td><td width="25%"><select id="time_period"><option value="1t">1 ' +
-                    Content.localize().textTickResultLabel.toLowerCase() + '</option><option value="1m" selected="selected">1 ' + text.localize("minute").toLowerCase() +
+                    Content.localize().textDuration + ':</td><td width="25%"><select id="time_period"><option value="1t" selected="selected">1 ' +
+                    Content.localize().textTickResultLabel.toLowerCase() + '</option><option value="1m">1 ' + text.localize("minute").toLowerCase() +
                     '</option><option value="2m">2 ' + Content.localize().textDurationMinutes.toLowerCase() + '</option><option value="3m">3 ' +
                     Content.localize().textDurationMinutes.toLowerCase() +'</option><option value="5m">5 ' + Content.localize().textDurationMinutes.toLowerCase() +
                     '</option><option value="10m">10 ' + Content.localize().textDurationMinutes.toLowerCase() + '</option><option value="15m">15 ' +
@@ -945,4 +928,8 @@ function setUnderlyingTime() {
 
 function chartFrameSource(underlying, highchart_time){
   document.getElementById('chart_frame').src = 'https://webtrader.binary.com?affiliates=true&instrument=' + underlying + '&timePeriod=' + highchart_time.value + '&gtm=true';
+}
+
+function isJapanTrading(){
+    return $('#trading_socket_container.japan').length;
 }
