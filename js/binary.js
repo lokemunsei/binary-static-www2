@@ -71569,7 +71569,7 @@ function swithTabIfError(IsErrorFound)
       }
       if (!contract.entry_tick_time && contract.date_start && parseInt((window.time._i/1000)) >= parseInt(contract.date_start)) {
         show_error('', text.localize('Waiting for entry tick.'));
-      } else if (!window.chart && !update) {
+      } else if (!window.chart) {
         request_data(window.contract);
       } else if (contract.entry_tick_time && window.chart) {
         select_entry_tick(contract.entry_tick_time);
