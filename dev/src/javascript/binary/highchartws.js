@@ -16,7 +16,7 @@ var Highchart = (function() {
         var times = history.times;
         var prices = history.prices;
         var i;
-        if (window.delayed || !window.min || !window.max) {
+        if (window.delayed) {
           for(i = 0; i < times.length; ++i) {
               data.push([times[i]*1000, prices[i]*1]);
           }
@@ -215,8 +215,15 @@ var Highchart = (function() {
             delete window.request.start;
             delete window.request.subscribe;
             window.delayed = true;
+          } else {
+            window.delayed = false;
           }
-          socketSend(window.request);
+          if (!contract.entry_tick_time && window.delayed === false && contract.date_start && parseInt((window.time._i/1000)) >= parseInt(contract.date_start)) {
+            show_error('', text.localize('Waiting for entry tick.'));
+          } else {
+            if (request.subscribe === 1) window.chart_subscribed = true;
+            socketSend(window.request);
+          }
       } else if ((type === 'history' || type === 'candles' || type === 'tick' || type === 'ohlc') && !error){
           window.responseID = response[type].id;
           // send view popup the response ID so view popup can forget the calls if it's closed before contract ends
@@ -357,9 +364,7 @@ var Highchart = (function() {
       if (!update) {
         initialized = false;
       }
-      if (!contract.entry_tick_time && contract.date_start && parseInt((window.time._i/1000)) >= parseInt(contract.date_start)) {
-        show_error('', text.localize('Waiting for entry tick.'));
-      } else if (!window.chart && (!window.chart_subscribed || window.chart_subscribed === '')) {
+      if (!window.chart && (!window.chart_subscribed || window.chart_subscribed === '')) {
         request_data(window.contract);
       } else if (contract.entry_tick_time && window.chart) {
         select_entry_tick(contract.entry_tick_time);
@@ -441,7 +446,6 @@ var Highchart = (function() {
 
     if(!contract.is_expired && !contract.sell_spot_time && parseInt((window.time._i/1000)) < end_time && (!window.chart_subscribed || window.chart_subscribed === '')) {
         request.subscribe = 1;
-        window.chart_subscribed = true;
     }
 
     window.request = request;
@@ -453,8 +457,15 @@ var Highchart = (function() {
         delete window.request.start;
         delete window.request.subscribe;
         window.delayed = true;
+      } else {
+        window.delayed = false;
       }
-      socketSend(window.request);
+      if (!contract.entry_tick_time && window.delayed === false && contract.date_start && parseInt((window.time._i/1000)) >= parseInt(contract.date_start)) {
+        show_error('', text.localize('Waiting for entry tick.'));
+      } else {
+        if (request.subscribe === 1) window.chart_subscribed = true;
+        socketSend(window.request);
+      }
     } else {
       socketSend({'contracts_for': contract.underlying});
     }
