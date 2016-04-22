@@ -71622,6 +71622,7 @@ function swithTabIfError(IsErrorFound)
     window.request = '';
     window.delayed = '';
     window.is_sold = '';
+    window.chart_subscribed = '';
   }
 
   function request_data(contract) {
@@ -71649,8 +71650,9 @@ function swithTabIfError(IsErrorFound)
       request.style = 'candles';
     }
 
-    if(!contract.is_expired && !contract.sell_spot_time && parseInt((window.time._i/1000)) < end_time) {
+    if(!contract.is_expired && !contract.sell_spot_time && parseInt((window.time._i/1000)) < end_time && (!window.chart_subscribed || window.chart_subscribed === '')) {
         request.subscribe = 1;
+        window.chart_subscribed = true;
     }
 
     window.request = request;
