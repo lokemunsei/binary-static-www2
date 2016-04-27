@@ -48,7 +48,7 @@ var KnowledgeTestData = (function() {
                 id: 9
             },
             {
-                question: "{JAPAN ONLY}For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option",
+                question: "{JAPAN ONLY}For a currency binary option with the underlying exchange rate of dollars against yen, the right to receive a payout if the yen becomes stronger is known as a dollar-put binary option.",
                 answer: true,
                 id: 10
             },

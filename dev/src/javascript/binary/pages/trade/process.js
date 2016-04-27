@@ -110,7 +110,11 @@ function processContract(contracts) {
     }
 
     document.getElementById('trading_socket_container').classList.add('show');
-    document.getElementById('trading_init_progress').style.display = 'none';
+    var init_logo = document.getElementById('trading_init_progress');
+    if(init_logo.style.display !== 'none') {
+        init_logo.style.display = 'none';
+        Defaults.update();
+    }
 
     Contract.setContracts(contracts);
 

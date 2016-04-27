@@ -56,7 +56,9 @@ var Highchart = (function() {
         credits:{
           enabled: false
         },
-        tooltip:{ xDateFormat:'%A, %b %e, %H:%M:%S GMT' },
+        tooltip: {
+          xDateFormat:'%A, %b %e, %H:%M:%S GMT'
+        },
         xAxis: {
           type: 'datetime',
           categories:null,
@@ -121,12 +123,14 @@ var Highchart = (function() {
           align: 'right',
           useHTML: true
         };
+        chartOptions.tooltip.valueDecimals = options.history.prices[0].split('.')[1].length || 3;
       } else if (options.candles) {
         chartOptions.subtitle = {
           text: window.delayed ? delay + start_time + end_time : start_time + end_time,
           align: 'right',
           useHTML: true
         };
+        chartOptions.tooltip.valueDecimals = options.candles[0].open.split('.')[1].length || 3;
       }
 
       if(!el) return;
@@ -209,10 +213,11 @@ var Highchart = (function() {
           error = response.error;
       var contract = window.contract;
       initialize_values(contract);
-      if (type === 'contracts_for' && !error) {
-          if (response.contracts_for.feed_license === 'delayed') {
-            window.request.end = 'latest';
-            delete window.request.start;
+      if (type === 'contracts_for' && (!error || (error && error.code && error.code === 'InvalidSymbol'))) {
+          if (response.contracts_for && response.contracts_for.feed_license && response.contracts_for.feed_license === 'delayed') {
+            if (!window.contract.is_expired) {
+              window.request.end = 'latest';
+            }
             delete window.request.subscribe;
             window.delayed = true;
           } else {
@@ -249,6 +254,9 @@ var Highchart = (function() {
                           break;
                       }
                   }
+                  if (!window.min || window.min === '') {
+                    window.min = response.history.times[0];
+                  }
                 }
                 get_max_history(contract, response);
             } else if (response.candles) {
@@ -271,8 +279,6 @@ var Highchart = (function() {
                 }
                 get_max_candle(contract, response);
             }
-            // set the entry_time
-            // if proposal_open_contract hasn't sent the entry_tick_time, use the calculated entry_tick_time
             window.entry_time = entry_tick_time;
             // start_time and exit_time are used in displaying the color zones
             window.start_time = start_time;
@@ -432,7 +438,8 @@ var Highchart = (function() {
       start: ((purchase_time || start_time)*1 - margin).toFixed(0), /* load more ticks before start */
       end: end_time ? (end_time*1 + margin).toFixed(0) : 'latest',
       style: 'ticks',
-      count: 4999 /* maximum number of ticks possible */
+      count: 4999, /* maximum number of ticks possible */
+      adjust_start_time: 1
     };
 
     if (is_sold) {
@@ -453,8 +460,9 @@ var Highchart = (function() {
 
     if (contracts_response && contracts_response.echo_req.contracts_for === contract.underlying) {
       if (contracts_response.contracts_for.feed_license === 'delayed') {
-        window.request.end = 'latest';
-        delete window.request.start;
+        if (!window.contract.is_expired) {
+          window.request.end = 'latest';
+        }
         delete window.request.subscribe;
         window.delayed = true;
       } else {

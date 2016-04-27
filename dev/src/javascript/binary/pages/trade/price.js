@@ -128,6 +128,8 @@ var Price = (function() {
             form_id: form_id
         };
 
+        resetPriceMovement();
+
         return proposal;
     };
 
@@ -237,9 +239,7 @@ var Price = (function() {
                 displayCommentPrice(comment, currency.value, proposal['ask_price'], proposal['payout']);
             }
             var oldprice = purchase.getAttribute('data-display_value');
-            if (oldprice) {
-                displayPriceMovement(amount, oldprice, proposal['display_value']);
-            }
+            displayPriceMovement(amount, oldprice, proposal['display_value']);
             purchase.setAttribute('data-purchase-id', id);
             purchase.setAttribute('data-ask-price', proposal['ask_price']);
             purchase.setAttribute('data-display_value', proposal['display_value']);

@@ -144,34 +144,34 @@
       <div class="grd-grid-6 grd-grid-mobile-12">
         <p class="center-aligned">
           <a class="button" href="#">
-            <span>[% l('{JAPAN ONLY}Introduction to Binary Options') %]</span>
+            <span class="link-size-box">[% l('{JAPAN ONLY}Introduction to Binary Options') %]</span>
           </a>
         </p>
         <p class="center-aligned">
           <a class="button" href="#">
-            <span>[% l('{JAPAN ONLY}Purchase, Settlement & Resale') %]</span>
+            <span class="link-size-box">[% l('{JAPAN ONLY}Purchase, Settlement & Resale') %]</span>
           </a>
         </p>
         <p class="center-aligned">
           <a class="button" href="#">
-            <span>[% l('{JAPAN ONLY}Options Basics') %]</span>
+            <span class="link-size-box">[% l('{JAPAN ONLY}Options Basics') %]</span>
           </a>
         </p>
       </div>
       <div class="grd-grid-6 grd-grid-mobile-12">
         <p class="center-aligned">
           <a class="button" href="#">
-            <span>[% l('{JAPAN ONLY}Trading & Hedging') %]</span>
+            <span class="link-size-box">[% l('{JAPAN ONLY}Trading & Hedging') %]</span>
           </a>
         </p>
         <p class="center-aligned">
           <a class="button" href="#">
-            <span>[% l('{JAPAN ONLY}Option Pricing') %]</span>
+            <span class="link-size-box">[% l('{JAPAN ONLY}Option Pricing') %]</span>
           </a>
         </p>
         <p class="center-aligned">
           <a class="button" href="#">
-            <span>[% l('{JAPAN ONLY}Regulation & Tax') %]</span>
+            <span class="link-size-box">[% l('{JAPAN ONLY}Regulation & Tax') %]</span>
           </a>
         </p>
       </div>

@@ -10,10 +10,19 @@ var TradingEvents = (function () {
     'use strict';
 
     var onStartDateChange = function(value){
-        if(!value || !$('#date_start').find('option[value='+value+']').length){
+        var $dateStartSelect = $('#date_start');
+        if(!value || !$dateStartSelect.find('option[value='+value+']').length){
             return 0;
         }
-        $('#date_start').val(value);
+
+        var yellowBorder = 'light-yellow-background';
+        if (value !== 'now') {
+            $dateStartSelect.addClass(yellowBorder);
+        } else {
+            $dateStartSelect.removeClass(yellowBorder);
+        }
+
+        $dateStartSelect.val(value);
 
         var make_price_request = 1;
         if (value !== 'now' && $('expiry_type').val() === 'endtime') {

@@ -29,25 +29,47 @@ var Defaults = (function(){
             value = value || '';
             if(Object.keys(params).length === 0) params = page.url.params_hash();
             if(params[key] != value) {
-                sessionStorage.setItem(key, value);
                 params[key] = value;
-                window.history.replaceState(null, null, window.location.pathname + '?' + page.url.params_hash_to_string(params));
+                // to increase speed, do not set values when form is still loading
+                if(!isVisible(document.getElementById('trading_init_progress'))) {
+                    sessionStorage.setItem(key, value);
+                    updateURL();
+                }
             }
         }
     };
 
     var removeDefault = function() {
         if(Object.keys(params).length === 0) params = page.url.params_hash();
+        var isUpdated = false;
         for (var i = 0; i < arguments.length; i++) {
-            sessionStorage.removeItem(arguments[i]);
-            delete(params[arguments[i]]);
+            if(params.hasOwnProperty(arguments[i])) {
+                sessionStorage.removeItem(arguments[i]);
+                delete(params[arguments[i]]);
+                isUpdated = true;
+            }
         }
+        if(isUpdated) {
+            updateURL();
+        }
+    };
+
+    var updateAll = function() {
+        for(var key in params)
+            if (params.hasOwnProperty(key)) {
+                sessionStorage.setItem(key, params[key]);
+            }
+        updateURL();
+    };
+
+    var updateURL = function() {
         window.history.replaceState(null, null, window.location.pathname + '?' + page.url.params_hash_to_string(params));
     };
 
     return {
         get   : getDefault,
         set   : setDefault,
+        update: updateAll,
         remove: removeDefault,
         clear : function(){params = {};}
     };

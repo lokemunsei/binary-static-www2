@@ -1,4 +1,8 @@
 <div id="trading_socket_container" class="tab-menu-wrap [% IF is_japan %]japan[% END %]">
+   <p id="temp_notice_msg" class="notice-msg center">
+     <span>[% l('As part of a re-branding exercise, the Random Indices are renamed to Volatility Indices. The indices remain the same and you may continue trading as usual. <a href="https://blog.binary.com/random-indices-renamed-to-volatility-indices/" target="_blank">Read more</a>.') %]</span>
+     <span id="close_temp_msg" class="close">X</span>
+   </p>
    <p id="markets_closed_msg" class="notice-msg center hidden">[% l('All markets are closed now. Please try again later.') %]</p>
    <div id="loading_container" class="overlay_container">
    </div>

@@ -155,6 +155,7 @@
     "src/javascript/binary/static/profittable/profittable.data.js",
     "src/javascript/binary/static/profittable/profittable.init.js",
     "src/javascript/binary/static/profittable/profittable.ui.js",
+    "src/javascript/binary/static/random_chg_msg.js",
     "src/javascript/binary/static/real_acc_opening.js",
     "src/javascript/binary/static/real_acc_opening/real_acc_opening.data.js",
     "src/javascript/binary/static/real_acc_opening/real_acc_opening.ui.js",

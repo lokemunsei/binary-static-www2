@@ -68,7 +68,7 @@ var ViewPopupWS = (function() {
         // ----- Tick -----
         if(contract.hasOwnProperty('tick_count')) {
             contractType = 'tick';
-            tickShowContract();
+            getTickHistory(contract.underlying, contract.date_start - 60, contract.date_start - 1, 1);
         }
         // ----- Spread -----
         else if(contract.shortcode.toUpperCase().indexOf('SPREAD') === 0) {
@@ -112,16 +112,24 @@ var ViewPopupWS = (function() {
             'tick_popup'
         );
 
+        TickDisplay.initialize({
+             "symbol"              : contract.underlying,
+             "number_of_ticks"     : contract.tick_count,
+             "previous_tick_epoch" : history.times[0],
+             "contract_category"   : ((/asian/i).test(contract.shortcode) ? 'asian' : (/digit/i).test(contract.shortcode) ? 'digits' : 'callput'),
+             "longcode"            : contract.longcode,
+             "display_decimals"    : history.prices[0].split('.')[1].length || 2,
+             "display_symbol"      : contract.display_name,
+             "contract_start"      : contract.date_start,
+             "show_contract_result": 0
+         });
+
         tickUpdate();
     };
 
     var tickUpdate = function() {
         if(contract.is_expired) {
             showWinLossStatus((contract.sell_price || contract.bid_price) > 0);
-        }
-        if (!window.updateChart || window.updateChart === 'false') {
-            WSTickDisplay.updateChart('', contract);
-            window.updateChart = 'true';
         }
     };
 
@@ -305,6 +313,7 @@ var ViewPopupWS = (function() {
         }
 
         sellSetVisibility(!isSellClicked && !isSold && !is_ended && +contract.is_valid_to_sell === 1);
+        contract.chart_validation_error = contract.validation_error;
         contract.validation_error = '';
     };
 
@@ -588,6 +597,10 @@ var ViewPopupWS = (function() {
         }
 
         switch(contractType) {
+            case 'tick':
+                 history = response.history;
+                 tickShowContract();
+                 break;
             case 'spread':
                 history = response.history;
                 spreadShowContract();

@@ -630,6 +630,16 @@ ul.checked li {
   z-index: 10;
 }
 
+.fake-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.light-yellow-background {
+  background-color: lightyellow;
+}
+
 *,
 *:after,
 *:before {
@@ -2041,6 +2051,13 @@ abbr {
 }
 .get-started .trade-type-flash, .get-started-jp .trade-type-flash {
   padding-bottom: 25px;
+}
+
+.get-started-jp .link-size-box {
+  display: table-cell;
+  vertical-align: middle;
+  height: 35px;
+  width: 170px;
 }
 
 .tour {
@@ -6438,6 +6455,18 @@ button:disabled {
 }
 .kv-pairs td {
   border: none;
+}
+
+#temp_notice_msg {
+  margin: 0 0 10px 0;
+}
+#temp_notice_msg #close_temp_msg {
+  position: absolute;
+  color: red;
+  font-size: .8em;
+  cursor: pointer;
+  top: 2px;
+  right: 2px;
 }
 
 /* Language based rules */

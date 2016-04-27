@@ -497,6 +497,17 @@ function displayPriceMovement(element, oldValue, currentValue) {
 }
 
 /*
+ * resets price movement color changing, to prevent coloring on some changes
+ * coloring will continue on the next proposal responses
+ */
+function resetPriceMovement() {
+    var btns = document.getElementsByClassName('purchase_button');
+    for(var i = 0; i < btns.length; i++) {
+        btns[i].setAttribute('data-display_value', '');
+    }
+}
+
+/*
  * function to toggle active class of menu
  */
 function toggleActiveNavMenuElement(nav, eventElement) {
