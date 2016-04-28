@@ -213,7 +213,8 @@ function BinarySocketClass() {
                       } else if (response.error.code === 'InvalidToken' &&
                           type !== 'reset_password' &&
                           type !== 'new_account_virtual' &&
-                          type !== 'paymentagent_withdraw') {
+                          type !== 'paymentagent_withdraw' &&
+                          type !== 'cashier') {
                         BinarySocket.send({'logout': '1'});
                       }
                     }

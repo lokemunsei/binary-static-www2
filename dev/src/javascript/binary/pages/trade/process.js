@@ -165,14 +165,14 @@ function processContractForm() {
         Durations.display();
     }
 
-    var expiry_type = Defaults.get('expiry_type') || 'duration';
-    var make_price_request = TradingEvents.onExpiryTypeChange(expiry_type);
-
     if (Defaults.get('amount')) $('#amount').val(Defaults.get('amount'));
         else Defaults.set('amount', document.getElementById('amount').value);
     if (Defaults.get('amount_type')) selectOption(Defaults.get('amount_type'), document.getElementById('amount_type'));
         else Defaults.set('amount_type', document.getElementById('amount_type').value);
     if (Defaults.get('currency')) selectOption(Defaults.get('currency'), document.getElementById('currency'));
+
+    var expiry_type = Defaults.get('expiry_type') || 'duration';
+    var make_price_request = TradingEvents.onExpiryTypeChange(expiry_type);
 
     if (make_price_request >= 0) {
         processPriceRequest();

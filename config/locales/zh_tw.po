@@ -168,11 +168,6 @@ msgid "%1 is entirely web-based and requires no software installation."
 msgstr "%1 完全基於網路，無需安裝任何軟體即可交易。"
 
 #. (stash->{website_name})
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "%1 is looking to recruit several talented designers who are passionate about what they do best. As our design team is responsible for creating the graphics required to support our global marketing and advertising campaigns, the team's creative efforts span a number of channels, including online marketing, affiliate networks, print advertising, trade shows, special events, and promotional projects in a number of languages."
-msgstr "%1欲招聘多名充滿熱忱的設計專業人才。我們的設計團隊負責為全球市場營銷和廣告活動進行平面設計。工作範圍關係到多個部門，包括網絡營銷、聯盟網絡、印刷廣告、商展會、特別活動、和以多種語言推出的促銷項目。"
-
-#. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/about/index.html.haml:1
 msgid "%1 is one of the oldest and most respected names in online binary trading."
 msgstr "%1 是線上二元交易行業中歷史最悠久、享有最高聲譽之佼佼者之一。"
@@ -189,18 +184,22 @@ msgstr "%1 正尋找一名初級至中級、擁有卓越行政和組織能力的
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "%1 is seeking a qualified proofreader with a flair for language and a meticulous eye for detail. You must be able to interact with our staff using a web-based translator interface. You’ll work with colleagues in IT, Customer Support and Marketing to provide localized text and document translation services on our global website %1."
+#, fuzzy
+#| msgid "%1 is seeking a qualified proofreader with a flair for language and a meticulous eye for detail. You must be able to interact with our staff using a web-based translator interface. You’ll work with colleagues in IT, Customer Support and Marketing to provide localized text and document translation services on our global website %1."
+msgid "%1 is seeking a qualified proofreader with a flair for language and a meticulous eye for detail. You must be able to interact with our staff using a web-based translator interface. You’ll work with colleagues in IT, Customer Support and Marketing to provide localised text and translation services."
 msgstr "%1 正尋找一名有語言天賦、注重細節的效對人員。要求能夠通過網路介面與我們的職員溝通。您須在我們的 %1全球網站與資訊技術、客服和市場部人員合作，提供本地化文字和文件翻譯服務。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "%1 is seeking qualified translation professionals familiar with specific target markets, languages, and cultures. By delivering a high level of translation and customer support services, you will be the company’s voice to our clients. You’ll work with colleagues in IT, Customer Support and Marketing to provide localized text and document translation services on our global website %1. This position will report to our Translation Project Manager."
+#, fuzzy
+#| msgid "%1 is seeking qualified translation professionals familiar with specific target markets, languages, and cultures. By delivering a high level of translation and customer support services, you will be the company’s voice to our clients. You’ll work with colleagues in IT, Customer Support and Marketing to provide localized text and document translation services on our global website %1. This position will report to our Translation Project Manager."
+msgid "%1 is seeking qualified translation professionals familiar with specific target markets, languages, and cultures. By delivering high-quality translation to support our customers in a particular language, you will serve as the company’s voice to clients in certain key areas of the world. You’ll work with colleagues in IT, Customer Support, and Marketing to provide localised text and translation services through a web-based tool. This position will report to our Translation Project Manager."
 msgstr "%1 正尋找熟悉特定目標市場、語言和文化的翻譯人才。通過向客戶提供高水平翻譯和客戶支持服務，您將成為本公司與客戶溝通的代表。您必須能通過網路介面與我們的職員交流。您須在我們的 %1全球網站與資訊技術、客服和市場部人員合作，提供本地化文字和文件翻譯服務。擔任此職位的人員向翻譯項目經理匯報。"
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "%1 is seeking several highly skilled Marketing Executives to join its team of talented professionals."
-msgstr "%1 正尋找多位能力特強的營銷高級主管加入專業人才團隊。"
+msgid "%1 is seeking several highly skilled Marketing Executives, eager to contribute their energy, passion, and specialised strengths in connecting with prospects and clients based throughout the globe."
+msgstr ""
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
@@ -221,6 +220,11 @@ msgstr "%1 努力讓二元期權所提交的每個標的資產報價與市場現
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:65
 msgid "%1 may have access to information that is not available to you, may have acquired trading positions at prices that are not available to you, and may have interests different from your interests. %1 does not undertake any obligation to provide you with market or other information we possess, nor to alter or refrain from our own trading."
 msgstr "%1 可能有辦法存取您所無法得到的資訊，以您無法得到的低價獲取交易頭寸，或跟您的利益有所不同。 %1 沒有義務向您提供我們所擁有的市場或其它資訊，也不會對我們自己的交易做出任何變更或節制。"
+
+#. (stash->{website_name})
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "%1 now seeks Affiliate Managers to drive rapid growth and business development in key areas of the world. Successful recruits for this telecommuting role will actively increase %1’s market presence, expanding its network of affiliate partners from particular countries, geographic regions, and / or languages as needed."
+msgstr ""
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/beginners_faq.html.haml:1
@@ -257,9 +261,24 @@ msgstr "%1 通過以下計劃提供商業夥伴關係服務。"
 msgid "%1 provides you with the opportunity to either self-exclude or <a href=\"%2\">set limits on your trading activities</a> on this website. You may also <a href=\"%3\">contact us</a> to state the limits you wish to set via live chat, email or phone. Available limits are:"
 msgstr "通過 %1，您可以在網站上自我禁止或 <a href=\"%2\">為自己的交易活動設限</a>。您也可以通過即時聊天、電郵或電話 <a href=\"%3\">聯繫我們</a> 告訴我們您想要設定的限額。可用的限額如下："
 
+#. (stash->{website_name})
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "%1 seeks a Project Coordinator to help drive the production of promotional content and rollout of marketing campaigns, designed to engage new prospects and current customers based throughout the globe."
+msgstr ""
+
+#. (stash->{website_name})
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "%1 seeks a Social Media Executive to enhance and proactively manage the company's social-media efforts. This role requires effective utilisation of a variety of social media channels to attract and nurture prospects, clients, partners, and recruits based throughout the world."
+msgstr ""
+
+#. (stash->{website_name})
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "%1 seeks a sharp Copywriter to produce content that actively engages new prospects and current customers based throughout the world."
+msgstr ""
+
 #. ($currency)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:115
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:120
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:114
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:109
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1037
 msgid "%1 transactions may not be performed with this account."
 msgstr "此帳戶可能無法執行%1交易。"
@@ -308,6 +327,11 @@ msgstr "%1-收銀台無法解鎖"
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "%1: Online Trading platform for binary options on Forex, Indices, Commodities and Smart Indices"
 msgstr "%1：外匯、指數、商品及智慧指數的二元期權線上交易平台"
+
+#. (stash->{website_name})
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "%1is looking to recruit highly skilled, experienced designers who are passionate about developing attractive visuals for both online and offline applications."
+msgstr ""
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -585,7 +609,7 @@ msgstr "50-100 million JPY"
 msgid "5d"
 msgstr "5天"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:927
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:926
 msgid "6 - 25 characters."
 msgstr "6 - 25 個字元。"
 
@@ -726,7 +750,7 @@ msgid "<p>Dear Valued Customer,</p><p>It appears that you have tried to register
 msgstr "<p>尊敬的客戶，</p><p>看來您註冊時使用的電子郵件地址已包括在我們系統內。如果不是您，請忽略此電子郵件，或如有任何疑問，請與我們客戶支持部聯繫。</p>"
 
 #. ($r->url_for('/cashier/forward')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:284
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:273
 msgid "<p>Sorry, an error has occurred. Please <a href=\"%1\">try accessing our Cashier</a> again.</p>"
 msgstr "<p>抱歉，出現錯誤。請重新<a href=\"%1\">嘗試存取我們的收銀台</a>。 </p>"
 
@@ -1061,7 +1085,9 @@ msgid "A Bachelor’s degree in Computer Science, or an equivalent combination o
 msgstr "電腦科學系學士，或具備同等技術教育、培訓背景及工作經驗的人員"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "A Bachelor’s degree in business or related discipline"
+#, fuzzy
+#| msgid "A Bachelor’s degree in business or related discipline"
+msgid "A Bachelor’s degree in Marketing, Business Administration, or related discipline"
 msgstr "商科或相關學科學士學位"
 
 #. ($params->{website_name})
@@ -1140,7 +1166,9 @@ msgid "A momentum indicator showing the percent rate-of-change of a triple expon
 msgstr "顯示三重指數平滑移動平均線（TRIX）百分比變動率的動力指標。如同其它震盪指標，TRIX指標在零線附近震盪。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "A native speaker with good command of English (oral and written)"
+#, fuzzy
+#| msgid "A native speaker with good command of English (oral and written)"
+msgid "A native speaker with strong command of the English language, in both oral and written form"
 msgstr "母語為英語，口語、寫作皆流利"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:198
@@ -1163,12 +1191,6 @@ msgstr "偏好并熱衷於使用Linux和開源平台"
 msgid "A proactive approach to solving problems and delivering client solutions"
 msgstr "主動尋求問題的對策，並向客戶端提交解決方案"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:177
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:187
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:58
-msgid "A problem occurred"
-msgstr "出現問題"
-
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:481
 msgid "A problem occurred while connecting to the server. Please try again later."
 msgstr "連接伺服器時出現問題。請稍後重試。"
@@ -1182,19 +1204,15 @@ msgid "A scanned copy of your passport or driver's licence."
 msgstr "您的護照或駕照掃描件。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "A sound understanding of the regulatory aspects of doing business in the region"
-msgstr "對有關地區的商業監管規定非常了解"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "A strong and passionate interest in marketing"
-msgstr "對市場行銷充滿熱忱，非常感興趣"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "A strong and passionate interest in marketing and advertising"
+#, fuzzy
+#| msgid "A strong and passionate interest in marketing and advertising"
+msgid "A strong and passionate interest in Marketing and Advertising"
 msgstr "對市場行銷和廣告充滿熱忱，非常感興趣"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "A strong and passionate interest in social media, marketing, and advertising"
+#, fuzzy
+#| msgid "A strong and passionate interest in social media, marketing, and advertising"
+msgid "A strong and passionate interest in Social Media, Marketing, and Advertising"
 msgstr "對社交媒體、市場行銷和廣告充滿熱忱，非常感興趣"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:613
@@ -1210,11 +1228,15 @@ msgid "A tick is the minimum upward or downward movement in the price of a marke
 msgstr "跳動點指市場價格的最小上漲或下跌數值。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "A university degree in Marketing, Communication, or Journalism"
-msgstr "市場行銷、 通信或新聞專業學位"
+#, fuzzy
+#| msgid "A university degree in Marketing, Journalism, Communications or other business related discipline"
+msgid "A university degree in Marketing, Communication, Business Administration, or related discipline"
+msgstr "市場行銷、 新聞、 通信或其他商業相關專業學位"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "A university degree in Marketing, Journalism, Communications or other business related discipline"
+#, fuzzy
+#| msgid "A university degree in Marketing, Journalism, Communications or other business related discipline"
+msgid "A university degree in Marketing, Journalism, Communications, or other business-related discipline"
 msgstr "市場行銷、 新聞、 通信或其他商業相關專業學位"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -1239,7 +1261,7 @@ msgstr "已經傳送了驗證郵件到 %1。"
 msgid "API"
 msgstr "應用程式編程介面"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:451
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:326
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:70
 msgid "API Token"
@@ -1254,8 +1276,32 @@ msgid "AUTHORISED PAYMENT AGENT?"
 msgstr "授權支付代理?"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "The ability to communicate fluently in English (both oral and written)"
+msgid "Ability to communicate fluently in the English language, in both oral and written forms"
+msgstr "能夠流利地以英語溝通（口語和書面）"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "The ability to speak and write in multiple languages"
+msgid "Ability to speak multiple languages"
+msgstr "多種語言的口語和書寫能力"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "The ability to speak and write in multiple languages"
+msgid "Ability to speak, read, and write multiple languages"
+msgstr "多種語言的口語和書寫能力"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Ability to work in a multicultural and international environment"
 msgstr "能夠在多元文化和國際環境中工作"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Will work with a simple web-based translation tool"
+msgid "Ability to work with a simple web-based translation tool"
+msgstr "將使用簡單、基於網絡的翻譯工具"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:519
 msgid "About"
@@ -1300,11 +1346,11 @@ msgstr "除非公司關鍵人員在執行職務時有此必要，我們嚴格禁
 msgid "Account Closure"
 msgstr "帳戶關閉"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:373
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:259
 msgid "Account Details"
 msgstr "帳戶詳細資料"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:415
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:377
 msgid "Account Limits"
 msgstr "帳戶限額"
 
@@ -1317,7 +1363,6 @@ msgstr "帳戶管理及追蹤"
 msgid "Account Opening"
 msgstr "帳戶開立"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:348
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/account_transferws.html.haml:1
 msgid "Account Transfer"
 msgstr "帳戶轉帳"
@@ -1358,11 +1403,11 @@ msgstr "累積/發佈"
 msgid "Accuracy of Information"
 msgstr "資訊的準確性"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:623
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:622
 msgid "Acknowledgement of Money Transfer"
 msgstr "確認轉帳"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:886
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:885
 msgid "Acknowledgement of Withdrawal Request"
 msgstr "確認提款要求"
 
@@ -1375,6 +1420,18 @@ msgstr "通過本網站金融期權合約的買入必須遵守網站頁面上的
 msgid "Action"
 msgstr "動作"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Adapt affiliate-marketing tactics and promotional materials as needed, to localise all content for maximum effectiveness"
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Adapt communication appropriately to suit a variety of different formats and target audiences"
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Adapt tone of voice as appropriate to suit specified target audiences"
+msgstr ""
+
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:540
 msgid "Add Lines"
 msgstr "新增線"
@@ -1384,7 +1441,7 @@ msgid "Add Overlay"
 msgstr "新增重疊"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:662
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:90
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:89
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:75
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:66
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:84
@@ -1440,12 +1497,18 @@ msgid "Advising senior managers regarding salary negotiations and job offers"
 msgstr "向高級管理人員提供關於薪金協商和錄取人員的建議"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:112
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:54
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:22
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/signup.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/signup.html.tt:8
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:17
 msgid "Affiliate"
 msgstr "聯盟"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
+#, fuzzy
+#| msgid "Affiliate Program"
+msgid "Affiliate Manager"
+msgstr "聯盟計劃"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
 msgid "Affiliate Program"
@@ -1502,7 +1565,7 @@ msgid "Although the Company has and retains all rights to refuse or to close a C
 msgstr "儘管公司擁有及保留所有拒絕或關閉客戶帳戶的權利，但公司保證所有開出的合同義務都必須執行。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:553
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:575
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:574
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/account_transferws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:16
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:62
@@ -1555,18 +1618,21 @@ msgstr "發現您的帳戶另由以下IP地址: %2，國家: %3和瀏覽器: %4�
 msgid "An advanced university degree in Mathematics, Physics or Engineering"
 msgstr "數學、 物理或工程專科碩士或博士學位"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "An assertive, sales-driven personality, able to adapt quickly and achieve powerful results"
+msgstr ""
+
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:345
 msgid "An error occured."
 msgstr "發生錯誤。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1088
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:518
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:526
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:604
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:762
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:770
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:864
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:354
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1087
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:517
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:525
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:603
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:761
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:769
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:863
 msgid "An error occurred while processing request. If this error persists, please contact customer support"
 msgstr "處理要求時發生錯誤。如果問題持續出現，請聯繫客戶支援人員"
 
@@ -1614,7 +1680,7 @@ msgstr "年收入"
 msgid "Another major award. This time we’re nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge."
 msgstr "這是我們贏得的另一大獎項。該獎項由《Global Banking and Finance Review》雜誌的線上讀者提名，並由行業專家和分析師評審團評選得出。這是對我們13年來的平台可靠性、交易品種範圍、定價、客戶服務和專業程度的認可。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1417
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1416
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:169
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:145
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:163
@@ -1663,9 +1729,15 @@ msgid "Anyone who has potential to grow or increase traffic to %1"
 msgstr "任何有潛力增長或提高 %1 流量之人士"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:707
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:532
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:407
 msgid "Applications"
 msgstr "應用程式"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
+#, fuzzy
+#| msgid "With a meticulous eye for detail, proofread and correct the content appearing on the company’s website, blogs and social media outlets."
+msgid "Apply a meticulous eye for detail in proofreading the content that appears on the company’s website, blog, social media outlets, and marketing materials."
+msgstr "非常注重細節，對公司網站、部落格和社交媒體網站內容進行校對和更正工作。"
 
 #. (website, apply_payment_agent_url)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_list.html.tt:29
@@ -1690,8 +1762,8 @@ msgid "Appropriateness Test"
 msgstr "合適性測試"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:83
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1098
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:313
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1097
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:312
 msgid "Apr"
 msgstr "四月"
 
@@ -1808,7 +1880,7 @@ msgid "Asset"
 msgstr "資產"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:154
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:130
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:26
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2610
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
@@ -1820,6 +1892,10 @@ msgstr "資產指數"
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Assist in the proofreading and recording of video presentations"
 msgstr "協助演示視訊的校對和錄製工作"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Assist marketing team members with additional tasks and initiatives"
+msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Assist senior members of the marketing team in implementing a broad array of promotional campaigns"
@@ -1847,12 +1923,16 @@ msgid "At least 1 year working experience is required for this position"
 msgstr "這個職位要求有至少 1 年的工作經驗"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "At least five years of experience with affiliate marketing, growth hacking, business development, and other closely related skills"
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Audit deposit patterns and take action on fraud or abuse"
 msgstr "審計存款模式並對欺詐或濫用行為採取行動"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:87
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1114
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:329
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1113
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:328
 msgid "Aug"
 msgstr "八月"
 
@@ -1865,11 +1945,11 @@ msgid "Australia"
 msgstr "澳大利亞"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:119
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:397
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:359
 msgid "Authenticate"
 msgstr "驗證"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:406
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:368
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/authenticate_to_withdraw.html.tt:1
 msgid "Authenticate to Withdraw"
 msgstr "驗證提款"
@@ -1902,10 +1982,6 @@ msgstr "圖表應用程式"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:3
 msgid "Available payment methods"
 msgstr "可用支付方式"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:162
-msgid "Average Change = Average Close - Average Open, for the period selected"
-msgstr "平均變更=（所選期間）平均收盤價– 平均開盤價"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:642
 msgid "Avg Directional Index"
@@ -2090,7 +2166,7 @@ msgstr "BetOnMarkets.com 成功重塑品牌為 Binary.com"
 msgid "BetOnMarkets.com reaches $1 billion turnover since starting in 1999"
 msgstr "BetOnMarkets.com 於1999年推出，目前營業額達10億美元"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:128
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:124
 msgid "Betting system and method"
 msgstr "博彩系統和方法"
 
@@ -2304,10 +2380,6 @@ msgstr "Binary平台平均每秒鐘進行15宗 <a href=\"http://binarycom.status
 msgid "Blog"
 msgstr "部落格"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Blog, using a variety of formats"
-msgstr "以各種格式展示的部落格"
-
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:615
 msgid "Bollinger Band Width"
 msgstr "布林通道寬度"
@@ -2345,7 +2417,11 @@ msgstr "Both the above"
 msgid "Both the deposit and the bonus amounts are clearly displayed when this type of promotion is available. E.g. Get $25 when you deposit $100. By way of example, if you choose to participate in a \"Get $25 when you deposit $100\" promotion, we will add an additional $25 to your account when you deposit $100 AND when you have purchased at least $125 worth of trades ($25 * 5= $125). The bonus will only be credited to your account when both of these conditions are met."
 msgstr "開展此類促銷活動時，存款和獎金數額都會清楚顯示，例如「存100 獎25」活動。舉例來說，如果您選擇參加「存100 獎25」促銷活動，當您存入100 美元並且至少執行125 美元的交易後（25 *5 = 125美元），您將獲得25 美元的獎勵。只有同時滿足這兩個條件，獎金才會記入您的帳戶。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1393
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Brainstorm new ways of using social media to connect meaningfully with prospects, clients, and partners"
+msgstr ""
+
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:161
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:137
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:155
@@ -2481,7 +2557,7 @@ msgid "Cash Dividend"
 msgstr "現金紅利"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:133
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:51
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:36
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:90
@@ -2515,12 +2591,8 @@ msgstr "蔡金波動性指標"
 msgid "Change"
 msgstr "變更"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:161
-msgid "Change = Close - Open, for the day"
-msgstr "變更=當日收盤價 – 當日開盤價"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:229
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:424
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:228
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:299
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:62
 msgid "Change Password"
@@ -2532,7 +2604,7 @@ msgstr "帳戶設定更改"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:220
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1747
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:589
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:384
 msgid "Chart"
 msgstr "圖表"
 
@@ -2689,11 +2761,11 @@ msgstr "點選此處重試"
 msgid "Client classification"
 msgstr "客戶分類"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:149
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:148
 msgid "Client email not set."
 msgstr "使用者電子郵件未設定。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:88
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:87
 msgid "Client is not fully authenticated."
 msgstr "客戶未完成身份驗證。"
 
@@ -2887,11 +2959,11 @@ msgstr "法務專員"
 msgid "Compliance with and Amendments to These Terms"
 msgstr "對這些條款的遵守和修正"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:136
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:132
 msgid "Computer system and method for speculating on a financial market"
 msgstr "金融市場進行預測之電腦系統和方法"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:132
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:128
 msgid "Computer trading system for offering custom financial market speculations"
 msgstr "提供自訂金融市場預測之電腦交易系統"
 
@@ -2916,7 +2988,7 @@ msgstr "確認"
 msgid "Confirm New Password"
 msgstr "確認新密碼"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:951
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:950
 msgid "Confirm Your Email"
 msgstr "請確定您的電子郵件"
 
@@ -2942,7 +3014,6 @@ msgstr "建構"
 msgid "Contact"
 msgstr "聯繫方式"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:461
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/topbar.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/payment_agent.html.haml:1
@@ -2962,8 +3033,8 @@ msgstr "請直接聯繫支付代理，詢問關於如何匯款給他們的資訊
 msgid "Contact us"
 msgstr "聯繫我們"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:430
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:476
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:429
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:475
 msgid "Continue"
 msgstr "繼續"
 
@@ -3021,7 +3092,7 @@ msgstr "售出合約"
 msgid "Contract barrier must be positive."
 msgstr "合約障礙必須為正數。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:636
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:431
 msgid "Contract cannot be sold at this time."
 msgstr "目前合約無法賣出。"
 
@@ -3129,11 +3200,15 @@ msgid "Contribute to %1's open-source projects."
 msgstr "為%1的開源專案做出貢獻。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-msgid "Contribute your creativity to further the company’s dynamic branding efforts by implementing a broad array of promotional campaigns."
+#, fuzzy
+#| msgid "Contribute your creativity to further the company’s dynamic branding efforts by implementing a broad array of promotional campaigns."
+msgid "Contribute your creativity and marketing capabilities to further the company’s branding efforts, implementing a broad array of promotional campaigns."
 msgstr "展現您的創造力，通過廣泛的宣傳活動，為進一步推廣公司的品牌而努力。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Contribute your ideas, energy and creativity to further the company’s dynamic branding efforts"
+#, fuzzy
+#| msgid "Contribute your ideas, energy and creativity to further the company’s dynamic branding efforts"
+msgid "Contribute your ideas, energy, and creativity to further the company’s dynamic branding efforts"
 msgstr "貢獻您的想法、能量和創造力，為進一步推廣公司的品牌而努力"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:128
@@ -3153,12 +3228,10 @@ msgid "Cookies"
 msgstr "Cookie"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Coordinate project delivery; develop and update schedules, maintain task lists, and hold team members accountable for assigned deliverables"
-msgstr "為項目交付展開協調，制定和更新日程安排、維護任務列表、並確保隊成員能夠負責各自的工作"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-msgid "Coordinate project delivery; develop and update schedules, maintain task lists, and hold team members accountable for assigned deliverables."
-msgstr "為項目交付展開協調，制定和更新日程安排、維護任務列表、並確保團隊成員能夠負責各自的工作。"
+#, fuzzy
+#| msgid "Support country appropriate products and regional capability strategies by coordinating business development activities and generating partnership leads"
+msgid "Coordinate business-development activities and generate high-quality partnership leads"
+msgstr "通過業務發展活動協調和產生夥伴關係線索，對國家適用的產品和區域實行策略給予支持"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/copyright.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:26
@@ -3170,7 +3243,7 @@ msgstr "版權"
 msgid "Copywriter"
 msgstr "文案"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:619
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:414
 msgid "Corporate Actions"
 msgstr "共同決議"
 
@@ -3179,12 +3252,11 @@ msgid "Costs and Charges"
 msgstr "成本和費用"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:605
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Country Manager"
 msgstr "區域經理"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:660
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1192
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1191
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:45
 msgid "Country of Residence"
 msgstr "居住國"
@@ -3208,7 +3280,7 @@ msgstr "新增"
 msgid "Create Free Account"
 msgstr "開立免費帳戶"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:433
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:308
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:66
 msgid "Create New Account"
@@ -3219,12 +3291,26 @@ msgid "Create New Token"
 msgstr "新增新權杖"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Create clear, concise and engaging content for display on the company’s website"
+#, fuzzy
+#| msgid "Create clear, concise and engaging content for display on the company’s website"
+msgid "Create clear, concise and engaging content for display on the company’s website, blog, social media outlets, and marketing materials"
 msgstr "為公司網站增添清晰、簡潔、引人入勝的內容"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-msgid "Create clear, concise and engaging content that promotes the company’s product offerings in a variety formats to be displayed on our website."
+#, fuzzy
+#| msgid "Create clear, concise and engaging content that promotes the company’s product offerings in a variety formats to be displayed on our website."
+msgid "Create clear, concise, and engaging content that effectively promotes the company’s trading platform and product offerings in a variety of formats."
 msgstr "為公司網站添加形式多樣、清晰簡明、引人入勝的內容，以推廣公司的產品。"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Create content to support our international marketing campaigns in a variety of different formats and languages"
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "%1 is looking to recruit several talented designers who are passionate about what they do best. As our design team is responsible for creating the graphics required to support our global marketing and advertising campaigns, the team's creative efforts span a number of channels, including online marketing, affiliate networks, print advertising, trade shows, special events, and promotional projects in a number of languages."
+msgid "Create the graphics required to support our global marketing and advertising campaigns. The team's creative efforts span a number of channels, including online marketing, affiliate networks, print advertising, tradeshows, special events, and promotional projects."
+msgstr "%1欲招聘多名充滿熱忱的設計專業人才。我們的設計團隊負責為全球市場營銷和廣告活動進行平面設計。工作範圍關係到多個部門，包括網絡營銷、聯盟網絡、印刷廣告、商展會、特別活動、和以多種語言推出的促銷項目。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Creating interfaces and tools to access market information, real-time and historical analysis of trading strategies"
@@ -3238,7 +3324,7 @@ msgstr "借記/貸記"
 msgid "Credit/Debit Card"
 msgstr "信用卡/扣款卡"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:477
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:476
 msgid "Cross-company payment agent transfers are not allowed."
 msgstr "不允許跨公司間支付代理轉帳。"
 
@@ -3263,11 +3349,11 @@ msgstr "目前"
 msgid "Current Level"
 msgstr "目前價位"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:504
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:299
 msgid "Current Spot"
 msgstr "目前現貨價格"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:496
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:291
 msgid "Current Spot Time"
 msgstr "目前現貨時間"
 
@@ -3378,8 +3464,8 @@ msgstr "截止日期 %1 無效"
 msgid "Date of Birth"
 msgstr "出生日期"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1144
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:360
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1143
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:359
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:43
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:44
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:62
@@ -3412,8 +3498,8 @@ msgstr "親愛的"
 #. ($pa_client->salutation, $pa_client->first_name, $pa_client->last_name)
 #. (BOM::Platform::Locale::translate_salutation($client->salutation)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:652
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:611
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:870
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:610
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:869
 msgid "Dear %1 %2 %3,"
 msgstr "親愛的 %1 %2 %3,"
 
@@ -3619,8 +3705,8 @@ msgid "Debt-free"
 msgstr "無負債"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:91
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1130
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:345
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1129
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:344
 msgid "Dec"
 msgstr "十二月"
 
@@ -3669,6 +3755,10 @@ msgstr "刪除所有線？"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:64
 msgid "Delete for Breach"
 msgstr "因違約被刪除"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Demonstrate the ability to think / act quickly and multi-task as needed to execute effective campaigns"
+msgstr ""
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:554
 #: /home/git/regentmarkets/bom-backoffice/f_manager_confodeposit.cgi:273
@@ -3744,6 +3834,10 @@ msgstr "衍生投資工具如二元期權和相關市場的波動性很大。二
 msgid "Description"
 msgstr "描述"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
+msgid "Design engaging, visually inspiring content for the company's website and many other forms of media, including both online and offline materials."
+msgstr ""
+
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:717
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reset_passwordws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:9
@@ -3775,15 +3869,15 @@ msgid "DevOps Manager / Team Lead"
 msgstr "DevOps 經理/團隊主管"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Develop and maintain a consistent and engaging brand voice throughout assigned social-media channels"
+#, fuzzy
+#| msgid "Develop and maintain a consistent and engaging brand voice throughout assigned social-media channels"
+msgid "Develop and maintain a consistent, engaging brand voice throughout all social-media channels"
 msgstr "為社交媒體整合、開發穩定而引人注目的品牌聲音，並進行維護工作"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-msgid "Develop and maintain a consistent and engaging brand voice throughout assigned social-media channels to promote the company."
-msgstr "為社交媒體整合、開發穩定而引人注目的品牌聲音，並進行維護工作。"
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Develop content that promotes the company through social media outlets"
+#, fuzzy
+#| msgid "Develop content that promotes the company through social media outlets"
+msgid "Develop content as necessary to promote the company through social media"
 msgstr "通過社交媒體渠道製定公司促銷內容"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -3791,16 +3885,10 @@ msgid "Develop derivatives pricing, risk management models and algorithms using 
 msgstr "使用C/C++, R, MATLAB, Perl, Python 和 Java 開發衍生產品的定價、風險管理模型和算法"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Develop strong relationships with regulatory, governmental, and professional organizations in order to promote the business and contribute to the improvement of service delivery"
-msgstr "與監管機構、政府部門和專業組織合作，建立良好的人際關係，以促進業務，並為改善服務作出貢獻"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Develop text that promotes the company’s product offerings in a variety formats"
+#, fuzzy
+#| msgid "Develop text that promotes the company’s product offerings in a variety formats"
+msgid "Develop text that promotes the company’s product offerings in a variety of formats"
 msgstr "採用不同格式文字製訂本公司的產品促銷採料"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Develop the digital marketing content that appears on the company’s website"
-msgstr "為公司網站開發數字化行銷內容"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/partners.html.haml:1
 msgid "Develop your own trading application with our APIs."
@@ -3906,6 +3994,10 @@ msgstr "您要檢視其他語言版本的Binary.com，還是想對目前譯文�
 msgid "Document account chargebacks"
 msgstr "文檔賬戶扣款"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Document department processes, to enhance the marketing team’s ability to execute repeated tasks efficiently and effectively"
+msgstr ""
+
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Client/IDAuthentication.pm:197
 msgid "Documents are required to verify your identity"
 msgstr "需要提交文件才能驗證您的身份"
@@ -3929,6 +4021,14 @@ msgstr "休眠和非使用中帳戶"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:528
 msgid "Dot Chart"
 msgstr "點圖"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Drive rapid growth and business development, to support the company's sales and marketing objectives"
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
+msgid "Drive rapid growth from key areas of the world, applying a variety of online and offline marketing abilities to expand the company's active affiliate network."
+msgstr ""
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1418
 msgid "Due to regulatory requirements, you are required to authenticate your account in order to continue trading."
@@ -4053,7 +4153,9 @@ msgid "Effect of Termination"
 msgstr "終止效果"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Effective English language skills, with attention to detail regarding punctuation, spelling, grammar, and syntax"
+#, fuzzy
+#| msgid "Effective English language skills, with attention to detail regarding punctuation, spelling, grammar, and syntax"
+msgid "Effective English language skills, with precise attention to detail regarding punctuation, spelling, grammar, and syntax"
 msgstr "有效的英語語言技能，注重標點、拼寫、語法和句法等方面的細節"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -4108,7 +4210,7 @@ msgid "Email Verification"
 msgstr "電子郵件驗證"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:659
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:856
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:855
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_passwordws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:56
 msgid "Email address"
@@ -4131,7 +4233,7 @@ msgid "Employee handbook"
 msgstr "員工手冊"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:162
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:420
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:215
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/duration.html.tt:5
 msgid "End Time"
 msgstr "結束時間"
@@ -4140,13 +4242,13 @@ msgstr "結束時間"
 msgid "Ends Between/Ends Outside trades"
 msgstr "「收於範圍之內/之外」的交易"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:92
-msgid "Ends Between/Outside"
-msgstr "「收於範圍之內/之外」的交易"
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Engage in data mining using SQL databases, R/S-Plus, OLAP and other analytical tools"
 msgstr "使用 SQL 資料庫、R/S-Plus、OLAP 和其他分析工具從事資料挖掘工作"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
+msgid "Enhance and proactively manage the company's social-media efforts, using a variety of channels to attract and nurture prospects, clients, partners, and recruits."
+msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Ensure compliance with quality control standards governing website content"
@@ -4190,7 +4292,7 @@ msgid "Entry Level"
 msgstr "進場價位"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:115
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:399
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:194
 msgid "Entry Spot"
 msgstr "入市現價"
 
@@ -4267,11 +4369,15 @@ msgid "Except to the extent your Application contains the Binary.com API, the Co
 msgstr "公司對您的應用程式的擁有或控制權僅限於該應用程式所包含的Binary.com API。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Exceptional communication skills (both oral and written) in English"
+#, fuzzy
+#| msgid "Exceptional communication skills (both oral and written) in English"
+msgid "Exceptional communication skills in English, in both oral and written form"
 msgstr "優秀的英語溝通能力（口語及書寫）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Exceptional organizational skills; detail orientation and a strong work ethic"
+#, fuzzy
+#| msgid "Exceptional organizational skills; detail orientation and a strong work ethic"
+msgid "Exceptional organizational skills; detail orientation; strong work ethic; and efficient multi-tasking capabilities"
 msgstr "出色的組織能力，注重細節並具有良好的職業道德"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:310
@@ -4336,7 +4442,7 @@ msgid "Exit Level"
 msgstr "退出價位"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:642
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:413
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:208
 msgid "Exit Spot"
 msgstr "退出現價"
 
@@ -4349,6 +4455,10 @@ msgstr "退出現價時間"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/explanation/details/risefall.html.tt:8
 msgid "Exit spot"
 msgstr "退出現價"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Expand our network of active affiliates in your local market. Contribute your energy, skills, and knowledge of the local business culture to help further our rapid rate of growth worldwide."
+msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Experience in an anti-fraud or risk management role"
@@ -4398,15 +4508,15 @@ msgstr "有國際環境工作經驗"
 msgid "Expertise in cloud solutions"
 msgstr "有云計算解決方案專門知識"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:479
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:274
 msgid "Expiry Price"
 msgstr "到期價格"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:475
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:270
 msgid "Expiry Spot"
 msgstr "到期現價"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:467
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:262
 msgid "Expiry Time"
 msgstr "到期時間"
 
@@ -4423,7 +4533,7 @@ msgid "Expiry time cannot be in the past."
 msgstr "到期時間不可為過去式。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:221
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:606
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:401
 msgid "Explanation"
 msgstr "說明"
 
@@ -4479,7 +4589,7 @@ msgstr "熟悉Perl、DBI、Mason、Moose、Sereal、Plack/PSGI、nginx、Javascr
 msgid "Familiarity with virtualization concepts (openvz / Xen / vmware)"
 msgstr "熟悉虛擬化概念 (openvz / Xen / vmware)"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1043
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1042
 msgid "Family Name"
 msgstr "姓"
 
@@ -4493,14 +4603,14 @@ msgstr "姓"
 msgid "Fast Stochastic"
 msgstr "快速隨機"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1393
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:162
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:138
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:156
 msgid "Favourite artist"
 msgstr "最愛的藝術家"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1393
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:160
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:136
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:154
@@ -4508,8 +4618,8 @@ msgid "Favourite dish"
 msgstr "最愛的菜餚"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:81
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1090
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:305
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1089
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:304
 msgid "Feb"
 msgstr "二月"
 
@@ -4545,7 +4655,7 @@ msgstr "過濾控制"
 msgid "Filtering Stray Ticks"
 msgstr "過濾離散價位"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:432
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:227
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/buy_success_ajax.html.tt:38
 msgid "Final Price"
 msgstr "最終價格"
@@ -4556,13 +4666,13 @@ msgstr "最終價格"
 msgid "Finance"
 msgstr "金融"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:478
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:353
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:2
 msgid "Financial Account Opening"
 msgstr "開立金融帳戶"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:658
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:523
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:398
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:112
 msgid "Financial Assessment"
 msgstr "金融評估"
@@ -4596,11 +4706,11 @@ msgstr "尋找各種市況之下的最佳交易機會。"
 msgid "Finish"
 msgstr "完成"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1013
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1012
 msgid "First Name"
 msgstr "名"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1229
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1228
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:111
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:69
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:87
@@ -4628,8 +4738,8 @@ msgid "First-class client service."
 msgstr "一流的客戶服務。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Five years of progressively responsible managerial experience in the region"
-msgstr "在該區域有五年以上漸進式責任管理經驗"
+msgid "Firsthand knowledge of other cultures through direct experience"
+msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "Flexibility"
@@ -4753,10 +4863,6 @@ msgstr "欺詐和洗錢"
 msgid "Free Bonus"
 msgstr "免費獎金"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:143
-msgid "Free Contract Bonus"
-msgstr "免費合約獎金"
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "Free E-books"
 msgstr "免費電子書"
@@ -4799,7 +4905,7 @@ msgid "Further information"
 msgstr "更多資訊"
 
 #. (300)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:741
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:740
 msgid "Further instructions must not exceed %1 characters."
 msgstr "詳細說明不能超過 %1 個字元。"
 
@@ -4874,16 +4980,11 @@ msgstr "優厚的佣金結構"
 msgid "Germany"
 msgstr "德國"
 
-#. ($promocode_currency . $promocode_amount, $promocode_currency . $min_deposit)
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:123
-msgid "Get %1 when you deposit %2."
-msgstr "存 %2 獎 %1。"
-
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:916
 msgid "Get Prices"
 msgstr "獲取報價"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:172
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:168
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/mobile_menu.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:51
@@ -4907,7 +5008,7 @@ msgstr "獲取報價"
 msgid "Getting Started"
 msgstr "開始交易"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:585
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:423
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/top_up_virtualws.html.tt:2
 msgid "Give Me More Money!"
 msgstr "我要賺更多！"
@@ -4935,10 +5036,6 @@ msgstr "前往<a href=\"https://login.binary.com/signup.php\">註冊頁面</a>�
 msgid "Go with the leader"
 msgstr "選擇行業領軍企業"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Good command of English (oral and written)"
-msgstr "流利的英語能力 (口語和書面)"
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:45
 msgid "Governing Laws and Jurisdiction"
 msgstr "適用法律和司法管轄權"
@@ -4946,6 +5043,10 @@ msgstr "適用法律和司法管轄權"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:86
 msgid "Governing law and jurisdiction"
 msgstr "適用法律和司法管轄權"
+
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:50
+msgid "Granularity is not valid"
+msgstr "細微性無效"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:606
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
@@ -5054,8 +5155,6 @@ msgid "High/Low"
 msgstr "最高/最低"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:178
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:51
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:52
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Higher/Lower"
@@ -5177,7 +5276,7 @@ msgid "I have read and agree to the"
 msgstr "我已閱讀並同意"
 
 #. (request()
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1449
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1448
 msgid "I have read and agree to the <a target=\"_blank\" href=\"%1\">terms and conditions</a> of the site."
 msgstr "我已閱讀並同意本網站的<a target=\"_blank\" href=\"%1\">條款和條件</a>。"
 
@@ -5204,10 +5303,6 @@ msgstr "有資訊科技審計經驗者優先考慮"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/benefits_of_trading_binaries.html.haml:1
 msgid "Ideal for both pros and novices"
 msgstr "適合各個層次的交易者"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Identify, engage, and convert potential customers and business partners"
-msgstr "識別、到達並發展潛在客戶和業務合作夥伴"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:537
 msgid "If a customer holds a long position and the prediction goes wrong as of the judgment time, the invested principal amount will become zero value."
@@ -5580,8 +5675,6 @@ msgid "In what country do you want to offer your service"
 msgstr "您要提供服務的國家"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:192
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:80
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:93
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 msgid "In/Out"
 msgstr "「範圍之內/之外」"
@@ -5623,7 +5716,7 @@ msgstr "賠償及責任"
 msgid "Indicative"
 msgstr "指示性"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:508
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:303
 msgid "Indicative Price"
 msgstr "指示價格"
 
@@ -5694,11 +5787,6 @@ msgstr "我們公司所用資料源的相關資訊，以及資料在導入系統
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/risk_disclaimer.html.tt:68
 msgid "Information of the previous performance of any underlying instrument or asset does not guarantee its current and/or future performance. Past performance is not a reliable indicator of future results."
 msgstr "任何標的工具或資產前次的效能資訊不可用於保證其目前或未來的效能。以前的效能並不可當作未來結果的可靠指標。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:74
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:78
-msgid "Input error."
-msgstr "輸入錯誤。"
 
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:427
 msgid "Input validation failed: "
@@ -5780,8 +5868,8 @@ msgstr "此google play網址不可使用。"
 msgid "Invalid URI for homepage."
 msgstr "首頁網址不可使用。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:597
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:603
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:596
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:602
 msgid "Invalid amount"
 msgstr "無效金額"
 
@@ -5793,12 +5881,12 @@ msgstr "無效金額，最大是"
 msgid "Invalid amount, minimum is"
 msgstr "無效金額，最小是"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1033
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1032
 msgid "Invalid amount. Minimum transfer amount is 0.10, and up to 2 decimal places."
 msgstr "無效金額。最小轉帳金額為0.10，最多2個小數位。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:468
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:713
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:467
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:712
 msgid "Invalid amount. minimum is 10, maximum is 2000."
 msgstr "無效金額，最小是10，最大是2000。"
 
@@ -5823,8 +5911,8 @@ msgstr "無效的電子郵件地址和密碼組合。"
 msgid "Invalid period input! Please input the period between 0 and #1"
 msgstr "無效期限輸入！請輸入在 0 和 #1 之間的期限"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:219
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:254
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:124
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:159
 msgid "Invalid request"
 msgstr "無效請求"
 
@@ -5833,17 +5921,17 @@ msgid "Invalid stake"
 msgstr "無效投注金額"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:577
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1379
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1378
 msgid "Invalid telephone number (too long)."
 msgstr "無效電話號碼（過長）。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:570
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1374
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1373
 msgid "Invalid telephone number (too short)."
 msgstr "無效電話號碼（過短）。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:582
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1384
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1383
 msgid "Invalid telephone number."
 msgstr "無效電話號碼。"
 
@@ -5957,8 +6045,8 @@ msgid "JAPAN ONLY CONTACT TEXT"
 msgstr "JAPAN ONLY CONTACT TEXT"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:80
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1086
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:301
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1085
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:300
 msgid "Jan"
 msgstr "一月"
 
@@ -6574,13 +6662,21 @@ msgstr "工作詳細資料"
 msgid "Join our analysts LIVE twice a week for a comprehensive analysis of recent developments and trends in the global financial markets."
 msgstr "加入我們每週兩次的分析師「即時線上分析」(LIVE)，對全球金融市場的最新發展和趨勢進行全面分析。"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Join our team of bright, talented professionals. Work collaboratively with us to enhance and promote a high-tech platform that has been one of the most recognised in the binary options trading industry for over 15 years."
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Join our team of bright, talented professionals. Work collaboratively with us to promote a high-tech platform that has been one of the most recognised in the binary options trading industry for over 15 years."
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/index.html.haml:1
 msgid "Joshua Cavallaro <span> Markets And You Trader.</span>"
 msgstr "Joshua Cavallaro <span> 讓您在交易市場得心應手。 </span>"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:86
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1110
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:325
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1109
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:324
 msgid "Jul"
 msgstr "七月"
 
@@ -6593,8 +6689,8 @@ msgid "Jump To"
 msgstr "跳至"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:85
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1106
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:321
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1105
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:320
 msgid "Jun"
 msgstr "六月"
 
@@ -6614,7 +6710,7 @@ msgstr "關鍵資料"
 msgid "Kind Regards"
 msgstr "謹致問候"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:879
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:878
 msgid "Kind Regards,"
 msgstr "此致，"
 
@@ -6624,6 +6720,18 @@ msgstr "請將驗證文件發送給我們。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Knowledge and experience in the financial services industry"
+msgstr "金融服務業知識和經驗"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Knowledge and experience in the financial services industry"
+msgid "Knowledge and experience with the financial services industry"
+msgstr "金融服務業知識和經驗"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Knowledge and experience in the financial services industry"
+msgid "Knowledge and experience with the financial services industry and / or binary options trading"
 msgstr "金融服務業知識和經驗"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -6771,6 +6879,12 @@ msgstr "Less than 6 months"
 msgid "Level of Education"
 msgstr "教育水平"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Identify, engage, and convert potential customers and business partners"
+msgid "Leverage social-media tools and channels to identify, engage, and convert potential new customers and partners"
+msgstr "識別、到達並發展潛在客戶和業務合作夥伴"
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/terms_and_conditions.html.tt:157
 msgid "Liability"
 msgstr "責任"
@@ -6882,7 +6996,7 @@ msgid "Login Failed"
 msgstr "登入失敗"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:578
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:505
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:380
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:98
 msgid "Login History"
 msgstr "登入歷史"
@@ -6894,7 +7008,7 @@ msgid "Login ID"
 msgstr "登入 ID"
 
 #. ($loginid_to)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:473
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:472
 msgid "Login ID (%1) does not exist."
 msgstr "登入 ID (%1) 不存在。"
 
@@ -6915,7 +7029,7 @@ msgstr "登入時間:"
 msgid "Login to this account has been temporarily disabled due to system maintenance. Please try again in 30 minutes."
 msgstr "由於系統維護，帳戶暫時不能登入。請 30 分鐘後重試。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:116
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:112
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/logintrouble.html.tt:4
 msgid "Login trouble"
 msgstr "登入故障"
@@ -6966,10 +7080,6 @@ msgstr "低障礙價格不在可接受的範圍內。請調整低障礙價格。
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/barrier.html.tt:34
 msgid "Low barrier offset"
 msgstr "低障礙位移"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:164
-msgid "Lower Band = Average - 0.5 * Std Deviation"
-msgstr "下軌 = 平均線 - 0.5 * 標準差"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:449
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:649
@@ -7022,10 +7132,6 @@ msgid "Manage security, intrusion detection, DDoS protection and PCI compliance 
 msgstr "我們所部署的所有伺服器相關的安全、入侵檢測、DDoS 保護和PCI 法規遵從性措施管理工作"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Manage social-media advertising campaigns targeting potential clients and business partners"
-msgstr "針對潛在客戶和業務合作夥伴的社交媒體廣告宣傳活動管理工作"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Manage the company’s cashier system"
 msgstr "管理公司的出納系統"
 
@@ -7037,13 +7143,9 @@ msgstr "對您的帳戶存取和安全保障設定進行管理。"
 msgid "Manage your authorised applications."
 msgstr "管理您的授權應用程式。"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Managerial, analytical, organizational, financial, and verbal/written communication skills in both the regional language and English"
-msgstr "區域語言和英語的管理、分析、組織、財務和溝通（口頭/書面）技巧"
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:82
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1094
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:309
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1093
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:308
 msgid "Mar"
 msgstr "三月"
 
@@ -7093,8 +7195,13 @@ msgstr "市場行銷"
 msgid "Marketing Executives"
 msgstr "市場行銷專員"
 
-#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:603
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
+#, fuzzy
+#| msgid "Marketing Project Manager"
+msgid "Marketing Project Coordinator"
+msgstr "市場行銷項目經理"
+
+#: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:603
 msgid "Marketing Project Manager"
 msgstr "市場行銷項目經理"
 
@@ -7106,10 +7213,6 @@ msgstr "營銷推廣"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:633
 msgid "Mass Index"
 msgstr "梅斯線"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:132
-msgid "Matched Contract Bonus"
-msgstr "對應合約獎勵"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:219
 msgid "Matches/Differs"
@@ -7188,35 +7291,26 @@ msgstr "最大未平倉頭寸數目"
 msgid "Maximum number of open positions is currently set to <strong>%1</strong>"
 msgstr "最大未平倉頭寸數目當前設定為<strong>%1</strong>"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:537
-msgid "Maximum withdrawal by all other means:"
-msgstr "通過所有其它方式的最大取款金額："
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:84
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:96
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1102
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:317
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1101
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:316
 msgid "May"
 msgstr "五月"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1393
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:159
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:135
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:153
 msgid "Memorable date"
 msgstr "難忘的日子"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1391
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:158
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:134
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:152
 msgid "Memorable town/city"
 msgstr "難忘的城鎮/城市"
-
-#. ($error_code)
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:465
-msgid "Mentioning error code %1 in any correspondence may help us resolve the issue more quickly."
-msgstr "在聯繫時指出錯誤代碼%1 可能有助於我們更快解決問題。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:23
 msgid "Method"
@@ -7235,7 +7329,7 @@ msgid "Min:"
 msgstr "最小:"
 
 #. ($min_amount, $max_amount)
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:571
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:570
 msgid "Min: %1 Max: %2"
 msgstr "最小: %1 最大: %2"
 
@@ -7331,7 +7425,7 @@ msgstr "更多福利"
 msgid "More specifically, when we enter into a Binary Option trade with you (each, a \"Contract\"), we have a duty to provide you with ‘best execution’. Best execution means that we must take reasonable steps to obtain the best possible result for you when executing an order with you. This document provides a summary of our best execution policy."
 msgstr "說得更具體就是，當我們和您進行二元期權交易時（雙方有了「合同」），我們有責任向您提供「最佳執行方案」。最佳執行方案的意思就是當我們執行您的訂單時，我們必須採取合理的措施來為您獲取最大的效益。此文件是我們最佳執行方案政策的總結。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1391
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:155
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:131
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:149
@@ -7388,7 +7482,7 @@ msgid "Multi-lingual and multi-currency support"
 msgstr "支持多種語言和貨幣"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:59
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:82
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:50
 msgid "My Account"
 msgstr "我的帳戶"
 
@@ -7401,14 +7495,14 @@ msgstr "Mycrowd - Binary.com 交易者專用"
 msgid "Name"
 msgstr "姓名"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1391
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:157
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:133
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:151
 msgid "Name of first love"
 msgstr "初戀情人姓名"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1392
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1391
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:156
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:132
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:150
@@ -7461,7 +7555,7 @@ msgid "New"
 msgstr "新"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:721
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:162
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:161
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reset_passwordws.html.haml:1
 msgid "New Password"
 msgstr "新密碼"
@@ -7499,7 +7593,7 @@ msgstr "第二天"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:415
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:819
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:791
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:790
 msgid "No"
 msgstr "無"
 
@@ -7624,8 +7718,7 @@ msgid "Note: Withdrawal via payment agent is available only if you deposit exclu
 msgstr "注意:您必須完全通過付款代理存款才可使用付款代理提款"
 
 #. ($currency,            $withdrawal_limits->{'frozen_free_gift'},            $withdrawal_limits->{'free_gift_turnover_limit'})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:975
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:554
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:974
 msgid "Note: You will be able to withdraw your bonus of %1%2 only once your aggregate volume of trades exceeds %1%3. This restriction applies only to the bonus and profits derived therefrom.  All other deposits and profits derived therefrom can be withdrawn at any time."
 msgstr "注：僅當您的交易總額超過%1%3時，您才能夠提取您的獎金%1%2。此限制僅適用於由此產生的獎金和收益。由此產生的所有其他存款和收益可隨時提取。"
 
@@ -7638,8 +7731,8 @@ msgid "Notification of Changes"
 msgstr "變動通知"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:90
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1126
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:341
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1125
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:340
 msgid "Nov"
 msgstr "十一月"
 
@@ -7689,8 +7782,8 @@ msgid "Occupation"
 msgstr "Occupation"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:89
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1122
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:337
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1121
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:336
 msgid "Oct"
 msgstr "十月"
 
@@ -7793,7 +7886,7 @@ msgstr "作為聯盟會員，只有適當新增標籤的客戶方可分派給您
 msgid "Open"
 msgstr "開盤"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:820
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:819
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:599
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:421
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:182
@@ -8097,7 +8190,7 @@ msgid "Partners"
 msgstr "合作夥伴"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:94
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:911
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:910
 #: /home/git/translations/binary-static-www2/src/templates/haml/home/login.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/header.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:81
@@ -8169,16 +8262,16 @@ msgstr "專利"
 msgid "Payment Agent"
 msgstr "付款代理"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:574
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:412
 msgid "Payment Agent Deposit"
 msgstr "支付代理存款"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:564
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:402
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:2
 msgid "Payment Agent Withdrawal"
 msgstr "支付代理取款"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:457
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:456
 msgid "Payment Agent activity not currently authorized"
 msgstr "支付代理活動目前未經授權"
 
@@ -8190,12 +8283,12 @@ msgstr "支付代理轉帳"
 msgid "Payment Agents"
 msgstr "付款代理"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:453
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:693
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:452
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:692
 msgid "Payment Agents are not available on this site."
 msgstr "本網站無可用支付代理。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:386
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:348
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:95
 msgid "Payment Methods"
@@ -8239,11 +8332,6 @@ msgstr "賠付額的小數點後不超過兩位數。"
 msgid "Payout must be between %1 and %2."
 msgstr "賠付額須在%1 與 %2之間。"
 
-#. (qq{<span class="balance">$currency_label $promocode_amount</span>})
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:118
-msgid "Pending Bonus: %1"
-msgstr "未定獎金：%1"
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:694
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:696
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:365
@@ -8280,7 +8368,7 @@ msgstr "權限不足。"
 msgid "Permissions"
 msgstr "權限"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:442
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:317
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:12
 msgid "Personal Details"
@@ -8307,7 +8395,7 @@ msgstr "執行隨機交易"
 msgid "Platform Tour"
 msgstr "平台導覽"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:95
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:94
 msgid "Please accept Funds Protection."
 msgstr "請接受資金保護。"
 
@@ -8383,16 +8471,16 @@ msgstr "請輸入大於0之數字"
 msgid "Please enter a number."
 msgstr "請輸入號碼。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:888
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:887
 msgid "Please enter a password."
 msgstr "請輸入密碼。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1284
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1283
 msgid "Please enter a town or city."
 msgstr "請輸入城鎮或城市。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:562
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:591
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:590
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:71
 msgid "Please enter a valid amount."
 msgstr "請輸入有效金額。"
@@ -8423,7 +8511,7 @@ msgstr "請輸入整數。"
 msgid "Please enter date in the format YYYY-MM-DD."
 msgstr "請輸入日期，格式為年-月-日。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:542
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:541
 msgid "Please enter the Login ID to transfer funds."
 msgstr "請輸入登入 ID 以便進行轉帳。"
 
@@ -8431,7 +8519,7 @@ msgstr "請輸入登入 ID 以便進行轉帳。"
 msgid "Please enter the country where you want to offer your service"
 msgstr "請輸入要提供服務的國家"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1223
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1222
 msgid "Please enter the first line of your home address."
 msgstr "請輸入您家庭地址的第一行。"
 
@@ -8440,15 +8528,15 @@ msgid "Please enter your current password."
 msgstr "請輸入您目前密碼。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:539
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:872
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:871
 msgid "Please enter your email address."
 msgstr "請輸入您的電郵地址。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1029
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1028
 msgid "Please enter your first name."
 msgstr "請輸入您的名。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1064
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1063
 msgid "Please enter your last name."
 msgstr "請輸入您的姓。"
 
@@ -8465,14 +8553,14 @@ msgstr "請依照此模式:3個數字，一破折號，接着是4個數字。"
 msgid "Please input a valid date"
 msgstr "請輸入有效日期"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1157
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1163
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1169
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1175
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1180
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:373
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:379
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:385
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1156
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1162
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1168
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1174
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1179
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:372
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:378
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:384
 msgid "Please input a valid date."
 msgstr "請輸入有效日期。"
 
@@ -8539,7 +8627,7 @@ msgstr "請記住，二元期權交易不論在什麼時候都會是一項令人
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:322
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:811
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:135
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:783
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:782
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:596
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:614
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:632
@@ -8617,7 +8705,7 @@ msgstr "請選擇一個數值。"
 msgid "Please select your country of residence"
 msgstr "請選擇您的居住國"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1208
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1207
 msgid "Please specify your country."
 msgstr "請指定您的國家。"
 
@@ -8663,8 +8751,8 @@ msgstr "請在以下欄位輸入您設定的密碼兩次："
 msgid "Please use a different password than your login password."
 msgstr "請使用與登入密碼不同的密碼。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1034
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1059
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1033
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1058
 msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
 msgstr "請僅使用字母、空格、連字號、句號或所有格號。"
 
@@ -8686,13 +8774,13 @@ msgstr "Policies and Exclusion of Liability"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1787
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:70
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:154
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:59
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/openpositionsws.html.tt:4
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:46
 msgid "Portfolio"
 msgstr "投資組合"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1328
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1327
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:118
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:140
 msgid "Postal Code / ZIP"
@@ -8705,11 +8793,11 @@ msgid "Postal code/ZIP"
 msgstr "郵遞區號"
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:209
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1349
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1348
 msgid "Postcode is required for UK residents."
 msgstr "英國居民需提供郵遞區號。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1344
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1343
 msgid "Postcode must be less than 20 characters long and may not contain \"+\"."
 msgstr "郵遞區號長度必須少於20 個字元且不能含有「+」。"
 
@@ -8743,8 +8831,8 @@ msgid "Predict the direction<br />and purchase"
 msgstr "預測價格走向<br />並購入"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Prepare periodic and special reports on sales within the region and maintain a reporting structure with affiliates to collect data"
-msgstr "準備區域銷售的定期和特別報告，維護聯盟成員的報告結構，以收集資料"
+msgid "Prepare project requirements, as needed to clarify expectations and deliverables"
+msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Preparing the periodic and special reports required to ensure legal and regulatory compliance in the jurisdictions within which we operate"
@@ -8754,7 +8842,7 @@ msgstr "準備當地法律法規所需的定期和特別報告"
 msgid "Presents the maximum aggregate payouts on outstanding contracts in your portfolio. If the maximum is attained, you may not purchase additional contracts without first closing out existing positions."
 msgstr "表示您證券組合中未平倉合約的最大總賠付額。如果達到該最大值，那麼您在購買更多合約之前需要先對現有頭寸進行平倉。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:351
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:146
 msgid "Prevailing market price cannot be determined at this time."
 msgstr "現行市價目前無法確定。"
 
@@ -8771,12 +8859,26 @@ msgid "Previous Day"
 msgstr "前一天"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Related experience in the financial services industry"
+msgid "Previous experience in the financial services industry"
+msgstr "金融服務業相關工作經驗"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Previous experience with financial/binary options website services"
+msgid "Previous experience with financial / binary options website services"
+msgstr "金融公司和/或二元期權網站工作經驗"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Previous experience with financial and/or binary options trading websites"
 msgstr "金融公司和/或二元期權交易網站工作經驗"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Previous experience with financial/binary options website services"
-msgstr "金融公司和/或二元期權網站工作經驗"
+#, fuzzy
+#| msgid "Substantial experience in a senior marketing or advertising role"
+msgid "Previous knowledge and experience in Marketing or Advertising"
+msgstr "有豐富的高級行銷或廣告經驗"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Previous work experience in a client service and/or marketing role"
@@ -8821,8 +8923,22 @@ msgid "Print chart"
 msgstr "列印圖表"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Prior experience in the financial services industry is preferred, as is an interest in Information Technology and/or Software Development"
+#, fuzzy
+#| msgid "Prior experience in the financial services industry is preferred, as is an interest in Information Technology and/or Software Development"
+msgid "Prior knowledge and experience in Information Technology and/or Software Development"
 msgstr "有金融服務行業經驗，或對資訊技術和/或軟件開發工作感興趣者優先考慮"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Knowledge and experience in the financial services industry"
+msgid "Prior knowledge and experience with IT development"
+msgstr "金融服務業知識和經驗"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Knowledge and experience in the financial services industry"
+msgid "Prior knowledge and experience with the financial industry"
+msgstr "金融服務業知識和經驗"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:25
@@ -8835,7 +8951,7 @@ msgstr "隱私和安全"
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:960
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:959
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/email_verified.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:20
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/ukgc_funds_protection_message.html.tt:19
@@ -8843,7 +8959,9 @@ msgid "Proceed"
 msgstr "執行"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Process website content translations regularly and efficiently"
+#, fuzzy
+#| msgid "Process website content translations regularly and efficiently"
+msgid "Process website content translations regularly and efficiently, delivering high-quality work on a dependable basis"
 msgstr "定期、高效地翻譯網站內容"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -8853,6 +8971,12 @@ msgstr "在全職譯員無法工作時翻譯網站內容"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:39
 msgid "Processing Time"
 msgstr "處理時間"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Proofread existing content used on the company’s blogs and social media outlets"
+msgid "Produce content for the company’s website, blog, social media outlets, and marketing materials"
+msgstr "公司部落格和社交媒體網站目前內容的校對工作"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:35
 msgid "Professional Clients"
@@ -8878,7 +9002,7 @@ msgstr "利潤 / 虧損"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:213
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:78
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:415
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:290
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:62
 msgid "Profit Table"
 msgstr "利潤表"
@@ -8897,22 +9021,16 @@ msgstr "利潤/虧損(點)"
 msgid "Prominently incorporate and continually display the most up-to-date Links provided to you by the Company on your Site and you shall not alter the form, location or operation of the Links without the Company's prior consent"
 msgstr "將公司提供給您的最新連結放置在您網站的醒目位置並進行持續顯示；未經公司的事先同意，您不得改變連結的格式、位置或操作"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Promote the company using social media and other online channels"
-msgstr "利用社交媒體和其他線上渠道對公司進行推廣"
-
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:27
 msgid "Promoting the %1 Site"
 msgstr "推廣 %1 網站"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Proofread and correct the content appearing on the company’s website, blogs and social media outlets, from English to the regional language and vice versa"
+#, fuzzy
+#| msgid "Proofread and correct the content appearing on the company’s website, blogs and social media outlets, from English to the regional language and vice versa"
+msgid "Proofread and correct the content appearing on the company’s website, blog, social media outlets, and marketing materials, from English to the regional language and vice versa"
 msgstr "校對並更正公司網站、部落格和社交媒體網站內容翻譯（從英語翻譯成各地區語言，或從各地區語言翻譯成英語）"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Proofread existing content used on the company’s blogs and social media outlets"
-msgstr "公司部落格和社交媒體網站目前內容的校對工作"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:610
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
@@ -8960,17 +9078,17 @@ msgid "Purchase"
 msgstr "買入"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:209
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:405
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:531
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:200
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:326
 msgid "Purchase Price"
 msgstr "買入價格"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:527
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:322
 msgid "Purchase Spot"
 msgstr "買入現價"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:113
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:523
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:318
 msgid "Purchase Time"
 msgstr "買入時間"
 
@@ -9126,9 +9244,9 @@ msgstr "檢視一些常見問題的回答。"
 msgid "Real Account"
 msgstr "真實帳戶"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:460
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:469
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:487
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:335
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:344
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:362
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:2
 msgid "Real Money Account Opening"
@@ -9328,13 +9446,13 @@ msgstr "職責包括硬體和軟體部署、網絡安全、入侵檢測和負載
 msgid "Responsible Trading"
 msgstr "負責任交易"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Responsible for recruiting, training, and nurturing affiliates from particular countries, geographic regions, and / or languages, leveraging your direct knowledge and experience of the local market"
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for supporting the Group’s global recruiting and talent management needs and a broad array of HR-related administrative tasks."
 msgstr "支持集團全球招聘、人才管理和廣泛的人力資源管理任務。"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-msgid "Responsible for the design and creative direction of the company's website's content and the production of marketing materials in an innovative group."
-msgstr "在創新部門負責公司網站內容的設計和創意指導，以及營銷材料的準備。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for the pricing of binary options offered on the Binary.com website and the risk management and profitability of its options book."
@@ -9343,14 +9461,6 @@ msgstr "負責Binary.com網站二元期權的訂價，以及相應選擇紀錄�
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for the processing of client payments, assisting with the management accounts of the companies within our group, and more."
 msgstr "負責處理客戶付款、協助集團各公司賬戶管理等工作。"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Responsible for the recruiting, training and development of employees and affiliates to achieve assigned sales and marketing objectives"
-msgstr "負責員工和聯盟成員招聘、培訓和發展工作，實現指定的銷售和市場營銷目標"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-msgid "Responsible for the recruiting, training and development of employees and affiliates to achieve assigned sales and marketing objectives."
-msgstr "負責員工和聯盟成員招聘、培訓和發展工作，實現指定的銷售和市場營銷目標。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
 msgid "Responsible for the risk management and derivatives pricing of the company, including implementation and maintenance."
@@ -9413,7 +9523,6 @@ msgid "Right to Terminate"
 msgstr "終止權利"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:177
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:38
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
 msgid "Rise/Fall"
@@ -9516,7 +9625,7 @@ msgstr "Score"
 msgid "Seasoned traders can use the %1 platform for the full advantage of the wide range of trading and analysis tools we have on offer."
 msgstr "經驗豐富的交易員可充分利用%1平台廣泛的交易類型和我們所提供的分析工具。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1249
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1248
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:123
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:78
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:96
@@ -9531,15 +9640,15 @@ msgstr "家庭地址第二行"
 msgid "Secondary"
 msgstr "次要"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1400
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1399
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:151
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:127
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:145
 msgid "Secret question"
 msgstr "密碼提示問題"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:108
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:364
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:107
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:250
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/settings_securityws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:148
@@ -9609,15 +9718,15 @@ msgstr "Self-employed"
 msgid "Sell"
 msgstr "賣出"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:479
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:274
 msgid "Sell Price"
 msgstr "賣出價格"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:475
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:270
 msgid "Sell Spot"
 msgstr "賣出現價"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:467
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:262
 msgid "Sell Time"
 msgstr "賣出時間"
 
@@ -9660,8 +9769,8 @@ msgid "Senior Perl Developer"
 msgstr "高級 Perl 開發人員"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:88
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1118
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:333
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1117
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:332
 msgid "Sep"
 msgstr "九月"
 
@@ -9694,8 +9803,14 @@ msgstr "工作階段時間："
 msgid "Set client deposit and loss limits"
 msgstr "設定客戶端存款和虧損限額"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Manage social-media advertising campaigns targeting potential clients and business partners"
+msgid "Set up and manage social-media advertising campaigns, effectively micro-targeting potential clients and partners"
+msgstr "針對潛在客戶和業務合作夥伴的社交媒體廣告宣傳活動管理工作"
+
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:102
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:496
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:371
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:2
 msgid "Settings"
 msgstr "設定"
@@ -9711,8 +9826,8 @@ msgstr "可分割性"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:550
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:653
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/ErrorMessage.pm:28
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:705
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:715
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:500
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:510
 msgid "Sharp Prices. Smart Trading."
 msgstr "精準報價，智慧交易。"
 
@@ -9767,7 +9882,9 @@ msgid "Sign me up"
 msgstr "我要註冊"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Significant experience in, Social Media, Marketing, and/or advertising"
+#, fuzzy
+#| msgid "Significant experience in, Social Media, Marketing, and/or advertising"
+msgid "Significant experience in Social Media, Marketing, and / or Advertising"
 msgstr "卓越的社交媒體、市場營銷和/或廣告經驗"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:410
@@ -9847,16 +9964,16 @@ msgid "Software (Perl) Development"
 msgstr "軟體 (Perl) 開發"
 
 #. ($currency, $client_to->loginid)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:492
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:491
 msgid "Sorry, %1 is not default currency for client %2"
 msgstr "對不起，%1 不是客戶 %2的預設貨幣"
 
 #. ($currency, $client_fm->loginid)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:489
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:488
 msgid "Sorry, %1 is not default currency for payment agent %2"
 msgstr "對不起，%1 不是付款代理 %2的預設貨幣"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:451
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:450
 msgid "Sorry, Payment Agent Transfer is temporarily disabled due to system maintenance. Please try again in 30 minutes."
 msgstr "對不起，由於系統維護，支付代理轉帳暫停使用。請 30 分鐘後重試。"
 
@@ -9865,7 +9982,7 @@ msgstr "對不起，由於系統維護，支付代理轉帳暫停使用。請 30
 msgid "Sorry, account opening is unavailable."
 msgstr "對不起，不可開立帳號。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:242
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:241
 msgid "Sorry, an error has occurred, Please try accessing our Cashier again."
 msgstr "對不起，出現錯誤。請重新嘗試存取我們的收銀台。"
 
@@ -9904,15 +10021,15 @@ msgstr "對不起，在處理您的帳戶時出錯。"
 msgid "Sorry, an error occurred while processing your request."
 msgstr "對不起，在處理您的請求時發生錯誤。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:151
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:660
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:677
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:696
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:330
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:140
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:455
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:472
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:491
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:216
 msgid "Sorry, an error occurred. Please contact customer support if this problem persists."
 msgstr "對不起，出錯了。如果問題持續出現，請聯繫客戶支援人員。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:575
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:574
 msgid "Sorry, client balance will exceed limits with this payment."
 msgstr "對不起，此筆付款將使客戶餘額超限。"
 
@@ -9920,15 +10037,15 @@ msgstr "對不起，此筆付款將使客戶餘額超限。"
 msgid "Sorry, contracts on Volatility Indices are not available in your country of residence"
 msgstr "對不起，您的居住國無法使用波動率指數合同"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:481
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:480
 msgid "Sorry, it is not allowed."
 msgstr "對不起，不允許使用。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:485
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:484
 msgid "Sorry, only USD is allowed."
 msgstr "對不起，只允許美元。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:844
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:843
 msgid "Sorry, our service is not available for your country of residence"
 msgstr "對不起，我們不對您的居住國提供服務"
 
@@ -9937,24 +10054,24 @@ msgid "Sorry, our service is not available for your country of residence."
 msgstr "對不起，我們不對您的居住國提供服務。"
 
 #. ($transfer_form->get_field_value('transfer_to')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:664
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:663
 msgid "Sorry, the Login ID (%1) does not exist."
 msgstr "對不起，登入 ID (%1) 不存在。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:691
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:690
 msgid "Sorry, the Payment Agent Withdrawal is temporarily disabled due to system maintenance. Please try again in 30 minutes."
 msgstr "對不起，由於系統維護，付款代理取款暫時不可用。請於 30 分鐘後重試。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:717
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:716
 msgid "Sorry, the Payment Agent does not exist."
 msgstr "對不起，付款代理不存在。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:720
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:719
 msgid "Sorry, the Payment Agent is unavailable for your region."
 msgstr "對不起，付款代理在您的區域不可用。"
 
 #. ($currency)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:731
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:730
 msgid "Sorry, the Payment Agent's currency %1 is unavailable for Payment Agent Withdrawal"
 msgstr "對不起，付款代理提款不可使用付款代理貨幣 %1"
 
@@ -9975,12 +10092,12 @@ msgstr "對不起，無法找到頁面。"
 msgid "Sorry, there is too much data to display, please select a shorter interval"
 msgstr "對不起，要顯示的資料太多，請選擇較短的間隔時間"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:219
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:256
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:218
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:245
 msgid "Sorry, there was a problem validating your personal information with our payment processor. Please contact our Customer Service."
 msgstr "對不起，我們的支付處理器在驗證您的個人資訊時出現了問題，請聯繫我們的客服。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1224
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1223
 msgid "Sorry, this feature is available to virtual accounts only"
 msgstr "對不起，此功能僅適用虛擬帳戶"
 
@@ -9989,7 +10106,7 @@ msgid "Sorry, this feature is available to virtual accounts only."
 msgstr "對不起，此功能僅適用虛擬帳戶。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:325
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:291
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:290
 msgid "Sorry, this feature is not available."
 msgstr "對不起，此功能不可用。"
 
@@ -10006,18 +10123,13 @@ msgstr "對不起，您的年齡太小，不能開戶。"
 msgid "Sorry, you cannot hold more than %1 contracts at a given time. Please visit the statement page to automatically sell your expired contracts."
 msgstr "對不起，在指定時間內您不可持有超過%1 的合約。請存取報表頁面自動賣出您的到期合約。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:523
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:531
-msgid "Sorry, you cannot withdraw."
-msgstr "對不起，您不能取款。"
-
 #. ($currency, $balance)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:946
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:945
 msgid "Sorry, you cannot withdraw. Your account balance is %1 %2."
 msgstr "對不起，您不能提款。您的帳戶餘額為%1 %2。"
 
 #. ("$currency $amount",                $limit,                request()
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:960
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:959
 msgid "Sorry, you cannot withdraw. Your withdrawal amount %1 exceeds withdrawal limit%2. Please contact <a href=\"%3\">customer support</a> to authenticate your account."
 msgstr "對不起，您不能提款。您的提款額 %1 超出提款限額%2。請聯繫<a href=\"%3\">客服部</a>驗證您的帳戶。"
 
@@ -10030,22 +10142,22 @@ msgid "Sorry, you have entered an incorrect cashier password"
 msgstr "對不起，您輸入的收銀台密碼不正確"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:544
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:837
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:877
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:836
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:876
 msgid "Sorry, you have entered an incorrect email address."
 msgstr "對不起，您輸入的電郵地址不正確。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:568
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:829
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:567
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:828
 msgid "Sorry, you have exceeded the maximum allowable transactions for today."
 msgstr "對不起，您已超過今日允許的最大交易數。"
 
 #. ($currency . $daily_limit)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:810
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:809
 msgid "Sorry, you have exceeded the maximum allowable transfer amount %1 for today."
 msgstr "對不起，您已超過今日允許的最大轉帳金額%1。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:560
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:559
 msgid "Sorry, you have exceeded the maximum allowable transfer amount for today."
 msgstr "對不起，您已超過今日允許的最大轉帳金額。"
 
@@ -10067,7 +10179,7 @@ msgstr "對不起，您已禁止自己存取本網站，直到%1。"
 msgid "Sorry, you have excluded yourself until %1."
 msgstr "對不起，您已禁止自己，直到%1。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1233
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1232
 msgid "Sorry, you have open positions. Please close out all open positions before requesting additional funds."
 msgstr "對不起，您還有未平倉的頭寸。在請求額外資金前，請了結所有未平倉頭寸。"
 
@@ -10092,13 +10204,9 @@ msgid "Sorry, your account is not authorised for any further contract purchases.
 msgstr "對不起，您的帳戶沒有進一步買入任何合約的權限。"
 
 #. ($currency)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:727
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:726
 msgid "Sorry, your currency of %1 is unavailable for Payment Agent Withdrawal"
 msgstr "對不起，付款代理提款不可使用您的 %1 貨幣"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:454
-msgid "Sorry, your payment could not be processed at this time."
-msgstr "對不起，此時不能處理您的支付。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:56
 msgid "Spam - We do not condone Spam"
@@ -10137,7 +10245,7 @@ msgid "Stake"
 msgstr "投注資金"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:114
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:393
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:188
 msgid "Start Time"
 msgstr "開始時間"
 
@@ -10173,7 +10281,7 @@ msgstr "開始時間是在過去"
 msgid "Start time on forward-starting contracts must be more than 5 minutes from now."
 msgstr "遠期起點合約的開始時間必須距離現在超過5分鐘。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1300
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1299
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:90
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:96
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:114
@@ -10184,7 +10292,7 @@ msgstr "州/省"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:193
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:86
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:406
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:281
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:75
 msgid "Statement"
 msgstr "帳單"
@@ -10208,10 +10316,6 @@ msgstr "狀況"
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/tour.html.haml:1
 msgid "Stay informed. %1 offers daily market reports and market research, as well as frequent trading webinars."
 msgstr "通過 %1 的每日市場報告及市場研究，還有經常舉行的線上研討會及時掌握最新動態。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:79
-msgid "Stays Between/Goes Outside"
-msgstr "「保持在範圍之內/超出範圍之外」"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "Stays Between/Goes Outside trades"
@@ -10332,8 +10436,8 @@ msgid "Streaming for this symbol is not available due to license restrictions."
 msgstr "由於許可證限制，此符號串流不可用。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Strengthen relationships with our current client base"
-msgstr "強化與現有客戶之間的關係"
+msgid "Strengthen relationships with current clients and foster greater loyalty through a variety of social-media outlets"
+msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Strong MS Office skills and experience working with accounting software and databases"
@@ -10348,12 +10452,32 @@ msgid "Strong attention to detail"
 msgstr "非常注重細節"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Strong computer skills in Excel, Word and PowerPoint"
-msgstr "極強的Excel、Word 和 PowerPoint 電腦技能"
+#, fuzzy
+#| msgid "Excellent English language skills, both oral and written"
+msgid "Strong command of the English language, in both oral and written form"
+msgstr "優秀的英語口語和書寫技能"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Strong knowledge of developing cross-platform/browser-compatible applications for web and mobile"
 msgstr "對網絡和手機的跨平台瀏覽器兼容應用程式編程非常熟悉"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "Managerial, analytical, organizational, financial, and verbal/written communication skills in both the regional language and English"
+msgid "Strong oral and written communication skills in both the regional language and English"
+msgstr "區域語言和英語的管理、分析、組織、財務和溝通（口頭/書面）技巧"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "A strong and passionate interest in social media, marketing, and advertising"
+msgid "Strong, passionate interest in Graphic Design, Marketing, and Advertising"
+msgstr "對社交媒體、市場行銷和廣告充滿熱忱，非常感興趣"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "A strong and passionate interest in marketing and advertising"
+msgid "Strong, passionate interest in Marketing and Advertising"
+msgstr "對市場行銷和廣告充滿熱忱，非常感興趣"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:272
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:65
@@ -10379,7 +10503,7 @@ msgid "Subject to your complying with the Company's instructions, with regards t
 msgstr "在您遵守公司要求的前提下，對於通過您網站連結或在註冊時註明您的聯盟會員 ID 而跟蹤客戶對 %1 的存取，公司將採用所有合理的方式確保客戶在任何時候通過這些連結或聯盟會員 ID 存取 %1，並後續執行合約交易或以其他方式與公司進行交易，相關客戶會被相應地確定源自您或您的網站。但是，如果公司無法確定某客戶源自您或您的網站，則不對您承擔任何責任。"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:739
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:614
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:613
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:40
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:84
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:82
@@ -10389,10 +10513,6 @@ msgstr "送出"
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Submit your CV and Cover Letter"
 msgstr "提交您的簡歷和求職信"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Substantial experience in a senior marketing or advertising role"
-msgstr "有豐富的高級行銷或廣告經驗"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:575
 msgid "Successful"
@@ -10418,10 +10538,6 @@ msgstr "星期日"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:2
 msgid "Supplementary Terms and Conditions for Financial Products offered by Binary Investments (Europe) Ltd."
 msgstr "Binary 投資 (歐洲)有限公司提供的金融產品補充條款和條件。"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Support country appropriate products and regional capability strategies by coordinating business development activities and generating partnership leads"
-msgstr "通過業務發展活動協調和產生夥伴關係線索，對國家適用的產品和區域實行策略給予支持"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:682
 msgid "Supported banks"
@@ -10462,7 +10578,7 @@ msgstr "系統問題導致目前無法正常結算。"
 msgid "TRIX"
 msgstr "三重指數平滑移動平均線"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:577
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:372
 msgid "Table"
 msgstr "表"
 
@@ -10502,7 +10618,7 @@ msgid "Tel"
 msgstr "電話"
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:670
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1358
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1357
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:135
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:114
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:132
@@ -10556,8 +10672,8 @@ msgstr "條款"
 msgid "Terms & Conditions"
 msgstr "條款和條件"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:148
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:160
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:144
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:156
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:108
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:113
@@ -10568,7 +10684,7 @@ msgstr "條款和條件"
 msgid "Terms and Conditions"
 msgstr "條款和條件"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:514
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:389
 msgid "Terms and Conditions Approval"
 msgstr "條款和條件審批"
 
@@ -10576,7 +10692,7 @@ msgstr "條款和條件審批"
 msgid "Terms and conditions"
 msgstr "Terms and conditions"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:79
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:78
 msgid "Terms and conditions approval is required."
 msgstr "需要批准條款和條件。"
 
@@ -10635,7 +10751,7 @@ msgstr "%1 所模擬的市場白天很活躍（但在晚間較穩定）。%2 所
 
 #. ($website_name)
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:682
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:881
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:880
 msgid "The %1 team."
 msgstr "%1 團隊。"
 
@@ -10842,11 +10958,6 @@ msgstr "公司將自行確定您的申請是否成功。公司的決定具有最
 msgid "The Company's Obligations"
 msgstr "公司的義務"
 
-#. (stash->{website_name})
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "The Country Manager will have overall operational responsibility for directing the growth and ongoing development of the local market. He or she will actively support the goal of increasing %1’s market presence and investigating business development opportunities."
-msgstr "區域經理將負責從整體運營層面指導本地市場的增長和持續發展，提高 %1 的目標市場佔有率，並調查商業發展機會。"
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "The Cyberview Lodge Resort in Cyberjaya"
 msgstr "Cyberjaya 的 Cyberview Lodge Resort 度假酒店"
@@ -10887,7 +10998,7 @@ msgid "The Moving Average Convergence/Divergence (MACD) indicator is a trend fol
 msgstr "平滑異同移動平均線（MACD)指數是一個趨勢跟蹤指數，用於判斷趨勢變化。 MACD是一個震盪指標，以一個股票價格的兩條價格指數平均線為基礎，一共顯示三條線。 MACD線計算的是兩個移動平均線之間的差（通常是12日和26日平均線）。而「訊號」線則是標準MACD線的9日平滑平均線，有時候也被稱為「緩慢」 MACD線。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:337
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:708
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:707
 msgid "The Payment Agent facility is currently not available in your country."
 msgstr "目前您的國家無可用付款代理設施。"
 
@@ -10924,11 +11035,15 @@ msgid "The ability to acquire knowledge of compliance matters in a multitude of 
 msgstr "在各個國際司法管轄區範圍內獲取法規遵循事項的相關知識"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "The ability to communicate effectively in English (both oral and written)"
+#, fuzzy
+#| msgid "The ability to communicate effectively in English (both oral and written)"
+msgid "The ability to communicate effectively in English, in both oral and written form"
 msgstr "能夠有效地以英語溝通（包括口語和書寫）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "The ability to communicate fluently in English (both oral and written)"
+#, fuzzy
+#| msgid "The ability to communicate fluently in English (both oral and written)"
+msgid "The ability to communicate fluently in English, in both oral and written form"
 msgstr "能夠流利地以英語溝通（口語和書面）"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
@@ -10940,8 +11055,10 @@ msgid "The ability to speak and write in multiple languages"
 msgstr "多種語言的口語和書寫能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "The ability to speak several languages"
-msgstr "能說多種語言"
+#, fuzzy
+#| msgid "The ability to speak and write in multiple languages"
+msgid "The ability to speak multiple languages"
+msgstr "多種語言的口語和書寫能力"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "The ability to translate information into clear, concise, and engaging content"
@@ -10959,16 +11076,16 @@ msgstr "能夠使用測試驅動開發技術寫出高品質、自記錄代碼"
 msgid "The above personal data that we collect will be held by us and processed for any purpose as may be allowed by law or required by any law. We may also transfer such personal data to any company within the Binary Group of companies, any of our business associates or payment providers, whether in or outside of the EEA including in countries which might not offer an equivalent level of protection of personal data."
 msgstr "對於以上收集的個人資料，我們將根據法律允許或規定目的持有或處理。我們可能會將相關個人資料轉移給Binary 集團的公司、我們的業務夥伴或資金提供者，不論其是否位於EEA區域，包括一些可能沒有提供相等個人資料保護水平的國家。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1073
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1072
 msgid "The account transfer is unavailable for accounts with different default currency."
 msgstr "帳戶不可用不同的預設貨幣轉帳。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1055
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1054
 msgid "The account transfer is unavailable for your account."
 msgstr "您的帳戶不可轉帳。"
 
 #. ($client->loginid)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1003
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1002
 msgid "The account transfer is unavailable for your account: %1."
 msgstr "您的帳戶不可轉帳：%1。"
 
@@ -10976,7 +11093,7 @@ msgstr "您的帳戶不可轉帳：%1。"
 msgid "The account transfer is unavailable. Please"
 msgstr "帳戶不可轉帳。請"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1067
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1066
 msgid "The account transfer is unavailable. Please deposit to your account."
 msgstr "帳戶不可轉帳。請將資金存入您的帳戶。"
 
@@ -11027,10 +11144,6 @@ msgstr "當所要求的最低存款一次性存入之後，獎金將被存入該
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:48
 msgid "The calculation of the price to be paid (or the payout to be received) for financial contracts on this site at the time the financial contract is purchased or sold will be based on the Company's best estimate of market price movements and the expected level of interest rates, implied volatilities and other market conditions during the life of the financial contract, and is based on complex mathematics. The calculation will include a bias in favour of the Company. The financial contract prices (or the payout amounts) offered to Clients speculating on market or index prices may differ substantially from prices available in the primary markets where stock indices or commodities or contracts thereupon are traded, due to the bias favouring the Company in the price calculation system referred to above."
 msgstr "在本網站買入或賣出金融合約時要支付的價格（或將獲得的賠付金額）是基於公司對市場價格走勢的最優估計、利息的預期水平、隱含波動率或金融合約期限內的其他市場情況計算，同時也是基於復雜的數理計算。計算將會包括有利於公司的偏向。提供給市場或股票指數投機客戶的金融合約價格（或賠付金額）可能會因為價格計算體系中對公司有利的偏向而與交易股指、商品或相關合約的主要市場價格大不相同。"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "The candidates selected will be responsible for the design and creative direction of the company's website content and the production of its marketing materials. They will work directly with members of our marketing and software development teams to produce the graphics required to support and drive our e-commerce business"
-msgstr "公司錄取的人員將負責本公司網站內容的設計和創作方向，以及其市場行銷材料的準備。該人員將與我們的市場行銷和軟體開發團隊合作，為支持和推動電子商務業務進行平面設計"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/betting_rules.html.tt:51
 msgid "The charting data made available to Clients by the Company is indicative only and may at times differ from the real market values. The Company's decision as to the calculation of a financial contract price will be final and binding. The Company allows the option to sell contracts before expiry time of some contracts but will not be obliged to do so and can suspend this option depending on the current market conditions. Contracts may be amended when the underlying asset value is adjusted by corporate actions during the contract period."
@@ -11093,10 +11206,6 @@ msgstr "合約到期日必須為交易日。"
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/glossary.html.haml:1
 msgid "The contract period is the timeframe of a trade. It is also called the duration."
 msgstr "合約期限是指交易的時間週期，即合約持續時間。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:140
-msgid "The currency of your bonus will be the same as the currency of your first deposit."
-msgstr "您獎金的幣種將與您首次存款的幣種相同。"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:514
 msgid "The customer agrees they understand each the following statements regarding OTC binary options trading:"
@@ -11313,8 +11422,8 @@ msgstr "通過本網站完成的交易以及客戶和本公司之間的關係由
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:145
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:300
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:190
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:258
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:189
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:257
 msgid "The two passwords that you entered do not match."
 msgstr "兩次輸入的密碼不相符。"
 
@@ -11374,12 +11483,12 @@ msgstr "買入時伺服器存取出了問題。"
 msgid "There was a problem accessing the server."
 msgstr "伺服器存取出了問題。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:237
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:236
 msgid "There was a problem validating your address."
 msgstr "您的地址驗證出了問題。"
 
 #. ($r->url_for('contact')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:275
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:264
 msgid "There was a problem validating your address. Please fix the indicated fields. If you need assistance feel free to contact our <a href=\"%1\">Customer Support</a>."
 msgstr "在驗證您地址的時候出現問題。請修改指示欄位。如需幫助，請聯繫我們的<a href=\"%1\">客戶支援人員</a>。"
 
@@ -11391,10 +11500,10 @@ msgstr "出現錯誤"
 msgid "There was an error and we were unable to process your request."
 msgstr "出現錯誤，我們無法處理您的要求。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:500
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:504
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:736
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:746
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:499
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:503
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:735
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:745
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/PortfolioManagement.pm:100
 msgid "There was an error processing the request."
 msgstr "處理要求時出錯。"
@@ -11459,10 +11568,6 @@ msgstr "交易者選擇一個目標價並預測市場在合約到期前將會觸
 msgid "These materials may not be copied or redistributed for commercial purposes or for compensation of any kind without prior written permission from a Binary Group company. If you have questions about these terms or would like information about licensing materials from Binary Ltd., please contact us."
 msgstr "未經 Binary Group 公司事先書面許可，不得基於商業目的或者以其他任何有償方式複製或者傳播這些材料。如果您對這些條款有任何疑問，或者希望從 Binary Ltd. 處獲得有關許可材料的資訊，請與我們聯繫。"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "These positions will present talented designers with a unique opportunity to develop their skills in graphics and creative design as valued members of an innovative marketing group"
-msgstr "這些職位面向有才華的設計師，讓他們有機會加入充滿創新活力的市場行銷部，在平面和創意設計中發展技能"
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/affiliate_tac_tab.html.tt:125
 msgid "This Agreement contains the entire agreement between the parties with respect to its subject matter and supersedes all previous agreements and understandings between the parties with respect to its subject matter."
 msgstr "本協議載有各方關於其主題的全部約定，並取代各方關於其主題的所有先前協議及解釋。"
@@ -11491,7 +11596,7 @@ msgstr "本協議自您接受本協議之日起開始生效，並將繼續生效
 msgid "This Document"
 msgstr "本文件"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:749
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:748
 msgid "This Payment Agent cashier section is locked."
 msgstr "此付款代理的收銀台已鎖定。"
 
@@ -11522,7 +11627,7 @@ msgstr "本獎金僅適用於新客戶。現有或以往客戶不符合條件。
 msgid "This bonus will be processed and credited to a client's account when:"
 msgstr "在下列時候，該獎金將被處理，並記入客戶的帳戶中："
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:500
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:499
 msgid "This client cashier section is locked."
 msgstr "此客戶的收銀台部份已鎖定。"
 
@@ -11604,11 +11709,11 @@ msgstr "此功能不適用於虛擬資金帳戶。"
 msgid "This field is required."
 msgstr "此為必填欄位。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:54
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:53
 msgid "This is a virtual-money account. Please switch to a real-money account to deposit funds."
 msgstr "這是虛擬帳戶。請轉換到真實資金帳戶並存入資金。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:106
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:95
 msgid "This is a virtual-money account. Please switch to real-money account and deposit funds."
 msgstr "這是虛擬帳戶。請轉換到真實資金帳戶並存入資金。"
 
@@ -11740,7 +11845,7 @@ msgstr "時代在變。我們增加了賠付金額，以便我們的客戶從盈
 msgid "Tip:"
 msgstr "提示："
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:995
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:994
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:12
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:30
 msgid "Title"
@@ -11830,8 +11935,6 @@ msgstr "每月淨收入總額"
 msgid "Total Profit/Loss"
 msgstr "利潤/虧損合計"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:65
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:66
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/random_markets.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/types_of_trades.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/volidx_markets.html.haml:1
@@ -11856,7 +11959,7 @@ msgstr "導覽"
 msgid "Tourism"
 msgstr "旅遊"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1268
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1267
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:99
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:87
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:105
@@ -11931,7 +12034,7 @@ msgid "Trading Rules"
 msgstr "交易規則"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:161
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:121
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:17
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2383
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2396
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
@@ -11989,7 +12092,7 @@ msgid "Trading on %1 is not offered for this contract type."
 msgstr "此類合約不在%1提供交易。"
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:358
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:153
 msgid "Trading on %1 is suspended at the moment."
 msgstr "%1 的目前交易暫停。"
 
@@ -12021,7 +12124,7 @@ msgstr "交易檢視"
 msgid "Tradingview"
 msgstr "交易檢視"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:459
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:458
 msgid "Transact in"
 msgstr "交易"
 
@@ -12041,7 +12144,7 @@ msgid "Transfer to"
 msgstr "轉給"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:561
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:526
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:525
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:48
 msgid "Transfer to Login ID"
 msgstr "轉給登入 ID"
@@ -12131,7 +12234,7 @@ msgstr "英國和曼島居民將在 Binary (IOM) Ltd開戶。"
 msgid "UK clients registered with Binary (Europe) Ltd can submit their dispute with the alternative dispute resolution entity IBAS by filling the adjudication form on the ADR entity’s"
 msgstr "在 Binary (Europe) Ltd註冊的英國客戶可以通過在替代性爭議解決機構IBAS填寫仲裁表格並提交糾紛申訴"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:125
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:121
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/us_patents.html.tt:3
 msgid "US Patents"
 msgstr "美國專利"
@@ -12139,6 +12242,12 @@ msgstr "美國專利"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:451
 msgid "US Stocks"
 msgstr "美國股票"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "No experience"
+msgid "UX / UI experience"
+msgstr "No experience"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:522
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:617
@@ -12191,6 +12300,18 @@ msgstr "很遺憾，不行。必須使用原存款方式提款。提款時不可
 msgid "United Kingdom"
 msgstr "英國"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "A university degree in Marketing, Journalism, Communications or other business related discipline"
+msgid "University degree in Marketing, Communications, Journalism, or related discipline"
+msgstr "市場行銷、 新聞、 通信或其他商業相關專業學位"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+#, fuzzy
+#| msgid "A Bachelor’s degree in business or related discipline"
+msgid "University degree, preferably in Graphic Design or a related discipline"
+msgstr "商科或相關學科學士學位"
+
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Transaction.pm:23
 msgid "Unknown contract proposal"
 msgstr "未知合約建議"
@@ -12237,7 +12358,7 @@ msgid "Upcoming Events"
 msgstr "未來事件"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:590
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1471
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1470
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:367
 msgid "Update"
 msgstr "更新"
@@ -12267,10 +12388,6 @@ msgstr "升級到真實帳戶"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:242
 msgid "Upon the expiration or termination of this Agreement, for whatever reason, all rights and license granted to you in this Agreement, including use of the Binary.com API, shall immediately terminate. You agree to promptly cease all further use of the Binary.com API. Termination of this Agreement shall not act as a waiver of any breach of this Agreement and shall not act as a release of your liability for breach of its obligation under this Agreement. The Company shall not be liable to you for damages of any kind solely as a result of terminating this Agreement in accordance with its terms."
 msgstr "本協議到期或終止時（不論是什麼原因），所有通過本協議授予您的權利和許可證，包括Binary.com API的使用權限，將立即終止。您同意立即停止繼續使用 Binary.com API。本協議的終止不可視為放棄追究本協議任何違約行為，且不可視為放棄追究您違反本協議所須承擔的義務與責任。公司不對僅僅由於按照協議條款終止本協議的任何類型損失索賠承擔責任。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:163
-msgid "Upper Band = Average + 0.5 * Std Deviation"
-msgstr "上軌線 = 平均線 + 0.5 * 標準差"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:72
 msgid "Usage Limit"
@@ -12304,13 +12421,13 @@ msgstr "使用者測試"
 msgid "Using our website, customers can trade currencies, indices, stocks and commodities 24/7. We have the most flexible pricing and the most comprehensive suite of products available."
 msgstr "客戶可使用我們網站全天候進行貨幣、指數、股票和大宗商品交易。我們擁有最靈活的價格和最齊全的產品配套供選擇。"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Utilise a variety of tactics – both online and offline – to grow and support the company’s network of partners in your designated market"
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/careers.html.haml:1
 msgid "Valletta, the capital of Malta"
 msgstr "馬爾他首都瓦萊塔"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Resources.pm:37
-msgid "Variable return"
-msgstr "變動回報"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/email_verified.html.haml:1
 msgid "Verification Successful"
@@ -12330,7 +12447,7 @@ msgstr "驗證碼格式不正確。"
 msgid "Verification token"
 msgstr "驗證權杖"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:195
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:194
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:46
 msgid "Verify new password"
 msgstr "驗證新密碼"
@@ -12340,11 +12457,11 @@ msgstr "驗證新密碼"
 #. ($params->{website_name})
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Account/Virtual.pm:101
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:105
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:309
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:195
 msgid "Verify your email address - %1"
 msgstr "驗證您的電子郵件地址 - %1"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:159
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:158
 msgid "Verify your withdraw request."
 msgstr "驗證您的提款要求。"
 
@@ -12352,7 +12469,7 @@ msgstr "驗證您的提款要求。"
 #. ($params->{website_name})
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:132
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:144
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:186
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:175
 msgid "Verify your withdrawal request - %1"
 msgstr "驗證您的提款要求 - %1"
 
@@ -12369,10 +12486,6 @@ msgstr "檢視"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/top_up_virtualws.html.tt:12
 msgid "View Updated Portfolio"
 msgstr "檢視更新後的組合"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:541
-msgid "View and increase your"
-msgstr "檢視和增加您的"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/index.html.haml:1
 msgid "View available payment methods"
@@ -12518,6 +12631,10 @@ msgstr "我們由馬爾他金融服務機構(「MFSA」）授予許可證和監�
 msgid "We are committed to making sure your personal data and transactions are secure:"
 msgstr "我們承諾確保您個人資料和交易的安全："
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "We are currently accepting applications from skilled, ambitious affiliate marketers based virtually all over the globe. Each applicant's skills and experience will be evaluated against the company's potential for growth in a particular segment, to determine the best-fit business cases for engagement."
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/biel_terms.html.tt:49
 msgid "We are entitled under the Rules to rely upon information provided by you. You should ensure that you provide us with accurate and complete information and notify us in the event that any information supplied to us changes. You should note that if you provide us with inaccurate information, or if you fail to notify us of any changes to information previously supplied by you, this may adversely affect the quality of the services that we can provide."
 msgstr "我們遵循規則需求，完全依賴您所提供的資訊。您必須確保給我們提供準確和完整的資訊，並在所提供的資訊有任何更改時通知我們。您須注意，如果給我們提供的資訊有錯誤，或是資訊有更改時沒通知我們，可能會嚴重影響我們所提供的服務品質。"
@@ -12535,7 +12652,7 @@ msgid "We are not able to stream live prices at the moment. To enjoy live stream
 msgstr "目前我們不能夠串流即時價格。要獲得價格的即時串流請試重新整理頁面，如果經過反复嘗試還是存在此問題，請換一個瀏覽器"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:62
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1213
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1212
 msgid "We are not accepting accounts from residents of this country at the present time."
 msgstr "目前不接受來自該國居民的帳戶。"
 
@@ -12653,7 +12770,7 @@ msgid "We will provide you with all the tools you need to turn your traffic into
 msgstr "我們將向您提供所有必要的工具，將您的流量轉化為可觀的收入"
 
 #. ($currency, $amount, $payment_agent->payment_agent_name, $website_name)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:613
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:612
 msgid ""
 "We would like to inform you that the transfer of %1 %2 via %3 has been processed.\n"
 "The funds have been credited into your account.\n"
@@ -12670,7 +12787,7 @@ msgstr ""
 "%4團隊。"
 
 #. ($currency, $amount, $client_name, $client_loginid, $paymentagent_loginid, $website_name)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:875
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:874
 msgid "We would like to inform you that the withdrawal request of %1%2 by %3 %4 has been processed. The funds have been credited into your account %5 at %6."
 msgstr "我們特此通知您，由%3 %4呈交的%1 %2取款要求已經處理。資金已經計入您在%6的%5帳戶。"
 
@@ -12686,6 +12803,10 @@ msgstr "然後我們將會通過電子郵件要求您確認您的身份。"
 #: /home/git/regentmarkets/bom-backoffice/f_setting_selfexclusion.cgi:24
 msgid "We're sorry but the Self Exclusion facility is not available for Virtual Accounts."
 msgstr "對不起，自我禁止工具對於虛擬帳戶不可用。"
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Web design / development experience"
+msgstr ""
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/charting/index.html.haml:1
 msgid "Web version"
@@ -12973,10 +13094,6 @@ msgstr "為何選擇我們？"
 msgid "Will I need to install any software?"
 msgstr "我需要安裝任何軟體嗎？"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Will work with a simple web-based translation tool"
-msgstr "將使用簡單、基於網絡的翻譯工具"
-
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:638
 msgid "William's %R"
 msgstr "威廉指標"
@@ -13039,10 +13156,6 @@ msgstr "通過 %1 交易，一切盡在您的掌握中。每次執行交易前�
 msgid "With %1, your money is secure."
 msgstr "通過 %1 交易，您的資金絕對安全無虞。"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-msgid "With a meticulous eye for detail, proofread and correct the content appearing on the company’s website, blogs and social media outlets."
-msgstr "非常注重細節，對公司網站、部落格和社交媒體網站內容進行校對和更正工作。"
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:15
 msgid "Withdraw"
@@ -13093,6 +13206,10 @@ msgid "Work closely with other members of the team to develop software that woul
 msgstr "與團隊其他成員緊密合作，開發出可在交易平台上推動價格的軟體"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
+msgid "Work directly with members of our marketing and IT teams to produce graphics for the company website, blog, social media outlets, and marketing materials"
+msgstr ""
+
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Work experience in a similar role"
 msgstr "類似職位的工作經驗"
 
@@ -13101,16 +13218,24 @@ msgid "Work to expand our international client base by applying creative marketi
 msgstr "通過應用創意行銷和客戶支持策略，努力擴大我們的國際客戶群"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
-msgid "Work with colleagues in IT, Customer Support and Marketing to provide localized text on our global website, blogs, and social media outlets."
+#, fuzzy
+#| msgid "Work with colleagues in IT, Customer Support and Marketing to provide localized text on our global website, blogs, and social media outlets."
+msgid "Work with colleagues in IT, Customer Support, and Marketing to provide localised text for our global website, blog, social media outlets, and promotional materials."
 msgstr "與資訊技術、客戶支持和市場行銷部的同事緊密合作，向我們全球網站、部落格和社交媒體網站提供本地化文字。"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Work with members of the QA team to ensure the integrity of releases"
 msgstr "與品質管理團隊成員緊密合作，確保發布版本的完整性"
 
+#: /home/git/translations/binary-static-www2/src/templates/haml/static/job_descriptions.html.haml:1
+msgid "Work with senior staff to coordinate project delivery; develop and update schedules; document processes; and push initiatives to successful completion."
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
-msgid "Work with members of the marketing team to prepare detailed project requirements"
-msgstr "與行銷團隊成員合作，細緻地完成項目所要求的準備工作"
+#, fuzzy
+#| msgid "Coordinate project delivery; develop and update schedules, maintain task lists, and hold team members accountable for assigned deliverables"
+msgid "Work with senior staff to coordinate project delivery; develop and update schedules; maintain task lists; and hold team members accountable for assigned deliverables"
+msgstr "為項目交付展開協調，制定和更新日程安排、維護任務列表、並確保隊成員能夠負責各自的工作"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "Working closely with the Head of Compliance to implement Know your Client (KYC), Anti-Money Laundering (AML), and data protection regulations"
@@ -13147,7 +13272,7 @@ msgstr "年"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:477
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:815
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:787
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:786
 msgid "Yes"
 msgstr "是"
 
@@ -13204,7 +13329,7 @@ msgstr "我們僅此通知您，%1 所提供的二元期權交易並不受任何
 #. ($symbol)
 #. ($args->{ticks_history})
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:40
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:62
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:66
 msgid "You are already subscribed to %1"
 msgstr "您已訂閱%1"
 
@@ -13228,11 +13353,11 @@ msgstr "您現已登入您的 %1(%2)真實資金帳戶。"
 msgid "You are currently logged in to your virtual money account (%2)."
 msgstr "您現已登入您的虛擬資金帳戶(%2)。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:106
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:110
 msgid "You are either already subscribed or you have reached the limit for pricing table subscription."
 msgstr "您已經訂閱，或已達到訂閱價表的上限。"
 
-#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:86
+#: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/v3/Wrapper/Streamer.pm:90
 msgid "You are either already subscribed or you have reached the limit for proposal subscription."
 msgstr "您已經訂閱，或已達到建议議訂閱的上限。"
 
@@ -13240,7 +13365,7 @@ msgstr "您已經訂閱，或已達到建议議訂閱的上限。"
 msgid "You are in default or breach of any covenant, obligation or condition contained in this Agreement, and if such default is not cured within seven days of receipt of written notice from the Company;"
 msgstr "您已違犯或違反本協議所包含的條款、義務或條件，如果收到本公司書面通知7天內您沒對該項錯誤作出修正；"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:455
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:454
 msgid "You are not a Payment Agent"
 msgstr "您不是支付代理"
 
@@ -13249,7 +13374,7 @@ msgid "You are not allowed to rebate any part commission payment onto your refer
 msgstr "您不能用部分佣金作為給推薦人的折扣，公司發現後將立即撤銷您的帳戶。"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:335
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:696
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:695
 msgid "You are not authorized for withdrawal via payment agent."
 msgstr "您未經授權通過付款代理取款。"
 
@@ -13295,11 +13420,6 @@ msgstr "您可設定交易期限，從10 秒至365 天。"
 msgid "You can trade a range of markets, timescales and indices – 24/7."
 msgstr "您可全天候參與各種市場、時間週期和指數的交易。"
 
-#. ($r->url_for("/cashier/forward", {act => $action})
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:459
-msgid "You can try another <a href=\"%1\">payment option</a> or for additional assistance:"
-msgstr "您可嘗試其他<a href=\"%1\">支付選項</a>，或尋求其他幫助："
-
 #. (website)
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_list.html.tt:4
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_listws.html.tt:5
@@ -13307,7 +13427,7 @@ msgid "You can use an authorized payment agent to process deposits and withdrawa
 msgstr "對於不受 %1  支持的支付方式或本地貨幣， 您可使用授權支付代理輕鬆處理存款和取款。"
 
 #. ($loginid_to)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:496
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:495
 msgid "You cannot transfer to account %1, as their account is currently disabled."
 msgstr "您不能轉帳至帳戶%1，因為此帳戶目前已禁用。"
 
@@ -13343,11 +13463,7 @@ msgstr "過去 %3 天裡您已累計提取 %1 %2 的等值。"
 msgid "You have already withdrawn the equivalent of %1 %2."
 msgstr "您已提取 %1 %2 的等值。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:129
-msgid "You have bought contracts with a combined purchase price of five times the bonus amount."
-msgstr "您已買入總買價為獎勵金額五倍的合約。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:552
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:551
 msgid "You have entered an invalid login ID"
 msgstr "您輸入的登入 ID 無效"
 
@@ -13605,11 +13721,6 @@ msgstr "您的%1帳戶不可用。如有任何問題，請聯繫%2。"
 msgid "Your %1 day withdrawal limit is currently %2 %3 (or equivalent in other currency)."
 msgstr "您的 %1 天取款限額目前為 %2 %3（或其他貨幣的等值）。"
 
-#. ($currency_label, $min_deposit)
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:128
-msgid "Your <strong>first</strong> deposit is equal to or more than %1%2, and"
-msgstr "您的<strong>首次</strong>存入金額等於或高於%1%2，且"
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:565
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:94
 msgid "Your Client will receive an email notification informing him/her that the transfer has been processed."
@@ -13624,7 +13735,7 @@ msgstr "您的 ID 將存入 cookie，每次有潛在客戶在您的聯盟連結�
 msgid "Your Login ID"
 msgstr "您的登入 ID"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:547
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:546
 msgid "Your Login ID should not contain spaces."
 msgstr "您的登入 ID 不應包含空格。"
 
@@ -13632,18 +13743,13 @@ msgstr "您的登入 ID 不應包含空格。"
 msgid "Your Property"
 msgstr "您的財產"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:523
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:534
-msgid "Your account balance"
-msgstr "您的帳戶餘額"
-
 #. ($currency,                to_monetary_number_format($balance)
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:803
 msgid "Your account balance (%1%2) is insufficient to buy this contract (%1%3)."
 msgstr "您的帳戶餘額(%1%2)不足以買入該合約(%1%3)。"
 
 #. ($currency, $balance, $withdrawal_limits->{'max_withdrawal'})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:967
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:966
 msgid "Your account balance is %1 %2. Maximum withdrawal by all other means is %1 %3."
 msgstr "您的帳戶餘額是 %1 %2。通過所有其它方式的最大取款金額是 %1 %3。"
 
@@ -13663,8 +13769,8 @@ msgstr "您的帳號沒有輸入居住國。"
 msgid "Your account has no trading activity."
 msgstr "您的帳號沒有交易活動。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:111
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:115
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:110
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:104
 msgid "Your account is disabled"
 msgstr "您的帳戶已被禁用"
 
@@ -13690,12 +13796,17 @@ msgstr "您的帳戶完全可用，您可以開始存入金額並買入合約。
 msgid "Your account is important to us. Please <a href=\"%1\">contact us</a> should you need further assistance."
 msgstr "您的帳戶對我們很重要。如需進一步幫助，請<a href=\"%1\">聯繫我們</a>。"
 
+#. ($r->url_for('/cashier/authenticatews')
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:73
+msgid "Your account is not fully authenticated. Please visit the <a href=\"%1\">authentication</a> page for more information."
+msgstr ""
+
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:17
 msgid "Your account is registered as a Payment Agent."
 msgstr "您的帳戶註冊為支付代理。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:102
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:104
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:101
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:93
 msgid "Your account is restricted to withdrawals only."
 msgstr "您的帳戶只限於取款。"
 
@@ -13712,7 +13823,7 @@ msgstr "您的帳戶已成功轉帳。最新餘額是:"
 msgid "Your application will then be reviewed by our compliance and marketing departments. Once approved, we will put you live in our <a href='%1'>payment agent</a> list."
 msgstr "然後我們的審核和行銷部門將審查您的申請。一旦批准，我們將把您列入 <a href='%1'>付款代理</a>列表。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1229
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:1228
 msgid "Your balance is higher than the permitted amount."
 msgstr "您的餘款已超出允許金額。"
 
@@ -13721,33 +13832,21 @@ msgstr "您的餘款已超出允許金額。"
 msgid "Your bonus request - %1"
 msgstr "您的獎勵請求- %1"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:126
-msgid "Your bonus will be credited to your account within 3 working days after the following conditions have been met:"
-msgstr "您的獎金將在滿足下列條件後的3 個工作日內匯入您的帳戶："
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:136
-msgid "Your bonus will be credited to your account within 3 working days after you have bought contracts with a combined purchase price equal to or greater than the bonus amount."
-msgstr "您的獎金將在您以等於或大於獎金金額的合計合約買入價格後的3個工作日內計入您的帳戶。"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:144
-msgid "Your bonus will be credited to your account within 3 working days."
-msgstr "您的獎金將在3個工作日內計入您的帳戶。"
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:189
 msgid "Your breach of any of Binary.com’s rights;"
 msgstr "您違反任何Binary.com權利;"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:109
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:113
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:108
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:102
 msgid "Your cashier is locked"
 msgstr "您的收銀台已被鎖定"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:459
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:458
 msgid "Your cashier is locked as per your request"
 msgstr "您的收銀台已依照您的請求被鎖定"
 
 #. ($r->url_for('/user/settings/securityws')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:118
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:107
 msgid "Your cashier is locked as per your request - to unlock it, please <a href=\"%1\">click here</a>."
 msgstr "根據您的要求，您的收銀台已被鎖定- 如需解除鎖定，請<a href=\"%1\">點選此處</a>。"
 
@@ -13755,12 +13854,12 @@ msgstr "根據您的要求，您的收銀台已被鎖定- 如需解除鎖定，�
 msgid "Your cashier is locked as per your request - to unlock it, please enter the password."
 msgstr "根據您的請求，您的收銀台已被鎖定- 如需解除鎖定，請輸入密碼。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:113
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:698
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:112
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:697
 msgid "Your cashier is locked as per your request."
 msgstr "您的收銀台已依照您的請求被鎖定。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:504
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:503
 msgid "Your cashier section is locked."
 msgstr "您的收銀台區段已被鎖定。"
 
@@ -13809,8 +13908,8 @@ msgstr "您的電子郵件地址"
 msgid "Your email address is unverified."
 msgstr "您的電子郵件地址未經驗證。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:285
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:335
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:171
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:221
 msgid "Your email has been verified."
 msgstr "您的電子郵件地址已經驗證。"
 
@@ -13820,13 +13919,13 @@ msgid "Your funds are safe"
 msgstr "您的資金非常安全"
 
 #. ('support@binary.com')
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:107
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:111
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:106
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:100
 msgid "Your identity documents have passed their expiration date. Kindly send a scan of a valid ID to <a href=\"mailto:%1\">%1</a> to unlock your cashier."
 msgstr "您的識別文件已過期。請傳送有效的身份識別掃描件到<a href=\"mailto:%1\">%1</a>以解鎖收銀台。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1459
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:60
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1458
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:59
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:60
 msgid "Your information is incomplete or incorrect. Please correct the fields highlighted above."
 msgstr "您的資訊不完整或不正確。請更正上面出現提示的欄位。"
@@ -13862,7 +13961,7 @@ msgstr "您的密碼和登入ID都是唯一的，而且密碼已經被雜湊處�
 msgid "Your password cannot be the same as your email"
 msgstr "您的密碼不可與電子郵件相同"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:893
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:892
 msgid "Your password contains invalid characters."
 msgstr "您的密碼含無效字元。"
 
@@ -13880,11 +13979,11 @@ msgstr "您的密碼已重設。"
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "您的密碼已成功重設。請用新密碼登入您的帳戶。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:898
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:897
 msgid "Your password should be at least 6 characters."
 msgstr "您的密碼至少應為 6 個字元。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:903
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:902
 msgid "Your password should not be more then 25 characters."
 msgstr "您的密碼最多不超過 25 個字元。"
 
@@ -13913,7 +14012,7 @@ msgstr "您從 %3 帳戶提取%1 %2 到付款代理 %4 帳戶的要求已成功�
 msgid "Your risks are known"
 msgstr "您的風險是已知的"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1434
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1433
 msgid "Your secret answer is too short.  Please enter at least 4 characters."
 msgstr "您的密碼保護問題答案過短。請輸入至少 4 個字元。"
 
@@ -13926,7 +14025,7 @@ msgid "Your token has expired."
 msgstr "您的權杖已經過期。"
 
 #. ($c->stash('request')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:240
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:145
 msgid "Your token has expired. If you require further assistance, please contact our <a href=\"%1\"><strong>Customer Support</strong></a>."
 msgstr "您的權杖已經過期。如需要更多幫助，請聯繫我們的<a href=\"%1\"><strong>客服人員</strong></a>。"
 
@@ -13957,13 +14056,13 @@ msgstr "如您使用Binary.com API導致Binary.com交易平臺損壞，Binary.co
 msgid "Your use of the Binary.com API will not confer to you any title, ownership interest or intellectual property rights that otherwise belongs to the Company. Our trading platform is protected under patent and our website, including its content, is protected by copyright laws, and will remain our exclusive property, as applicable."
 msgstr "您使用Binary.com API不會賦予您任何職務、擁有者權益或應屬於本公司的智慧財產權權利。 我們的交易平臺和網站， 包括其內容都受到專利保護， 也受版權法保護， 並屬於我們的專屬財產。"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:154
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:153
 msgid "Your verification link has expired."
 msgstr "您的驗證連結已經過期。"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:160
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:339
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:348
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:149
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:225
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:234
 msgid "Your verification link has expired. Please click below to re-send a verification email."
 msgstr "您的驗證連結已經失效。請點選下方的連結，以重傳驗證電郵。"
 
@@ -14084,7 +14183,7 @@ msgstr "天"
 msgid "deposit"
 msgstr "存款"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:72
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:71
 msgid "details"
 msgstr "詳細資料"
 
@@ -14175,7 +14274,7 @@ msgstr "低障礙"
 msgid "m"
 msgstr "月"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:603
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:602
 msgid "maximum is"
 msgstr "最大為"
 
@@ -14190,7 +14289,7 @@ msgstr "最小"
 msgid "minimum available duration"
 msgstr "最短可用期限"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:597
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:596
 msgid "minimum is"
 msgstr "最小為"
 
@@ -14340,10 +14439,6 @@ msgstr "驗證權杖"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/complaints_disputes.html.tt:16
 msgid "website"
 msgstr "網站"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Cashier.pm:544
-msgid "withdrawal limits"
-msgstr "取款限額"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:105
 msgid "year"
@@ -16875,10 +16970,6 @@ msgstr "牛市指數"
 msgid "Volatility 100 Index"
 msgstr "波動率100指數"
 
-#: Underlying Symbol RDYIN
-msgid "Random Yin"
-msgstr "隨機陰市"
-
 #: Underlying Symbol R_75
 msgid "Volatility 75 Index"
 msgstr "波動率75指數"
@@ -16890,14 +16981,6 @@ msgstr "熊市指數"
 #: Underlying Symbol R_25
 msgid "Volatility 25 Index"
 msgstr "波動率25指數"
-
-#: Underlying Symbol RDMARS
-msgid "Random Mars"
-msgstr "隨機火星"
-
-#: Underlying Symbol RDSUN
-msgid "Random Sun"
-msgstr "隨機日市"
 
 #: Translation for market name
 msgid "Synthetic"
@@ -17481,6 +17564,165 @@ msgstr "如果%3一直到%5時處於%7至%6之外，將獲得%1%2的賠付額。
 msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgstr "如果%3在%4過後一直到%5時處於%7與%6之外，將獲得%1%2的賠付額。"
 
+#~ msgid "%1 is seeking several highly skilled Marketing Executives to join its team of talented professionals."
+#~ msgstr "%1 正尋找多位能力特強的營銷高級主管加入專業人才團隊。"
+
+#~ msgid "A problem occurred"
+#~ msgstr "出現問題"
+
+#~ msgid "A sound understanding of the regulatory aspects of doing business in the region"
+#~ msgstr "對有關地區的商業監管規定非常了解"
+
+#~ msgid "A strong and passionate interest in marketing"
+#~ msgstr "對市場行銷充滿熱忱，非常感興趣"
+
+#~ msgid "A university degree in Marketing, Communication, or Journalism"
+#~ msgstr "市場行銷、 通信或新聞專業學位"
+
+#~ msgid "Average Change = Average Close - Average Open, for the period selected"
+#~ msgstr "平均變更=（所選期間）平均收盤價– 平均開盤價"
+
+#~ msgid "Blog, using a variety of formats"
+#~ msgstr "以各種格式展示的部落格"
+
+#~ msgid "Change = Close - Open, for the day"
+#~ msgstr "變更=當日收盤價 – 當日開盤價"
+
+#~ msgid "Coordinate project delivery; develop and update schedules, maintain task lists, and hold team members accountable for assigned deliverables."
+#~ msgstr "為項目交付展開協調，制定和更新日程安排、維護任務列表、並確保團隊成員能夠負責各自的工作。"
+
+#~ msgid "Develop and maintain a consistent and engaging brand voice throughout assigned social-media channels to promote the company."
+#~ msgstr "為社交媒體整合、開發穩定而引人注目的品牌聲音，並進行維護工作。"
+
+#~ msgid "Develop strong relationships with regulatory, governmental, and professional organizations in order to promote the business and contribute to the improvement of service delivery"
+#~ msgstr "與監管機構、政府部門和專業組織合作，建立良好的人際關係，以促進業務，並為改善服務作出貢獻"
+
+#~ msgid "Develop the digital marketing content that appears on the company’s website"
+#~ msgstr "為公司網站開發數字化行銷內容"
+
+#~ msgid "Ends Between/Outside"
+#~ msgstr "「收於範圍之內/之外」的交易"
+
+#~ msgid "Five years of progressively responsible managerial experience in the region"
+#~ msgstr "在該區域有五年以上漸進式責任管理經驗"
+
+#~ msgid "Free Contract Bonus"
+#~ msgstr "免費合約獎金"
+
+#~ msgid "Get %1 when you deposit %2."
+#~ msgstr "存 %2 獎 %1。"
+
+#~ msgid "Good command of English (oral and written)"
+#~ msgstr "流利的英語能力 (口語和書面)"
+
+#~ msgid "Input error."
+#~ msgstr "輸入錯誤。"
+
+#~ msgid "Lower Band = Average - 0.5 * Std Deviation"
+#~ msgstr "下軌 = 平均線 - 0.5 * 標準差"
+
+#~ msgid "Matched Contract Bonus"
+#~ msgstr "對應合約獎勵"
+
+#~ msgid "Maximum withdrawal by all other means:"
+#~ msgstr "通過所有其它方式的最大取款金額："
+
+#~ msgid "Mentioning error code %1 in any correspondence may help us resolve the issue more quickly."
+#~ msgstr "在聯繫時指出錯誤代碼%1 可能有助於我們更快解決問題。"
+
+#~ msgid "Pending Bonus: %1"
+#~ msgstr "未定獎金：%1"
+
+#~ msgid "Prepare periodic and special reports on sales within the region and maintain a reporting structure with affiliates to collect data"
+#~ msgstr "準備區域銷售的定期和特別報告，維護聯盟成員的報告結構，以收集資料"
+
+#~ msgid "Promote the company using social media and other online channels"
+#~ msgstr "利用社交媒體和其他線上渠道對公司進行推廣"
+
+#~ msgid "Responsible for the design and creative direction of the company's website's content and the production of marketing materials in an innovative group."
+#~ msgstr "在創新部門負責公司網站內容的設計和創意指導，以及營銷材料的準備。"
+
+#~ msgid "Responsible for the recruiting, training and development of employees and affiliates to achieve assigned sales and marketing objectives"
+#~ msgstr "負責員工和聯盟成員招聘、培訓和發展工作，實現指定的銷售和市場營銷目標"
+
+#~ msgid "Responsible for the recruiting, training and development of employees and affiliates to achieve assigned sales and marketing objectives."
+#~ msgstr "負責員工和聯盟成員招聘、培訓和發展工作，實現指定的銷售和市場營銷目標。"
+
+#~ msgid "Sorry, you cannot withdraw."
+#~ msgstr "對不起，您不能取款。"
+
+#~ msgid "Sorry, your payment could not be processed at this time."
+#~ msgstr "對不起，此時不能處理您的支付。"
+
+#~ msgid "Stays Between/Goes Outside"
+#~ msgstr "「保持在範圍之內/超出範圍之外」"
+
+#~ msgid "Strengthen relationships with our current client base"
+#~ msgstr "強化與現有客戶之間的關係"
+
+#~ msgid "Strong computer skills in Excel, Word and PowerPoint"
+#~ msgstr "極強的Excel、Word 和 PowerPoint 電腦技能"
+
+#~ msgid "The Country Manager will have overall operational responsibility for directing the growth and ongoing development of the local market. He or she will actively support the goal of increasing %1’s market presence and investigating business development opportunities."
+#~ msgstr "區域經理將負責從整體運營層面指導本地市場的增長和持續發展，提高 %1 的目標市場佔有率，並調查商業發展機會。"
+
+#~ msgid "The ability to speak several languages"
+#~ msgstr "能說多種語言"
+
+#~ msgid "The candidates selected will be responsible for the design and creative direction of the company's website content and the production of its marketing materials. They will work directly with members of our marketing and software development teams to produce the graphics required to support and drive our e-commerce business"
+#~ msgstr "公司錄取的人員將負責本公司網站內容的設計和創作方向，以及其市場行銷材料的準備。該人員將與我們的市場行銷和軟體開發團隊合作，為支持和推動電子商務業務進行平面設計"
+
+#~ msgid "The currency of your bonus will be the same as the currency of your first deposit."
+#~ msgstr "您獎金的幣種將與您首次存款的幣種相同。"
+
+#~ msgid "These positions will present talented designers with a unique opportunity to develop their skills in graphics and creative design as valued members of an innovative marketing group"
+#~ msgstr "這些職位面向有才華的設計師，讓他們有機會加入充滿創新活力的市場行銷部，在平面和創意設計中發展技能"
+
+#~ msgid "Upper Band = Average + 0.5 * Std Deviation"
+#~ msgstr "上軌線 = 平均線 + 0.5 * 標準差"
+
+#~ msgid "Variable return"
+#~ msgstr "變動回報"
+
+#~ msgid "View and increase your"
+#~ msgstr "檢視和增加您的"
+
+#~ msgid "Work with members of the marketing team to prepare detailed project requirements"
+#~ msgstr "與行銷團隊成員合作，細緻地完成項目所要求的準備工作"
+
+#~ msgid "You can try another <a href=\"%1\">payment option</a> or for additional assistance:"
+#~ msgstr "您可嘗試其他<a href=\"%1\">支付選項</a>，或尋求其他幫助："
+
+#~ msgid "You have bought contracts with a combined purchase price of five times the bonus amount."
+#~ msgstr "您已買入總買價為獎勵金額五倍的合約。"
+
+#~ msgid "Your <strong>first</strong> deposit is equal to or more than %1%2, and"
+#~ msgstr "您的<strong>首次</strong>存入金額等於或高於%1%2，且"
+
+#~ msgid "Your account balance"
+#~ msgstr "您的帳戶餘額"
+
+#~ msgid "Your bonus will be credited to your account within 3 working days after the following conditions have been met:"
+#~ msgstr "您的獎金將在滿足下列條件後的3 個工作日內匯入您的帳戶："
+
+#~ msgid "Your bonus will be credited to your account within 3 working days after you have bought contracts with a combined purchase price equal to or greater than the bonus amount."
+#~ msgstr "您的獎金將在您以等於或大於獎金金額的合計合約買入價格後的3個工作日內計入您的帳戶。"
+
+#~ msgid "Your bonus will be credited to your account within 3 working days."
+#~ msgstr "您的獎金將在3個工作日內計入您的帳戶。"
+
+#~ msgid "withdrawal limits"
+#~ msgstr "取款限額"
+
+#~ msgid "Random Yin"
+#~ msgstr "隨機陰市"
+
+#~ msgid "Random Mars"
+#~ msgstr "隨機火星"
+
+#~ msgid "Random Sun"
+#~ msgstr "隨機日市"
+
 #~ msgid "Building Number"
 #~ msgstr "樓號"
 
@@ -17649,9 +17891,6 @@ msgstr "如果%3在%4過後一直到%5時處於%7與%6之外，將獲得%1%2的�
 
 #~ msgid "Go to Home Page"
 #~ msgstr "前往首頁"
-
-#~ msgid "Granularity is not valid"
-#~ msgstr "細微性無效"
 
 #, fuzzy
 #~| msgid "Create free account"

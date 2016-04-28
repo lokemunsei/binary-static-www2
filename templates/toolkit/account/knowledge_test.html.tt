@@ -2,7 +2,7 @@
     <h1 id="knowledge-test-header">[% l('{JAPAN ONLY}Knowledge Test') %]</h1>
     <p id="knowledge-test-msg"></p>
     <div id="disclaimer">
-        <p>[% l('{JAPAN ONLY}Disclaimer for knowledge test') %]</p>
+        <h3>[% l('{JAPAN ONLY}Disclaimer for knowledge test') %]</h3>
         <ul>
             <li>[% l('{JAPAN ONLY}This knowledge test is required by law. As we provide the test, we know customers better whether the customers are suitable investors to be carried out the binary options trading, and customers can start trading with us.') %]</li>
             <li>[% l('{JAPAN ONLY}To invest a binary options investment accurately, the customer are required knowledge and experience related to derivative transactions.') %]</li>

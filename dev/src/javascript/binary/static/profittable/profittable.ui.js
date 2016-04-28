@@ -44,21 +44,21 @@ var ProfitTableUI = (function(){
 
     function updateFooter(transactions){
         var accTotal = document.querySelector("#pl-day-total > .pl").textContent;
-        accTotal = parseFloat(accTotal);
+        accTotal = parseFloat(accTotal.replace(/,/g, ''));
         if (isNaN(accTotal)) {
             accTotal = 0;
         }
 
         var currentTotal = transactions.reduce(function(previous, current){
-            var buyPrice = addComma(Number(parseFloat(current["buy_price"])));
-            var sellPrice = addComma(Number(parseFloat(current["sell_price"])));
+            var buyPrice = Number(parseFloat(current["buy_price"]));
+            var sellPrice = Number(parseFloat(current["sell_price"]));
             var pl = sellPrice - buyPrice;
             return previous + pl;
         }, 0);
 
         var total = accTotal + currentTotal;
 
-        $("#pl-day-total > .pl").text(Number(total).toFixed(2));
+        $("#pl-day-total > .pl").text(addComma(Number(total).toFixed(2)));
 
         var subTotalType = (total >= 0 ) ? "profit" : "loss";
         $("#pl-day-total > .pl").removeClass("profit").removeClass("loss");
