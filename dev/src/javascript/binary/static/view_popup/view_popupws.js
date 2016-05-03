@@ -256,7 +256,7 @@ var ViewPopupWS = (function() {
             containerSetText('trade_details_barrier'    , contract.high_barrier , '', true);
             containerSetText('trade_details_barrier_low', contract.low_barrier  , '', true);
         } else if(contract.barrier) {
-            containerSetText('trade_details_barrier'    , contract.barrier || '', '', true);
+            containerSetText('trade_details_barrier'    , contract.entry_tick_time ? contract.barrier : '-', '', true);
         }
 
         var currentSpot = user_sold ? contract.sell_spot : (is_ended ? contract.exit_tick : contract.current_spot);
@@ -282,16 +282,10 @@ var ViewPopupWS = (function() {
         }
 
         if(!chartStarted) {
-            if (TradePage.is_trading_page() && !tickForgotten) {
+            if (!tickForgotten) {
               socketSend({"forget_all":"ticks"});
               tickForgotten = true;
-            } else if (!TradePage.is_trading_page()) {
-                Highchart.show_chart(contract);
-                if (contract.entry_tick_time) {
-                  chartStarted = true;
-                }
-                tickForgotten = true;
-            } else if (tickForgotten) {
+            } else {
               Highchart.show_chart(contract, 'update');
               if (contract.entry_tick_time) {
                 chartStarted = true;
@@ -322,7 +316,7 @@ var ViewPopupWS = (function() {
             var now = Math.max(Math.ceil((window.time || 0) / 1000), contract.current_spot_time || 0);
             containerSetText('trade_details_live_date' , epochToDateTime(now));
             showLocalTimeOnHover('#trade_details_live_date');
-            
+
             var is_started = !contract.is_forward_starting || contract.current_spot_time > contract.date_start,
                 is_ended   = contract.is_expired || contract.is_sold;
             if(!is_started || is_ended || now >= contract.date_expiry) {
@@ -508,10 +502,16 @@ var ViewPopupWS = (function() {
 
     // ===== Requests & Responses =====
     // ----- Get Contract -----
-    var getContract = function() {
+    var getContract = function(option) {
         if(contractID) {
             ViewPopupUI.forget_streams();
-            socketSend({"proposal_open_contract": 1, "contract_id": contractID, "subscribe": 1});
+            var req = {
+              "proposal_open_contract": 1,
+              "contract_id": contractID,
+              "subscribe": 1
+            };
+            if (option === 'no-subscribe') delete req.subscribe;
+            socketSend(req);
         }
     };
 
@@ -563,7 +563,7 @@ var ViewPopupWS = (function() {
                     text.localize('Your transaction reference number is [_1]').replace('[_1]', response.sell.transaction_id)
                 );
             }
-            getContract();
+            getContract('no-subscribe');
         }
     };
 
@@ -625,12 +625,17 @@ var ViewPopupWS = (function() {
     };
 
     // ===== Dispatch =====
-    var storeSubscriptionID = function(id) {
-        if(!window.stream_ids) {
+    var storeSubscriptionID = function(id, option) {
+        if(!window.stream_ids && !option) {
             window.stream_ids = [];
         }
-        if(id && id.length > 0 && $.inArray(id, window.stream_ids) < 0) {
+        if (!window.chart_stream_ids && option) {
+            window.chart_stream_ids = [];
+        }
+        if(!option && id && id.length > 0 && $.inArray(id, window.stream_ids) < 0) {
             window.stream_ids.push(id);
+        } else if(option && id && id.length > 0 && $.inArray(id, window.chart_stream_ids) < 0) {
+            window.chart_stream_ids.push(id);
         }
     };
 

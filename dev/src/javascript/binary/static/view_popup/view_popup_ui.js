@@ -33,14 +33,22 @@ var ViewPopupUI = (function() {
         },
         cleanup: function () {
             this.forget_streams();
+            this.forget_chart_streams();
             this.clear_timer();
             this.close_container();
             this._init();
-            Highchart.clear_values();
         },
         forget_streams: function() {
             while(window.stream_ids && window.stream_ids.length > 0) {
                 var id = window.stream_ids.pop();
+                if(id && id.length > 0) {
+                    BinarySocket.send({"forget": id});
+                }
+            }
+        },
+        forget_chart_streams: function() {
+            while(window.chart_stream_ids && window.chart_stream_ids.length > 0) {
+                var id = window.chart_stream_ids.pop();
                 if(id && id.length > 0) {
                     BinarySocket.send({"forget": id});
                 }

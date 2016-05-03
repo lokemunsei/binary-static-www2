@@ -21,6 +21,7 @@ WSTickDisplay.dispatch = function(data) {
   var chart = document.getElementById('tick_chart');
 
   if (window.subscribe && data.tick && document.getElementById('sell_content_wrapper')) {
+      if (data.echo_req.hasOwnProperty('passthrough') && data.echo_req.passthrough.dispatch_to === 'ViewChartWS') return;
       window.responseID = data.tick.id;
       ViewPopupWS.storeSubscriptionID(window.responseID);
   }
