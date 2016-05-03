@@ -56,15 +56,10 @@ pjax_config_page("new_account/virtualws", function(){
                     virtualForm.unbind('submit');
                     form.submit();
                   } else if (type === 'error' || error) {
-                    if (error.code === 'InvalidToken' || error.code === 'duplicate email') {
+                    if (error.code === 'InvalidToken') {
                       virtualForm.empty();
                       $('.notice-message').remove();
-                      var noticeText;
-                      if (error.code === 'InvalidToken') {
-                        noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('')) + '</p>';
-                      } else if (error.code === 'duplicate email') {
-                        noticeText = '<p>' + Content.localize().textDuplicatedEmail.replace('[_1]', page.url.url_for('user/lost_passwordws')) + '</p>';
-                      }
+                      var noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('')) + '</p>';
                       virtualForm.html(noticeText);
                       return;
                     } else if (error.code === 'PasswordError') {
