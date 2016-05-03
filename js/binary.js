@@ -79490,10 +79490,13 @@ function dropDownMonths(select, startNum, endNum) {
     return;
 }
 
-function generateBirthDate(){
+function generateBirthDate(country){
     var days    = document.getElementById('dobdd'),
         months  = document.getElementById('dobmm'),
         year    = document.getElementById('dobyy');
+
+    if (document.getElementById('dobdd').length > 1) return;
+    
     //days
     dropDownNumbers(days, 1, 31);
     //months
@@ -79503,6 +79506,11 @@ function generateBirthDate(){
     var endYear = currentYear - 17;
     //years
     dropDownNumbers(year, startYear, endYear);
+    if (country && country === 'jp') {
+      days.options[0].innerHTML = text.localize('Day');
+      months.options[0].innerHTML = text.localize('Month');
+      year.options[0].innerHTML = text.localize('Year');
+    }
     return;
 }
 
@@ -79525,12 +79533,13 @@ function handle_residence_state_ws(){
       var response = JSON.parse(msg.data);
       if (response) {
         var type = response.msg_type;
+        var country;
         var residenceDisabled = $('#residence-disabled');
         if (type === 'get_settings') {
-          var country = response.get_settings.country_code;
+          country = response.get_settings.country_code;
           if (country && country !== null) {
             page.client.residence = country;
-            generateBirthDate();
+            generateBirthDate(country);
             generateState();
             if (/maltainvestws/.test(window.location.pathname)) {
               var settings = response.get_settings;
@@ -79609,7 +79618,7 @@ function handle_residence_state_ws(){
             $('#error-residence').insertAfter('#residence-disabled');
             residenceDisabled.attr('disabled', 'disabled');
             $('#real-form').show();
-            generateBirthDate();
+            generateBirthDate(country);
             generateState();
             return;
           }
@@ -82685,6 +82694,7 @@ function isJapanTrading(){
             textPassword: text.localize('password'),
             textPasswordsNotMatching: text.localize('The two passwords that you entered do not match.'),
             textClickHereToRestart: text.localize('Your token has expired. Please click <a class="pjaxload" href="[_1]">here</a> to restart the verification process.'),
+            textDuplicatedEmail: text.localize('Your provided email address is already in use by another Login ID. According to our terms and conditions, you may only register once through our site. If you have forgotten the password of your existing account, please <a href="[_1]">try our password recovery tool</a> or contact customer service.'),
             textAsset: text.localize('Asset'),
             textOpens: text.localize('Opens'),
             textCloses: text.localize('Closes'),
@@ -89228,12 +89238,12 @@ pjax_config_page("user/assessmentws", function() {
             if (req.dry_run === 1) {
                 $('#transfer_error_client_id').removeClass(hiddenClass);
                 $('#transfer_error_client_id').text(response.error.message);
-                return;    
+                return;
             } else {
                 PaymentAgentTransferUI.showTransferError(response.error.message);
             }
         }
-        
+
         if (response.paymentagent_transfer === 2) {
             PaymentAgentTransferUI.hideForm();
             PaymentAgentTransferUI.hideDone();
@@ -89320,6 +89330,7 @@ pjax_config_page("user/assessmentws", function() {
         });
 
         $paConfirmTransferButton.click(function() {
+            $paConfirmTransferButton.attr('disabled','disabled');
             var clientID = $clientIDInput.val();
             var amount = $amountInput.val();
             PaymentAgentTransferData.transfer(clientID, currency, amount, false);
@@ -91667,10 +91678,15 @@ var ViewBalanceUI = (function(){
                     virtualForm.unbind('submit');
                     form.submit();
                   } else if (type === 'error' || error) {
-                    if (error.code === 'InvalidToken') {
+                    if (error.code === 'InvalidToken' || error.code === 'duplicate email') {
                       virtualForm.empty();
                       $('.notice-message').remove();
-                      var noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('')) + '</p>';
+                      var noticeText;
+                      if (error.code === 'InvalidToken') {
+                        noticeText = '<p>' + Content.localize().textClickHereToRestart.replace('[_1]', page.url.url_for('')) + '</p>';
+                      } else if (error.code === 'duplicate email') {
+                        noticeText = '<p>' + Content.localize().textDuplicatedEmail.replace('[_1]', page.url.url_for('user/lost_passwordws')) + '</p>';
+                      }
                       virtualForm.html(noticeText);
                       return;
                     } else if (error.code === 'PasswordError') {

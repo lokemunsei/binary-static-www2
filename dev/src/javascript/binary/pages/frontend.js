@@ -284,10 +284,13 @@ function dropDownMonths(select, startNum, endNum) {
     return;
 }
 
-function generateBirthDate(){
+function generateBirthDate(country){
     var days    = document.getElementById('dobdd'),
         months  = document.getElementById('dobmm'),
         year    = document.getElementById('dobyy');
+
+    if (document.getElementById('dobdd').length > 1) return;
+    
     //days
     dropDownNumbers(days, 1, 31);
     //months
@@ -297,6 +300,11 @@ function generateBirthDate(){
     var endYear = currentYear - 17;
     //years
     dropDownNumbers(year, startYear, endYear);
+    if (country && country === 'jp') {
+      days.options[0].innerHTML = text.localize('Day');
+      months.options[0].innerHTML = text.localize('Month');
+      year.options[0].innerHTML = text.localize('Year');
+    }
     return;
 }
 
@@ -319,12 +327,13 @@ function handle_residence_state_ws(){
       var response = JSON.parse(msg.data);
       if (response) {
         var type = response.msg_type;
+        var country;
         var residenceDisabled = $('#residence-disabled');
         if (type === 'get_settings') {
-          var country = response.get_settings.country_code;
+          country = response.get_settings.country_code;
           if (country && country !== null) {
             page.client.residence = country;
-            generateBirthDate();
+            generateBirthDate(country);
             generateState();
             if (/maltainvestws/.test(window.location.pathname)) {
               var settings = response.get_settings;
@@ -403,7 +412,7 @@ function handle_residence_state_ws(){
             $('#error-residence').insertAfter('#residence-disabled');
             residenceDisabled.attr('disabled', 'disabled');
             $('#real-form').show();
-            generateBirthDate();
+            generateBirthDate(country);
             generateState();
             return;
           }

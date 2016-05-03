@@ -7,12 +7,12 @@ var PaymentAgentTransfer = (function () {
             if (req.dry_run === 1) {
                 $('#transfer_error_client_id').removeClass(hiddenClass);
                 $('#transfer_error_client_id').text(response.error.message);
-                return;    
+                return;
             } else {
                 PaymentAgentTransferUI.showTransferError(response.error.message);
             }
         }
-        
+
         if (response.paymentagent_transfer === 2) {
             PaymentAgentTransferUI.hideForm();
             PaymentAgentTransferUI.hideDone();
@@ -99,6 +99,7 @@ var PaymentAgentTransfer = (function () {
         });
 
         $paConfirmTransferButton.click(function() {
+            $paConfirmTransferButton.attr('disabled','disabled');
             var clientID = $clientIDInput.val();
             var amount = $amountInput.val();
             PaymentAgentTransferData.transfer(clientID, currency, amount, false);
