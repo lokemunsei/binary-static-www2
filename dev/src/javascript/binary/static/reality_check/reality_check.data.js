@@ -87,8 +87,8 @@ var RealityCheckData = (function () {
         var startTimeString = tradingTimeTemplate.replace('[_1]', startTime.format('YYYY-MM-DD HH:mm:ss') + ' GMT');
         return {
             startTimeString: startTimeString,
-            loginTime: startTime.format('YYYY-MM-DD HH:mm:ss') + ' GMT',
-            currentTime: currentTime.format('YYYY-MM-DD HH:mm:ss') + ' GMT',
+            loginTime: startTime.format('YYYY-MM-DD HH:mm:ss ZZ'),
+            currentTime: currentTime.format('YYYY-MM-DD HH:mm:ss ZZ'),
             sessionDuration: durationString,
             loginId: wsData.loginid,
             currency: wsData.currency,

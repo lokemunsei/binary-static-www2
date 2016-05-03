@@ -22,6 +22,7 @@ var ApplicationsUI = (function(){
     function createTable(app){
         Table.clearTableBody(tableID);
         Table.appendTableBody(tableID, app, createRow);
+        showLocalTimeOnHover('td.last_used');
     }
     
     function createRow(data){

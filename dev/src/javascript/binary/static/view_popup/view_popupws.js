@@ -321,7 +321,8 @@ var ViewPopupWS = (function() {
         var update_time = function() {
             var now = Math.max(Math.ceil((window.time || 0) / 1000), contract.current_spot_time || 0);
             containerSetText('trade_details_live_date' , epochToDateTime(now));
-
+            showLocalTimeOnHover('#trade_details_live_date');
+            
             var is_started = !contract.is_forward_starting || contract.current_spot_time > contract.date_start,
                 is_ended   = contract.is_expired || contract.is_sold;
             if(!is_started || is_ended || now >= contract.date_expiry) {
@@ -673,6 +674,10 @@ var ViewPopupWS = (function() {
                 default:
                     break;
             }
+            showLocalTimeOnHover('#trade_details_start_date');
+            showLocalTimeOnHover('#trade_details_end_date');
+            showLocalTimeOnHover('#trade_details_current_date');
+            showLocalTimeOnHover('#trade_details_live_date');
         }
     };
 

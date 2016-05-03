@@ -5,7 +5,7 @@ var StatementUI = (function(){
 
     function createEmptyStatementTable(){
         var header = [
-            Content.localize().textPurchaseDate,
+            Content.localize().textDate,
             Content.localize().textRef,
             Content.localize().textAction,
             Content.localize().textDescription,
@@ -44,7 +44,7 @@ var StatementUI = (function(){
 
         var momentObj = moment.utc(dateObj);
         var dateStr = momentObj.format("YYYY-MM-DD");
-        var timeStr = momentObj.format("HH:mm:ss");
+        var timeStr = momentObj.format("HH:mm:ss") + ' GMT';
 
         var date = dateStr + "\n" + timeStr;
         var ref = transaction["transaction_id"];

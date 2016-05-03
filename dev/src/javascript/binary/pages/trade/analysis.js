@@ -184,7 +184,8 @@ var TradingAnalysis = (function() {
         var selectedTab = sessionStorage.getItem('currentAnalysisTab') || (isJapanTrading() ? 'tab_portfolio' : 'tab_explanation'),
             selectedElement = document.getElementById(selectedTab);
 
-        if (selectedElement && selectedElement.classList.contains('invisible')) {
+        if (selectedElement && selectedElement.classList.contains('invisible') && 
+            !(selectedTab === 'tab_portfolio' && BetAnalysis.Portfolio.isActive())) {
             selectedTab = 'tab_explanation';
             sessionStorage.setItem('currentAnalysisTab', 'tab_explanation');
         }

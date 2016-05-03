@@ -211,7 +211,7 @@ var PricingTable = (function() {
 
     render: function render() {
       var barriers = Object.keys(this.props.prices).sort(function(a, b) {
-        return b - a;
+        return (a > b ? -1 : 1);
       });
 
       var i = 1;
@@ -237,19 +237,21 @@ var PricingTable = (function() {
   });
 
   function sendRequest(form) {
-    if (form.contract_category && form.date_expiry && form.symbol) {
+    if (form.contract_category && form.date_expiry && form.date_start && form.symbol) {
       $('#pricing_table').hide();
       $('#contract_description1').hide();
       state.prev_prices = {};
       state.prices = {};
       state.category = form.contract_category;
       state.dateExpiry = form.date_expiry;
+      state.dateStart = form.date_start;
       state.symbol = form.symbol;
       state.units = form.units;
       BinarySocket.send({
         pricing_table: 1,
         contract_category: form.contract_category,
         date_expiry: form.date_expiry,
+        date_start: form.date_start,
         symbol: form.symbol,
         type: 'japan',
       });
@@ -287,7 +289,8 @@ var PricingTable = (function() {
       processForgetTables();
     } else if (state.category === echo_req.contract_category &&
       state.dateExpiry === echo_req.date_expiry &&
-      state.symbol === echo_req.symbol) {
+      state.symbol === echo_req.symbol &&
+      state.dateStart === echo_req.date_start) {
 
       state.prev_prices = state.prices;
       state.prices = res.pricing_table.prices;

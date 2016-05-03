@@ -12,6 +12,7 @@ if (isJapanTrading()) {
     var period = $('#period').val();
     var res = period.split('_');
     var date_expiry = res[1];
+    var date_start = res[0];
     var formName = sessionStorage.getItem('formname');
     var units = Math.abs(parseInt($('#japan_unit').val(), 10)) || 1;
     var category = formName === 'higherlower' ? 'callput' : formName;
@@ -19,6 +20,7 @@ if (isJapanTrading()) {
     PricingTable.sendRequest({
       symbol: symbol,
       date_expiry: date_expiry,
+      date_start: date_start,
       contract_category: category,
       units: units,
     });
@@ -47,3 +49,4 @@ if (isJapanTrading()) {
 
   };
 }
+

@@ -84,7 +84,7 @@ var KnowledgeTest = (function() {
         var lastTestDate = new Date(lastTestEpoch * 1000);
 
         var msgTemplate =
-            '{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until [_1].\nLast test taken at [_2].';
+            '{JAPAN ONLY}Dear customer, you are not allowed to take knowledge test until [_1]. Last test taken at [_2].';
 
         var msg = text.localize(msgTemplate)
             .replace('[_1]', nextTestDate.toUTCString())

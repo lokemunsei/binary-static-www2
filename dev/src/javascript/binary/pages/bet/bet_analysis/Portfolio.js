@@ -3,9 +3,8 @@ BetAnalysis.Portfolio = (function() {
   var $portfolio;
 
   function init() {
-    var user = new User();
 
-    if (user.email && isJapanTrading()) {
+    if (isActive()) {
       $('#tab_portfolio').removeClass('invisible');
     }
 
@@ -28,6 +27,13 @@ BetAnalysis.Portfolio = (function() {
     return;
   }
 
+  function isActive() {
+    var user = new User();
+    if (user.email && isJapanTrading()) {
+      return true;
+    }
+  }
+
   function hide() {
     if (isJapanTrading()) {
       PortfolioWS.onUnload();
@@ -40,6 +46,7 @@ BetAnalysis.Portfolio = (function() {
     init: init,
     show: show,
     hide: hide,
+    isActive: isActive,
   };
 })();
 

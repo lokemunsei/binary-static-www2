@@ -12,6 +12,7 @@ pjax_config_page("user/statement", function(){
                         var type = response.msg_type;
                         if (type === 'statement'){
                             StatementWS.statementHandler(response);
+                            showLocalTimeOnHover('td.date');
                         }
                     }
                 }

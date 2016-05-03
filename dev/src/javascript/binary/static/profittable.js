@@ -14,6 +14,7 @@ pjax_config_page("user/profit_table", function(){
                         var type = response.msg_type;
                         if (type === 'profit_table'){
                             ProfitTableWS.profitTableHandler(response);
+                            showLocalTimeOnHover('td.buy-date,td.sell-date');
                         }
                     }
                 }

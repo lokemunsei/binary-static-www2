@@ -640,6 +640,22 @@ ul.checked li {
   background-color: lightyellow;
 }
 
+.tooltip-content {
+  display: none;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+*:hover > .tooltip-content {
+  display: inline;
+}
+
 *,
 *:after,
 *:before {
@@ -2998,7 +3014,6 @@ a.close:hover {
   margin-bottom: 15px;
 }
 
-/* special notice (f_trade.cgi), currently align center */
 .centerText,
 .notice-1 {
   text-align: center;
@@ -5824,6 +5839,25 @@ div.kineticjs-content {
   display: none;
 }
 
+#trading_socket_container.japan {
+  min-width: 960px;
+}
+#trading_socket_container.japan .big-col {
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+#trading_socket_container.japan #market_menu {
+  background: #FFF;
+  margin-left: 20px;
+}
+#trading_socket_container.japan #market_menu input {
+  margin-right: 5px;
+}
+#trading_socket_container.japan #contract_markets_container,
+#trading_socket_container.japan #contract_market_form_container {
+  display: none;
+}
 #trading_socket_container.japan #guideBtn {
   display: none;
 }
@@ -5851,7 +5885,7 @@ div.kineticjs-content {
   width: 301px;
   border: 1px solid #dedede;
   display: none;
-  height: 100px;
+  height: 120px;
   padding: 10px;
   margin-left: 2px;
 }
@@ -5977,7 +6011,7 @@ div.kineticjs-content {
   background: #f2f2f2;
 }
 #trading_socket_container.japan #period {
-  width: 155px;
+  width: 200px;
 }
 #trading_socket_container.japan #payout_row {
   display: none;

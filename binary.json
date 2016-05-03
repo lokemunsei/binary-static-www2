@@ -88,7 +88,6 @@
     "src/javascript/binary/pages/livechart.js",
     "src/javascript/binary/pages/openpositionsws.js",
     "src/javascript/binary/pages/payment_agent.js",
-    "src/javascript/binary/pages/portfolio.js",
     "src/javascript/binary/pages/resources/asset_indexws.js",
     "src/javascript/binary/pages/resources/market_timesws.js",
     "src/javascript/binary/pages/trade/analysis.js",

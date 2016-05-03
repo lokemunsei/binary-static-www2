@@ -60,6 +60,10 @@ var RealityCheckUI = (function () {
         $('#sold').text(summary.contractsSold);
         $('#open').text(summary.openContracts);
         $('#potential').text(summary.potentialProfit);
+
+        showLocalTimeOnHover('#start-time');
+        showLocalTimeOnHover('#login-time');
+        showLocalTimeOnHover('#current-time');
     }
 
     function renderSummaryPopUp(summary) {
