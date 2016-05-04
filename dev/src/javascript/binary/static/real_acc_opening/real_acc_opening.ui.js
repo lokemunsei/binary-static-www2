@@ -62,8 +62,8 @@ var RealAccOpeningUI = (function(){
     ValidAccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
 
     if (elementObj['residence'].value === 'gb' && /^$/.test(Trim(elementObj['postcode'].value))){
-      errorPostcode.innerHTML = Content.errorMessage('req');
-      Validate.displayErrorMessage(errorPostcode);
+      elementObj['postcode'].innerHTML = Content.errorMessage('req');
+      Validate.displayErrorMessage(elementObj['postcode']);
       window.accountErrorCounter++;
     }
 

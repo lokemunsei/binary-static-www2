@@ -166,9 +166,11 @@ var TradingEvents = (function () {
                     displayTooltip('', underlying);
                 }
             });
-            underlyingElement.addEventListener('mousedown', function(e) {
+            if (isJapanTrading()) {
+              underlyingElement.addEventListener('mousedown', function(e) {
                 Symbols.getSymbols(0);
-            });
+              });
+            }
         }
 
         /*

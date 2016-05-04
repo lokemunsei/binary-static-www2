@@ -19,7 +19,7 @@ pjax_config_page('chart_application', function () {
     };
 });
 
-pjax_config_page('trading', function () {
+pjax_config_page('/trading', function () {
     return {
         onLoad: function(){TradePage.onLoad();},
         onUnload: function(){TradePage.onUnload();}

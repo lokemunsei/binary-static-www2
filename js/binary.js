@@ -72682,7 +72682,7 @@ pjax_config_page('chart_application', function () {
     };
 });
 
-pjax_config_page('trading', function () {
+pjax_config_page('/trading', function () {
     return {
         onLoad: function(){TradePage.onLoad();},
         onUnload: function(){TradePage.onUnload();}
@@ -83757,9 +83757,11 @@ var TradingEvents = (function () {
                     displayTooltip('', underlying);
                 }
             });
-            underlyingElement.addEventListener('mousedown', function(e) {
+            if (isJapanTrading()) {
+              underlyingElement.addEventListener('mousedown', function(e) {
                 Symbols.getSymbols(0);
-            });
+              });
+            }
         }
 
         /*
@@ -89866,8 +89868,8 @@ function showRandomRenamedMsg(msg) {
     ValidAccountOpening.checkPostcode(elementObj['postcode'], errorObj['postcode']);
 
     if (elementObj['residence'].value === 'gb' && /^$/.test(Trim(elementObj['postcode'].value))){
-      errorPostcode.innerHTML = Content.errorMessage('req');
-      Validate.displayErrorMessage(errorPostcode);
+      elementObj['postcode'].innerHTML = Content.errorMessage('req');
+      Validate.displayErrorMessage(elementObj['postcode']);
       window.accountErrorCounter++;
     }
 
