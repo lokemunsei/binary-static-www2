@@ -1,13 +1,14 @@
 var RealityCheck = (function () {
     'use strict';
     var hiddenClass = 'invisible';
-    var loginTime;
+    var loginTime;      // milliseconds
 
     function realityCheckWSHandler(response) {
         if ($.isEmptyObject(response.reality_check)) {
             // not required for reality check
             return;
         }
+
         var summary = RealityCheckData.summaryData(response.reality_check);
         RealityCheckUI.renderSummaryPopUp(summary);
     }
@@ -77,8 +78,7 @@ var RealityCheck = (function () {
             return;
         }
 
-        var rcCookie = getCookieItem('reality_check');
-        loginTime = rcCookie && rcCookie.split(',')[1] * 1000;
+        loginTime = TUser.get().logintime * 1000;
 
         window.addEventListener('storage', realityStorageEventHandler, false);
 

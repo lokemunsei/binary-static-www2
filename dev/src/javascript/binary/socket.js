@@ -115,7 +115,9 @@ function BinarySocketClass() {
             }
 
             if(isReady()=== true){
-                page.header.validate_cookies();
+                if(!Login.is_login_pages()) {
+                    page.header.validate_cookies();
+                }
                 if (clock_started === false) {
                     page.header.start_clock_ws();
                 }
@@ -144,18 +146,25 @@ function BinarySocketClass() {
                 var type = response.msg_type;
                 if (type === 'authorize') {
                     if(response.hasOwnProperty('error')) {
+                        var isActiveTab = sessionStorage.getItem('active_tab') === '1';
+                        if(response.error.code === 'SelfExclusion' && isActiveTab) {
+                            sessionStorage.removeItem('active_tab');
+                            alert(response.error.message);
+                        }
                         LocalStore.set('reality_check.ack', 0);
-                       send({'logout': '1', passthrough: {'redirect': 'login'}});
+                        page.client.send_logout_request(isActiveTab);
                     }
                     else {
                         authorized = true;
-                        page.client.response_authorize(response);
                         if(typeof events.onauth === 'function'){
                             events.onauth();
                         }
-                        send({balance:1, subscribe: 1});
-                        send({landing_company_details: TUser.get().landing_company_name});
-                        send({get_settings: 1});
+                        if(!Login.is_login_pages()) {
+                            page.client.response_authorize(response);
+                            send({balance:1, subscribe: 1});
+                            send({landing_company_details: TUser.get().landing_company_name});
+                            send({get_settings: 1});
+                        }
                         sendBufferedSends();
                     }
                 } else if (type === 'balance') {
@@ -168,12 +177,14 @@ function BinarySocketClass() {
                     page.header.do_logout(response);
                 } else if (type === 'landing_company_details') {
                     page.client.response_landing_company_details(response);
-                    RealityCheck.init();
+                    BinarySocket.send({reality_check: 1, passthrough: { for: 'init_rc' }});
                 } else if (type === 'payout_currencies' && response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.handler === 'page.client') {
                     page.client.response_payout_currencies(response);
                 } else if (type === 'get_settings') {
+                    GTM.event_handler(response.get_settings);
+                    page.client.set_storage_value('tnc_status', response.get_settings.client_tnc_status || '-');
+                    page.client.check_tnc();
                     var jpStatus = response.get_settings.jp_account_status;
-
                     if (jpStatus) {
                         switch (jpStatus.status) {
                             case 'jp_knowledge_test_pending': localStorage.setItem('jp_test_allowed', 1);
@@ -193,6 +204,10 @@ function BinarySocketClass() {
                         localStorage.removeItem('jp_test_allowed');
                     }
                 } else if (type === 'website_status') {
+                    if(!response.hasOwnProperty('error')) {
+                        LocalStore.set('website.tnc_version', response.website_status.terms_conditions_version);
+                        page.client.check_tnc();
+                    }
                   if (response.website_status.clients_country) {
                     localStorage.setItem('clients_country', response.website_status.clients_country);
                     if (isNotBackoffice()) {
@@ -200,7 +215,14 @@ function BinarySocketClass() {
                     }
                   }
                 } else if (type === 'reality_check') {
-                    RealityCheck.realityCheckWSHandler(response);
+                    if (response.echo_req.passthrough.for === 'init_rc') {
+                        var currentData = TUser.get();
+                        var addedLoginTime = Object.assign({logintime: response.reality_check.start_time}, currentData);
+                        TUser.set(addedLoginTime);
+                        RealityCheck.init();
+                    } else {
+                        RealityCheck.realityCheckWSHandler(response);
+                    }
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {
@@ -215,7 +237,7 @@ function BinarySocketClass() {
                           type !== 'new_account_virtual' &&
                           type !== 'paymentagent_withdraw' &&
                           type !== 'cashier') {
-                        BinarySocket.send({'logout': '1'});
+                            page.client.send_logout_request();
                       }
                     }
                 }

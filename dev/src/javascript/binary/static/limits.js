@@ -1,9 +1,6 @@
-pjax_config_page("limitsws", function(){
+pjax_config_page_require_auth("limitsws", function(){
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
             Content.populate();
             Content.limitsTranslation();
             if (TUser.get().is_virtual) {

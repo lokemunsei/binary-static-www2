@@ -1,10 +1,7 @@
-pjax_config_page("new_account/maltainvestws", function(){
+pjax_config_page_require_auth("new_account/maltainvestws", function(){
   return {
     onLoad: function() {
       Content.populate();
-      if (page.client.redirect_if_logout()) {
-          return;
-      }
       for (i = 0; i < page.user.loginid_array.length; i++){
         if (page.user.loginid_array[i].financial){
           window.location.href = page.url.url_for('user/my_accountws');

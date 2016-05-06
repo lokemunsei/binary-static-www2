@@ -1,6 +1,6 @@
 var ValidAccountOpening = (function(){
   var redirectCookie = function() {
-    if (page.client.redirect_if_logout()) {
+    if (page.client.show_login_if_logout(true)) {
         return;
     }
     if (!page.client.is_virtual()) {
@@ -38,16 +38,7 @@ var ValidAccountOpening = (function(){
       window.location.href = page.url.url_for('new_account/knowledge_testws');
       $('#topbar-msg').children('a').addClass('invisible');
     } else {     // jp account require more steps to have real account
-      var loginid = message.client_id;
-      // set a flag to push to gtm in my_account
-      localStorage.setItem('new_account', '1');
-      //generate dropdown list and switch
-      page.client.clear_storage_values();
-      var option = new Option('Real Account (' + loginid + ')', loginid);
-      document.getElementById('client_loginid').appendChild(option);
-      $('#client_loginid option[value="' + page.client.loginid + '"]').removeAttr('selected');
-      option.setAttribute('selected', 'selected');
-      $('#loginid-switch-form').submit();
+      page.client.process_new_account(getCookieItem('email'), message.client_id, message.oauth_token, false);
     }
   };
   var letters, numbers, space, hyphen, period, apost;

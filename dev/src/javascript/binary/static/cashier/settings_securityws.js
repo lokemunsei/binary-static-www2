@@ -18,9 +18,7 @@ var securityws = (function(){
 
         clearErrors();
 
-        if(page.client.is_virtual()) {
-            $form.hide();
-            $('#SecuritySuccessMsg').addClass('notice-msg center').text(Content.localize().textFeatureUnavailable);
+        if(checkIsVirtual()) {
             return;
         }
 
@@ -37,6 +35,15 @@ var securityws = (function(){
             BinarySocket.send({"authorize": loginToken, "passthrough": {"value": $(this).attr("value") === "Update" ? "lock_password" : "unlock_password"}});
         });
         BinarySocket.send({"authorize": loginToken, "passthrough": {"value": "is_locked"}});
+    };
+
+    var checkIsVirtual = function(){
+        if(page.client.is_virtual()) {
+            $form.hide();
+            $('#SecuritySuccessMsg').addClass('notice-msg center').text(Content.localize().textFeatureUnavailable);
+            return true;
+        }
+        return false;
     };
 
     var validateForm = function(){
@@ -146,10 +153,12 @@ var securityws = (function(){
         return;
     };
     var SecurityApiResponse = function(response){
+        if(checkIsVirtual()) {
+            return;
+        }
         var type = response.msg_type;
         if (type === "cashier_password" || (type === "error" && "cashier_password" in response.echo_req)){
            responseMessage(response);
-
         }else if(type === "authorize" || (type === "error" && "authorize" in response.echo_req))
         {
             isAuthorized(response);
@@ -162,13 +171,9 @@ var securityws = (function(){
     };
 })();
 
-pjax_config_page("user/settings/securityws", function() {
+pjax_config_page_require_auth("user/settings/securityws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
-
             Content.populate();
 
             BinarySocket.init({
@@ -180,9 +185,7 @@ pjax_config_page("user/settings/securityws", function() {
                 }
             });
 
-            if(page.client.get_storage_value('is_virtual').length > 0) {
-                securityws.init();
-            }
+            securityws.init();
         }
     };
 });

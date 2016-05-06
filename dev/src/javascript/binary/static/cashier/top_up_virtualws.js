@@ -61,13 +61,9 @@ var TopUpVirtualWS = (function() {
 }());
 
 
-pjax_config_page("top_up_virtualws", function() {
+pjax_config_page_require_auth("top_up_virtualws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
-
         	BinarySocket.init({
                 onmessage: function(msg){
                     var response = JSON.parse(msg.data);

@@ -137,10 +137,7 @@
          var key = keys1[i];
          var option = document.createElement('option'), content = document.createTextNode(elements[key].name);
          option.setAttribute('value', key);
-         if(!elements[key].is_active){
-            option.setAttribute('disabled', '');
-         }
-         else if (selected && selected === key) {
+         if (selected && selected === key) {
              option.setAttribute('selected', 'selected');
          }
          option.appendChild(content);
@@ -152,10 +149,7 @@
                 var key2 = keys2[j];
                 option = document.createElement('option');
                 option.setAttribute('value', key2);
-                if(!elements[key].submarkets[key2].is_active){
-                   option.setAttribute('disabled', '');
-                }
-                else if (selected && selected === key2) {
+                if (selected && selected === key2) {
                     option.setAttribute('selected', 'selected');
                 }
                 option.textContent = '\xA0\xA0\xA0\xA0'+elements[key].submarkets[key2].name;
@@ -240,9 +234,6 @@ function displayUnderlyings(id, elements, selected) {
                 var key = submarkets[keys2[j]][k];
                 var option = document.createElement('option'), content = document.createTextNode(text.localize(elements[key]['display']));
                 option.setAttribute('value', key);
-                if (elements[key]['is_active'] !== 1) {
-                    option.setAttribute('disabled', true);
-                }
                 if (selected && selected === key) {
                     option.setAttribute('selected', 'selected');
                 }

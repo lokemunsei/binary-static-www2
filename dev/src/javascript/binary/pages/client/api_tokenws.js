@@ -282,13 +282,9 @@ var APITokenWS = (function() {
 
 
 
-pjax_config_page("api_tokenws", function() {
+pjax_config_page_require_auth("api_tokenws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
-
             BinarySocket.init({
                 onmessage: function(msg) {
                     var response = JSON.parse(msg.data);

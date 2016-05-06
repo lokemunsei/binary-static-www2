@@ -34,25 +34,21 @@ msgid "\"Third Party Provider(s)\" means the third party (non-affiliated) entity
 msgstr "\"Fornecedor(es) terceiro(s)\" significa a entidade terceira (não afiliada) que disponibiliza recursos e funções através do usa da API Binary.com."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:708
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:736
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:394
 msgid "$100,000 - $250,000"
 msgstr "$100.000 - $250.000"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:705
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:718
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:380
 msgid "$100,000 - $500,000"
 msgstr "$100.000 - $500.000"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:704
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:714
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:379
 msgid "$25,000 - $100,000"
 msgstr "$25.000 - $100.000"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:709
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:740
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:395
 msgid "$250,000 - $1,000,000"
 msgstr "$250.000 - $1.000.000"
@@ -103,8 +99,8 @@ msgid "%1 and the bull/bear logo are registered trademarks."
 msgstr "%1 e o logotipo do touro e urso são marcas comerciais registradas."
 
 #. ($client->loginid)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:396
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:442
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:404
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:450
 msgid "%1 cashier password updated"
 msgstr "Senha do caixa %1 atualizada"
 
@@ -320,7 +316,7 @@ msgid "%1's systems are now processing in excess of 1 million transactions/day (
 msgstr "Os sistemas %1 já processam mais de 1 milhão de transações/dia (incluindo contas virtuais)."
 
 #. ($client->loginid)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:421
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:429
 msgid "%1-Failed attempt to unlock cashier section"
 msgstr "%1-Tentativa falhada para desbloquear seção do caixa"
 
@@ -419,7 +415,6 @@ msgid "- A scanned copy of your passport, driving licence (provisional or full) 
 msgstr "- Uma cópia digitalizada do seu passaporte, carta de habilitação/condução (provisória ou definitiva), ou carteira de Identidade/cartão de cidadão, onde constam o seu nome e a sua data de nascimento."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:684
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:600
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:163
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:191
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:219
@@ -430,7 +425,6 @@ msgid "0-1 year"
 msgstr "0-1 ano"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:687
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:618
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:177
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:205
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:233
@@ -445,7 +439,6 @@ msgid "1 million transactions/day"
 msgstr "1 milhão de transações/dia"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:685
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:604
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:164
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:192
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:220
@@ -579,7 +572,6 @@ msgid "4. Choose your Payout"
 msgstr "4. Escolha o seu pagamento"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:689
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:626
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:179
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:207
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:235
@@ -605,10 +597,6 @@ msgstr "50-100 million JPY"
 msgid "5d"
 msgstr "5 dias"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:847
-msgid "6 - 25 characters."
-msgstr "6 - 25 caracteres."
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:285
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:261
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:278
@@ -621,7 +609,6 @@ msgid "6 months to 1 year"
 msgstr "6 months to 1 year"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:688
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:622
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:178
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:206
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:234
@@ -1243,7 +1230,7 @@ msgstr "Um e-mail de verificação foi enviado para %1."
 msgid "API"
 msgstr "API"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:178
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:603
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/api_tokenws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:70
 msgid "API Token"
@@ -1334,7 +1321,7 @@ msgstr "O acesso aos seus dados pessoais é estritamente proibido, com a exceç�
 msgid "Account Closure"
 msgstr "Encerramento de Conta"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:111
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:549
 msgid "Account Details"
 msgstr "Detalhes da Conta"
 
@@ -1427,8 +1414,7 @@ msgstr "Adicionar Linhas"
 msgid "Add Overlay"
 msgstr "Adicionar Sobreposição"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:662
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:89
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:670
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:81
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:66
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:84
@@ -1472,7 +1458,7 @@ msgid "Advising senior managers regarding salary negotiations and job offers"
 msgstr "Fornecer aconselhamento a gerentes seniores em relação a negociações salariais e ofertas de emprego"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:112
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:22
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:460
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/signup.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/affiliates/signup.html.tt:8
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/tac.html.tt:17
@@ -1546,7 +1532,6 @@ msgid "Although the Company has and retains all rights to refuse or to close a C
 msgstr "Apesar da empresa ter e reter todos os direitos de recusar ou de fechar uma conta de cliente, a empresa garante, porém, que todas as obrigações contratuais já assumidas serão honradas."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:561
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:495
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/account_transferws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:16
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:62
@@ -1589,11 +1574,6 @@ msgstr "Uma negociação \"Termina Dentro\" paga prêmio se o preço de saída d
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:597
 msgid "An additional password can be used to restrict access to the cashier."
 msgstr "Uma senha adicional pode ser usada para restringir acesso ao caixa."
-
-#. ($session->email, $r->client_ip, $country_code, $user_agent)
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:125
-msgid "An additional sign-in has just been detected on your account %1 from the following IP address: %2, country: %3 and browser: %4. If this additional sign-in was not performed by you, and / or you have any related concerns, please contact our Customer Support team."
-msgstr "Um início de sessão adicional acabou de ser detectado na sua conta %1 a partir do seguinte endereço IP: %2, país: %3 e navegador: %4. Se este início de sessão adicional não foi executado por você, e/ou você tem preocupações relacionadas, por favor contate a nossa equipe de Apoio ao cliente."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/job_details.html.haml:1
 msgid "An advanced university degree in Mathematics, Physics or Engineering"
@@ -1661,7 +1641,6 @@ msgstr "Rendimento anual"
 msgid "Another major award. This time we’re nominated by the online readers of Global Banking and Finance Review and judged by a panel of industry experts and analysts who recognise our 13 years of platform reliability, range of trades, pricing, customer service and extensive knowledge."
 msgstr "Outro grande prêmio. Desta vez, nós fomos indicados pelos leitores online da Global Banking and Finance Review e julgados por um painel de especialistas da indústria e analistas, que reconheceram os nossos 13 anos de uma plataforma confiável, com grande variedade de negociações, preços, serviço de apoio ao cliente e amplo conhecimento."
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1294
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:175
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:145
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:163
@@ -1714,7 +1693,7 @@ msgid "Anyone who has potential to grow or increase traffic to %1"
 msgstr "Qualquer pessoa ou entidade que tenha o potencial de aumentar o tráfego para a %1"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:715
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:259
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:684
 msgid "Applications"
 msgstr "Aplicativos"
 
@@ -1747,8 +1726,6 @@ msgid "Appropriateness Test"
 msgstr "Teste de adequação"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:83
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:312
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:975
 msgid "Apr"
 msgstr "Abr"
 
@@ -1865,7 +1842,7 @@ msgstr "Ativos"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:154
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:432
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2652
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2651
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:81
@@ -1915,8 +1892,6 @@ msgid "Audit deposit patterns and take action on fraud or abuse"
 msgstr "Proceder à auditoria de padrões de depósito e tomar ações perante fraudes ou abusos"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:87
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:328
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:991
 msgid "Aug"
 msgstr "Ago"
 
@@ -1933,7 +1908,7 @@ msgstr "Austrália"
 msgid "Authenticate"
 msgstr "Autenticar"
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:8
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:8
 msgid "Authenticate your account"
 msgstr "Autenticar a sua conta"
 
@@ -2217,13 +2192,11 @@ msgid "Binary options basics"
 msgstr "Opções binárias básicas"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:675
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:288
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:270
 msgid "Binary options or other financial derivatives trading experience"
 msgstr "Experiência com negociações de opções binárias ou outros derivados financeiros"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:676
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:314
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:284
 msgid "Binary options or other financial derivatives trading frequency"
 msgstr "Frequência de negociação de opções binárias ou outros derivados financeiros"
@@ -2383,7 +2356,6 @@ msgstr "Tanto o valor do depósito como o valor do bônus são apresentados de f
 msgid "Brainstorm new ways of using social media to connect meaningfully with prospects, clients, and partners"
 msgstr ""
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1270
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:167
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:137
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:155
@@ -2424,7 +2396,7 @@ msgid "Buy Price"
 msgstr "Preço de compra"
 
 #. (to_monetary_number_format($stake_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1653
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1652
 msgid "Buy price must be between %1 and %2."
 msgstr "O preço de compra deverá ser entre %1 e %2."
 
@@ -2523,8 +2495,8 @@ msgstr "Dividendo (Lucro)"
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:220
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:33
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:90
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:33
 msgid "Cashier"
 msgstr "Caixa"
 
@@ -2554,14 +2526,13 @@ msgstr "Volatilidade de Chaikin"
 msgid "Change"
 msgstr "Alterar"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:228
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:151
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:576
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:62
 msgid "Change Password"
 msgstr "Alterar Senha"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:687
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:695
 msgid "Change in account settings"
 msgstr "Alterar nas definições da conta"
 
@@ -2821,8 +2792,8 @@ msgstr "Fechado"
 msgid "Closes"
 msgstr "Fecha"
 
-#. ($exchange->closing_on($when)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Offerings.pm:159
+#. ($calendar->closing_on($when)
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Offerings.pm:161
 msgid "Closes early (at %1)"
 msgstr "Fechamento antecipado (na %1)"
 
@@ -2875,13 +2846,11 @@ msgid "Commodities are resources that are grown or extracted from the ground, su
 msgstr "As matérias-primas são recursos naturais valiosos, que são cultivados ou extraídos do solo, tais como a prata, o ouro e o petróleo. Na %1, os preços são apresentados em Dólar americano."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:671
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:184
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:214
 msgid "Commodities trading experience"
 msgstr "Experiência com negociação de matérias-primas"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:672
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:210
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:228
 msgid "Commodities trading frequency"
 msgstr "Frequência de negociação de matérias-primas"
@@ -2972,7 +2941,6 @@ msgid "Connection failure. Please try again later."
 msgstr "Falha na conexão. Tente novamente mais tarde."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:690
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:636
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:331
 msgid "Construction"
 msgstr "Construção"
@@ -3000,7 +2968,6 @@ msgstr "Contate o agente de pagamentos diretamente para mais informações sobre
 msgid "Contact us"
 msgstr "Contate-nos"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:429
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:64
 msgid "Continue"
 msgstr "Continuar"
@@ -3067,7 +3034,7 @@ msgstr "O contrato não pode ser vendido no momento."
 msgid "Contract expired"
 msgstr "Contrato expirado"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2366
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2365
 msgid "Contract has already expired."
 msgstr "O contrato já expirou."
 
@@ -3075,11 +3042,11 @@ msgstr "O contrato já expirou."
 msgid "Contract is not started yet"
 msgstr "O contrato ainda não foi iniciado"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1650
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1649
 msgid "Contract market price is too close to final payout."
 msgstr "O preço de mercado do contrato é demasiado próximo do prêmio final."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2423
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2422
 msgid "Contract must expire during trading hours."
 msgstr "O contrato deve expirar durante os horários de negociação."
 
@@ -3118,12 +3085,12 @@ msgid "Contracts may not expire on a weekend; therefore the expiry date of a con
 msgstr "Os contratos não podem expirar no fim-de-semana; portanto, a data de validade de um contrato pode ser adiada para a segunda-feira seguinte, caso a mesma recaia num sábado ou domingo."
 
 #. ($self->underlying->translated_display_name)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2381
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2380
 msgid "Contracts on %1 with duration more than 24 hours must expire at the end of a trading day."
 msgstr "Contratos na %1 com duração superior a 24 horas devem expirar no fim de um dia de negociação."
 
 #. ($underlying->translated_display_name()
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2432
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2431
 msgid "Contracts on %1 with durations under 24 hours must expire on the same trading day."
 msgstr "Contratos na %1 com duração inferior a um dia devem expirar no mesmo dia de negociação."
 
@@ -3217,8 +3184,7 @@ msgstr "Custos e encargos"
 msgid "Country Manager"
 msgstr "Gestor de País"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:660
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1069
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:668
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:45
 msgid "Country of Residence"
 msgstr "País de Residência"
@@ -3242,7 +3208,7 @@ msgstr "Criar"
 msgid "Create Free Account"
 msgstr "Criar uma conta gratuita"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:160
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:585
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/virtualws.html.tt:66
 msgid "Create New Account"
@@ -3319,7 +3285,7 @@ msgstr "Preço Atual de Mercado"
 msgid "Current Spot Time"
 msgstr "Hora do preço atual de mercado"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2305
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2304
 msgid "Current market price is 0."
 msgstr "O preço atual de mercado é 0."
 
@@ -3420,8 +3386,6 @@ msgstr "Data e hora"
 msgid "Date of Birth"
 msgstr "Data de nascimento"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1021
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:359
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:49
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:44
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:62
@@ -3433,7 +3397,7 @@ msgstr "Data de nascimento"
 msgid "Date of birth is invalid"
 msgstr "A data de nascimento é inválida"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:481
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:489
 msgid "Date of birth is required."
 msgstr "Data de nascimento é obrigatória."
 
@@ -3453,7 +3417,7 @@ msgstr "Caro(a)"
 #. ($client_to->salutation, $client_to->first_name, $client_to->last_name,)
 #. ($pa_client->salutation, $pa_client->first_name, $pa_client->last_name)
 #. (BOM::Platform::Locale::translate_salutation($client->salutation)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:652
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:660
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:612
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:871
 msgid "Dear %1 %2 %3,"
@@ -3678,8 +3642,6 @@ msgid "Debt-free"
 msgstr "Sem dívidas"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:91
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1007
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:344
 msgid "Dec"
 msgstr "Dez"
 
@@ -4105,7 +4067,6 @@ msgid "Educate prospects, clients, and partners regarding the benefits of %1’s
 msgstr "Educar candidatos, clientes e parceiros em relação aos benefícios da plataforma de negociação inovadora da %1"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:691
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:640
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/footer.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:332
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/global/footer.html.tt:43
@@ -4161,11 +4122,8 @@ msgstr "Contraparte elegível"
 msgid "Eliminating Antisocial Forces"
 msgstr "Eliminar forças antissociais"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/home/login.html.haml:1
-#: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/header.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/available_payment_agents_list.html.tt:28
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_agent_listws.html.tt:46
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:80
 msgid "Email"
 msgstr "E-mail"
 
@@ -4175,20 +4133,15 @@ msgstr "E-mail"
 msgid "Email Verification"
 msgstr "Verificação de e-mail"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:659
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:776
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:667
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_passwordws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:56
 msgid "Email address"
 msgstr "Endereço de e-mail"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:162
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:152
 msgid "Email address is incorrect."
 msgstr "O endereço de e-mail está incorreto."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:48
-msgid "Email not given."
-msgstr "E-mail não fornecido."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/contact.html.haml:1
 msgid "Email: "
@@ -4271,7 +4224,6 @@ msgid "Equities"
 msgstr "Capitais"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:683
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:496
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:388
 msgid "Estimated Net Worth"
 msgstr "Patrimônio líquido estimado"
@@ -4351,19 +4303,19 @@ msgid "Exclude time cannot be for more than 5 years."
 msgstr "O tempo de exclusão não pode ser superior a 5 anos."
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:433
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:822
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:830
 msgid "Exclude time cannot be for more than five years."
 msgstr "O tempo de exclusão não pode ser superior a cinco anos."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:378
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:428
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:817
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:825
 msgid "Exclude time cannot be less than 6 months."
 msgstr "O tempo de exclusão não pode ser inferior a seis meses."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:377
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:423
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:812
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:820
 msgid "Exclude time must be after today."
 msgstr "A hora da exclusão tem que ser depois de hoje."
 
@@ -4485,11 +4437,11 @@ msgstr "Tempo de vencimento"
 msgid "Expiry price"
 msgstr "Preço de vencimento"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2329
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2328
 msgid "Expiry time cannot be equal to start time."
 msgstr "A hora de expiração não pode ser igual à hora de início."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2338
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2337
 msgid "Expiry time cannot be in the past."
 msgstr "A hora de vencimento não pode ser no passado."
 
@@ -4550,10 +4502,6 @@ msgstr "Familiarização com Perl, DBI, Mason, Moose, Sereal, Plack/PSGI, nginx,
 msgid "Familiarity with virtualization concepts (openvz / Xen / vmware)"
 msgstr "Familiarização com conceitos de virtualização (openvz / Xen / vmware)"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:920
-msgid "Family Name"
-msgstr "Sobrenome"
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:25
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:35
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:53
@@ -4564,14 +4512,12 @@ msgstr "Sobrenome"
 msgid "Fast Stochastic"
 msgstr "Estocástico Rápido"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1270
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:168
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:138
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:156
 msgid "Favourite artist"
 msgstr "Artista favorito"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1270
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:166
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:136
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:154
@@ -4579,8 +4525,6 @@ msgid "Favourite dish"
 msgstr "Prato favorito"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:81
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:304
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:967
 msgid "Feb"
 msgstr "Fev"
 
@@ -4622,18 +4566,17 @@ msgid "Final Price"
 msgstr "Preço final"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:692
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:644
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:333
 msgid "Finance"
 msgstr "Finanças"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:205
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:630
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:2
 msgid "Financial Account Opening"
 msgstr "Abertura de contas financeiras"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:666
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:250
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:675
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:112
 msgid "Financial Assessment"
 msgstr "Avaliação financeira"
@@ -4642,7 +4585,6 @@ msgstr "Avaliação financeira"
 msgid "Financial Asset"
 msgstr "Ativo financeiro"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:515
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:155
 msgid "Financial Information"
 msgstr "Informações financeiras"
@@ -4667,11 +4609,6 @@ msgstr "Encontre a negociação certa para todas as condições de mercado."
 msgid "Finish"
 msgstr "Terminar"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:890
-msgid "First Name"
-msgstr "Primeiro Nome"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1106
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:117
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:69
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:87
@@ -4794,20 +4731,14 @@ msgid "Forex"
 msgstr "Forex (Mercado de Câmbio)"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:667
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:80
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:158
 msgid "Forex trading experience"
 msgstr "Experiência com negociações forex"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:668
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:106
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:172
 msgid "Forex trading frequency"
 msgstr "Frequência de negociação forex"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/home/login.html.haml:1
-msgid "Forgot Login ID or Password?"
-msgstr "Esqueceu-se do login ou da senha?"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:733
 msgid "Format: yyyy-mm-dd (not required for virtual-money accounts)"
@@ -5059,7 +4990,6 @@ msgid "Have a question? Need Help?"
 msgstr "Tem dúvidas? Precisa de ajuda?"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:693
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:648
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:334
 msgid "Health"
 msgstr "Saúde"
@@ -5241,11 +5171,6 @@ msgstr "Eu tenho uma conta de dinheiro real"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:176
 msgid "I have read and agree to the"
 msgstr "Já li e aceito os"
-
-#. (request()
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1326
-msgid "I have read and agree to the <a target=\"_blank\" href=\"%1\">terms and conditions</a> of the site."
-msgstr "Li e aceito os <a target=\"_blank\" href=\"%1\">termos e condições</a> do site."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:425
 msgid "I hereby agree and accept that all documents such as pre-contract forms, all terms and conditions, trade reports and other legally required materials will be issued in electronic format only."
@@ -5656,7 +5581,6 @@ msgid "In/Out trades"
 msgstr "Contratos Dentro/Fora"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:681
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:444
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:357
 msgid "Income Source"
 msgstr "Fonte de rendimento"
@@ -5708,13 +5632,11 @@ msgid "Indices"
 msgstr "Índices"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:669
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:132
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:186
 msgid "Indices trading experience"
 msgstr "Experiência com negociações de índices"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:670
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:158
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:200
 msgid "Indices trading frequency"
 msgstr "Frequência de negociação de índices"
@@ -5728,7 +5650,6 @@ msgid "Indonesia"
 msgstr "Indonésia"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:679
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:392
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:326
 msgid "Industry of Employment"
 msgstr "Indústria de emprego"
@@ -5802,7 +5723,7 @@ msgstr "Riscos da Negociação na Internet"
 msgid "Interpretation"
 msgstr "Interpretação"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2153
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2152
 msgid "Intraday contracts may not cross market open."
 msgstr "Contratos intra-diários podem não cruzar com mercados abertos."
 
@@ -5829,11 +5750,6 @@ msgstr "URI inválido para Google Play."
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:43
 msgid "Invalid URI for homepage."
 msgstr "URI inválido para página inicial."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:517
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:523
-msgid "Invalid amount"
-msgstr "Valor inválido"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:340
 msgid "Invalid amount, maximum is"
@@ -5864,31 +5780,23 @@ msgstr "Data de nascimento inválida."
 msgid "Invalid email address"
 msgstr "Endereço de e-mail inválido"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:179
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:57
-msgid "Invalid email and password combination."
-msgstr "Combinação inválida de e-mail e senha."
-
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:453
 msgid "Invalid period input! Please input the period between 0 and #1"
 msgstr "Introdução de período inválido! Por favor introduza um período entre 0 e #1"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2287
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2286
 msgid "Invalid stake"
 msgstr "Aposta inválida"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:577
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1256
 msgid "Invalid telephone number (too long)."
 msgstr "Número de telefone inválido (muito extenso)."
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:570
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1251
 msgid "Invalid telephone number (too short)."
 msgstr "Número de telefone inválido (muito curto)."
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:582
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1261
 msgid "Invalid telephone number."
 msgstr "Número de telefone inválido."
 
@@ -5923,7 +5831,6 @@ msgid "Investment trust"
 msgstr "Fundo de investimento"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:701
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:692
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:364
 msgid "Investments & Dividends"
 msgstr "Investimentos e dividendos"
@@ -5998,8 +5905,6 @@ msgid "JAPAN ONLY CONTACT TEXT"
 msgstr "JAPAN ONLY CONTACT TEXT"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:80
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:300
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:963
 msgid "Jan"
 msgstr "Jan"
 
@@ -6628,8 +6533,6 @@ msgid "Joshua Cavallaro <span> Markets And You Trader.</span>"
 msgstr "Joshua Cavallaro <span> Negociador da Markets And You.</span>"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:86
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:324
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:987
 msgid "Jul"
 msgstr "Jul"
 
@@ -6642,8 +6545,6 @@ msgid "Jump To"
 msgstr "Pular para"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:85
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:320
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:983
 msgid "Jun"
 msgstr "Jun"
 
@@ -6797,13 +6698,11 @@ msgid "Legal Compliance"
 msgstr "Conformidade legal"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:707
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:732
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:393
 msgid "Less than $100,000"
 msgstr "Menos de $100.000"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:703
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:710
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:378
 msgid "Less than $25,000"
 msgstr "Menos de $25.000"
@@ -6826,7 +6725,6 @@ msgid "Less than 6 months"
 msgstr "Less than 6 months"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:680
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:418
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:343
 msgid "Level of Education"
 msgstr "Nível de Instrução"
@@ -6903,7 +6801,7 @@ msgid "Lock Cashier"
 msgstr "Bloquear Caixa"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/header.html.haml:1
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:82
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:78
 msgid "Log in"
 msgstr "Conectar-se"
 
@@ -6930,16 +6828,8 @@ msgstr "Faça o login na sua conta de afiliado da %1 e clique em: Relatórios &r
 msgid "Logarithmic Scale"
 msgstr "Escala Logarítmica"
 
-#: /home/git/translations/binary-static-www2/src/templates/haml/home/login.html.haml:1
-msgid "Login"
-msgstr "Conectar-se"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:149
-msgid "Login Failed"
-msgstr "Login falhou"
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:586
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:232
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:657
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:98
 msgid "Login History"
 msgstr "Histórico de logins"
@@ -6954,14 +6844,6 @@ msgstr "ID de Login"
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:474
 msgid "Login ID (%1) does not exist."
 msgstr "A ID de Login (%1) não existe."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:139
-msgid "Login Success"
-msgstr "Sessão iniciada com sucesso"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/home/login.html.haml:1
-msgid "Login Trouble"
-msgstr "Problema com Login"
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_summaryws.html.haml:1
 msgid "Login time:"
@@ -6993,11 +6875,6 @@ msgstr "Parceria a longo prazo com o serviço líder de negociação financeira"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:129
 msgid "Loss"
 msgstr "Perda"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/header.html.haml:1
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:85
-msgid "Lost password?"
-msgstr "Perdeu a senha?"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:502
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/charting/legacy_chart_table.html.tt:14
@@ -7044,7 +6921,7 @@ msgstr "Manter velocidade e volume adequados de produção"
 msgid "Make a Deposit"
 msgstr "Faça um Depósito"
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:35
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:35
 msgid "Make a deposit or withdraw."
 msgstr "Faça um depósito ou retirada."
 
@@ -7081,8 +6958,6 @@ msgid "Manage your authorised applications."
 msgstr "Gerencie os seus aplicativos autorizados."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:82
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:308
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:971
 msgid "Mar"
 msgstr "Mar"
 
@@ -7155,7 +7030,7 @@ msgstr "Índice de Massa (Mass Index)"
 msgid "Matches/Differs"
 msgstr "Combina/Difere"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:929
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:937
 msgid "Max 30 tokens are allowed."
 msgstr "Um máximo de 30 tokens é permitido."
 
@@ -7230,19 +7105,15 @@ msgstr "O número máximo de posições em aberto está atualmente definido como
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:84
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:96
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:316
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:979
 msgid "May"
 msgstr "Maio"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1270
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:165
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:135
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:153
 msgid "Memorable date"
 msgstr "Data memorável"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1269
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:164
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:134
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:152
@@ -7264,11 +7135,6 @@ msgstr "Retirada Mín-Máx"
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:77
 msgid "Min:"
 msgstr "Mín:"
-
-#. ($min_amount, $max_amount)
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:491
-msgid "Min: %1 Max: %2"
-msgstr "Mín: %1 Máx: %2"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_withdrawws.html.tt:58
 msgid "Min: 10 Max: 2000"
@@ -7362,7 +7228,6 @@ msgstr "Mais benefícios"
 msgid "More specifically, when we enter into a Binary Option trade with you (each, a \"Contract\"), we have a duty to provide you with ‘best execution’. Best execution means that we must take reasonable steps to obtain the best possible result for you when executing an order with you. This document provides a summary of our best execution policy."
 msgstr "Mais especificamente, quando celebramos um negócio de opções binárias com você (cada negócio representando um contrato), temos o dever de lhe proporcionar a \"melhor execução\". Melhor execução significa que teremos de tomar medidas razoáveis para obter o melhor resultado possível para você, ao executarmos uma das suas ordens. Este documento fornece um resumo da nossa política de melhor execução."
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1269
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:161
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:131
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:149
@@ -7419,7 +7284,7 @@ msgid "Multi-lingual and multi-currency support"
 msgstr "Apoio multilíngue e multi-moedas"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:59
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:50
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:488
 msgid "My Account"
 msgstr "Minha Conta"
 
@@ -7432,14 +7297,12 @@ msgstr "Mycrowd - para negociadores Binary.com"
 msgid "Name"
 msgstr "Nome"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1269
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:163
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:133
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:151
 msgid "Name of first love"
 msgstr "Nome do primeiro amor"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1269
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:162
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:132
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:150
@@ -7466,7 +7329,6 @@ msgid "Neither you, your direct relatives, or any persons you control are eligib
 msgstr "Nem você nem os seus familiares diretos são elegíveis para se tornarem Clientes e você não terá direito à participação em receitas líquidas ou qualquer outra remuneração proveniente da Empresa relativas a tais familiares ou amigos. Familiares diretos neste contexto incluem a sua esposa/seu marido, parceiro, pai/mãe, filho/filha ou irmão/irmã."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:682
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:470
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:373
 msgid "Net Annual Income"
 msgstr "Rendimento anual líquido"
@@ -7494,7 +7356,6 @@ msgid "New"
 msgstr "Novo"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:730
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:161
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reset_passwordws.html.haml:1
 msgid "New Password"
 msgstr "Nova Senha"
@@ -7503,15 +7364,11 @@ msgstr "Nova Senha"
 msgid "New Password Request"
 msgstr "Pedido de Nova Senha"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:120
-msgid "New Sign-In Activity Detected"
-msgstr "Nova atividade de início de sessão foi detectada"
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:25
 msgid "New password"
 msgstr "Nova senha"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:183
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:173
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:39
 msgid "New password is same as old password."
 msgstr "Nova senha é igual à senha anterior."
@@ -7532,7 +7389,6 @@ msgstr "Dia seguinte"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:415
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:819
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:711
 msgid "No"
 msgstr "Não"
 
@@ -7665,8 +7521,6 @@ msgid "Notification of Changes"
 msgstr "Notificação de Alterações"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:90
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1003
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:340
 msgid "Nov"
 msgstr "Nov"
 
@@ -7689,7 +7543,7 @@ msgid "Number of ticks"
 msgstr "Número de tique-taques"
 
 #. ($min_duration, $max_duration)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2639
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2638
 msgid "Number of ticks must be between %1 and %2"
 msgstr "O número de tique-taques deve estar entre %1 e %2"
 
@@ -7723,8 +7577,6 @@ msgid "Occupation"
 msgstr "Profissão"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:89
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:336
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:999
 msgid "Oct"
 msgstr "Out"
 
@@ -7743,7 +7595,7 @@ msgid "Ok"
 msgstr "Ok"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:383
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:179
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:169
 msgid "Old password is wrong."
 msgstr "A senha antiga está errada."
 
@@ -7822,7 +7674,6 @@ msgstr "Apenas uma conta por pessoa é permitida. Não é possível recolher qua
 msgid "Open"
 msgstr "Abrir"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:740
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:605
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:421
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:182
@@ -7845,10 +7696,6 @@ msgstr "Abrir uma conta financeira"
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 msgid "Open a free account"
 msgstr "Abra uma conta gratuita"
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/home/login.html.haml:1
-msgid "Open an Account"
-msgstr "Abrir uma conta"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/payment_methods.html.tt:9
 msgid "Open an account now"
@@ -7874,8 +7721,8 @@ msgstr "Abrir uma conta"
 msgid "Opens"
 msgstr "Abre"
 
-#. ($exchange->opening_on($when)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Offerings.pm:165
+#. ($calendar->opening_on($when)
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Offerings.pm:167
 #, fuzzy
 msgid "Opens late (at %1)"
 msgstr "Abre mais tarde (na %1)"
@@ -7893,8 +7740,6 @@ msgid "Oscillator calculated from the daily readings of the Accumulation Distrib
 msgstr "Oscilador calculado a partir das leituras diárias da Linha de Distribuição de Acumulação. O CMF é diferente de um oscilador de dinâmica, na medida em que não é influenciado pela variação diária do preço. Em vez disso, o indicador incide sobre a localização do fechamento referente ao intervalo do período (diário ou semanal)."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:695
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:656
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:700
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:395
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:336
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:366
@@ -7910,13 +7755,11 @@ msgid "Other best execution factors such as speed of execution, likelihood of ex
 msgstr "Outros fatores de melhor execução, tais como velocidade de execução, probabilidade de execução e liquidação, dimensão, natureza ou quaisquer outras considerações relevantes à execução de uma ordem específica podem também ser aplicados por nós para obter o melhor resultado possível para você."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:677
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:340
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:298
 msgid "Other financial instruments trading experience"
 msgstr "Experiência com a negociação de outros instrumentos financeiros"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:678
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:366
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:312
 msgid "Other financial instruments trading frequency"
 msgstr "Frequência de negociação de outros instrumentos financeiros"
@@ -8016,13 +7859,11 @@ msgid "Output validation failed: "
 msgstr "Falha na validação de saída: "
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:710
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:744
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:396
 msgid "Over $1,000,000"
 msgstr "Mais de $1.000.000"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:706
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:722
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:381
 msgid "Over $500,001"
 msgstr "Mais de $500.001"
@@ -8038,7 +7879,6 @@ msgid "Over 100 million JPY"
 msgstr "Over 100 million JPY"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:686
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:608
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:165
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:193
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:221
@@ -8134,10 +7974,6 @@ msgid "Partners"
 msgstr "Parceiros"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:94
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:831
-#: /home/git/translations/binary-static-www2/src/templates/haml/home/login.html.haml:1
-#: /home/git/translations/binary-static-www2/src/templates/haml/layouts/default/header.html.haml:1
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/global/header.html.tt:81
 msgid "Password"
 msgstr "Senha"
 
@@ -8155,7 +7991,7 @@ msgid "Password is moderate"
 msgstr "A senha é moderada"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:308
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:187
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:177
 msgid "Password is not strong enough."
 msgstr "A senha não é forte o suficiente."
 
@@ -8175,10 +8011,6 @@ msgstr "A senha é fraca"
 msgid "Password must contains at least 1 digit, 1 uppercase letter and 1 lowercase letter."
 msgstr "A senha deve conter pelo menos um número, uma maiúscula e uma minúscula."
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Login.pm:52
-msgid "Password not given."
-msgstr "Senha não dada."
-
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/lost_passwordws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:2
 msgid "Password reset"
@@ -8188,7 +8020,7 @@ msgstr "Redefinição de senha"
 msgid "Password score is: %1. Passing score is: 20."
 msgstr "A classificação da senha é %1. A classificação de aprovação é: 20."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:191
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:181
 msgid "Password should be at least six characters, including lower and uppercase letters with numbers."
 msgstr "A senha deve conter no mínimo seis caracteres, incluindo letras minúsculas e maiúsculas com números."
 
@@ -8268,17 +8100,16 @@ msgstr "Prêmio"
 msgid "Payout has moved in your favour from %1 to %2."
 msgstr "O pagamento mudou a seu favor de %1 para %2."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2265
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2264
 msgid "Payout may not have more than two decimal places."
 msgstr "O pagamento não deve ter mais do que duas casa decimais."
 
 #. (to_monetary_number_format($payout_min, 1)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1662
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1661
 msgid "Payout must be between %1 and %2."
 msgstr "O pagamento deve ser entre %1 e %2."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:702
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:696
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:365
 msgid "Pension"
 msgstr "Pensão de aposentação"
@@ -8313,7 +8144,7 @@ msgstr "Permissão negada."
 msgid "Permissions"
 msgstr "Permissões"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:169
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:594
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:3
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:12
 msgid "Personal Details"
@@ -8395,7 +8226,7 @@ msgid "Please enter a number between 0 and %1"
 msgstr "Digite um número entre 0 e %1"
 
 #. ($self_exclusion->{$field})
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:792
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:800
 msgid "Please enter a number between 0 and %1."
 msgstr "Digite um número entre 0 e %1."
 
@@ -8414,16 +8245,7 @@ msgstr "Digite um número superior a 0"
 msgid "Please enter a number."
 msgstr "Insira um número."
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:808
-msgid "Please enter a password."
-msgstr "Insira uma senha."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1161
-msgid "Please enter a town or city."
-msgstr "Introduza uma vila ou cidade."
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:570
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:511
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:71
 msgid "Please enter a valid amount."
 msgstr "Introduza uma quantia válida."
@@ -8454,34 +8276,17 @@ msgstr "Introduza um valor inteiro."
 msgid "Please enter date in the format YYYY-MM-DD."
 msgstr "Por favor, digite a data no formato AAAA-MM-DD."
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:462
-msgid "Please enter the Login ID to transfer funds."
-msgstr "Introduza o ID de Início de Sessão para transferir os fundos."
-
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:499
 msgid "Please enter the country where you want to offer your service"
 msgstr "Introduza o país onde pretende prestar o seu serviço"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1100
-msgid "Please enter the first line of your home address."
-msgstr "Introduza a primeira linha do seu endereço residencial."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:17
 msgid "Please enter your current password."
 msgstr "Insira a sua senha atual."
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:539
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:792
 msgid "Please enter your email address."
 msgstr "Insira o seu endereço de e-mail."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:906
-msgid "Please enter your first name."
-msgstr "Introduza o seu nome próprio."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:941
-msgid "Please enter your last name."
-msgstr "Introduza os seus apelidos."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:568
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:44
@@ -8496,19 +8301,8 @@ msgstr "Siga o padrão: 3 números, um hífen, seguidos por 4 números."
 msgid "Please input a valid date"
 msgstr "Insira uma data válida"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1034
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1040
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1046
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1052
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1057
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:372
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:378
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:384
-msgid "Please input a valid date."
-msgstr "Introduza uma data válida."
-
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Transaction.pm:29
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:128
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:118
 #: /home/git/regentmarkets/bom-websocket-api/lib/BOM/WebSocketAPI/Websocket_v3.pm:431
 msgid "Please log in."
 msgstr "Por favor, conecte-se."
@@ -8535,7 +8329,7 @@ msgstr "Por favor, note que as cotações ao fim-de-semana são ignoradas para f
 msgid "Please note that you may update your personal information at any time by logging into the \"Settings\" section of your account. It is your responsibility to ensure that %1 is promptly and continually informed of any change in your personal information."
 msgstr "Por favor, note que pode atualizar as suas informações pessoais a qualquer momento entrando na seção \"Definições\" da sua conta. É da sua responsabilidade garantir que a %1 é informada de forma imediata e contínua de quaisquer alterações às suas informações pessoais."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:654
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:662
 msgid "Please note that your settings have been updated as follows:"
 msgstr "Por favor, note que as suas definições foram atualizadas da seguinte forma:"
 
@@ -8543,7 +8337,7 @@ msgstr "Por favor, note que as suas definições foram atualizadas da seguinte f
 msgid "Please provide an underlying symbol."
 msgstr "Forneça um símbolo subjacente."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:882
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:890
 msgid "Please provide at least one self-exclusion setting."
 msgstr "Forneça pelo menos uma definição de auto-exclusão."
 
@@ -8574,14 +8368,6 @@ msgstr "Por favor lembre que as negociações com opções binárias podem ser s
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:323
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:811
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:135
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:703
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:596
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:614
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:632
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:662
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:680
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:706
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:728
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:16
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:205
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:224
@@ -8627,34 +8413,9 @@ msgstr "Selecione um valor agente de pagamentos"
 msgid "Please select a valid date"
 msgstr "Selecione uma data válida"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:119
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:145
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:171
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:197
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:223
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:249
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:275
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:301
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:327
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:353
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:379
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:405
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:431
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:457
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:483
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:509
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:586
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:93
-msgid "Please select a value."
-msgstr "Selecione um valor."
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:9
 msgid "Please select your country of residence"
 msgstr "Selecione o seu país de residência"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1085
-msgid "Please specify your country."
-msgstr "Especifique o seu país."
 
 #: /home/git/translations/binary-static-www2/src/templates/haml/user/reality_check_frequencyws.html.haml:1
 msgid "Please specify your preferred reality-check interval in minutes "
@@ -8694,14 +8455,9 @@ msgstr "Por favor, tente novamente."
 msgid "Please type your chosen password twice into the fields below:"
 msgstr "Digite duas vezes a senha que escolheu nos campos abaixo:"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:382
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:390
 msgid "Please use a different password than your login password."
 msgstr "Use uma senha diferente daquela do login."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:911
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:936
-msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
-msgstr "Utilize apenas letras, espaços, hífenes, pontos finais ou apóstrofes."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:56
 msgid "Please wait.<br />Your request is being processed."
@@ -8721,13 +8477,12 @@ msgstr "Policies and Exclusion of Liability"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1787
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:70
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:59
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:497
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:46
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/openpositionsws.html.tt:4
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:46
 msgid "Portfolio"
 msgstr "Portfólio"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1205
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:118
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:140
 msgid "Postal Code / ZIP"
@@ -8740,13 +8495,8 @@ msgid "Postal code/ZIP"
 msgstr "Código postal/CEP"
 
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:209
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1226
 msgid "Postcode is required for UK residents."
 msgstr "O código postal é exigido para moradores do Reino Unido."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1221
-msgid "Postcode must be less than 20 characters long and may not contain \"+\"."
-msgstr "O código postal deve ter menos de 20 caracteres e não deve ter \"+\"."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:182
 msgid "Potential Payout"
@@ -8852,7 +8602,6 @@ msgid "Prices"
 msgstr "Preços"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:696
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:666
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:348
 msgid "Primary"
 msgstr "Principal"
@@ -8945,8 +8694,8 @@ msgstr "Lucro / Perda"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:213
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:78
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:142
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:62
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:567
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:62
 msgid "Profit Table"
 msgstr "Tabela de Lucros"
 
@@ -9126,9 +8875,9 @@ msgstr "Leia as respostas às pergunta frequentes."
 msgid "Real Account"
 msgstr "Conta Real"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:187
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:196
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:214
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:612
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:621
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:639
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:2
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:2
 msgid "Real Money Account Opening"
@@ -9272,12 +9021,12 @@ msgstr "Representa o número máximo de contratos pendentes no seu portfólio. C
 msgid "Represents the maximum volume of contracts that you may purchase in any given trading day."
 msgstr "Representa o volume máximo de contratos que pode comprar em qualquer dia de negociações."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2452
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2451
 msgid "Resale of this contract is not offered due to market holidays during contract period."
 msgstr "A revenda deste contrato não é oferecida devido aos feriados de mercado existentes durante o período do contrato."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2613
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2622
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2612
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2621
 msgid "Resale of this contract is not offered."
 msgstr "A revenda deste contrato não é mais oferecida."
 
@@ -9452,7 +9201,6 @@ msgid "Sa"
 msgstr "Sáb"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:699
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:684
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:362
 msgid "Salaried Employee"
 msgstr "Trabalhador assalariado"
@@ -9507,7 +9255,6 @@ msgstr "Classificação"
 msgid "Seasoned traders can use the %1 platform for the full advantage of the wide range of trading and analysis tools we have on offer."
 msgstr "Os negociadores experientes podem usar a plataforma %1 para tirarem pleno partido da ampla oferta de ferramentas de negociação e análise existente."
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1126
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:129
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:78
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:96
@@ -9517,20 +9264,17 @@ msgid "Second line of home address"
 msgstr "Segunda linha de endereço residencial"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:697
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:670
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:349
 msgid "Secondary"
 msgstr "Ensino Secundário"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1277
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:157
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:127
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:145
 msgid "Secret question"
 msgstr "Pergunta secreta"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:107
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:102
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:540
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/settings_securityws.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/haml/static/why_us.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:154
@@ -9581,7 +9325,6 @@ msgid "Self Exclusion"
 msgstr "Auto-Exclusão"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:700
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:688
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:363
 msgid "Self-Employed"
 msgstr "Trabalhador independente"
@@ -9651,8 +9394,6 @@ msgid "Senior Perl Developer"
 msgstr "Desenvolvedor Perl sénior"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:88
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:332
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:995
 msgid "Sep"
 msgstr "Set"
 
@@ -9663,7 +9404,7 @@ msgstr "Setembro"
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:374
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:296
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:411
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:800
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:808
 msgid "Session duration limit cannot be more than 6 weeks."
 msgstr "O limite de duração de sessões não pode ser superior a 6 semanas."
 
@@ -9692,7 +9433,7 @@ msgid "Set up and manage social-media advertising campaigns, effectively micro-t
 msgstr "Gerenciar campanhas de publicidade em mídia social destinadas a clientes e parceiros de negócio potenciais"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:102
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:223
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:648
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settingsws.html.tt:2
 msgid "Settings"
 msgstr "Definições"
@@ -9708,8 +9449,8 @@ msgstr "Separabilidade"
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:550
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:653
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/ErrorMessage.pm:28
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:500
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Trade.pm:510
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:443
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:453
 msgid "Sharp Prices. Smart Trading."
 msgstr "Preços Afiados. Negociações Inteligentes."
 
@@ -9878,18 +9619,18 @@ msgid "Sorry, an error occurred while loading the form. Please contact customer 
 msgstr "Lamentamos, ocorreu um erro enquanto o formulário estava sendo carregado. Por favor contate o nosso apoio ao cliente se o problema persistir"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:262
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:391
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:437
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:473
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:598
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:644
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:399
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:445
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:481
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:606
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:652
 msgid "Sorry, an error occurred while processing your account."
 msgstr "Lamentamos, ocorreu um erro durante o processamento da sua conta."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:654
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:1094
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:966
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:979
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:1102
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:974
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:987
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:223
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Contract.pm:276
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/MarketDiscovery.pm:49
@@ -9922,18 +9663,9 @@ msgstr "Lamentamos, não é permitido."
 msgid "Sorry, only USD is allowed."
 msgstr "Lamentamos, apenas são permitidos dólares dos EUA."
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:764
-msgid "Sorry, our service is not available for your country of residence"
-msgstr "Lamentamos, o nosso serviço não está disponível no seu país de residência"
-
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:208
 msgid "Sorry, our service is not available for your country of residence."
 msgstr "Lamentamos, o nosso serviço não está disponível no seu país de residência."
-
-#. ($transfer_form->get_field_value('transfer_to')
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:584
-msgid "Sorry, the Login ID (%1) does not exist."
-msgstr "Lamentamos, o ID de Início de Sessão (%1) não existe."
 
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:692
 msgid "Sorry, the Payment Agent Withdrawal is temporarily disabled due to system maintenance. Please try again in 30 minutes."
@@ -10013,13 +9745,11 @@ msgstr "Lamentamos, não é possível retirar fundos. O seu valor de retirada %1
 msgid "Sorry, you have already had too many unsuccessful attempts. Please try again in 5 minutes."
 msgstr "Lamentamos, você já teve muitas tentativas sem êxito. Por favor, tente novamente em 5 minutos."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:432
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:440
 msgid "Sorry, you have entered an incorrect cashier password"
 msgstr "Lamentamos, introduziu uma senha de caixa incorreta"
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:544
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:757
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:797
 msgid "Sorry, you have entered an incorrect email address."
 msgstr "Lamentamos, introduziu um endereço de e-mail incorreto."
 
@@ -10040,7 +9770,6 @@ msgstr "Lamentamos, excedeu o montante máximo de transferências permissível p
 #. ($lim)
 #. ($limit_excludeuntil)
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1881
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:170
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:1593
 msgid "Sorry, you have excluded yourself from the website until %1."
 msgstr "Lamentamos, você auto excluiu-se da página Web até %1."
@@ -10051,7 +9780,7 @@ msgstr "Lamentamos, você auto excluiu-se da página Web até %1."
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Client.pm:844
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/User.pm:100
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Authorize.pm:37
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:142
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:132
 msgid "Sorry, you have excluded yourself until %1."
 msgstr "Lamentamos, você excluiu-se até %1."
 
@@ -10061,7 +9790,6 @@ msgstr "Lamentamos, tem posições em aberto. Feche todas as posições em abert
 
 #. ($lim)
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1889
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:177
 msgid "Sorry, you have reached your session duration limit of %plural(%1,%d minute,%d minutes)."
 msgstr "Lamentamos, mas você atingiu o limite de duração da sua sessão de %plural(%1,%d minuto,%d minutos)."
 
@@ -10144,20 +9872,19 @@ msgstr "Hora de início"
 msgid "Start time %1 must be before end time %2"
 msgstr "A hora de início %1 deve ser antes da hora de término %2"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2352
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2351
 msgid "Start time is in the future."
 msgstr "A hora de início é no futuro."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2347
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2346
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:384
 msgid "Start time is in the past"
 msgstr "A hora de início está no passado"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2360
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2359
 msgid "Start time on forward-starting contracts must be more than 5 minutes from now."
 msgstr "A hora de inicio de contratos com início avançado deve ser mais de 5 minutos a contar do presente."
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1177
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:96
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:96
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:114
@@ -10168,8 +9895,8 @@ msgstr "Estado/Província"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:193
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:86
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:133
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:75
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:558
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:75
 msgid "Statement"
 msgstr "Extrato"
 
@@ -10254,13 +9981,11 @@ msgid "Stock market indices measure the value of a selection of companies in the
 msgstr "Os índices de mercados de valores medem o valor de uma seleção de empresas do mercado de valores."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:673
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:236
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:242
 msgid "Stocks trading experience"
 msgstr "Experiência com negociação de ações"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:674
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:262
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:256
 msgid "Stocks trading frequency"
 msgstr "Frequência de negociação de ações"
@@ -10372,7 +10097,6 @@ msgid "Subject to any specific instructions which may be provided by you, when e
 msgstr "Sujeito a quaisquer instruções específicas que poderão ser fornecidas por você, quando executamos ordens de clientes, tomaremos todas as medidas razoáveis para obter o melhor resultado possível para você. O melhor resultado possível será determinado em termos de consideração total, isto é, o preço do instrumento e os custos relacionados com a execução, que incluirão todas as despesas suportadas por você que estão diretamente relacionadas com a execução da ordem."
 
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:739
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:534
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/knowledge_test.html.tt:51
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/deposit_withdraw_ws.html.tt:87
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:84
@@ -10480,8 +10204,7 @@ msgstr "Indicador técnico encontrado ao subtrair o Aroon Down do Aroon Up. Uma 
 msgid "Tel"
 msgstr "Tel"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:670
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1235
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:678
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:141
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:114
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:132
@@ -10548,7 +10271,7 @@ msgstr "Termos e Condições"
 msgid "Terms and Conditions"
 msgstr "Termos e Condições"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/User.pm:241
+#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:666
 msgid "Terms and Conditions Approval"
 msgstr "Aprovação dos termos e condições"
 
@@ -10561,7 +10284,6 @@ msgid "Terms and conditions approval is required."
 msgstr "Aprovação dos termos e condições é necessária."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:698
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:674
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:350
 msgid "Tertiary"
 msgstr "Ensino Superior"
@@ -10589,7 +10311,7 @@ msgid "The %1 Quantitative Analytics group is responsible for the pricing of bin
 msgstr "O grupo de análise quantitativa da %1 é responsável pelo apreçamento das opções binárias disponibilizadas no site, bem como pelo gerenciamento de risco e rentabilidade da sua carteira de opções. Processando mais de um milhão de transações por dia, a empresa gere uma carteira de opções exóticas que provavelmente excede em termos de complexidade aquela de uma corretora de derivados típica."
 
 #. ($website_name)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:682
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:690
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:882
 msgid "The %1 team."
 msgstr "A equipe da %1."
@@ -11079,7 +10801,7 @@ msgstr "O contrato %4 mudou a seu favor de %1%2 para %1%3."
 msgid "The contract has expired"
 msgstr "O contrato expirou"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2410
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2409
 msgid "The contract must expire on a trading day."
 msgstr "O contrato deverá expirar em um dia de negociação."
 
@@ -11099,7 +10821,7 @@ msgstr "A duração de um contrato representa o período da negociação comprad
 msgid "The easiest way to get started in the financial markets"
 msgstr "A forma mais fácil de começar a negociar nos mercados financeiros"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:488
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:496
 msgid "The email address and date of birth do not match."
 msgstr "O endereço de e-mail e a data de nascimento não correspondem."
 
@@ -11132,7 +10854,6 @@ msgid "The financial trading services contained within this site are only suitab
 msgstr "Os serviços de negociação financeira contidos neste site são adequados apenas para Clientes  que sejam capazes de suportar a perda de todo o dinheiro que investem e que entendem e têm experiência nos riscos implicados na aquisição de contratos financeiros."
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:711
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:537
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:406
 msgid "The financial trading services contained within this site are only suitable for customers who are able to bear the loss of all the money they invest and who understand and have experience of the risk involved in the acquistion of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium."
 msgstr "Os serviços de negociação financeira contidos neste site são adequados apenas para clientes que sejam capazes de suportar a perda de todo o dinheiro que investem e que entendem e têm experiência nos riscos envolvidos na aquisição de contratos financeiros. As transações em contratos financeiros têm um elevado grau de risco. Se os contratos adquiridos finalizarem sem valor, você sofrerá uma perda total do seu investimento, que consistirá no prêmio do contrato."
@@ -11172,7 +10893,7 @@ msgstr "A perda de USD 306 é a diferença entre o nível de saída e de entrada
 msgid "The market exit price is the price in effect at the end of the contract period."
 msgstr "O preço de saída do mercado é o preço em vigor no momento do fim do contrato."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2399
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2398
 msgid "The market must be open at the start time."
 msgstr "O mercado deve estar aberto no horário do início."
 
@@ -11189,7 +10910,7 @@ msgstr "A perda máxima que pode ocorrer a qualquer Cliente é a quantia de dinh
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "O número máximo de tokens (%1) foi atingido."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:922
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:930
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/App.pm:57
 msgid "The name is taken."
 msgstr "Este nome não está disponível."
@@ -11199,12 +10920,12 @@ msgid "The page has timed out. This may be due to a slow Internet connection, or
 msgstr "O tempo da página expirou. Pode dever-se a uma ligação à Internet lenta, ou a excesso de carga nos nossos servidores. Por favor volte a tentar dentro de alguns momentos."
 
 #. ($client->email,                    $client_ip)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:332
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:340
 msgid "The password for your account %1 has been changed. This request originated from IP address %2. If this request was not performed by you, please immediately contact Customer Support."
 msgstr "A senha da sua conta %1 foi alterada. Esta solicitação teve origem no endereço IP %2. Se esta solicitação não foi realizada por você, informe o Apoio ao Cliente imediatamente."
 
 #. ($email)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:513
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:521
 msgid "The password for your account %1 has been reset. If this request was not performed by you, please immediately contact Customer Support."
 msgstr "A senha da sua conta %1 foi redefinida. Se esta solicitação não foi realizada por você, informe o Apoio ao cliente imediatamente."
 
@@ -11238,7 +10959,7 @@ msgid "The provided currency %1 is invalid."
 msgstr "A moeda providenciada %1 é inválida."
 
 #. ($currency)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:1053
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:1061
 msgid "The provided currency %1 is not applicable for this account."
 msgstr "A moeda inserida %1 não é aplicável nesta conta."
 
@@ -11302,8 +11023,6 @@ msgstr "As transações desenvolvidas neste site e as relações entre os Client
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:145
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:300
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:189
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:257
 msgid "The two passwords that you entered do not match."
 msgstr "As palavras-chave que introduziu não coincidem."
 
@@ -11477,13 +11196,12 @@ msgstr "A seção do caixa deste Agente de Pagamentos está bloqueada."
 msgid "This URL is invalid."
 msgstr "Este URL não é válido."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:132
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:122
 msgid "This account is unavailable."
 msgstr "Esta conta não está disponível."
 
 #. ($r->url_for("contact")
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Controller/Bet.pm:1871
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Hooks.pm:161
 msgid "This account is unavailable. For any questions please contact <a href=\"%1\">Customer Support</a>."
 msgstr "Esta conta está indisponível. Para qualquer questão, queira contatar o <a href=\"%1\">apoio ao cliente</a>."
 
@@ -11520,7 +11238,7 @@ msgstr "Este contrato GANHOU"
 msgid "This contract has already expired."
 msgstr "Lamentamos, este contrato já expirou."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1108
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1107
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:308
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/portfolio/contract_details.html.tt:46
 msgid "This contract has been sold."
@@ -11530,7 +11248,7 @@ msgstr "Esse contrato foi vendido."
 msgid "This contract has expired."
 msgstr "Esse contrato expirou."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1126
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1125
 msgid "This contract is affected by corporate action."
 msgstr "Este contrato foi afetado por ações corporativas."
 
@@ -11547,7 +11265,7 @@ msgstr "Esse contrato está indisponível nesta conta."
 msgid "This contract lost"
 msgstr "Esse contrato perdeu"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2305
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2304
 msgid "This contract offers no return."
 msgstr "Este contrato não oferece retorno."
 
@@ -11588,13 +11306,13 @@ msgid "This is a virtual-money account. Please switch to a real-money account to
 msgstr "Esta é uma conta de dinheiro virtual. Mude para uma conta de dinheiro real para depositar fundos."
 
 #. ($client->loginid,                            $client_ip)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:402
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:448
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:410
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:456
 msgid "This is an automated message to alert you that a change was made to your cashier settings section of your account %1 from IP address %2. If you did not perform this update please login to your account and update settings."
 msgstr "Esta mensagem foi gerada automaticamente para alertá-lo que uma alteração foi feita à seção de configurações do caixa da sua conta %1 a partir do endereço IP %2. Se você não executou esta atualização,  por favor inicie sessão na sua conta e atualize as configurações."
 
 #. ($client->loginid,                            $client_ip)
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:427
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:435
 msgid "This is an automated message to alert you to the fact that there was a failed attempt to unlock the Cashier/Settings section of your account %1 from IP address %2"
 msgstr "Esta mensagem foi gerada automaticamente para alertá-lo quanto ao facto de ter havido uma tentativa falhada de desbloqueio da seção do Caixa/Definições da sua conta %1 a partir do endereço IP %2"
 
@@ -11631,7 +11349,7 @@ msgstr "É esta razão por qual estamos agora recrutando testadores adicionais p
 msgid "This market closes early today at"
 msgstr "Este mercado fecha hoje antecipadamente às"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2399
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2398
 msgid "This market is presently closed."
 msgstr "Este mercado está atualmente fechado."
 
@@ -11711,7 +11429,6 @@ msgstr "Os tempos estão mudando. Nós aumentamos os pagamentos para que os noss
 msgid "Tip:"
 msgstr "Dica:"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:872
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:12
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:30
 msgid "Title"
@@ -11781,7 +11498,7 @@ msgid "Token"
 msgstr "Token"
 
 #. ($safer_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2453
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2452
 msgid "Too many market holidays during the contract period. Select an expiry date after %1."
 msgstr "Haverá muitos feriados durante o período do contrato. Por favor selecione uma data de expiração depois de %1."
 
@@ -11819,12 +11536,10 @@ msgid "Tour"
 msgstr "Visita"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:694
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:652
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:335
 msgid "Tourism"
 msgstr "Turismo"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1145
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/japanws.html.tt:105
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/maltainvestws.html.tt:87
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/realws.html.tt:105
@@ -11900,8 +11615,8 @@ msgstr "Regras de negociação"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Menu.pm:161
 #: /home/git/regentmarkets/bom-web/lib/BOM/Web/Static.pm:423
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2425
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2438
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2424
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2437
 #: /home/git/translations/binary-static-www2/src/templates/haml/resources/index.html.haml:1
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/datafeed.html.tt:29
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/resources/market_timesws.html.tt:2
@@ -11932,18 +11647,18 @@ msgstr "A negociação de opções binárias é especulativa e envolve um alto g
 msgid "Trading is Suspended"
 msgstr "A Negociação foi Suspensa"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2623
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2622
 msgid "Trading is not offered for this duration."
 msgstr "A negociação não é oferecida para esta duração."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2170
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2180
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2190
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2197
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2169
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2179
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2189
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2196
 msgid "Trading is suspended at the moment."
 msgstr "A negociação está suspensa no momento."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2675
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2674
 msgid "Trading is suspended due to missing market data."
 msgstr "As negociações estão suspensas devido à falta de dados do mercado."
 
@@ -11964,10 +11679,10 @@ msgstr "A negociação na %1 está suspensa no momento."
 #. ($self->underlying->translated_display_name)
 #. ($self->underlying->translated_display_name()
 #. ($translated_name)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1412
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:154
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2215
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2223
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1411
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:153
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2214
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2222
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:212
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:253
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Spread.pm:461
@@ -12009,7 +11724,6 @@ msgid "Transfer to"
 msgstr "Transferir para"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:569
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:446
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/cashier/paymentagent_transferws.html.tt:48
 msgid "Transfer to Login ID"
 msgstr "Transferir para ID de Início de Sessão"
@@ -12018,7 +11732,7 @@ msgstr "Transferir para ID de Início de Sessão"
 msgid "Transfer to Payment Agent"
 msgstr "Transferir para Agente de Pagamentos"
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:18
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:18
 msgid "Transfer to client"
 msgstr "Transferir para o cliente"
 
@@ -12065,7 +11779,7 @@ msgstr "Experimente adicionar mais números."
 msgid "Try it now"
 msgstr "Experimente"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2406
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2405
 msgid "Try out the Volatility Indices which are always open."
 msgstr "Experimente os Índices Volatility que estão sempre abertos."
 
@@ -12229,7 +11943,6 @@ msgid "Upcoming Events"
 msgstr "Próximos Eventos"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:598
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1348
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/settings_detailsws.html.tt:367
 msgid "Update"
 msgstr "Atualização"
@@ -12319,14 +12032,13 @@ msgstr "Formato incorreto de código de verificação."
 msgid "Verification token"
 msgstr "Token de verificação"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:194
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:46
 msgid "Verify new password"
 msgstr "Verifique a nova senha"
 
 #. (request()
 #. ($params->{website_name})
-#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Account/Virtual.pm:101
+#: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Account/Virtual.pm:96
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/NewAccount.pm:102
 msgid "Verify your email address - %1"
 msgstr "Verifique o seu endereço de e-mail - %1"
@@ -12392,7 +12104,7 @@ msgstr "Veja os horários de funcionamento dos mercados nos quais você pode neg
 msgid "View your financial assessment settings."
 msgstr "Ver as suas configurações de avaliação financeira."
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:77
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:77
 msgid "View your historical transactions."
 msgstr "Veja o seu histórico de transações."
 
@@ -12400,7 +12112,7 @@ msgstr "Veja o seu histórico de transações."
 msgid "View your login history."
 msgstr "Ver o seu histórico de logins."
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:48
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:48
 msgid "View your open positions."
 msgstr "Veja as suas negociações em aberto."
 
@@ -12418,7 +12130,7 @@ msgstr "Veja o seu extrato"
 msgid "View your trading and withdrawal limits."
 msgstr "Ver os seus limites de negociação e de retirada de fundos."
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:64
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:64
 msgid "View your trading profit/loss."
 msgstr "Veja os seus ganhos e perdas."
 
@@ -12444,7 +12156,7 @@ msgid "Volatility Indices are further categorized into two types:"
 msgstr "Os índices de volatilidade são ainda categorizados em dois tipos:"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:227
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:151
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:150
 msgid "Waiting for entry tick."
 msgstr "Aguardando tick de entrada."
 
@@ -12520,7 +12232,6 @@ msgid "We are not able to stream live prices at the moment. To enjoy live stream
 msgstr "Não podemos transmitir ao vivo os preços no momento. Para ver os preços ao vivo tente recarregar a página, se o problema persistir após repetidas tentativas tente um navegar diferente"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:62
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1090
 msgid "We are not accepting accounts from residents of this country at the present time."
 msgstr "Não aceitamos atualmente contas de residentes deste país."
 
@@ -12539,8 +12250,8 @@ msgstr "Nós somos obrigados por nossa licença à informá-lo sobre o que acont
 msgid "We are required to take a number of factors into account when considering how to give you best execution. We have rated price as the most important followed by: (a) costs; (b) size, (c) liquidity of the underlying market, (d) speed and (e) likelihood of execution and settlement. The main way in which we will ensure that you obtain best execution is by ensuring that in our calculation of our bid/offer prices, we pay due consideration to the market price for the underlying reference product to which your Contract relates. We have access to a number of different data sources in order to ascertain the market price, which is our objective view of the bids and offers available to arms' length traders."
 msgstr "Somos obrigados a levar um grande número de fatores em conta quando consideramos como lhe proporcionar a melhor execução. Classificamos o preço como o mais importante, seguido por: (a) custos; (b) dimensão, (c) liquidez do mercado subjacente, (d) velocidade e (e) probabilidade de execução e liquidação. A principal forma na qual iremos certificar que você obtenha melhor execução é ao assegurar que, no nosso cálculo dos nossos preços de proposta/oferta, nós prestemos a devida consideração aos preços de mercado dos produtos de referência subjacentes a que se relaciona o seu contrato. Temos acesso a um grande número de fontes de dados diferentes para averiguar os preços de mercado, que representa a nossa perspectiva objetiva das propostas e ofertas disponíveis a negociadores imparciais."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1422
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1556
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1421
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:1555
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitdiff.pm:44
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Digitmatch.pm:45
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Role/BarrierBuilder.pm:22
@@ -12738,7 +12449,7 @@ msgstr "Média Móvel Ponderada"
 msgid "Weighted volume indicator based on the one-day change in price divided by the current day's range. Generally, the ADI moves in the direction of price."
 msgstr "Indicador de volume ponderado baseado na mudança de um dia no preço dividido pelo intervalo do dia atual. Geralmente, o ADI move-se na direção do preço."
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:2
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:2
 msgid "Welcome!"
 msgstr "Bem-vindo!"
 
@@ -13150,7 +12861,6 @@ msgstr "Ano"
 
 #: /home/git/regentmarkets/bom-app/lib/BOM/View/Charting.pm:477
 #: /home/git/regentmarkets/bom-backoffice/lib/BOM/Backoffice/Form.pm:815
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:707
 msgid "Yes"
 msgstr "Sim"
 
@@ -13340,10 +13050,6 @@ msgstr "Você já retirou o equivalente a %1 %2 em agregado durante os últimos 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:247
 msgid "You have already withdrawn the equivalent of %1 %2."
 msgstr "Você já retirou o equivalente a %1 %2."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:472
-msgid "You have entered an invalid login ID"
-msgstr "Introduziu um ID de início de sessão inválido"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:807
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Transaction.pm:812
@@ -13648,10 +13354,6 @@ msgstr "A sua ID será armazenada numa cookie e identificada cada vez que um can
 msgid "Your Login ID"
 msgstr "O seu ID de Início de Sessão"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:467
-msgid "Your Login ID should not contain spaces."
-msgstr "O seu ID de Início de Sessão não pode conter espaços."
-
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/misc/api_tac_tab.html.tt:116
 msgid "Your Property"
 msgstr "A sua propriedade"
@@ -13712,7 +13414,7 @@ msgstr "A sua conta é importante para nós. Por favor, <a href=\"%1\">contate-n
 msgid "Your account is not fully authenticated. Please visit the <a href=\"%1\">authentication</a> page for more information."
 msgstr ""
 
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/homepage/logged_inws.html.tt:17
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/my_accountws.html.tt:17
 msgid "Your account is registered as a Payment Agent."
 msgstr "A sua conta está registrada como Agente de Pagamentos."
 
@@ -13777,11 +13479,11 @@ msgstr "A sua seção do caixa está bloqueada."
 msgid "Your cashier session has expired"
 msgstr "A sua sessão do caixa expirou"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:377
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:385
 msgid "Your cashier was locked."
 msgstr "O seu caixa foi bloqueado."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:411
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:419
 msgid "Your cashier was not locked."
 msgstr "O seu caixa não foi bloqueado."
 
@@ -13801,10 +13503,6 @@ msgstr "O seu saldo atual é"
 #: /home/git/regentmarkets/bom-platform/lib/BOM/Platform/Locale.pm:211
 msgid "Your date of birth is invalid."
 msgstr "A sua data de nascimento é inválida."
-
-#: /home/git/translations/binary-static-www2/src/templates/haml/home/login.html.haml:1
-msgid "Your details"
-msgstr "Os seus detalhes"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:712
 msgid "Your details have been updated."
@@ -13827,12 +13525,6 @@ msgstr "Os seus fundos estão seguros"
 #: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Cashier.pm:108
 msgid "Your identity documents have passed their expiration date. Kindly send a scan of a valid ID to <a href=\"mailto:%1\">%1</a> to unlock your cashier."
 msgstr "Os seus documentos de identidade passaram da data de validade. Por favor, envie uma cópia escaneada de um documento válido para <a href=\"mailto:%1\">%1</a> para desbloquear o seu caixa."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1336
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:59
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form/maltainvest.pm:60
-msgid "Your information is incomplete or incorrect. Please correct the fields highlighted above."
-msgstr "As suas informações estão incompletas ou incorretas. Corrija por favor os campos destacados  acima."
 
 #. (stash->{website_name})
 #: /home/git/translations/binary-static-www2/src/templates/haml/get_started/beginners_faq.html.haml:1
@@ -13865,16 +13557,17 @@ msgstr "A sua senha e o ID de início de sessão são únicos e as senhas estão
 msgid "Your password cannot be the same as your email"
 msgstr "A sua senha não pode ser igual ao seu e-mail"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:813
-msgid "Your password contains invalid characters."
-msgstr "A sua senha contém caracteres inválidos."
-
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:326
-#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:72
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:334
 msgid "Your password has been changed."
 msgstr "A sua senha foi alterada."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:508
+#: /home/git/translations/binary-static-www2/src/templates/toolkit/account/change_passwordws.html.tt:72
+#, fuzzy
+#| msgid "Your password has been changed."
+msgid "Your password has been changed. Please log in again."
+msgstr "A sua senha foi alterada."
+
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:516
 msgid "Your password has been reset."
 msgstr "A sua senha foi redefinida."
 
@@ -13882,14 +13575,6 @@ msgstr "A sua senha foi redefinida."
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/account/reset_password.html.tt:23
 msgid "Your password has been successfully reset. Please log into your account using your new password."
 msgstr "A sua senha foi redefinida com sucesso. Por favor, inicie sessão na sua conta, usando a sua nova senha."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:818
-msgid "Your password should be at least 6 characters."
-msgstr "A sua senha deve conter pelo menos 6 caracteres."
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:823
-msgid "Your password should not be more then 25 characters."
-msgstr "A sua senha não deve ter mais de 25 caracteres."
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/legal/privacy.html.tt:9
 msgid "Your personal information is used primarily as a way of authenticating you as the proper owner of your account and as the person to whom withdrawal payments may be made, and to process trades. We collect personal data relating to you directly from you when you fill in the account opening form. In the event of any doubt as to the authenticity of your account details or of any withdrawal request, the company reserves the right to request further authentication information as may be deemed appropriate under the circumstances."
@@ -13917,15 +13602,11 @@ msgstr "O seu pedido para levantar %1 %2 da sua conta %3 para a conta %4 do Agen
 msgid "Your risks are known"
 msgstr "Seus riscos são conhecidos"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:1311
-msgid "Your secret answer is too short.  Please enter at least 4 characters."
-msgstr "A sua resposta secreta é muito curta. Por favor insira ao menos 4 caracteres."
-
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:263
 msgid "Your settings have been updated successfully."
 msgstr "As suas definições foram atualizadas com sucesso."
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:154
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Utility.pm:144
 msgid "Your token has expired."
 msgstr "O seu token expirou."
 
@@ -14000,7 +13681,7 @@ msgstr "um limite na quantia que você pode apostar dentro de um período de tem
 msgid "a limit on the losses you may incur within a specified period of time;"
 msgstr "um limite sobre as perdas em que pode incorrer dentro de um período de tempo específico;"
 
-#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:925
+#: /home/git/regentmarkets/bom-rpc/lib/BOM/RPC/v3/Accounts.pm:933
 msgid "alphanumeric with space and dash, 2-32 characters"
 msgstr "alfanumérico com espaço e traço, 2 a 32 caracteres"
 
@@ -14030,7 +13711,7 @@ msgstr "qualquer restrição aos seus Clientes na compra de quaisquer contratos 
 msgid "apostrophe"
 msgstr "apóstrofe"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2103
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2102
 msgid "barrier"
 msgstr "barreira"
 
@@ -14044,7 +13725,7 @@ msgid "binary options, forex, forex trading, online trading, financial trading, 
 msgstr "opções binárias, forex, negociação forex, negociação online, negociação financeira, negociação binária, índice de negociação, índices de negociação, negociação forex, negociação de commodities, estratégia de negociações binárias, aposta binária, aposta binária, plataforma de negociação de opções binárias, estratégia binária, finanças, ações, investimento, negociações"
 
 #. ($self->date_expiry->date)
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:805
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:804
 msgid "close on %1"
 msgstr "no vencimento a %1"
 
@@ -14056,7 +13737,7 @@ msgstr "vírgula"
 msgid "conflicts Policy"
 msgstr "Política de conflitos"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:799
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:798
 msgid "contract start time"
 msgstr "hora de início do contrato"
 
@@ -14072,10 +13753,6 @@ msgstr "dias"
 #: /home/git/translations/binary-static-www2/src/templates/haml/cashier/account_transferws.html.haml:1
 msgid "deposit"
 msgstr "depositar"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:71
-msgid "details"
-msgstr "detalhes"
 
 #: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Strike.pm:255
 msgid "entry spot"
@@ -14109,11 +13786,11 @@ msgstr "explicação"
 msgid "f"
 msgstr "f"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:810
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:809
 msgid "first tick"
 msgstr "primeiro tique-taque"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2103
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2102
 msgid "high barrier"
 msgstr "barreira alta"
 
@@ -14156,17 +13833,13 @@ msgstr "caracteres"
 msgid "loading..."
 msgstr "a carregar..."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2103
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2102
 msgid "low barrier"
 msgstr "barreira baixa"
 
 #: /home/git/regentmarkets/bom-app/bin/GenerateStaticData.pm:264
 msgid "m"
 msgstr "m"
-
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:523
-msgid "maximum is"
-msgstr "o máximo é"
 
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/duration.html.tt:28
 #: /home/git/translations/binary-static-www2/src/templates/toolkit/bet/form/duration.html.tt:31
@@ -14179,11 +13852,7 @@ msgstr "min"
 msgid "minimum available duration"
 msgstr "duração mínima disponível"
 
-#: /home/git/regentmarkets/bom-web/lib/BOM/Web/Form.pm:517
-msgid "minimum is"
-msgstr "o mínimo é"
-
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2100
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2099
 msgid "minus"
 msgstr "menos"
 
@@ -14240,7 +13909,7 @@ msgstr "senha"
 msgid "period"
 msgstr "ponto"
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2100
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract.pm:2099
 msgid "plus"
 msgstr "mais"
 
@@ -14309,7 +13978,7 @@ msgstr "tique-taques"
 msgid "to your account."
 msgstr "para a sua conta."
 
-#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Offerings.pm:181
+#: /home/git/regentmarkets/bom/lib/BOM/Product/Contract/Offerings.pm:183
 msgid "today"
 msgstr "hoje"
 
@@ -15533,12 +15202,6 @@ msgstr "Índice Xangai"
 msgid "French Smart Index"
 msgstr "Índice Inteligente Francês"
 
-#: Underlying Symbol OTC_DJI
-#, fuzzy
-#| msgid "Wall Street Index"
-msgid "Wall Street OTC Index"
-msgstr "Índice de Wall Street"
-
 #: Underlying Symbol SYNN225
 msgid "Japanese Smart Index"
 msgstr "Índice Inteligente Japonês"
@@ -15552,13 +15215,6 @@ msgstr "Índice US Tech Composite"
 #| msgid "Russian Regular Index"
 msgid "Russian Regular OTC Index"
 msgstr "Índice Regulador Russo"
-
-# Start of extra_translations
-#: Underlying Symbol OTC_AEX
-#, fuzzy
-#| msgid "Dutch Index"
-msgid "Dutch OTC Index"
-msgstr "Índice Holandês"
 
 #: Underlying Symbol FTSE
 msgid "UK Index"
@@ -15582,12 +15238,6 @@ msgstr "Índice Italiano"
 #: Underlying Symbol SSECOMP
 msgid "Shanghai Index"
 msgstr "Índice Xangai"
-
-#: Underlying Symbol OTC_BIST100
-#, fuzzy
-#| msgid "Istanbul Index"
-msgid "Istanbul OTC Index"
-msgstr "Índice de Istambul"
 
 #: Underlying Symbol FCHI
 msgid "French Index"
@@ -15631,12 +15281,6 @@ msgstr "Índice Espanhol"
 msgid "Euro 50 Index"
 msgstr "Índice 50 Europeu"
 
-#: Underlying Symbol OTC_N225
-#, fuzzy
-#| msgid "Japanese Index"
-msgid "Japanese OTC Index"
-msgstr "Índice Japonês"
-
 #: Underlying Symbol SYNSX5E
 msgid "Euro 50 Smart Index"
 msgstr "Índice Inteligente Euro 50"
@@ -15650,18 +15294,6 @@ msgstr "Índice de Shenzhen"
 #: Underlying Symbol OBX
 msgid "Norwegian Index"
 msgstr "Índice Norueguês"
-
-#: Underlying Symbol OTC_BFX
-#, fuzzy
-#| msgid "Belgian Index"
-msgid "Belgian OTC Index"
-msgstr "Índice Belga"
-
-#: Underlying Symbol OTC_AS51
-#, fuzzy
-#| msgid "Australian Index"
-msgid "Australian OTC Index"
-msgstr "índice Australiano"
 
 #: Underlying Symbol N225
 msgid "Japanese Index"
@@ -15769,12 +15401,6 @@ msgstr "AP Ordinária"
 msgid "Jakarta Index"
 msgstr "Índice de Jacarta"
 
-#: Underlying Symbol OTC_GDAXI
-#, fuzzy
-#| msgid "German Index"
-msgid "German OTC Index"
-msgstr "Índice Alemão"
-
 #: Underlying Symbol OTC_KOSPI2
 #, fuzzy
 #| msgid "Korean Index"
@@ -15787,12 +15413,6 @@ msgstr "Índice Coreano"
 #| msgid "Kuwait Index"
 msgid "Kuwait OTC Index"
 msgstr "Índice Kuwait"
-
-#: Underlying Symbol OTC_FCHI
-#, fuzzy
-#| msgid "French Index"
-msgid "French OTC Index"
-msgstr "Índice Francês"
 
 #: Underlying Symbol SYNFTSE
 msgid "UK Smart Index"
@@ -15842,18 +15462,6 @@ msgstr "Índice Inteligente Português"
 msgid "Korean Index"
 msgstr "Índice Coreano"
 
-#: Underlying Symbol OTC_HSI
-#, fuzzy
-#| msgid "Hong Kong Index"
-msgid "Hong Kong OTC Index"
-msgstr "Índice de Hong Kong"
-
-#: Underlying Symbol OTC_IXIC
-#, fuzzy
-#| msgid "US Tech 100 Index"
-msgid "US Tech OTC Index"
-msgstr "Índice US Tech 100"
-
 # Start of extra_translations
 #: Underlying Symbol SYNAEX
 msgid "Dutch Smart Index"
@@ -15875,12 +15483,6 @@ msgstr "Índice de Arábia Saudita"
 msgid "Swiss Index"
 msgstr "Índice Suíço"
 
-#: Underlying Symbol OTC_FTSE
-#, fuzzy
-#| msgid "UK Index"
-msgid "UK OTC Index"
-msgstr "Índice do RU"
-
 #: Underlying Symbol HSI
 msgid "Hong Kong Index"
 msgstr "Índice de Hong Kong"
@@ -15901,23 +15503,11 @@ msgstr "Índice Italiano"
 msgid "Euro 100 Index"
 msgstr "Índice 100 Europeu"
 
-#: Underlying Symbol OTC_BSESENSEX30
-#, fuzzy
-#| msgid "Bombay Index"
-msgid "Bombay OTC Index"
-msgstr "Índice de Bombaim"
-
 #: Underlying Symbol OTC_N150
 #, fuzzy
 #| msgid "Euro 150 Index"
 msgid "Euro 150 OTC Index"
 msgstr "Índice 150 Europeu"
-
-#: Underlying Symbol OTC_SPC
-#, fuzzy
-#| msgid "US Index"
-msgid "US OTC Index"
-msgstr "Índice USA"
 
 #: Underlying Symbol OTC_SPTSX60
 #, fuzzy
@@ -17692,6 +17282,198 @@ msgstr "Prêmio de %1 %2 se %3 sair fora de %7 a %6 até %5."
 #: Translation for contract type description (UPORDOWN - intraday)
 msgid "%1 %2 payout if %3 goes outside %7 and %6 through %5 after %4."
 msgstr "Prêmio de %1 %2 se %3 sair fora de %7 e %6 até %5 depois de %4."
+
+#~ msgid "6 - 25 characters."
+#~ msgstr "6 - 25 caracteres."
+
+#~ msgid "An additional sign-in has just been detected on your account %1 from the following IP address: %2, country: %3 and browser: %4. If this additional sign-in was not performed by you, and / or you have any related concerns, please contact our Customer Support team."
+#~ msgstr "Um início de sessão adicional acabou de ser detectado na sua conta %1 a partir do seguinte endereço IP: %2, país: %3 e navegador: %4. Se este início de sessão adicional não foi executado por você, e/ou você tem preocupações relacionadas, por favor contate a nossa equipe de Apoio ao cliente."
+
+#~ msgid "Email not given."
+#~ msgstr "E-mail não fornecido."
+
+#~ msgid "Family Name"
+#~ msgstr "Sobrenome"
+
+#~ msgid "First Name"
+#~ msgstr "Primeiro Nome"
+
+#~ msgid "Forgot Login ID or Password?"
+#~ msgstr "Esqueceu-se do login ou da senha?"
+
+#~ msgid "I have read and agree to the <a target=\"_blank\" href=\"%1\">terms and conditions</a> of the site."
+#~ msgstr "Li e aceito os <a target=\"_blank\" href=\"%1\">termos e condições</a> do site."
+
+#~ msgid "Invalid amount"
+#~ msgstr "Valor inválido"
+
+#~ msgid "Invalid email and password combination."
+#~ msgstr "Combinação inválida de e-mail e senha."
+
+#~ msgid "Login"
+#~ msgstr "Conectar-se"
+
+#~ msgid "Login Failed"
+#~ msgstr "Login falhou"
+
+#~ msgid "Login Success"
+#~ msgstr "Sessão iniciada com sucesso"
+
+#~ msgid "Login Trouble"
+#~ msgstr "Problema com Login"
+
+#~ msgid "Lost password?"
+#~ msgstr "Perdeu a senha?"
+
+#~ msgid "Min: %1 Max: %2"
+#~ msgstr "Mín: %1 Máx: %2"
+
+#~ msgid "New Sign-In Activity Detected"
+#~ msgstr "Nova atividade de início de sessão foi detectada"
+
+#~ msgid "Open an Account"
+#~ msgstr "Abrir uma conta"
+
+#~ msgid "Password not given."
+#~ msgstr "Senha não dada."
+
+#~ msgid "Please enter a password."
+#~ msgstr "Insira uma senha."
+
+#~ msgid "Please enter a town or city."
+#~ msgstr "Introduza uma vila ou cidade."
+
+#~ msgid "Please enter the Login ID to transfer funds."
+#~ msgstr "Introduza o ID de Início de Sessão para transferir os fundos."
+
+#~ msgid "Please enter the first line of your home address."
+#~ msgstr "Introduza a primeira linha do seu endereço residencial."
+
+#~ msgid "Please enter your first name."
+#~ msgstr "Introduza o seu nome próprio."
+
+#~ msgid "Please enter your last name."
+#~ msgstr "Introduza os seus apelidos."
+
+#~ msgid "Please input a valid date."
+#~ msgstr "Introduza uma data válida."
+
+#~ msgid "Please select a value."
+#~ msgstr "Selecione um valor."
+
+#~ msgid "Please specify your country."
+#~ msgstr "Especifique o seu país."
+
+#~ msgid "Please use only letters, spaces, hyphens, full-stops or apostrophes."
+#~ msgstr "Utilize apenas letras, espaços, hífenes, pontos finais ou apóstrofes."
+
+#~ msgid "Postcode must be less than 20 characters long and may not contain \"+\"."
+#~ msgstr "O código postal deve ter menos de 20 caracteres e não deve ter \"+\"."
+
+#~ msgid "Sorry, our service is not available for your country of residence"
+#~ msgstr "Lamentamos, o nosso serviço não está disponível no seu país de residência"
+
+#~ msgid "Sorry, the Login ID (%1) does not exist."
+#~ msgstr "Lamentamos, o ID de Início de Sessão (%1) não existe."
+
+#~ msgid "You have entered an invalid login ID"
+#~ msgstr "Introduziu um ID de início de sessão inválido"
+
+#~ msgid "Your Login ID should not contain spaces."
+#~ msgstr "O seu ID de Início de Sessão não pode conter espaços."
+
+#~ msgid "Your details"
+#~ msgstr "Os seus detalhes"
+
+#~ msgid "Your information is incomplete or incorrect. Please correct the fields highlighted above."
+#~ msgstr "As suas informações estão incompletas ou incorretas. Corrija por favor os campos destacados  acima."
+
+#~ msgid "Your password contains invalid characters."
+#~ msgstr "A sua senha contém caracteres inválidos."
+
+#~ msgid "Your password should be at least 6 characters."
+#~ msgstr "A sua senha deve conter pelo menos 6 caracteres."
+
+#~ msgid "Your password should not be more then 25 characters."
+#~ msgstr "A sua senha não deve ter mais de 25 caracteres."
+
+#~ msgid "Your secret answer is too short.  Please enter at least 4 characters."
+#~ msgstr "A sua resposta secreta é muito curta. Por favor insira ao menos 4 caracteres."
+
+#~ msgid "details"
+#~ msgstr "detalhes"
+
+#~ msgid "maximum is"
+#~ msgstr "o máximo é"
+
+#~ msgid "minimum is"
+#~ msgstr "o mínimo é"
+
+#, fuzzy
+#~| msgid "Wall Street Index"
+#~ msgid "Wall Street OTC Index"
+#~ msgstr "Índice de Wall Street"
+
+# Start of extra_translations
+#, fuzzy
+#~| msgid "Dutch Index"
+#~ msgid "Dutch OTC Index"
+#~ msgstr "Índice Holandês"
+
+#, fuzzy
+#~| msgid "Istanbul Index"
+#~ msgid "Istanbul OTC Index"
+#~ msgstr "Índice de Istambul"
+
+#, fuzzy
+#~| msgid "Japanese Index"
+#~ msgid "Japanese OTC Index"
+#~ msgstr "Índice Japonês"
+
+#, fuzzy
+#~| msgid "Belgian Index"
+#~ msgid "Belgian OTC Index"
+#~ msgstr "Índice Belga"
+
+#, fuzzy
+#~| msgid "Australian Index"
+#~ msgid "Australian OTC Index"
+#~ msgstr "índice Australiano"
+
+#, fuzzy
+#~| msgid "German Index"
+#~ msgid "German OTC Index"
+#~ msgstr "Índice Alemão"
+
+#, fuzzy
+#~| msgid "French Index"
+#~ msgid "French OTC Index"
+#~ msgstr "Índice Francês"
+
+#, fuzzy
+#~| msgid "Hong Kong Index"
+#~ msgid "Hong Kong OTC Index"
+#~ msgstr "Índice de Hong Kong"
+
+#, fuzzy
+#~| msgid "US Tech 100 Index"
+#~ msgid "US Tech OTC Index"
+#~ msgstr "Índice US Tech 100"
+
+#, fuzzy
+#~| msgid "UK Index"
+#~ msgid "UK OTC Index"
+#~ msgstr "Índice do RU"
+
+#, fuzzy
+#~| msgid "Bombay Index"
+#~ msgid "Bombay OTC Index"
+#~ msgstr "Índice de Bombaim"
+
+#, fuzzy
+#~| msgid "US Index"
+#~ msgid "US OTC Index"
+#~ msgstr "Índice USA"
 
 #~ msgid "<p>Sorry, an error has occurred. Please <a href=\"%1\">try accessing our Cashier</a> again.</p>"
 #~ msgstr "<p>Lamentamos, ocorreu um erro. <a href=\"%1\">Experimente acessar o Caixa</a> novamente.</p>"

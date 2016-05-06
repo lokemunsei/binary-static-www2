@@ -38,6 +38,7 @@ var LostPassword = (function() {
     }
 
     function init() {
+        $('#lost_passwordws').removeClass('invisible');
         $('#submit:enabled').click(function() {
             submitEmail();
         });

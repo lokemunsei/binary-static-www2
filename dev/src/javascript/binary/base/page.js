@@ -38,10 +38,12 @@ var GTM = (function() {
         }
 
         // new implementation (all pages except the above list)
-        var info = gtm_data_layer_info(data && typeof(data) === 'object' ? data : null);
-        dataLayer[0] = info.data;
-        dataLayer.push(info.data);
-        dataLayer.push({"event": info.event});
+        if(!(/logged_inws/i).test(window.location.pathname)) {
+            var info = gtm_data_layer_info(data && typeof(data) === 'object' ? data : null);
+            dataLayer[0] = info.data;
+            dataLayer.push(info.data);
+            dataLayer.push({"event": info.event});
+        }
     };
 
     var page_title = function() {
@@ -91,8 +93,54 @@ var GTM = (function() {
         }
     };
 
+    var event_handler = function(get_settings) {
+        var is_login      = localStorage.getItem('GTM_login')      === '1',
+            is_newaccount = localStorage.getItem('GTM_newaccount') === '1';
+        if(!is_login && !is_newaccount) {
+            return;
+        }
+
+        localStorage.removeItem('GTM_login');
+        localStorage.removeItem('GTM_newaccount');
+
+        var affiliateToken = $.cookie('affiliate_tracking');
+        if (affiliateToken) {
+            GTM.push_data_layer({'bom_affiliate_token': JSON.parse(affiliateToken).t});
+        }
+
+        var data = {
+            'visitorID'   : page.client.loginid,
+            'bom_country' : get_settings.country,
+            'bom_email'   : get_settings.email,
+            'url'         : window.location.href,
+            'bom_today'   : Math.floor(Date.now() / 1000),
+            'event'       : is_newaccount ? 'new_account' : 'log_in'
+        };
+        if(is_newaccount) {
+            data['bom_date_joined'] = data['bom_today'];
+        }
+        if(!page.client.is_virtual()) {
+            data['bom_age']       = parseInt((moment().unix() - get_settings.date_of_birth) / 31557600);
+            data['bom_firstname'] = get_settings.first_name;
+            data['bom_lastname']  = get_settings.last_name;
+            data['bom_phone']     = get_settings.phone;
+        }
+        GTM.push_data_layer(data);
+    };
+
+    var set_login_flag = function() {
+        localStorage.setItem('GTM_login', '1');
+    };
+
+    var set_newaccount_flag = function() {
+        localStorage.setItem('GTM_newaccount', '1');
+    };
+
     return {
-        push_data_layer : push_data_layer
+        push_data_layer     : push_data_layer,
+        event_handler       : event_handler,
+        set_login_flag      : set_login_flag,
+        set_newaccount_flag : set_newaccount_flag,
     };
 }());
 
@@ -142,9 +190,14 @@ var Client = function() {
 };
 
 Client.prototype = {
-    redirect_if_logout: function() {
+    show_login_if_logout: function(shouldReplacePageContents) {
         if(!this.is_logged_in) {
-            window.location.href = page.url.url_for('login');
+            if(shouldReplacePageContents) {
+                $('#content > .grd-container').addClass('center').empty()
+                    .append($('<p/>', {class: 'notice-msg', html: text.localize('Please [_1] to view this page')
+                        .replace('[_1]', '<a class="login_link" href="javascript:;">' + text.localize('login') + '</a>')}));
+                $('.login_link').click(function(){Login.redirect_to_login();});
+            }
         }
         return !this.is_logged_in;
     },
@@ -154,6 +207,12 @@ Client.prototype = {
             window.location.href = page.url.url_for(redirectPage || '');
         }
         return is_virtual;
+    },
+    redirect_if_login: function() {
+        if(page.client.is_logged_in) {
+            window.location.href = page.url.default_redirect_url();
+        }
+        return page.client.is_logged_in;
     },
     is_virtual: function() {
         return this.get_storage_value('is_virtual') === '1';
@@ -206,6 +265,11 @@ Client.prototype = {
             }
         }
 
+        // website TNC version
+        if(!LocalStore.get('website.tnc_version')) {
+            BinarySocket.send({'website_status': 1});
+        }
+
         return is_ok;
     },
     response_payout_currencies: function(response) {
@@ -238,18 +302,80 @@ Client.prototype = {
         page.contents.activate_by_client_type();
         page.contents.topbar_message_visibility();
     },
+    check_tnc: function() {
+        if(!page.client.is_virtual() && sessionStorage.getItem('check_tnc') === '1') {
+            var client_tnc_status   = this.get_storage_value('tnc_status'),
+                website_tnc_version = LocalStore.get('website.tnc_version');
+            if(client_tnc_status && website_tnc_version) {
+                sessionStorage.removeItem('check_tnc');
+                if(client_tnc_status !== website_tnc_version) {
+                    sessionStorage.setItem('tnc_redirect', window.location.href);
+                    window.location.href = page.url.url_for('user/tnc_approvalws');
+                }
+            }
+        }
+    },
     clear_storage_values: function() {
         var that  = this;
-        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual', 'has_reality_check'];
+        var items = ['currencies', 'allowed_markets', 'landing_company_name', 'is_virtual', 'has_reality_check', 'tnc_status'];
         items.forEach(function(item) {
             that.set_storage_value(item, '');
         });
+        localStorage.removeItem('website.tnc_version');
         sessionStorage.setItem('currencies', '');
     },
     update_storage_values: function() {
         this.clear_storage_values();
         this.check_storage_values();
     },
+    send_logout_request: function(showLoginPage) {
+        if(showLoginPage) {
+            sessionStorage.setItem('showLoginPage', 1);
+        }
+        BinarySocket.send({'logout': '1'});
+    },
+    get_token: function(loginid) {
+        var token,
+            tokens = page.client.get_storage_value('tokens');
+        if(loginid && tokens) {
+            tokensObj = JSON.parse(tokens);
+            if(tokensObj.hasOwnProperty(loginid) && tokensObj[loginid]) {
+                token = tokensObj[loginid];
+            }
+        }
+        return token;
+    },
+    add_token: function(loginid, token) {
+        if(!loginid || !token || this.get_token(loginid)) {
+            return false;
+        }
+        var tokens = page.client.get_storage_value('tokens');
+        var tokensObj = tokens && tokens.length > 0 ? JSON.parse(tokens) : {};
+        tokensObj[loginid] = token;
+        this.set_storage_value('tokens', JSON.stringify(tokensObj));
+    },
+    set_cookie: function(cookieName, Value) {
+        var cookie_expire = new Date();
+        cookie_expire.setDate(cookie_expire.getDate() + 60);
+        var cookie = new CookieStorage(cookieName);
+        cookie.write(Value, cookie_expire, true);
+    },
+    process_new_account: function(email, loginid, token, is_virtual) {
+        if(!email || !loginid || !token) {
+            return;
+        }
+        // save token
+        this.add_token(loginid, token);
+        // set cookies
+        this.set_cookie('email'       , email);
+        this.set_cookie('login'       , token);
+        this.set_cookie('loginid'     , loginid);
+        this.set_cookie('loginid_list', is_virtual ? loginid + ':V:E' : loginid + ':R:E' + '+' + $.cookie('loginid_list'));
+        // set local storage
+        GTM.set_newaccount_flag();
+        localStorage.setItem('active_loginid', loginid);
+        window.location.href = page.url.url_for('trading');
+    }
 };
 
 var URL = function (url) { // jshint ignore:line
@@ -392,6 +518,9 @@ URL.prototype = {
             params.push(param);
         }
         return params;
+    },
+    default_redirect_url: function() {
+        return this.url_for('trading');
     },
 };
 
@@ -686,7 +815,7 @@ Header.prototype = {
     },
     logout_handler : function(){
         $('a.logout').unbind('click').click(function(){
-            BinarySocket.send({"logout": "1"});
+            page.client.send_logout_request();
         });
     },
     validate_cookies: function(){
@@ -695,12 +824,12 @@ Header.prototype = {
             var loginid = $.cookie("loginid");
 
             if(!client_form.is_loginid_valid(loginid)){
-                BinarySocket.send({"logout": "1"});
+                page.client.send_logout_request();
             }
 
             for(var i=0;i<accIds.length;i++){
                 if(!client_form.is_loginid_valid(accIds[i].split(":")[0])){
-                    BinarySocket.send({"logout": "1"});
+                    page.client.send_logout_request();
                 }
             }
         }
@@ -708,6 +837,7 @@ Header.prototype = {
     do_logout : function(response){
         if("logout" in response && response.logout === 1){
             page.client.clear_storage_values();
+            LocalStore.remove('client.tokens');
             LocalStore.set('reality_check.ack', 0);
             var cookies = ['login', 'loginid', 'loginid_list', 'email', 'settings', 'reality_check', 'affiliate_token', 'affiliate_tracking', 'residence', 'allowed_markets'];
             var current_domain = ['.' + document.domain.split('.').slice(-2).join('.'), document.domain];
@@ -726,21 +856,7 @@ Header.prototype = {
                   $.removeCookie(c, {path: cookie_path[1]});
               }
             });
-            var redirectPage;
-                redirectCheck = 1;
-            if(response.echo_req.hasOwnProperty('passthrough') && response.echo_req.passthrough.hasOwnProperty('redirect')) {
-                redirectPage = response.echo_req.passthrough.redirect;
-                regex = new RegExp(redirectPage);
-                if (regex.test(window.location.pathname)) {
-                  redirectCheck = 0;
-                }
-            }
-            else {
-                redirectPage = ''; //redirect to homepage
-            }
-            if (redirectCheck) {
-              window.location.href = page.url.url_for(redirectPage);
-            }
+            page.reload();
         }
     },
 };
@@ -903,6 +1019,8 @@ Contents.prototype = {
                 $('#account-transfer-section').hide();
             }
         } else {
+            $('#btn_login').unbind('click').click(function(){Login.redirect_to_login();});
+
             $('.by_client_type.client_logged_out').removeClass('invisible');
             $('.by_client_type.client_logged_out').show();
 
@@ -932,7 +1050,11 @@ Contents.prototype = {
                 return;
             }
             var loginid_array = this.user.loginid_array;
-            var c_config = page.settings.get('countries_list')[this.client.residence];
+            var countries_list = page.settings.get('countries_list');
+            if(!countries_list || countries_list.length === 0) {
+                return;
+            }
+            var c_config = countries_list[this.client.residence];
 
             if (page.client.is_virtual()) {
                 var show_upgrade = true;
@@ -1028,6 +1150,10 @@ Page.prototype = {
             LocalStore.set('reality_check.ack', 0);
         }
         $('#current_width').val(get_container_width());//This should probably not be here.
+        if(sessionStorage.getItem('showLoginPage')) {
+            sessionStorage.removeItem('showLoginPage');
+            Login.redirect_to_login();
+        }
     },
     on_unload: function() {
         this.header.on_unload();
@@ -1043,9 +1169,31 @@ Page.prototype = {
     on_change_loginid: function() {
         var that = this;
         $('#client_loginid').on('change', function() {
-            page.client.clear_storage_values();
-            $('#loginid-switch-form').submit();
+            $(this).attr('disabled','disabled');
+            that.switch_loginid($(this).val());
         });
+    },
+    switch_loginid: function(loginid) {
+        if(!loginid || loginid.length === 0) {
+            return;
+        }
+        var token = page.client.get_token(loginid);
+        if(!token || token.length === 0) {
+            page.client.send_logout_request(true);
+            return;
+        }
+
+        // cleaning the previous values
+        page.client.clear_storage_values();
+        sessionStorage.setItem('active_tab', '1');
+        // set cookies: loginid, login
+        page.client.set_cookie('loginid', loginid);
+        page.client.set_cookie('login'  , token);
+        // set local storage
+        GTM.set_login_flag();
+        localStorage.setItem('active_loginid', loginid);
+        $('#client_loginid').removeAttr('disabled');
+        page.reload();
     },
     on_click_acc_transfer: function() {
         $('#acc_transfer_submit').on('click', function() {
@@ -1058,7 +1206,6 @@ Page.prototype = {
             $('#acc_transfer_submit').submit();
         });
     },
-
     localize_for: function(language) {
         text = texts[language];
         moment.locale(language.toLowerCase());
@@ -1113,5 +1260,8 @@ Page.prototype = {
             path: '/',
             domain: '.' + location.hostname.split('.').slice(-2).join('.')
         });
-    }
+    },
+    reload: function() {
+        window.location.reload();
+    },
 };

@@ -64,7 +64,7 @@
                 </div>
                 <div id="client-logged-in" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 by_client_type client_real client_virtual" style="display: none">
                   <div id="logout">
-                    <form id="loginid-switch-form" action="[% request.url_for('loginid_switch?l=EN') %]" method="post">
+                    <form id="loginid-switch-form">
                         <div id="login-fields">
                             <select id="client_loginid" name="client_loginid">
                             </select>
@@ -74,17 +74,8 @@
                     </form>
                   </div>
                 </div>
-                <div id="client-logged-out" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 grd-no-gutter-left by_client_type client_logged_out">
-                    <form id="login-form" action="[% request.url_for('login') %]" method="post">
-                        <span id="login-fields">
-                            <input name="email" type="text" placeholder="[% l("Email") %]" />
-                            <input name="password" type="password" placeholder="[% l("Password") %]" />
-                            <input type="submit" value="[% l("Log in") %]" />
-                        </span>
-                        <span id="login-links">
-                            <a class="pjaxload" id="lost-password" href="[% request.url_for('/user/lost_passwordws') %]">[% l("Lost password?") %]</a>
-                        </span>
-                    </form>
+                <div id="client-logged-out" class="grd-grid-3 grd-grid-mobile-9 grd-grid-phablet-10 grd-no-gutter-left by_client_type client_logged_out invisible">
+                    <div id="btn_login" class="button">[% l('Log in') %]</div>
                 </div>
                 <div class='grd-grid-1 grd-hide grd-show-mobile grd-no-gutter-mobile grd-show-phablet'>
                     <div id='mobile-menu-icon-container'>

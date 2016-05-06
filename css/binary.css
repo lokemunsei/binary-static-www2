@@ -849,27 +849,7 @@ ul.checked li {
 #header #binary-logo-text {
   margin-top: 10px;
 }
-#header #login-form, #header #loginid-switch-form {
-  text-align: right;
-}
-#header #login-form #login-links, #header #loginid-switch-form #login-links {
-  margin: 5px 0 0 0;
-  display: block;
-}
-#header #login-form input, #header #loginid-switch-form input {
-  display: inline;
-  border-radius: 4px;
-  font-size: 11px;
-  margin: 0 0 0 5px;
-}
-#header #login-form input[type=text], #header #login-form input[type=password], #header #loginid-switch-form input[type=text], #header #loginid-switch-form input[type=password] {
-  background: #FEFEFE;
-  border: 0;
-  width: 50px;
-  color: #000000;
-  padding: 4px;
-}
-#header #login-form input[type=submit], #header #loginid-switch-form input[type=submit] {
+#header #client-logged-out #btn_login {
   color: white;
   text-decoration: none;
   text-align: center;
@@ -882,18 +862,22 @@ ul.checked li {
   letter-spacing: 0.75px;
   border: 0;
   text-transform: uppercase;
-  padding: 5px 3px;
-  word-break: break-all;
+  padding: 0px 10px;
   white-space: nowrap;
-  max-width: 100px;
-  letter-spacing: 0;
+  font-weight: normal;
+  font-size: .8em;
+  line-height: 2em;
+  margin: 0.8em 0;
 }
-#header #login-form input[type=submit]:visited, #header #loginid-switch-form input[type=submit]:visited {
+#header #client-logged-out #btn_login:visited {
   color: white;
 }
-#header #login-form input[type=submit]:hover, #header #login-form input[type=submit]:active, #header #loginid-switch-form input[type=submit]:hover, #header #loginid-switch-form input[type=submit]:active {
+#header #client-logged-out #btn_login:hover, #header #client-logged-out #btn_login:active {
   text-decoration: none;
   background-color: #14602B;
+}
+#header #client-logged-out, #header #loginid-switch-form {
+  text-align: right;
 }
 #header a#lost-password, #header a#register {
   display: inline-block;
@@ -6502,18 +6486,6 @@ button:disabled {
 }
 .kv-pairs td {
   border: none;
-}
-
-#temp_notice_msg {
-  margin: 0 0 10px 0;
-}
-#temp_notice_msg #close_temp_msg {
-  position: absolute;
-  color: red;
-  font-size: .8em;
-  cursor: pointer;
-  top: 2px;
-  right: 2px;
 }
 
 /* Language based rules */

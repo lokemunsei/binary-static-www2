@@ -122,10 +122,10 @@ var FinancialAssessmentws = (function(){
 }());
 
 
-pjax_config_page("user/assessmentws", function() {
+pjax_config_page_require_auth("user/assessmentws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout() || page.client.redirect_if_is_virtual('user/my_accountws')) {
+            if (page.client.redirect_if_is_virtual('user/my_accountws')) {
                 return;
             }
 

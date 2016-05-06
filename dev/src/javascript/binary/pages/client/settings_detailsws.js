@@ -6,7 +6,8 @@ var SettingsDetailsWS = (function() {
         RealAccElements,
         errorClass;
     var fieldIDs;
-    var isValid;
+    var isValid,
+        changed;
 
 
     var init = function() {
@@ -14,6 +15,7 @@ var SettingsDetailsWS = (function() {
         frmBtn = formID + ' button';
         RealAccElements = '.RealAcc';
         errorClass = 'errorfield';
+        changed = false;
         fieldIDs = {
             address1 : '#Address1',
             address2 : '#Address2',
@@ -80,6 +82,22 @@ var SettingsDetailsWS = (function() {
                 $(fieldIDs.postcode).val(data.address_postcode);
                 $(fieldIDs.phone).val(data.phone);
 
+                $(fieldIDs.address1).on('change', function() {
+                  changed = true;
+                });
+                $(fieldIDs.address2).on('change', function() {
+                  changed = true;
+                });
+                $(fieldIDs.city).on('change', function() {
+                  changed = true;
+                });
+                $(fieldIDs.postcode).on('change', function() {
+                  changed = true;
+                });
+                $(fieldIDs.phone).on('change', function() {
+                  changed = true;
+                });
+
                 $(RealAccElements).removeClass('hidden');
 
                 $(frmBtn).click(function(e){
@@ -108,6 +126,9 @@ var SettingsDetailsWS = (function() {
             $(fieldIDs.state).replaceWith($('<input/>', {id: 'State', type: 'text', maxlength: '35', value: defaultValue}));
         }
         $('#lblState').text($('#State option:selected').text());
+        $(fieldIDs.state).on('change', function() {
+          changed = true;
+        });
     };
 
     var formValidate = function() {
@@ -154,6 +175,11 @@ var SettingsDetailsWS = (function() {
         if(!isCountError(fieldIDs.phone, 6, 35) && !(/^(|\+?[0-9\s\-]+)$/).test(phone)) {
             showError(fieldIDs.phone, Content.errorMessage('reg', [numbers, space, '-']));
         }
+
+        if (!changed) {
+          isValid = false;
+        }
+        changed = false;
 
         if(isValid) {
             return {
@@ -235,13 +261,9 @@ var SettingsDetailsWS = (function() {
 
 
 
-pjax_config_page("settings/detailsws", function() {
+pjax_config_page_require_auth("settings/detailsws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
-
             BinarySocket.init({
                 onmessage: function(msg) {
                     var response = JSON.parse(msg.data);

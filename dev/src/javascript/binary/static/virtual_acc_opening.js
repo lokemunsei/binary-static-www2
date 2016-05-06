@@ -46,15 +46,13 @@ pjax_config_page("new_account/virtualws", function(){
                   var type = response.msg_type;
                   var error = response.error;
 
-                  if (type === 'new_account_virtual' && !error){
-                    // set a flag to push to gtm in my_account
-                    localStorage.setItem('new_account', '1');
-
-                    document.getElementById('email').value = response.new_account_virtual.email;
-                    form.setAttribute('action', '/login');
-                    form.setAttribute('method', 'POST');
-                    virtualForm.unbind('submit');
-                    form.submit();
+                  if (type === 'new_account_virtual' && !error) {
+                    page.client.set_cookie('residence', response.echo_req.residence);
+                    page.client.process_new_account(
+                      response.new_account_virtual.email,
+                      response.new_account_virtual.client_id,
+                      response.new_account_virtual.oauth_token,
+                      true);
                   } else if (type === 'error' || error) {
                     if (error.code === 'InvalidToken' || error.code === 'duplicate email') {
                       virtualForm.empty();

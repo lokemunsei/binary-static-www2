@@ -4,12 +4,16 @@ var TNCApproval = (function() {
     var terms_conditions_version,
         client_tnc_status,
         hiddenClass,
+        redirectUrl,
         isReal;
 
 
     var init = function() {
         hiddenClass = 'invisible';
         showLoadingImage($('#tnc-loading'));
+
+        redirectUrl = sessionStorage.getItem('tnc_redirect');
+        sessionStorage.removeItem('tnc_redirect');
 
         BinarySocket.send({"get_settings"   : "1"});
         BinarySocket.send({"website_status" : "1"});
@@ -27,7 +31,7 @@ var TNCApproval = (function() {
         }
 
         if(terms_conditions_version === client_tnc_status) {
-            redirectToMyAccount();
+            redirectBack();
             return;
         }
 
@@ -44,21 +48,21 @@ var TNCApproval = (function() {
 
     var responseTNCApproval = function(response) {
         if(!response.hasOwnProperty('error')) {
-            redirectToMyAccount();
+            redirectBack();
         }
         else {
             $('#err_message').html(response.error.message).removeClass(hiddenClass);
         }
     };
 
-    var redirectToMyAccount = function() {
-        window.location.href = page.url.url_for('user/my_accountws');
+    var redirectBack = function() {
+        window.location.href = redirectUrl || page.url.url_for('trading');
     };
 
     var apiResponse = function(response) {
         isReal = !TUser.get().is_virtual;
         if(!isReal) {
-            redirectToMyAccount();
+            redirectBack();
         }
 
         switch(response.msg_type) {
@@ -86,14 +90,9 @@ var TNCApproval = (function() {
 
 
 
-pjax_config_page("tnc_approvalws", function() {
+pjax_config_page_require_auth("tnc_approvalws", function() {
     return {
         onLoad: function() {
-            if (!$.cookie('login')) {
-                window.location.href = page.url.url_for('login');
-                return;
-            }
-
             BinarySocket.init({
                 onmessage: function(msg) {
                     var response = JSON.parse(msg.data);

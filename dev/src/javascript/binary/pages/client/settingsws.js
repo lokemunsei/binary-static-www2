@@ -21,13 +21,9 @@ var SettingsWS = (function() {
 }());
 
 
-pjax_config_page("settingsws", function() {
+pjax_config_page_require_auth("settingsws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
-
             if(page.client.get_storage_value('is_virtual').length === 0) {
                 BinarySocket.init({
                     onmessage: function(msg) {

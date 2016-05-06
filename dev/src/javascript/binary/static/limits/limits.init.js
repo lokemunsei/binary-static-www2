@@ -41,6 +41,7 @@ var LimitsWS = (function(){
     }
 
     function limitsError(){
+        document.getElementById('withdrawal-title').setAttribute('style', 'display:none');
         document.getElementById('limits-title').setAttribute('style', 'display:none');
         document.getElementsByClassName('notice-msg')[0].innerHTML = Content.localize().textFeatureUnavailable;
         document.getElementById('client_message').setAttribute('style', 'display:block');

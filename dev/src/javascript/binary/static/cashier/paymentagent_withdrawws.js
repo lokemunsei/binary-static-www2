@@ -264,12 +264,9 @@ var PaymentAgentWithdrawWS = (function() {
 
 
 
-pjax_config_page("paymentagent/withdrawws", function() {
+pjax_config_page_require_auth("paymentagent/withdrawws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_logout()) {
-                return;
-            }
             BinarySocket.init({
                 onmessage: function(msg) {
                     var response = JSON.parse(msg.data);

@@ -172,9 +172,6 @@ var PortfolioWS =  (function() {
     };
 
     var onLoad = function() {
-        if (page.client.redirect_if_logout()) {
-            return;
-        }
         BinarySocket.init({
             onmessage: function(msg){
                 var response;
@@ -226,7 +223,7 @@ var PortfolioWS =  (function() {
 
 })();
 
-pjax_config_page("user/openpositionsws", function() {
+pjax_config_page_require_auth("user/openpositionsws", function() {
     return {
         onLoad: PortfolioWS.onLoad,
         onUnload: PortfolioWS.onUnload,
