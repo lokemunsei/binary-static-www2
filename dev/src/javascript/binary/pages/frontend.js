@@ -290,7 +290,7 @@ function generateBirthDate(country){
         year    = document.getElementById('dobyy');
 
     if (document.getElementById('dobdd').length > 1) return;
-    
+
     //days
     dropDownNumbers(days, 1, 31);
     //months
@@ -475,14 +475,6 @@ function generateState() {
       BinarySocket.send({ states_list: page.client.residence });
     }
     return;
-}
-
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
 }
 
 // returns true if internet explorer browser

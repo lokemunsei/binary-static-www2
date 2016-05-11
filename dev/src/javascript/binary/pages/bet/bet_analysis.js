@@ -31,7 +31,7 @@ var BetAnalysis = function () {
                     }
 
                     if(!shown_some_tab) {
-                        that.tab_explanation.render(tab);
+                        that.tab_live_chart.render();
                     }
                 }
 
@@ -50,7 +50,7 @@ var BetAnalysis = function () {
         },
         show_tab: function(tab) {
             if(!tab || !$('#' . tab)) {
-                tab = 'tab_explanation';
+                tab = 'tab_graph';
             }
 
             if(!this.is_showing_tab(tab)) {

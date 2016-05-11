@@ -113,6 +113,7 @@ var SelfExlusionWS = (function() {
         }
         else {
             showFormMessage(text.localize('Your changes have been updated.'), true);
+            page.client.set_storage_value('session_start', parseInt(moment().valueOf() / 1000)); // used to handle session duration limit
             getRequest();
         }
     };

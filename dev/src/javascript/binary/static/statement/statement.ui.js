@@ -37,9 +37,6 @@ var StatementUI = (function(){
     function createStatementRow(transaction){
         var action = transaction["action_type"];
         var dateObj = new Date(transaction["transaction_time"] * 1000);
-        if (action === 'sell') {
-            dateObj = new Date(transaction["purchase_time"] * 1000);
-        }
         action = StringUtil.toTitleCase(action);
 
         var momentObj = moment.utc(dateObj);

@@ -181,13 +181,13 @@ var TradingAnalysis = (function() {
      * get the current active tab if its visible i.e allowed for current parameters
      */
     var getActiveTab = function() {
-        var selectedTab = sessionStorage.getItem('currentAnalysisTab') || (isJapanTrading() ? 'tab_portfolio' : 'tab_explanation'),
+        var selectedTab = sessionStorage.getItem('currentAnalysisTab') || (isJapanTrading() ? 'tab_portfolio' : window.chartAllowed ? 'tab_graph' : 'tab_explanation'),
             selectedElement = document.getElementById(selectedTab);
 
-        if (selectedElement && selectedElement.classList.contains('invisible') && 
+        if (selectedElement && selectedElement.classList.contains('invisible') &&
             !(selectedTab === 'tab_portfolio' && BetAnalysis.Portfolio.isActive())) {
-            selectedTab = 'tab_explanation';
-            sessionStorage.setItem('currentAnalysisTab', 'tab_explanation');
+            selectedTab = window.chartAllowed ? 'tab_graph' : 'tab_explanation';
+            sessionStorage.setItem('currentAnalysisTab', selectedTab);
         }
 
         return selectedTab;

@@ -8,7 +8,7 @@ var KnowledgeTest = (function() {
     var randomPicksAnswer = {};
     var resultScore = 0;
 
-    var passMsg = '{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly';
+    var passMsg = '{JAPAN ONLY}Congratulations, you have pass the test, our Customer Support will contact you shortly.';
     var failMsg = '{JAPAN ONLY}Sorry, you have failed the test, please try again after 24 hours.';
 
     function questionAnswerHandler(ev) {
@@ -39,7 +39,7 @@ var KnowledgeTest = (function() {
         // compute score
         for (var k in submitted) {
             if (submitted.hasOwnProperty(k)) {
-                resultScore += submitted[k] === randomPicksAnswer[k] ? 1 : 0;
+                resultScore += (submitted[k] === randomPicksAnswer[k] ? 1 : 0);
             }
         }
         KnowledgeTestData.sendResult(resultScore);

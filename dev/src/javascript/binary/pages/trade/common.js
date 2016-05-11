@@ -629,7 +629,7 @@ function getDefaultMarket() {
     'use strict';
     var mkt = Defaults.get('market');
     var markets = Symbols.markets(1);
-    if (!mkt || !markets[mkt] || !markets[mkt].is_active) {
+    if (!mkt || !markets[mkt]) {
         var sorted_markets = Object.keys(Symbols.markets()).filter(function(v){return markets[v].is_active;}).sort(function(a, b) {
             return getMarketsOrder(a) - getMarketsOrder(b);
         });

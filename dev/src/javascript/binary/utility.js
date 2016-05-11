@@ -221,26 +221,6 @@ function element_data_attrs(element) {
 }
 
 /**
- * Gets a DOM or jQuery element and reads its data attributes
- * and returns a URL encoded string (like a form data)
- * This is used where we store some data as element attributes.
- *
- * @param element: DOM or jQuery element
- * @return string
- */
-function element_data_attrs_as_form_params(element) {
-    var data =  element_data_attrs(element);
-    var params = [];
-    var key;
-    for (key in data) if (data.hasOwnProperty(key)) {
-        var val = data[key];
-        if (val === undefined) continue;
-        params.push( key + '=' + encodeURIComponent(val) );
-    }
-    return params.join('&');
-}
-
-/**
  * Converts a snake_cased string to a camelCased string.
  * The first character case not changed unless requested.
  *
@@ -367,7 +347,7 @@ function attach_inpage_popup(element) {
     return popups;
 }
 
-/** 
+/**
  * Calculate container width for chart as of now but can
  * be used to get current container width
  */

@@ -652,6 +652,14 @@ ul.checked li {
   display: inline;
 }
 
+#session_limit .limit_message {
+  margin: 30px auto;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
 *,
 *:after,
 *:before {
@@ -1670,6 +1678,10 @@ abbr {
   width: 10%;
   margin: 0 1em;
 }
+.home-content .mena {
+  width: 10%;
+  margin: 0 1em;
+}
 .home-content .xcta {
   position: relative;
   bottom: 30px;
@@ -1766,6 +1778,9 @@ abbr {
 @media screen and (max-width: 480px) {
   .home-content .small-image {
     width: 30%;
+  }
+  .home-content .mena {
+    width: 32%;
   }
 }
 #login #content {
@@ -1918,31 +1933,31 @@ abbr {
 }
 .get-started dl div#what-is-binary-trading, .get-started-jp dl div#what-is-binary-trading {
   height: 80px;
-  background: url("../images/pages/get-started/intro_1.png") no-repeat 0 0;
+  background: url("../images/pages/get-started/intro_2.png") no-repeat 0 0;
 }
 .get-started dl div#binary-options-basics, .get-started-jp dl div#binary-options-basics {
   height: 80px;
-  background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 0;
+  background: url("../images/pages/get-started/intro_2.png") no-repeat 100% 0;
 }
 .get-started dl div#how-to-trade-binaries, .get-started-jp dl div#how-to-trade-binaries {
   height: 80px;
-  background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 24%;
+  background: url("../images/pages/get-started/intro_2.png") no-repeat 100% 24%;
 }
 .get-started dl div#types-of-trades, .get-started-jp dl div#types-of-trades {
   height: 80px;
-  background: url("../images/pages/get-started/intro_1.png") no-repeat 0 47%;
+  background: url("../images/pages/get-started/intro_2.png") no-repeat 0 47%;
 }
 .get-started dl div#benefits-of-trading-binaries, .get-started-jp dl div#benefits-of-trading-binaries {
   height: 80px;
-  background: url("../images/pages/get-started/intro_1.png") no-repeat 0 24%;
+  background: url("../images/pages/get-started/intro_2.png") no-repeat 0 24%;
 }
 .get-started dl div#beginners-faq, .get-started-jp dl div#beginners-faq {
   height: 80px;
-  background: url("../images/pages/get-started/intro_1.png") no-repeat 0 71%;
+  background: url("../images/pages/get-started/intro_2.png") no-repeat 0 71%;
 }
 .get-started dl div#glossary, .get-started-jp dl div#glossary {
   height: 80px;
-  background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 71%;
+  background: url("../images/pages/get-started/intro_2.png") no-repeat 100% 71%;
 }
 .get-started dl div#spread, .get-started-jp dl div#spread {
   height: 80px;
@@ -1950,7 +1965,7 @@ abbr {
 }
 .get-started dl div#random-trades, .get-started-jp dl div#random-trades {
   height: 80px;
-  background: url("../images/pages/get-started/intro_1.png") no-repeat 100% 93%;
+  background: url("../images/pages/get-started/intro_2.png") no-repeat 100% 93%;
 }
 .get-started dl div#smart-indices, .get-started-jp dl div#smart-indices {
   height: 80px;
@@ -6113,6 +6128,11 @@ div.kineticjs-content {
   display: none;
 }
 
+.error-field {
+  border-color: #cc0033;
+  color: #cc0033;
+}
+
 /*
  * these styles are for trade analysis and will be removed
  *
@@ -6249,40 +6269,34 @@ div.kineticjs-content {
     padding-right: 5px !important;
   }
 }
-.flex-table-container #statement-table .flex-tr > th:last-child, .flex-table-container #statement-table .flex-tr > td:last-child {
+.flex-table-container #statement-table .flex-tr > th.details, .flex-table-container #statement-table .flex-tr > td.details {
   display: none !important;
 }
 @media (max-width: 600px) {
-  .flex-table-container #statement-table .flex-tr > th:nth-child(4) {
+  .flex-table-container #statement-table .flex-tr > th.desc, .flex-table-container #statement-table .flex-tr > td.desc {
     display: none !important;
   }
-  .flex-table-container #statement-table .flex-tr > td:nth-child(4) {
-    display: none !important;
-  }
-  .flex-table-container #statement-table .flex-tr > th:last-child, .flex-table-container #statement-table .flex-tr > td:last-child {
+  .flex-table-container #statement-table .flex-tr > th.details, .flex-table-container #statement-table .flex-tr > td.details {
     display: table-cell !important;
   }
-  .flex-table-container #statement-table .flex-tr > th:last-child .button, .flex-table-container #statement-table .flex-tr > td:last-child .button {
+  .flex-table-container #statement-table .flex-tr > th.details .button, .flex-table-container #statement-table .flex-tr > td.details .button {
     padding: 8px 15px;
   }
   .flex-table-container #statement-table .flex-tr .flex-tr-child {
     font-size: 12px;
   }
 }
-.flex-table-container #profit-table .flex-tr > th:last-child, .flex-table-container #profit-table .flex-tr > td:last-child {
+.flex-table-container #profit-table .flex-tr > th.details, .flex-table-container #profit-table .flex-tr > td.details {
   display: none !important;
 }
 @media (max-width: 600px) {
-  .flex-table-container #profit-table .flex-tr > th:nth-child(3) {
+  .flex-table-container #profit-table .flex-tr > th.contract, .flex-table-container #profit-table .flex-tr > td.contract {
     display: none !important;
   }
-  .flex-table-container #profit-table .flex-tr > td:nth-child(3) {
-    display: none !important;
-  }
-  .flex-table-container #profit-table .flex-tr > th:last-child, .flex-table-container #profit-table .flex-tr > td:last-child {
+  .flex-table-container #profit-table .flex-tr > th.details, .flex-table-container #profit-table .flex-tr > td.details {
     display: table-cell !important;
   }
-  .flex-table-container #profit-table .flex-tr > th:last-child .button, .flex-table-container #profit-table .flex-tr > td:last-child .button {
+  .flex-table-container #profit-table .flex-tr > th.details .button, .flex-table-container #profit-table .flex-tr > td.details .button {
     padding: 8px 15px;
   }
   .flex-table-container #profit-table .flex-tr .flex-tr-child {
@@ -6317,15 +6331,6 @@ tr#highchart_duration td:nth-child(2) {
 
 #knowledge-test-msg {
   white-space: pre-line;
-}
-
-#disclaimer ul {
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
-}
-#disclaimer ul li {
-  display: list-item;
-  list-style-type: disc;
 }
 
 #profit-table-ws-container th {
@@ -6363,6 +6368,41 @@ tr#highchart_duration td:nth-child(2) {
 
 button:disabled {
   opacity: 0.5;
+}
+
+.applications-page .application {
+  margin: 20px 0 40px;
+  padding-right: 30px !important;
+  line-height: 1.4em;
+}
+.applications-page .application img.image {
+  height: 180px;
+  width: auto !important;
+}
+.applications-page .application h2 {
+  color: #e98024;
+  font-weight: normal;
+  margin: 20px 0 15px;
+}
+.applications-page .application .desc {
+  padding: 0px;
+  margin: 20px 0;
+}
+.applications-page .application .icon {
+  margin-top: 10px;
+  padding: 0 0 0 15px;
+}
+.applications-page .application span.button {
+  font-weight: normal;
+  min-width: 111px;
+  padding: 10px;
+  line-height: 19px;
+}
+.applications-page .application.links {
+  line-height: 1.8em;
+}
+.applications-page .application .soon {
+  color: #c2c2c2;
 }
 
 #virtual-form input, #virtual-form select, #change-password input, #change-password select, .usersettingssecurityws-content input, .usersettingssecurityws-content select {
@@ -6557,11 +6597,14 @@ body.RU #trading_socket_container .contract_heading {
 body.RU .calls_recording {
   display: inline !important;
 }
+body.RU .ru-hide {
+  display: none !important;
+}
 
-body.PT a, body.PT button, body.PT .button, body.PT span, body.PT input {
+body.PT a, body.PT button, body.PT .button, body.PT span, body.PT input, body.RU a, body.RU button, body.RU .button, body.RU span, body.RU input {
   text-transform: initial !important;
 }
-body.PT h1, body.PT h2, body.PT h3, body.PT h4, body.PT h5, body.PT h6 {
+body.PT h1, body.PT h2, body.PT h3, body.PT h4, body.PT h5, body.PT h6, body.RU h1, body.RU h2, body.RU h3, body.RU h4, body.RU h5, body.RU h6 {
   text-transform: initial !important;
 }
 

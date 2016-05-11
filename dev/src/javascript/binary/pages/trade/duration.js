@@ -264,6 +264,7 @@ var Durations = (function(){
             dateFormat: 'yy-mm-dd'
         });
 
+        validateMinDurationAmount();
         // we need to call it here as for days we need to show absolute barriers
         Barriers.display();
     };
@@ -363,6 +364,17 @@ var Durations = (function(){
         Barriers.display();
     };
 
+    var validateMinDurationAmount = function(){
+        var durationAmountElement = document.getElementById('duration_amount'),
+            durationMinElement    = document.getElementById('duration_minimum');
+        if(!isVisible(durationAmountElement) || !isVisible(durationMinElement)) return;
+        if(durationAmountElement.value * 1 < durationMinElement.textContent * 1) {
+            durationAmountElement.classList.add('error-field');
+        } else {
+            durationAmountElement.classList.remove('error-field');
+        }
+    };
+
     return {
         display: displayDurations,
         displayEndTime: displayEndTime,
@@ -373,7 +385,7 @@ var Durations = (function(){
         trading_times: function(){ return trading_times; },
         select_amount: function(a){ selected_duration.amount = a; },
         select_unit: function(u){ selected_duration.unit = u; } ,
-        selectEndDate: selectEndDate       
+        selectEndDate: selectEndDate,
+        validateMinDurationAmount: validateMinDurationAmount
     };
 })();
-

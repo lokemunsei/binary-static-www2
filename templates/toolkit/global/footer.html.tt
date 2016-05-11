@@ -130,7 +130,10 @@
                         </li>
                         <li class="ja-hide">
                         <a class="pjaxload" href="[% request.url_for('/terms-and-conditions', {selected_tab => 'complaints-disputes-tac-tab'}) %]"[% IF target %]
-                            target="[% target %]"[% END %]>[% l('Complaints and Disputes') %]</a>
+                            target="[% target %]"[% END %]>[% l('Complaints') %]</a>
+                        </li>
+                        <li class="ja-hide id-hide ru-hide">
+                            <a href="[% request.url_for('/download/BIEL_Prospectus.pdf') %]" download="download" target="_blank">[% l('Prospectus') %]</a>
                         </li>
                         <li class="ja-hide id-hide">
                             <a href="[% request.url_for('/legal/us_patents') %]" class="us_patent_link pjaxload">[% l('Patents') %]</a>

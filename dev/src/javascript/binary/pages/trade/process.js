@@ -40,7 +40,7 @@ function processMarket(flag) {
         market = getDefaultMarket();
         Defaults.set('market', market);
     }
-    if (update_page && (!symbol || !Symbols.underlyings()[market][symbol] || !Symbols.underlyings()[market][symbol].is_active)) {
+    if (update_page && (!symbol || !Symbols.underlyings()[market][symbol])) {
         symbol = undefined;
     }
     displayUnderlyings('underlying', Symbols.underlyings()[market], symbol);

@@ -61,6 +61,7 @@ var TradingEvents = (function () {
             }
             make_price_request = 1;
             Defaults.remove('expiry_date', 'expiry_time', 'end_date');
+            Durations.validateMinDurationAmount();
         }
 
         return make_price_request;
@@ -192,10 +193,12 @@ var TradingEvents = (function () {
             // jquery needed for datepicker
             $('#duration_amount').on('input', debounce(function (e) {
                 triggerOnDurationChange(e);
+                Durations.validateMinDurationAmount();
                 inputEventTriggered = true;
             }));
             $('#duration_amount').on('change', debounce(function (e) {
                 // using Defaults, to update the value by datepicker if it was emptied by keyboard (delete)
+                Durations.validateMinDurationAmount();
                 if(inputEventTriggered === false || !Defaults.get('duration_amount'))
                     triggerOnDurationChange(e);
                 else

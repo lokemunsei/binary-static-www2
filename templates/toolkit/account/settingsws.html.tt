@@ -75,13 +75,13 @@
     
     <div class="grd-grid-3 grd-grid-mobile-6 grd-parent ja-hide">
         <div class="grd-grid-8 grd-with-padding">
-            <a class="pjaxload" href="[% request.url_for('/user/applicationsws') %]">
+            <a class="pjaxload" href="[% request.url_for('/user/authorised_appsws') %]">
                 <img class="responsive" src="[% request.url_for('images/pages/settings/applications.svg') %]">
             </a>
         </div>
         <div class="grd-grid-12">
             <h4>
-                <a class="pjaxload" href="[% request.url_for('/user/applicationsws') %]">[% l('Authorised Applications') %]</a>
+                <a class="pjaxload" href="[% request.url_for('/user/authorised_appsws') %]">[% l('Authorised Applications') %]</a>
             </h4>
             <p>[% l('Manage your authorised applications.') %]</p>
         </div>
