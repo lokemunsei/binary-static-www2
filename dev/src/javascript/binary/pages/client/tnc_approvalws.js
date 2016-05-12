@@ -22,6 +22,7 @@ var TNCApproval = (function() {
             e.preventDefault();
             e.stopPropagation();
             BinarySocket.send({"tnc_approval" : "1"});
+            if (page.client.residence !== 'jp') BinarySocket.send({'get_account_status': 1});
         });
     };
 

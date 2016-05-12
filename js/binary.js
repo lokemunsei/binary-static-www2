@@ -69211,6 +69211,8 @@ Client.prototype = {
                 if(client_tnc_status !== website_tnc_version) {
                     sessionStorage.setItem('tnc_redirect', window.location.href);
                     window.location.href = page.url.url_for('user/tnc_approvalws');
+                } else if (page.client.residence !== 'jp') {
+                  BinarySocket.send({'get_account_status': 1});
                 }
             }
         }
@@ -69447,7 +69449,7 @@ Menu.prototype = {
                 this.show_main_menu();
             }
         } else {
-            var is_mojo_page = /^\/$|\/login|\/home|\/smart-indices|\/ad|\/open-source-projects|\/bulk-trader-facility|\/partners|\/payment-agent|\/about-us|\/group-information|\/group-history|\/careers|\/contact|\/terms-and-conditions|\/terms-and-conditions-jp|\/responsible-trading|\/us_patents|\/lost_password|\/realws|\/virtualws|\/open-positions|\/job-details|\/user-testing|\/japanws|\/maltainvestws$/.test(window.location.pathname);
+            var is_mojo_page = /^\/$|\/login|\/home|\/ad|\/open-source-projects|\/bulk-trader-facility|\/partners|\/payment-agent|\/about-us|\/group-information|\/group-history|\/careers|\/contact|\/terms-and-conditions|\/terms-and-conditions-jp|\/responsible-trading|\/us_patents|\/lost_password|\/realws|\/virtualws|\/open-positions|\/job-details|\/user-testing|\/japanws|\/maltainvestws$/.test(window.location.pathname);
             if(!is_mojo_page) {
                 trading.addClass('active');
                 this.show_main_menu();
@@ -71268,7 +71270,7 @@ if (typeof trackJs !== 'undefined') trackJs.configure(window._trackJs);
       var lbl_entry_spot = '<div style="margin-left:10px;display:inline-block;border:3px solid orange;border-radius:6px;width:4px;height:4px;"></div> Entry spot ';
       var lbl_exit_spot = '<div style="margin-left:10px;display:inline-block;background-color:orange;border-radius:6px;width:10px;height:10px;"></div> Exit spot ';
       var lbl_end_time = '<div style="margin-bottom: 3px;margin-left:10px;height:0;width:20px;border:0;border-bottom:2px;border-style:dashed;border-color:#E98024;display:inline-block"></div> End time ';
-      var lbl_delay = '<span style="color:red">Charting for this underlying is delayed </span>';
+      var lbl_delay = '<span style="display:block;text-align:center;margin-bottom:0.2em;color:red">Charting for this underlying is delayed </span>';
       // options.history indicates line chart
       if(options.history){
         type = 'line';
@@ -71379,14 +71381,14 @@ if (typeof trackJs !== 'undefined') trackJs.configure(window._trackJs);
       if (options.history) {
         chartOptions.subtitle = {
           text: chart_delayed ? lbl_delay + lbl_start_time + lbl_entry_spot + lbl_exit_spot + lbl_end_time : lbl_start_time + lbl_entry_spot + lbl_exit_spot + lbl_end_time,
-          align: 'right',
+          align: 'center',
           useHTML: true
         };
         chartOptions.tooltip.valueDecimals = options.history.prices[0].split('.')[1].length || 3;
       } else if (options.candles) {
         chartOptions.subtitle = {
           text: chart_delayed ? lbl_delay + lbl_start_time + lbl_end_time : lbl_start_time + lbl_end_time,
-          align: 'right',
+          align: 'center',
           useHTML: true
         };
         chartOptions.tooltip.valueDecimals = options.candles[0].open.split('.')[1].length || 3;
@@ -71409,7 +71411,7 @@ if (typeof trackJs !== 'undefined') trackJs.configure(window._trackJs);
         });
         var subtitle = chart.subtitle.element;
         var subtitle_length = chart.subtitle.element.childNodes.length;
-        if (sell_spot_time) {
+        if (sell_time && sell_time < end_time) {
           var textnode = document.createTextNode(" Sell time ");
           for (i = 0; i < chart.subtitle.element.childNodes.length; i++) {
             if (/End time/.test(chart.subtitle.element.childNodes[i].nodeValue)) {
@@ -79057,6 +79059,7 @@ pjax_config_page_require_auth("settingsws", function() {
             e.preventDefault();
             e.stopPropagation();
             BinarySocket.send({"tnc_approval" : "1"});
+            if (page.client.residence !== 'jp') BinarySocket.send({'get_account_status': 1});
         });
     };
 
@@ -79360,6 +79363,7 @@ var get_started_behaviour = function() {
 
         return false;
     };
+
     var to_show;
     var nav = $('.get-started').find('.subsection-navigation');
     var fragment;
@@ -79380,6 +79384,20 @@ var get_started_behaviour = function() {
         to_show = fragment ? $('a[name=' + fragment + '-section]').parent('.subsection') : $('.subsection.first');
         update_active_subsection(to_show);
     }
+    select_nav_element();
+};
+
+var select_nav_element = function() {
+  var $navLink = $('.nav li a');
+  var $navList = $('.nav li');
+  $navList.removeClass('selected');
+  for (i = 0; i < $navLink.length; i++) {
+    if ($navLink[i].href.match(window.location.pathname)) {
+      document.getElementsByClassName('nav')[0].getElementsByTagName('li')[i].setAttribute('class', 'selected');
+      break;
+    }
+  }
+  return;
 };
 
 var Charts = function(charts) {
@@ -79839,20 +79857,6 @@ pjax_config_page('/why-us', function() {
             var whyus = $('.why-us');
             sidebar_scroll(whyus);
             hide_if_logged_in();
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
-pjax_config_page('/smart-indices', function() {
-    return {
-        onLoad: function() {
-            sidebar_scroll($('.smart-indices'));
-            if (page.url.location.hash !== "") {
-              $('a[href="' + page.url.location.hash + '"]').click();
-            }
         },
         onUnload: function() {
             $(window).off('scroll');
@@ -82483,7 +82487,7 @@ function displayTooltip(market, symbol){
     }
     if (market.match(/^smart_fx/) || symbol.match(/^WLD/)){
         tip.show();
-        tip.setAttribute('target','/smart-indices#world-fx-indices');
+        tip.setAttribute('target','/get-started/smart-indices#world-fx-indices');
     }
 }
 
@@ -85964,6 +85968,7 @@ function BinarySocketClass() {
                             send({get_settings: 1});
                             if(!page.client.is_virtual()) {
                                 send({get_self_exclusion: 1});
+                                if (page.client.residence !== 'jp' && !sessionStorage.getItem('check_tnc')) send({get_account_status: 1});
                             }
                         }
                         sendBufferedSends();
@@ -86026,6 +86031,12 @@ function BinarySocketClass() {
                     } else {
                         RealityCheck.realityCheckWSHandler(response);
                     }
+                } else if (type === 'get_account_status') {
+                  if (response.get_account_status.risk_classification && response.get_account_status.risk_classification === 'high') {
+                    sessionStorage.setItem('risk_classification', 'high');
+                    sessionStorage.setItem('risk_redirect', window.location.href);
+                    window.location.href = page.url.url_for('user/assessmentws');
+                  }
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {
@@ -86284,7 +86295,7 @@ var BinarySocket = new BinarySocketClass();
             if (response) {
               var error = response.error;
               if (response.msg_type === 'get_account_status' && !check_virtual() && !error){
-                if ($.inArray('authenticated', response.get_account_status) > -1) {
+                if ($.inArray('authenticated', response.get_account_status.status) > -1) {
                   message.innerHTML = '<p>' +
                                         text.localize('Your account is fully authenticated. You can view your [_1]trading limits here').replace('[_1]', '<a class="pjaxload" href="' + page.url.url_for('cashier/limitsws') + '">') + '</a>.' +
                                       '</p>';
@@ -86639,7 +86650,7 @@ pjax_config_page_require_auth("cashier/account_transferws", function() {
     };
 
     var responseAccountStatus = function(response) {
-        get_account_status = response.get_account_status;
+        get_account_status = response.get_account_status.status;
         checkAll();
     };
 
@@ -88371,7 +88382,7 @@ function showPasswordError(password) {
 })();
 ;var FinancialAssessmentws = (function(){
    "use strict";
-   
+
     var init = function(){
         LocalizeText();
         $("#assessment_form").on("submit",function(event) {
@@ -88379,12 +88390,16 @@ function showPasswordError(password) {
             submitForm();
             return false;
         });
+        if (sessionStorage.getItem('risk_classification') === 'high') {
+          $('#high_risk_classification').text(text.localize('Please complete the following financial assessment form before continuing.'))
+                                        .removeClass('invisible');
+        }
         BinarySocket.send(JSON.parse("{\"get_financial_assessment\" : 1}"));
     };
-   
+
     // For translating strings
     var LocalizeText = function(){
-        $("#heading").text(text.localize($("#heading").text())); 
+        $("#heading").text(text.localize($("#heading").text()));
         $("legend").text(text.localize($("legend").text()));
         $("#assessment_form label").each(function(){
             var ele = $(this);
@@ -88397,7 +88412,7 @@ function showPasswordError(password) {
         $("#warning").text(text.localize($("#warning").text()));
         $("#submit").text(text.localize($("#submit").text()));
     };
-    
+
     var submitForm = function(){
         if(!validateForm()){
             return;
@@ -88409,9 +88424,9 @@ function showPasswordError(password) {
         });
         $('html, body').animate({ scrollTop: 0 }, 'fast');
         BinarySocket.send(data);
-        
+
     };
-    
+
     var validateForm = function(){
         var isValid = true,
             errors = {};
@@ -88424,15 +88439,15 @@ function showPasswordError(password) {
         if(!isValid){
             displayErrors(errors);
         }
-        
+
         return isValid;
     };
-    
+
     var showLoadingImg = function(){
-        showLoadingImage($('<div/>', {id: 'loading'}).insertAfter('#heading')); 
+        showLoadingImage($('<div/>', {id: 'loading'}).insertAfter('#heading'));
         $("#assessment_form").addClass('invisible');
     };
-    
+
     var hideLoadingImg = function(show_form){
         $("#loading").remove();
         if(typeof show_form === 'undefined'){
@@ -88441,7 +88456,7 @@ function showPasswordError(password) {
         if(show_form)
             $("#assessment_form").removeClass('invisible');
     };
-    
+
     var responseGetAssessment = function(response){
         hideLoadingImg();
         for(var key in response.get_financial_assessment){
@@ -88451,7 +88466,7 @@ function showPasswordError(password) {
             }
         }
     };
-    
+
     var displayErrors = function(errors){
         var id;
         $(".errorfield").each(function(){$(this).text('');});
@@ -88461,20 +88476,26 @@ function showPasswordError(password) {
                 $("#error"+key).text(text.localize(error));
                 id = key;
             }
-        }  
+        }
         hideLoadingImg();
         $('html, body').animate({
             scrollTop: $("#"+id).offset().top
         }, 'fast');
     };
-    
+
     var responseOnSuccess = function(){
         $("#heading").hide();
         hideLoadingImg(false);
         $("#response_on_success").text(text.localize("Your details have been updated."))
             .removeClass("invisible");
+        sessionStorage.removeItem('risk_classification');
+        if (sessionStorage.getItem('risk_redirect')) {
+          var redirectUrl = sessionStorage.getItem('risk_redirect');
+          sessionStorage.removeItem('risk_redirect');
+          window.location.href = redirectUrl;
+        }
     };
-    
+
     var apiResponse = function(response){
         if(response.msg_type === 'get_financial_assessment'){
             responseGetAssessment(response);

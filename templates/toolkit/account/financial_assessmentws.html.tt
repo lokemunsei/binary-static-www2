@@ -1,6 +1,7 @@
 <div class="grd-grid-12">
 
     <h1 id="heading">Financial Assessment</h1>
+    <p class="invisible" id="high_risk_classification"></p>
     <p class = "invisible" id="response_on_success"></p>
     <form class="formObject grd-row-padding invisible" id="assessment_form" name="assessment_form">
         <div class="rbox form">

@@ -80,6 +80,7 @@ var get_started_behaviour = function() {
 
         return false;
     };
+
     var to_show;
     var nav = $('.get-started').find('.subsection-navigation');
     var fragment;
@@ -100,6 +101,20 @@ var get_started_behaviour = function() {
         to_show = fragment ? $('a[name=' + fragment + '-section]').parent('.subsection') : $('.subsection.first');
         update_active_subsection(to_show);
     }
+    select_nav_element();
+};
+
+var select_nav_element = function() {
+  var $navLink = $('.nav li a');
+  var $navList = $('.nav li');
+  $navList.removeClass('selected');
+  for (i = 0; i < $navLink.length; i++) {
+    if ($navLink[i].href.match(window.location.pathname)) {
+      document.getElementsByClassName('nav')[0].getElementsByTagName('li')[i].setAttribute('class', 'selected');
+      break;
+    }
+  }
+  return;
 };
 
 var Charts = function(charts) {
@@ -559,20 +574,6 @@ pjax_config_page('/why-us', function() {
             var whyus = $('.why-us');
             sidebar_scroll(whyus);
             hide_if_logged_in();
-        },
-        onUnload: function() {
-            $(window).off('scroll');
-        }
-    };
-});
-
-pjax_config_page('/smart-indices', function() {
-    return {
-        onLoad: function() {
-            sidebar_scroll($('.smart-indices'));
-            if (page.url.location.hash !== "") {
-              $('a[href="' + page.url.location.hash + '"]').click();
-            }
         },
         onUnload: function() {
             $(window).off('scroll');

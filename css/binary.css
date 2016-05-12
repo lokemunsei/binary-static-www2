@@ -664,6 +664,10 @@ ul.checked li {
   padding: 0px !important;
 }
 
+_:-ms-fullscreen, :root #content-holder {
+  height: 100%;
+}
+
 *,
 *:after,
 *:before {

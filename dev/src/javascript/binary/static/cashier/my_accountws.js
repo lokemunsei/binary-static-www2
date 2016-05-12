@@ -46,7 +46,7 @@ var MyAccountWS = (function() {
     };
 
     var responseAccountStatus = function(response) {
-        get_account_status = response.get_account_status;
+        get_account_status = response.get_account_status.status;
         checkAll();
     };
 

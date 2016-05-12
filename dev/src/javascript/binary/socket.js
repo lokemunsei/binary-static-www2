@@ -169,6 +169,7 @@ function BinarySocketClass() {
                             send({get_settings: 1});
                             if(!page.client.is_virtual()) {
                                 send({get_self_exclusion: 1});
+                                if (page.client.residence !== 'jp' && !sessionStorage.getItem('check_tnc')) send({get_account_status: 1});
                             }
                         }
                         sendBufferedSends();
@@ -231,6 +232,12 @@ function BinarySocketClass() {
                     } else {
                         RealityCheck.realityCheckWSHandler(response);
                     }
+                } else if (type === 'get_account_status') {
+                  if (response.get_account_status.risk_classification && response.get_account_status.risk_classification === 'high') {
+                    sessionStorage.setItem('risk_classification', 'high');
+                    sessionStorage.setItem('risk_redirect', window.location.href);
+                    window.location.href = page.url.url_for('user/assessmentws');
+                  }
                 }
                 if (response.hasOwnProperty('error')) {
                     if(response.error && response.error.code) {

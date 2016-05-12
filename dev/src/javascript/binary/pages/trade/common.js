@@ -789,7 +789,7 @@ function displayTooltip(market, symbol){
     }
     if (market.match(/^smart_fx/) || symbol.match(/^WLD/)){
         tip.show();
-        tip.setAttribute('target','/smart-indices#world-fx-indices');
+        tip.setAttribute('target','/get-started/smart-indices#world-fx-indices');
     }
 }
 
