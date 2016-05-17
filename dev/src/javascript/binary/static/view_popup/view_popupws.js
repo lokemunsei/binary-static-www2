@@ -279,8 +279,8 @@ var ViewPopupWS = (function() {
 
         if(!chartStarted) {
             if (!tickForgotten) {
-              socketSend({"forget_all":"ticks"});
               tickForgotten = true;
+              socketSend({"forget_all":"ticks"});
             } else {
               Highchart.show_chart(contract, 'update');
               if (contract.entry_tick_time) {
@@ -664,9 +664,9 @@ var ViewPopupWS = (function() {
                     break;
                 case 'forget_all':
                     if (response.echo_req.forget_all === 'ticks' && !candleForgotten) {
-                      socketSend({"forget_all":"candles"});
                       candleForgotten = true;
-                    } else {
+                      socketSend({"forget_all":"candles"});
+                    } else if (response.echo_req.forget_all === 'candles') {
                       Highchart.show_chart(contract);
                       if (contract.entry_tick_time) {
                         chartStarted = true;

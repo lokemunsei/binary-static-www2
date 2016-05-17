@@ -71654,8 +71654,8 @@ if (typeof trackJs !== 'undefined') trackJs.configure(window._trackJs);
     if (!entry_tick_time && chart_delayed === false && start_time && parseInt((window.time._i/1000)) >= parseInt(start_time)) {
       show_error('', text.localize('Waiting for entry tick.'));
     } else if (!history_send){
-      history_send = true;
       console.log('tick history request sent at time: ' + window.time._i + ' history_send is: ' + history_send + ' chart_subscribed is: ' + chart_subscribed);
+      history_send = true;
       socketSend(request);
     }
     return;
@@ -91404,8 +91404,8 @@ var ProfitTableUI = (function(){
 
         if(!chartStarted) {
             if (!tickForgotten) {
-              socketSend({"forget_all":"ticks"});
               tickForgotten = true;
+              socketSend({"forget_all":"ticks"});
             } else {
               Highchart.show_chart(contract, 'update');
               if (contract.entry_tick_time) {
@@ -91789,9 +91789,9 @@ var ProfitTableUI = (function(){
                     break;
                 case 'forget_all':
                     if (response.echo_req.forget_all === 'ticks' && !candleForgotten) {
-                      socketSend({"forget_all":"candles"});
                       candleForgotten = true;
-                    } else {
+                      socketSend({"forget_all":"candles"});
+                    } else if (response.echo_req.forget_all === 'candles') {
                       Highchart.show_chart(contract);
                       if (contract.entry_tick_time) {
                         chartStarted = true;
