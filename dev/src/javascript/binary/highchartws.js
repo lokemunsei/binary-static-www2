@@ -397,6 +397,7 @@ var Highchart = (function() {
       show_error('', text.localize('Waiting for entry tick.'));
     } else if (!history_send){
       history_send = true;
+      console.log('tick history request sent at time: ' + window.time._i + ' history_send is: ' + history_send + ' chart_subscribed is: ' + chart_subscribed);
       socketSend(request);
     }
     return;
