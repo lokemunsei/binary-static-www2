@@ -163,6 +163,7 @@
     "src/javascript/binary/static/reality_check/reality_check.ui.js",
     "src/javascript/binary/static/reset_password.js",
     "src/javascript/binary/static/reset_password/reset_password.init.js",
+    "src/javascript/binary/static/risk_classification.js",
     "src/javascript/binary/static/session_duration_limit.js",
     "src/javascript/binary/static/statement.js",
     "src/javascript/binary/static/statement/statement.data.js",

@@ -2,23 +2,23 @@ var FinancialAssessmentws = (function(){
    "use strict";
 
     var init = function(){
+        if (checkIsVirtual()) return;
         LocalizeText();
         $("#assessment_form").on("submit",function(event) {
             event.preventDefault();
             submitForm();
             return false;
         });
-        if (sessionStorage.getItem('risk_classification') === 'high') {
-          $('#high_risk_classification').text(text.localize('Please complete the following financial assessment form before continuing.'))
-                                        .removeClass('invisible');
-        }
         BinarySocket.send(JSON.parse("{\"get_financial_assessment\" : 1}"));
     };
 
     // For translating strings
     var LocalizeText = function(){
         $("#heading").text(text.localize($("#heading").text()));
-        $("legend").text(text.localize($("legend").text()));
+        $('#heading_risk').text(text.localize($("#heading_risk").text()));
+        $('#high_risk_classification').text(text.localize($('#high_risk_classification').text()));
+        document.getElementsByTagName('legend')[0].innerHTML = text.localize(document.getElementsByTagName('legend')[0].innerHTML);
+        if (document.getElementsByTagName('legend')[1]) document.getElementsByTagName('legend')[1].innerHTML = text.localize(document.getElementsByTagName('legend')[1].innerHTML);
         $("#assessment_form label").each(function(){
             var ele = $(this);
             ele.text(text.localize(ele.text()));
@@ -42,7 +42,7 @@ var FinancialAssessmentws = (function(){
         });
         $('html, body').animate({ scrollTop: 0 }, 'fast');
         BinarySocket.send(data);
-
+        RiskClassification.cleanup();
     };
 
     var validateForm = function(){
@@ -106,15 +106,10 @@ var FinancialAssessmentws = (function(){
         hideLoadingImg(false);
         $("#response_on_success").text(text.localize("Your details have been updated."))
             .removeClass("invisible");
-        sessionStorage.removeItem('risk_classification');
-        if (sessionStorage.getItem('risk_redirect')) {
-          var redirectUrl = sessionStorage.getItem('risk_redirect');
-          sessionStorage.removeItem('risk_redirect');
-          window.location.href = redirectUrl;
-        }
     };
 
     var apiResponse = function(response){
+        if (checkIsVirtual()) return;
         if(response.msg_type === 'get_financial_assessment'){
             responseGetAssessment(response);
         }
@@ -125,9 +120,22 @@ var FinancialAssessmentws = (function(){
             responseOnSuccess();
         }
     };
+
+    var checkIsVirtual = function(){
+        if(page.client.is_virtual()) {
+            $("#assessment_form").addClass('invisible');
+            $('#response_on_success').addClass('notice-msg center').removeClass('invisible').text(text.localize('This feature is not relevant to virtual-money accounts.'));
+            hideLoadingImg(false);
+            return true;
+        }
+        return false;
+    };
+
     return {
         init : init,
-        apiResponse : apiResponse
+        apiResponse : apiResponse,
+        submitForm: submitForm,
+        LocalizeText: LocalizeText
     };
 }());
 
@@ -135,10 +143,6 @@ var FinancialAssessmentws = (function(){
 pjax_config_page_require_auth("user/assessmentws", function() {
     return {
         onLoad: function() {
-            if (page.client.redirect_if_is_virtual('user/my_accountws')) {
-                return;
-            }
-
             BinarySocket.init({
                 onmessage: function(msg) {
                     var response = JSON.parse(msg.data);
